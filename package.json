@@ -1,32 +1,37 @@
 {
-    "name": "bp-frontend",
-    "version": "1.0.0",
-    "description": "How frontend apps are built.",
-    "main": "public/index.html",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "webpack-dev-server --inline --history-api-fallback --content-base ./public/ --hot --config webpack.dev.js",
-        "start:prod": "webpack-dev-server --inline --history-api-fallback --content-base ./public/ --hot --compress --config webpack.prod.js",
-        "build": "webpack --config webpack.prod.js",
-        "docker:build": "docker build -t $npm_package_name:latest .",
-        "docker:run": "docker run --name $npm_package_name -d -p 8080:80 $npm_package_name:latest",
-        "docker": "npm run build && npm run docker:build && npm run docker:run",
-        "docker:destroy": "docker stop $npm_package_name && docker rm $npm_package_name && docker rmi $npm_package_name"
-    },
-    "author": "Harmelodic",
-    "devDependencies": {
-        "babel-core": "^6.26.3",
-        "babel-loader": "^7.1.4",
-        "babel-minify-webpack-plugin": "^0.3.1",
-        "babel-preset-react": "^6.24.1",
-        "compression-webpack-plugin": "^1.1.11",
-        "react": "^16.4.0",
-        "react-dom": "^16.4.0",
-        "redux": "^3.7.2",
-        "styled-components": "^3.3.0",
-        "uglifyjs-webpack-plugin": "^1.2.5",
-        "webpack": "^3.12.0",
-        "webpack-dev-server": "^2.11.2",
-        "webpack-merge": "^4.1.2"
-    }
+  "name": "bp-frontend",
+  "version": "1.0.0",
+  "description": "How frontend apps are built.",
+  "main": "public/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --inline --history-api-fallback --content-base ./public/ --hot --config webpack.dev.js",
+    "start:prod": "webpack-dev-server --inline --history-api-fallback --content-base ./public/ --hot --compress --config webpack.prod.js",
+    "build": "webpack --config webpack.prod.js",
+    "docker:build": "docker build -t $npm_package_name:latest .",
+    "docker:run": "docker run --name $npm_package_name -d -p 8080:80 $npm_package_name:latest",
+    "docker": "npm run build && npm run docker:build && npm run docker:run",
+    "docker:destroy": "docker stop $npm_package_name && docker rm $npm_package_name && docker rmi $npm_package_name"
+  },
+  "author": "Harmelodic",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-minify-webpack-plugin": "^0.3.1",
+    "babel-preset-react": "^6.24.1",
+    "compression-webpack-plugin": "^1.1.11",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "redux": "^3.7.2",
+    "styled-components": "^3.3.0",
+    "uglifyjs-webpack-plugin": "^1.2.5",
+    "webpack": "^3.12.0",
+    "webpack-dev-server": "^2.11.2",
+    "webpack-merge": "^4.1.2"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/Harmelodic/bp-frontend.git"
+  }
 }
