@@ -33,5 +33,18 @@
   "repository": {
     "type": "git",
     "url": "git+https://gitlab.com/Harmelodic/bp-frontend.git"
-  }
+  },
+  "bugs": {
+    "url": "https://gitlab.com/Harmelodic/bp-frontend/issues"
+  },
+  "homepage": "https://gitlab.com/Harmelodic/bp-frontend#README",
+  "keywords": [
+    "frontend",
+    "react",
+    "harmelodic",
+    "boilerplate",
+    "template",
+    "redux"
+  ],
+  "license": "UNLICENSED"
 }
