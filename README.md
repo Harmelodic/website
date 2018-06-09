@@ -11,13 +11,18 @@ Component-based development
 
 - Redux  
 Implementation of the Flux design pattern:  
-Action > Dispatcher > Store > View
+`Action > Dispatcher > Store > View`  
+or in the case where Middleware is used:  
+`Middleware > Action(s) > Dispatcher > Store > View`
 
 - styled-components  
 CSS in your JavaScript.
 
 - webpack-dev-server  
 Local development server with hot-reloading & more.
+
+- remote-redux-devtools  
+Local development plugin that links with [Redux DevTools Extension](https://github.com/zalmoxisus/redux-devtools-extension)
 
 ### Testing
 
