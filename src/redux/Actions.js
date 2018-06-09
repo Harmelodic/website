@@ -14,12 +14,14 @@ export default class Actions {
         }
     }
 
+    // bp-frontend
     static requestHttpBinStatus() {
         return {
             type: REQUEST_HTTPBIN_STATUS,
         }
     }
 
+    // bp-frontend
     static receivedHttpBinStatus(status) {
         return {
             type: RECEIVED_HTTPBIN_STATUS,

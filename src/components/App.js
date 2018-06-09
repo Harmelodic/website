@@ -61,13 +61,14 @@ export default class App extends React.Component {
     }
 
     componentDidMount() {
-        // bp-frontend
         this.unsubscribe = Store.subscribe(() => {
+            // bp-frontend
             this.setState({
                 text: Store.getState().text,
                 httpbin: Store.getState().httpbin
             })
         });
+        // bp-frontend
         Store.dispatch(Middleware.updateHttpBinStatus());
     }
 

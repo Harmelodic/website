@@ -9,6 +9,7 @@ export const initialiseStore = () => {
     Store = createStore(
         rootReducer,
         initialState,
+        // bp-frontend
         compose(
             applyMiddleware(thunk),
             devToolsEnhancer()
