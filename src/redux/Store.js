@@ -1,14 +1,27 @@
 import { rootReducer } from "./Reducers";
-import { createStore } from "redux";
+import thunk from 'redux-thunk';
+import { createStore, applyMiddleware, compose } from "redux";
+import devToolsEnhancer from 'remote-redux-devtools';
 
 export let Store;
 
 export const initialiseStore = () => {
-    Store = createStore(rootReducer, initialState);
+    Store = createStore(
+        rootReducer,
+        initialState,
+        compose(
+            applyMiddleware(thunk),
+            devToolsEnhancer()
+        )
+    );
 }
 
 const initialState = {
 
     // bp-frontend
-    text: "Change me!"
+    text: "Change me!",
+    httpbin: {
+        loading: false,
+        status: "Unset Status"
+    }
 }

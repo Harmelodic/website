@@ -2,6 +2,7 @@ import Actions from "../redux/Actions";
 import React from "react";
 import { Store } from "../redux/Store";
 import styled from "styled-components";
+import Middleware from "../redux/Middleware";
 
 // bp-frontend
 const StyledApp = styled.div`
@@ -37,15 +38,9 @@ export default class App extends React.Component {
         // bp-frontend
         this.state = {
             inputValue: "",
-            text: Store.getState().text
+            text: Store.getState().text,
+            httpbin: Store.getState().httpbin
         }
-
-        // bp-frontend
-        Store.subscribe(() => {
-            this.setState({
-                text: Store.getState().text
-            })
-        })
 
         // bp-frontend
         this.changeInputValue = this.changeInputValue.bind(this);
@@ -65,6 +60,21 @@ export default class App extends React.Component {
         Store.dispatch(Actions.updateText(this.state.inputValue));
     }
 
+    componentDidMount() {
+        // bp-frontend
+        this.unsubscribe = Store.subscribe(() => {
+            this.setState({
+                text: Store.getState().text,
+                httpbin: Store.getState().httpbin
+            })
+        });
+        Store.dispatch(Middleware.updateHttpBinStatus());
+    }
+
+    componentWillUnmount() {
+        this.unsubscribe();
+    }
+
     render() {
         return (
             // bp-frontend
@@ -74,6 +84,7 @@ export default class App extends React.Component {
                 <StyledInput type="text" name="inputText" value={this.state.inputValue} onChange={this.changeInputValue} placeholder="Enter text here" />
                 <StyledInput type="submit" value="Submit" onClick={this.changeText} />
                 <StyledText>{this.state.text}</StyledText>
+                <StyledText>HTTP Bin Status: {this.state.httpbin.loading ? "Loading..." : this.state.httpbin.status}</StyledText>
             </StyledApp>
         );
     }
