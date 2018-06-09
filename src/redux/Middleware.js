@@ -9,7 +9,7 @@ export default class Middleware {
 
             fetch("https://httpbin.org/status/200")
                 .then(response => {
-                    return dispatch(Actions.receivedHttpBinStatus(response.status))
+                    setTimeout(() => dispatch(Actions.receivedHttpBinStatus(response.status)), 3000)
                 })
         }
     }
