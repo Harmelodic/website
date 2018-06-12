@@ -24,6 +24,9 @@ Local development server with hot-reloading & more.
 - remote-redux-devtools  
 Local development plugin that links with [Redux DevTools Extension](https://github.com/zalmoxisus/redux-devtools-extension)
 
+- redux-thunk  
+Allows writing action creators (Middleware) that return a function instead of an action. Effectively allowing async Store dispatches.
+
 ### Testing
 
 - Cypress  

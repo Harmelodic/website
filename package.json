@@ -6,7 +6,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --inline --history-api-fallback --content-base ./public/ --hot --config webpack.dev.js",
-    "start:dev": "export NODE_ENV=development && npm start",
     "start:prod": "webpack-dev-server --inline --history-api-fallback --content-base ./public/ --hot --compress --config webpack.prod.js",
     "build": "webpack --config webpack.prod.js",
     "docker:build": "docker build -t $npm_package_name:latest .",
