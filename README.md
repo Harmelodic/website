@@ -27,6 +27,9 @@ Local redux development enhancer that links with [Redux DevTools Extension](http
 - [redux-thunk](https://github.com/reduxjs/redux-thunk)  
 Allows writing action creators (Middleware) that return a function instead of an action. Effectively allowing async Store dispatches.
 
+- [React Router](https://reacttraining.com/react-router/)  
+Provides easy routing (handling of the URL) and linking from within the app.
+
 ### Testing
 
 - [Cypress](https://www.cypress.io/)  
