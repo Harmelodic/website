@@ -1,8 +1,8 @@
-import Actions from "../redux/Actions";
 import React from "react";
-import { Store } from "../redux/Store";
 import styled from "styled-components";
+import Actions from "../redux/Actions";
 import Middleware from "../redux/Middleware";
+import { Store } from "../redux/Store";
 
 // bp-frontend
 const StyledBpFrontend = styled.div`

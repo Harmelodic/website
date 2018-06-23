@@ -1,4 +1,8 @@
-import { UPDATE_TEXT, REQUEST_HTTPBIN_STATUS, RECEIVED_HTTPBIN_STATUS } from "./Actions";
+import {
+    UPDATE_TEXT,
+    REQUEST_HTTPBIN_STATUS,
+    RECEIVED_HTTPBIN_STATUS
+} from "./Actions";
 
 export const rootReducer = (state, action) => {
     // bp-frontend

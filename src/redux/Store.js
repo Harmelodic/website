@@ -1,18 +1,17 @@
-import { rootReducer } from "./Reducers";
-import thunk from 'redux-thunk';
 import { createStore, applyMiddleware, compose } from "redux";
-import devToolsEnhancer from 'remote-redux-devtools';
+import thunk from 'redux-thunk';
+import { rootReducer } from "./Reducers";
 
 export let Store;
 
 export const initialiseStore = () => {
+    const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
     Store = createStore(
         rootReducer,
         initialState,
-        // bp-frontend
-        compose(
-            applyMiddleware(thunk),
-            devToolsEnhancer()
+        composeEnhancers(
+            applyMiddleware(thunk)
         )
     );
 }
