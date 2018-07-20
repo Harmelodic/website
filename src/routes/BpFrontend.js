@@ -38,13 +38,13 @@ export default class BpFrontend extends React.Component {
         // bp-frontend
         this.state = {
             inputValue: "",
-            text: Store.getState().text,
+            editableText: Store.getState().editableText,
             httpbin: Store.getState().httpbin
         }
 
         // bp-frontend
         this.changeInputValue = this.changeInputValue.bind(this);
-        this.changeText = this.changeText.bind(this);
+        this.changeEditableText = this.changeEditableText.bind(this);
     }
 
     // bp-frontend
@@ -55,16 +55,21 @@ export default class BpFrontend extends React.Component {
     }
 
     // bp-frontend
-    changeText(event) {
+    changeEditableText(event) {
         event.preventDefault();
-        Store.dispatch(Actions.updateText(this.state.inputValue));
+        Store.dispatch(Actions.updateEditableText(this.state.inputValue));
+    }
+
+    changeHttpBinStatus(event) {
+        event.preventDefault();
+        Store.dispatch(Middleware.updateHttpBinStatus());
     }
 
     componentDidMount() {
         this.unsubscribe = Store.subscribe(() => {
             // bp-frontend
             this.setState({
-                text: Store.getState().text,
+                editableText: Store.getState().editableText,
                 httpbin: Store.getState().httpbin
             })
         });
@@ -83,9 +88,10 @@ export default class BpFrontend extends React.Component {
                 <StyledImg src="images/bp-frontend.svg" />
                 <StyledText>Change the text.</StyledText>
                 <StyledInput type="text" name="inputText" value={this.state.inputValue} onChange={this.changeInputValue} placeholder="Enter text here" />
-                <StyledInput type="submit" value="Submit" onClick={this.changeText} />
-                <StyledText>{this.state.text}</StyledText>
+                <StyledInput type="submit" value="Submit" onClick={this.changeEditableText} />
+                <StyledText>{this.state.editableText}</StyledText>
                 <StyledText>HTTP Bin Status: {this.state.httpbin.loading ? "Loading..." : this.state.httpbin.status}</StyledText>
+                <StyledInput type="submit" value="Change HTTP Bin Status" onClick={this.changeHttpBinStatus} />
             </StyledBpFrontend>
         );
     }

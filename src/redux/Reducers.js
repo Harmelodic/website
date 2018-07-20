@@ -1,50 +1,43 @@
 import {
-    UPDATE_TEXT,
-    REQUEST_HTTPBIN_STATUS,
-    RECEIVED_HTTPBIN_STATUS
+    SET_HTTP_BIN_STATUS_LOADING,
+    SET_HTTP_BIN_STATUS,
+    UPDATE_EDITABLE_TEXT
 } from "./Actions";
 
 export const rootReducer = (state, action) => {
     // bp-frontend
     return {
-        text: textReducer(state.text, action),
+        editableText: editableTextReducer(state.editableText, action),
         httpbin: httpbinReducer(state.httpbin, action)
     }
 }
 
 // bp-frontend
-export const textReducer = (text, action) => {
-    let textValue;
+export const editableTextReducer = (editableTextState, action) => {
+    let editableText = editableTextState;
+
     switch (action.type) {
-        case UPDATE_TEXT:
-            textValue = action.value
-            break;
-        default:
-            textValue = text
+        case UPDATE_EDITABLE_TEXT:
+            editableText = action.value
             break;
     }
-    return textValue;
+
+    return editableText;
 }
 
 // bp-frontend
 export const httpbinReducer = (httpbinState, action) => {
-    let httpbinValue;
+    let httpbin = Object.assign({}, httpbinState);
+
     switch (action.type) {
-        case REQUEST_HTTPBIN_STATUS:
-            httpbinValue = {
-                loading: true,
-                status: httpbinState.status
-            }
+        case SET_HTTP_BIN_STATUS_LOADING:
+            httpbin.loading = action.value;
             break;
-        case RECEIVED_HTTPBIN_STATUS:
-            httpbinValue = {
-                loading: false,
-                status: action.status
-            }
-            break;
-        default:
-            httpbinValue = httpbinState
+        case SET_HTTP_BIN_STATUS:
+            httpbin.loading = false;
+            httpbin.status = action.status;
             break;
     }
-    return httpbinValue;
+
+    return httpbin;
 }

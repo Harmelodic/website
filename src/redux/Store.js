@@ -19,7 +19,7 @@ export const initialiseStore = () => {
 const initialState = {
 
     // bp-frontend
-    text: "Change me!",
+    editableText: "Change me!",
     httpbin: {
         loading: false,
         status: "Unset Status"

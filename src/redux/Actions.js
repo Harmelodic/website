@@ -1,30 +1,31 @@
 // Action Types
-export const UPDATE_TEXT = "UPDATE_TEXT";
-export const REQUEST_HTTPBIN_STATUS = "REQUEST_HTTPBIN_STATUS";
-export const RECEIVED_HTTPBIN_STATUS = "RECEIVED_HTTPBIN_STATUS";
+export const SET_HTTP_BIN_STATUS_LOADING = "SET_HTTP_BIN_STATUS_LOADING";
+export const SET_HTTP_BIN_STATUS = "SET_HTTP_BIN_STATUS";
+export const UPDATE_EDITABLE_TEXT = "UPDATE_EDITABLE_TEXT";
 
 // Action Creators
 export default class Actions {
 
     // bp-frontend
-    static updateText(value) {
+    static updateEditableText(value) {
         return {
-            type: UPDATE_TEXT,
+            type: UPDATE_EDITABLE_TEXT,
             value: value
         }
     }
 
     // bp-frontend
-    static requestHttpBinStatus() {
+    static setHttpBinStatusLoading(boolean) {
         return {
-            type: REQUEST_HTTPBIN_STATUS,
+            type: SET_HTTP_BIN_STATUS_LOADING,
+            value: boolean
         }
     }
 
     // bp-frontend
-    static receivedHttpBinStatus(status) {
+    static setHttpBinStatus(status) {
         return {
-            type: RECEIVED_HTTPBIN_STATUS,
+            type: SET_HTTP_BIN_STATUS,
             status: status
         }
     }
