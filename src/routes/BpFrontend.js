@@ -10,9 +10,17 @@ const StyledBpFrontend = styled.div`
     font-size: 16px;
 `
 
+const StyledSection = styled.div`
+    max-width: 1080px;
+    width: 60%;
+    margin: 0 auto;
+    border-top: 1px double #999999;
+    padding: 30px 0;
+`
+
 // bp-frontend
 const StyledText = styled.div`
-    margin: 20px auto;
+    font-size: 16px;
 `
 
 // bp-frontend
@@ -86,12 +94,16 @@ export default class BpFrontend extends React.Component {
             // bp-frontend
             <StyledBpFrontend>
                 <StyledImg src="images/bp-frontend.svg" />
-                <StyledText>Change the text.</StyledText>
-                <StyledInput type="text" name="inputText" value={this.state.inputValue} onChange={this.changeInputValue} placeholder="Enter text here" />
-                <StyledInput type="submit" value="Submit" onClick={this.changeEditableText} />
-                <StyledText>{this.state.editableText}</StyledText>
-                <StyledText>HTTP Bin Status: {this.state.httpbin.loading ? "Loading..." : this.state.httpbin.status}</StyledText>
-                <StyledInput type="submit" value="Change HTTP Bin Status" onClick={this.changeHttpBinStatus} />
+                <StyledSection>
+                    <StyledText>Change the text.</StyledText>
+                    <StyledInput type="text" name="inputText" value={this.state.inputValue} onChange={this.changeInputValue} placeholder="Enter text here" />
+                    <StyledInput type="submit" value="Submit" onClick={this.changeEditableText} />
+                    <StyledText>{this.state.editableText}</StyledText>
+                </StyledSection>
+                <StyledSection>
+                    <StyledText>HTTP Bin Status: {this.state.httpbin.loading ? "Loading..." : this.state.httpbin.status}</StyledText>
+                    <StyledInput type="submit" value="Change HTTP Bin Status" onClick={this.changeHttpBinStatus} />
+                </StyledSection>
             </StyledBpFrontend>
         );
     }
