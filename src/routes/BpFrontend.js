@@ -62,7 +62,7 @@ export default class BpFrontend extends React.Component {
 
     changeHttpBinStatus(event) {
         event.preventDefault();
-        Store.dispatch(Middleware.updateHttpBinStatus());
+        Store.dispatch(Middleware.fetchHttpBinStatus());
     }
 
     componentDidMount() {
@@ -74,7 +74,7 @@ export default class BpFrontend extends React.Component {
             })
         });
         // bp-frontend
-        Store.dispatch(Middleware.updateHttpBinStatus());
+        Store.dispatch(Middleware.fetchHttpBinStatus());
     }
 
     componentWillUnmount() {

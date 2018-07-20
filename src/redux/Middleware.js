@@ -27,7 +27,7 @@ const httpCall = (method, url, body) => {
 
 export default class Middleware {
     // bp-frontend
-    static updateHttpBinStatus() {
+    static fetchHttpBinStatus() {
         return dispatch => {
             dispatch(Actions.setHttpBinStatusLoading(true));
 
