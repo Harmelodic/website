@@ -93,7 +93,7 @@ export default class BpFrontend extends React.Component {
         return (
             // bp-frontend
             <StyledBpFrontend>
-                <StyledImg src="images/bp-frontend.svg" />
+                <StyledImg src="images/bp-frontend.png" />
                 <StyledSection>
                     <StyledText>Change the text.</StyledText>
                     <StyledInput type="text" name="inputText" value={this.state.inputValue} onChange={this.changeInputValue} placeholder="Enter text here" />
