@@ -26,22 +26,12 @@ const httpCall = (method, url, body) => {
 }
 
 export default class Middleware {
-    // bp-frontend
-    static fetchHttpBinStatus() {
+    static fetchProjects() {
         return dispatch => {
-            dispatch(Actions.setHttpBinStatusLoading(true));
-
-            const responseCodeXX = Math.floor(Math.random() * Math.floor(4)) + 2;
-
-            httpCall("GET", "https://httpbin.org/status/" + responseCodeXX + "00")
-                .then(response => {
-                    // Any 2xx response
-                    dispatch(Actions.setHttpBinStatus(response.status));
-                })
-                .catch(response => {
-                    // Any non-2xx response
-                    dispatch(Actions.setHttpBinStatus(response.status));
-                })
+            httpCall("GET", "/resources/projects.json")
+                .then(response => response.json().then(data => {
+                    dispatch(Actions.setProjects(data));
+                }))
         }
     }
 }

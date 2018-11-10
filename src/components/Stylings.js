@@ -13,7 +13,3 @@ export const StyledFadeInDiv = styled.div`
 
     animation: complete-fade-in ${props => props.fadeInTime ? props.fadeInTime : "800ms"};
 `
-
-export const StyledText = styled.span`
-    font-size: 16px;
-`

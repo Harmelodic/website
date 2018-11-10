@@ -1,6 +1,6 @@
 import React from "react";
 import Menu from "../components/Menu";
-import { StyledFadeInDiv, StyledText } from "../components/Stylings";
+import { StyledFadeInDiv } from "../components/Stylings";
 
 export default class Me extends React.Component {
     render() {
@@ -8,7 +8,7 @@ export default class Me extends React.Component {
             <div>
                 <Menu me={true} />
                 <StyledFadeInDiv>
-                    <StyledText>Hey it me</StyledText>
+
                 </StyledFadeInDiv>
             </div>
         )
