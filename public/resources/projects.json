@@ -1,10 +1,12 @@
 [
     {
         "title": "Flavour 101",
+        "subtitle": "Food Blog",
         "href": "http://flavour101.com"
     },
     {
         "title": "Vyllian",
+        "subtitle": "Tech Company",
         "href": "http://vyllian.com"
     }
 ]

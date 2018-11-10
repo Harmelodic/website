@@ -31,6 +31,14 @@ const StyledProjectBottom = styled.div`
     padding-bottom: 25px;
     font-size: 20px;
     color: #000;
+    line-height: 24px;
+`
+
+const StyledSubtitle = styled.span`
+    display: block;
+    font-size: 16px;
+    color: #999;
+    font-style: italic;
 `
 
 export default class Project extends React.Component {
@@ -38,7 +46,10 @@ export default class Project extends React.Component {
         return (
             <StyledProject href={this.props.href} target="_blank">
                 <StyledProjectTop src={this.props.src} alt="project-image"></StyledProjectTop>
-                <StyledProjectBottom>{this.props.title}</StyledProjectBottom>
+                <StyledProjectBottom>
+                    {this.props.title}
+                    {this.props.subtitle && <StyledSubtitle>{this.props.subtitle}</StyledSubtitle>}
+                </StyledProjectBottom>
             </StyledProject>
         )
     }

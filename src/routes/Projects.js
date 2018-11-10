@@ -54,6 +54,7 @@ export default class Projects extends React.Component {
                                             key={index}
                                             src={project.src}
                                             title={project.title}
+                                            subtitle={project.subtitle}
                                             href={project.href}
                                         />
                                     )
