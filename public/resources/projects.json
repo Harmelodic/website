@@ -2,11 +2,13 @@
     {
         "title": "Flavour 101",
         "subtitle": "Food Blog",
+        "src": "https://gitlab.com/uploads/-/system/group/avatar/3434513/flavour101.png",
         "href": "http://flavour101.com"
     },
     {
         "title": "Vyllian",
         "subtitle": "Tech Company",
+        "src": "https://gitlab.com/uploads/-/system/group/avatar/3962894/Logo_-_GitLab.png",
         "href": "http://vyllian.com"
     }
 ]

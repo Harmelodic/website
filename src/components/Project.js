@@ -16,17 +16,21 @@ const StyledProject = styled.a`
     }
 `
 
-const StyledProjectTop = styled.img`
+const StyledProjectImage = styled.div`
     display: block;
     margin: 25px;
     width: 150px;
     height: 150px;
     border-radius: 100%;
     border: solid 1px #000;
-    background: #fff;
+    background-color: #fff;
+    background-image: url('${props => props.src}');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 `
 
-const StyledProjectBottom = styled.div`
+const StyledProjectText = styled.div`
     width: 100%;
     padding-bottom: 25px;
     font-size: 20px;
@@ -45,11 +49,11 @@ export default class Project extends React.Component {
     render() {
         return (
             <StyledProject href={this.props.href} target="_blank">
-                <StyledProjectTop src={this.props.src} alt="project-image"></StyledProjectTop>
-                <StyledProjectBottom>
+                <StyledProjectImage src={this.props.src} alt="project-image"></StyledProjectImage>
+                <StyledProjectText>
                     {this.props.title}
                     {this.props.subtitle && <StyledSubtitle>{this.props.subtitle}</StyledSubtitle>}
-                </StyledProjectBottom>
+                </StyledProjectText>
             </StyledProject>
         )
     }
