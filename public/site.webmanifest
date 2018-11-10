@@ -1,6 +1,6 @@
 {
-    "name": "bp-frontend",
-    "short_name": "bp-frontend",
+    "name": "main",
+    "short_name": "main",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",

@@ -1,5 +1,5 @@
 {
-    "name": "bp-frontend",
+    "name": "main",
     "version": "1.0.0",
     "description": "How frontend apps are built.",
     "main": "public/index.html",
@@ -35,12 +35,12 @@
     "dependencies": {},
     "repository": {
         "type": "git",
-        "url": "git+https://gitlab.com/Harmelodic/bp-frontend.git"
+        "url": "git+https://gitlab.com/Harmelodic/main.git"
     },
     "bugs": {
-        "url": "https://gitlab.com/Harmelodic/bp-frontend/issues"
+        "url": "https://gitlab.com/Harmelodic/main/issues"
     },
-    "homepage": "https://gitlab.com/Harmelodic/bp-frontend#README",
+    "homepage": "https://gitlab.com/Harmelodic/main#README",
     "keywords": [
         "frontend",
         "react",
