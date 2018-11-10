@@ -17,4 +17,5 @@ export const StyledFadeInDiv = styled.div`
 export const StyledProjects = styled.div`
     margin-top: 30px;
     text-align: center;
+    white-space: normal;
 `
