@@ -7,6 +7,7 @@ const StyledProject = styled.a`
     width: 200px;
     text-align: center;
     text-decoration: none;
+    vertical-align: top;
     transition: background 300ms;
 
     &:hover {

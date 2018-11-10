@@ -1,6 +1,42 @@
 [
     {
+        "title": "aspc",
+        "href": "https://gitlab.com/Harmelodic/aspc",
+        "src": ""
+    },
+    {
+        "title": "bp-backend",
+        "href": "https://gitlab.com/Harmelodic/bp-backend",
+        "src": ""
+    },
+    {
         "title": "bp-frontend",
-        "href": "https://gitlab.com/Harmelodic/bp-frontend"
+        "href": "https://gitlab.com/Harmelodic/bp-frontend",
+        "src": ""
+    },
+    {
+        "title": "Chrome Theme: Minimal Grey",
+        "href": "https://gitlab.com/Harmelodic/chrome-theme-minimal-grey",
+        "src": ""
+    },
+    {
+        "title": "dots",
+        "href": "https://gitlab.com/Harmelodic/dots",
+        "src": ""
+    },
+    {
+        "title": "imdb",
+        "href": "https://gitlab.com/Harmelodic/imdb",
+        "src": ""
+    },
+    {
+        "title": "tdash",
+        "href": "https://gitlab.com/Harmelodic/tdash",
+        "src": ""
+    },
+    {
+        "title": "tools",
+        "href": "https://gitlab.com/Harmelodic/tools",
+        "src": ""
     }
 ]
