@@ -14,6 +14,7 @@ const StyledLogo = styled.img`
     transform: translateX(-50%)
     height: 300px;
     width: 300px;
+    user-select: none;
 `
 
 const RainbowBar = styled.div`
