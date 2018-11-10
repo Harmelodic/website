@@ -34,7 +34,7 @@ export default class Header extends React.Component {
         return (
             <StyledHeader>
                 <RainbowBar />
-                <StyledLogo src="/images/Logo.svg" />
+                <StyledLogo src="/images/logo.svg" />
             </StyledHeader>
         )
     }
