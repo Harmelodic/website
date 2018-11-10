@@ -13,3 +13,8 @@ export const StyledFadeInDiv = styled.div`
 
     animation: complete-fade-in ${props => props.fadeInTime ? props.fadeInTime : "800ms"};
 `
+
+export const StyledProjects = styled.div`
+    margin-top: 30px;
+    text-align: center;
+`

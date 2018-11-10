@@ -1,10 +1,11 @@
 import {
-    SET_PROJECTS
+    SET_PROJECTS, SET_OPEN_SOURCE_PROJECTS
 } from "./Actions";
 
 export const rootReducer = (state, action) => {
     return {
-        projects: projectsReducer(state.projects, action)
+        projects: projectsReducer(state.projects, action),
+        openSourceProjects: openSourceProjectsReducer(state.openSourceProjects, action)
     }
 }
 
@@ -18,4 +19,16 @@ export const projectsReducer = (projectsState, action) => {
     }
 
     return projects;
+}
+
+export const openSourceProjectsReducer = (openSourceProjectsState, action) => {
+    let openSourceProjects = Object.assign([], openSourceProjectsState);
+
+    switch (action.type) {
+        case SET_OPEN_SOURCE_PROJECTS:
+            openSourceProjects = action.openSourceProjects;
+            break;
+    }
+
+    return openSourceProjects;
 }

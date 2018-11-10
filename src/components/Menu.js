@@ -29,6 +29,7 @@ export default class Menu extends React.Component {
         return (
             <StyledMenu>
                 <MenuItem to="/projects" selected={this.props.projects}>Projects</MenuItem>
+                <MenuItem to="/open-source" selected={this.props.openSource}>Open-source</MenuItem>
                 <MenuItem to="/me" selected={this.props.me}>Me</MenuItem>
             </StyledMenu>
         )
