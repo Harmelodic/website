@@ -1,0 +1,44 @@
+image: docker:latest
+
+variables:
+  DOCKER_DRIVER: overlay
+
+stages:
+  - build
+  - package
+  - deploy
+  - clean
+
+npm-build:
+  image: node:alpine
+  stage: build
+  script:
+  - npm i
+  - npm run build
+  artifacts:
+    paths:
+    - public/*
+
+docker-build:
+  stage: package
+  services:
+  - docker:dind
+  script:
+  - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN ${CI_REGISTRY}
+  - docker build -t "${CI_REGISTRY_IMAGE}:${CI_COMMIT_SHA}" .
+  - docker tag "${CI_REGISTRY_IMAGE}:${CI_COMMIT_SHA}" "${CI_REGISTRY_IMAGE}:latest"
+  - docker push "${CI_REGISTRY_IMAGE}:${CI_COMMIT_SHA}"
+  - docker push "${CI_REGISTRY_IMAGE}:latest"
+  only:
+    - master
+
+deploy-dev:
+  stage: deploy
+  image:
+    name: quay.io/ukhomeofficedigital/kd:latest
+    entrypoint: ["/bin/bash", "-c"]
+  script:
+  - echo "${KUBE_SERVER}"
+  - KUBE_NAMESPACE=default IMAGE_TAG="${CI_REGISTRY_IMAGE}:${CI_COMMIT_SHA}" kd --insecure-skip-tls-verify --timeout=5m0s -f ${CI_PROJECT_DIR}/k8s
+  only:
+  - master

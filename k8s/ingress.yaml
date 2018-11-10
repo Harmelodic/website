@@ -1,0 +1,25 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: main
+  namespace: {{.KUBE_NAMESPACE}}
+  labels:
+    app: main
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+spec:
+  rules:
+  - host: flavour101.com
+    http:
+      paths:
+        - path: /
+          backend:
+            serviceName: main
+            servicePort: 80
+  - host: "*.flavour101.com"
+    http:
+      paths:
+        - path: /
+          backend:
+            serviceName: main
+            servicePort: 80
