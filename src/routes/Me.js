@@ -1,11 +1,11 @@
 import React from "react";
 import Menu from "../components/Menu";
 
-export default class Projects extends React.Component {
+export default class Me extends React.Component {
     render() {
         return (
             <div>
-                <Menu projects={true}/>
+                <Menu me={true} />
             </div>
         )
     }
