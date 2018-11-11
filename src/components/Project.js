@@ -8,6 +8,7 @@ const StyledProject = styled.a`
     text-align: center;
     text-decoration: none;
     vertical-align: top;
+    color: #000;
     transition: background 300ms;
 
     &:hover {
@@ -28,13 +29,14 @@ const StyledProjectImage = styled.div`
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    font-size: 20px;
+    line-height: 150px;
 `
 
 const StyledProjectText = styled.div`
     width: 100%;
     padding-bottom: 25px;
     font-size: 20px;
-    color: #000;
     line-height: 24px;
 `
 
@@ -49,7 +51,12 @@ export default class Project extends React.Component {
     render() {
         return (
             <StyledProject href={this.props.href} target="_blank">
-                <StyledProjectImage src={this.props.src} alt="project-image"></StyledProjectImage>
+                {
+                    this.props.src ?
+                        <StyledProjectImage src={this.props.src} alt="project-image"></StyledProjectImage>
+                    :
+                        <StyledProjectImage>No Logo</StyledProjectImage>
+                }
                 <StyledProjectText>
                     {this.props.title}
                     {this.props.subtitle && <StyledSubtitle>{this.props.subtitle}</StyledSubtitle>}
