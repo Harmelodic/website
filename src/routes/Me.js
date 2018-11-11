@@ -8,7 +8,11 @@ export default class Me extends React.Component {
             <div>
                 <Menu me={true} />
                 <StyledFadeInDiv>
-
+                    {/* 
+                        About Me Description
+                        Social Media Links
+                        Blog Link
+                    */}
                 </StyledFadeInDiv>
             </div>
         )

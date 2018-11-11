@@ -1,6 +1,6 @@
 [
     {
-        "title": "aspc",
+        "title": "ASPC",
         "href": "https://gitlab.com/Harmelodic/aspc",
         "src": "https://assets.gitlab-static.net/uploads/-/system/project/avatar/8356986/ASPC.png"
     },
@@ -13,6 +13,11 @@
         "title": "bp-frontend",
         "href": "https://gitlab.com/Harmelodic/bp-frontend",
         "src": "https://assets.gitlab-static.net/uploads/-/system/project/avatar/6508849/bp-frontend.png"
+    },
+    {
+        "title": "Chorus",
+        "href": "https://gitlab.com/Chorus",
+        "src": "https://assets.gitlab-static.net/uploads/-/system/group/avatar/2437687/1024x1024.png"
     },
     {
         "title": "Chrome Theme: Minimal Grey",
