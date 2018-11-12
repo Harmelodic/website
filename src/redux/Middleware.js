@@ -37,7 +37,7 @@ export default class Middleware {
 
     static fetchOpenSourceProjects() {
         return dispatch => {
-            httpCall("GET", "/resources/openSourceProjects.json")
+            httpCall("GET", "/resources/open-source.json")
                 .then(response => response.json().then(data => {
                     dispatch(Actions.setOpenSourceProjects(data));
                 }))
