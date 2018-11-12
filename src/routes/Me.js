@@ -4,6 +4,8 @@ import Menu from "../components/Menu";
 import { StyledFadeInDiv } from "../components/Stylings";
 import PatreonButton from "../components/PatreonButton";
 import SocialMedia from "../components/SocialMedia";
+import { Store } from "../redux/Store";
+import Middleware from "../redux/Middleware";
 
 const Info = styled.div`
     max-width: 800px;
@@ -29,6 +31,28 @@ const StyledSocialMediaLinks = styled.div`
 `
 
 export default class Me extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            socialMedia: Store.getState().socialMedia
+        }
+    }
+
+    componentDidMount() {
+        this.unsubscribe = Store.subscribe(() => {
+            this.setState({
+                socialMedia: Store.getState().socialMedia
+            })
+        })
+
+        Store.dispatch(Middleware.fetchSocialMedia());
+    }
+
+    componentWillUnmount() {
+        this.unsubscribe();
+    }
+
     render() {
         return (
             <div>
@@ -49,13 +73,17 @@ export default class Me extends React.Component {
                     <Info>
                         <InfoTitle>Social Media</InfoTitle>
                         <StyledSocialMediaLinks>
-                            <SocialMedia href="https://twitter.com/Harmelodic" title="Twitter (Personal)"></SocialMedia>
-                            <SocialMedia href="https://twitter.com/MSmithDeveloper" title="Twitter (Work)"></SocialMedia>
-                            <SocialMedia href="http://scribbes.harmelodic.com" title="Scribbles"></SocialMedia>
-                            <SocialMedia href="https://instagram.com/Harmelodic" title="Instagram"></SocialMedia>
-                            <SocialMedia href="https://youtube.com/Harmelodic" title="YouTube"></SocialMedia>
-                            <SocialMedia href="https://keybase.io/harmelodic" title="Keybase"></SocialMedia>
-                            <SocialMedia href="https://www.linkedin.com/in/harmelodic/" title="LinkedIn"></SocialMedia>
+                            {
+                                this.state.socialMedia.map(media => {
+                                    return (
+                                        <SocialMedia
+                                            href={media.href}
+                                            title={media.title}
+                                            src={media.src}
+                                        />
+                                    )
+                                })
+                            }
                         </StyledSocialMediaLinks>
                     </Info>
                 </StyledFadeInDiv>

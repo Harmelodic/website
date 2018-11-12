@@ -1,11 +1,12 @@
 import {
-    SET_PROJECTS, SET_OPEN_SOURCE_PROJECTS
+    SET_PROJECTS, SET_OPEN_SOURCE_PROJECTS, SET_SOCIAL_MEDIA
 } from "./Actions";
 
 export const rootReducer = (state, action) => {
     return {
         projects: projectsReducer(state.projects, action),
-        openSourceProjects: openSourceProjectsReducer(state.openSourceProjects, action)
+        openSourceProjects: openSourceProjectsReducer(state.openSourceProjects, action),
+        socialMedia: socialMediaReducer(state.socialMedia, action)
     }
 }
 
@@ -31,4 +32,16 @@ export const openSourceProjectsReducer = (openSourceProjectsState, action) => {
     }
 
     return openSourceProjects;
+}
+
+export const socialMediaReducer = (socialMediaState, action) => {
+    let socialMedia = Object.assign([], socialMediaState);
+
+    switch (action.type) {
+        case SET_SOCIAL_MEDIA:
+            socialMedia = action.socialMedia;
+            break;
+    }
+    
+    return socialMedia;
 }

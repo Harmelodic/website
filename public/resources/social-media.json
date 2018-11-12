@@ -1,0 +1,37 @@
+[
+    {
+        "href": "https://twitter.com/Harmelodic",
+        "title": "Twitter (Personal)",
+        "src": "/images/social-media/twitter-personal.svg"
+    },
+    {
+        "href": "https://twitter.com/MSmithDeveloper",
+        "title": "Twitter (Work)",
+        "src": "/images/social-media/twitter-work.svg"
+    },
+    {
+        "href": "http://scribbes.harmelodic.com",
+        "title": "Scribbles",
+        "src": "/images/social-media/scribbles.svg"
+    },
+    {
+        "href": "https://instagram.com/Harmelodic",
+        "title": "Instagram",
+        "src": "/images/social-media/instagram.svg"
+    },
+    {
+        "href": "https://youtube.com/Harmelodic",
+        "title": "YouTube",
+        "src": "/images/social-media/youtube.svg"
+    },
+    {
+        "href": "https://keybase.io/harmelodic",
+        "title": "Keybase",
+        "src": "/images/social-media/keybase.svg"
+    },
+    {
+        "href": "https://www.linkedin.com/in/harmelodic/",
+        "title": "LinkedIn",
+        "src": "/images/social-media/linkedin.svg"
+    }
+]
