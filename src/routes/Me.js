@@ -22,16 +22,15 @@ const PatreonButton = styled.a`
     display: block;
     width: 250px;
     height: 59px;
-    box-shadow: none;
     margin: 10px auto 0 auto;
-    background: url('/images/become_a_patron_button@2x.png');
+    background-color: #fff;
+    background-image: url('/images/become_a_patron_button@2x.png');
     background-size: contain;
     background-repeat: no-repeat;
-    transition: 200ms box-shadow;
+    transition: 200ms opacity;
 
     &:hover {
-        box-shadow: 0 1px 3px 0px rgb(5, 45, 73);
-        box-shadow-top: none;
+        opacity: 0.8;
     }
 `
 

@@ -2,36 +2,36 @@
     {
         "title": "ASPC",
         "href": "https://gitlab.com/Harmelodic/aspc",
-        "src": "https://assets.gitlab-static.net/uploads/-/system/project/avatar/8356986/ASPC.png"
+        "src": "/images/open-source/ASPC.png"
     },
     {
         "title": "bp-backend",
         "href": "https://gitlab.com/Harmelodic/bp-backend",
-        "src": "https://assets.gitlab-static.net/uploads/-/system/project/avatar/8303214/bp-backend.png"
+        "src": "/images/open-source/bp-backend.png"
     },
     {
         "title": "bp-frontend",
         "href": "https://gitlab.com/Harmelodic/bp-frontend",
-        "src": "https://assets.gitlab-static.net/uploads/-/system/project/avatar/6508849/bp-frontend.png"
+        "src": "/images/open-source/bp-frontend.png"
     },
     {
         "title": "Chrome Theme: Minimal Grey",
         "href": "https://gitlab.com/Harmelodic/chrome-theme-minimal-grey",
-        "src": "https://assets.gitlab-static.net/uploads/-/system/project/avatar/8356913/128.png"
+        "src": "/images/open-source/Chrome-Theme-Minimal-Grey.png"
     },
     {
         "title": "dots",
         "href": "https://gitlab.com/Harmelodic/dots",
-        "src": "https://assets.gitlab-static.net/uploads/-/system/project/avatar/8280293/BoredKitty.png"
+        "src": "/images/open-source/dots.png"
     },
     {
         "title": "imdb",
         "href": "https://gitlab.com/Harmelodic/imdb",
-        "src": "https://assets.gitlab-static.net/uploads/-/system/project/avatar/8356887/imdb-simple.png"
+        "src": "/images/open-source/imdb.png"
     },
     {
         "title": "tdash",
         "href": "https://gitlab.com/Harmelodic/tdash",
-        "src": "https://assets.gitlab-static.net/uploads/-/system/project/avatar/5642665/tdash.png"
+        "src": "/images/open-source/tdash.png"
     }
 ]
