@@ -48,11 +48,16 @@ export default class Me extends React.Component {
                     </Info>
                     <Info>
                         <InfoTitle>Social Media</InfoTitle>
+                        {/* 
+                            Blog
+                            Twitter Personal
+                            Twitter Work
+                            Instagram
+                            YouTube
+                            Keybase
+                            LinkedIn
+                        */}
                     </Info>
-                    {/* 
-                        Social Media Links
-                        Blog Link
-                    */}
                 </StyledFadeInDiv>
             </div>
         )
