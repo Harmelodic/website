@@ -6,15 +6,14 @@ import Projects from "../routes/Projects";
 import OpenSource from "../routes/OpenSource";
 import Me from "../routes/Me";
 
-const StyledAppBottomSpace = styled.div`
-    width: 100%;
-    height: 50vh;
+const StyledApp = styled.div`
+    margin-bottom: 50vh;
 `
 
 export default class App extends React.Component {
     render() {
         return (
-            <div>
+            <StyledApp>
                 <Header />
                 <Switch>
                     <Redirect exact from="/" to="/projects" />
@@ -22,8 +21,7 @@ export default class App extends React.Component {
                     <Route path="/open-source" component={OpenSource} />
                     <Route path="/me" component={Me} />
                 </Switch>
-                <StyledAppBottomSpace />
-            </div>
+            </StyledApp>
         )
     }
 }
