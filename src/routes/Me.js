@@ -2,9 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import Menu from "../components/Menu";
 import { StyledFadeInDiv } from "../components/Stylings";
+import SocialMedia from "../components/SocialMedia";
 
 const Info = styled.div`
-    max-width: 600px;
+    max-width: 800px;
     margin: 40px auto;
     font-size: 18px;
     color: #000;
@@ -34,6 +35,13 @@ const PatreonButton = styled.a`
     }
 `
 
+const StyledSocialMediaLinks = styled.div`
+    min-width: 300px;
+    display: block;
+    margin: 0 auto;
+    white-space: normal;
+`
+
 export default class Me extends React.Component {
     render() {
         return (
@@ -54,15 +62,15 @@ export default class Me extends React.Component {
                     </Info>
                     <Info>
                         <InfoTitle>Social Media</InfoTitle>
-                        {/* 
-                            Blog
-                            Twitter Personal
-                            Twitter Work
-                            Instagram
-                            YouTube
-                            Keybase
-                            LinkedIn
-                        */}
+                        <StyledSocialMediaLinks>
+                            <SocialMedia href="https://twitter.com/Harmelodic" title="Twitter (Personal)"></SocialMedia>
+                            <SocialMedia href="https://twitter.com/MSmithDeveloper" title="Twitter (Work)"></SocialMedia>
+                            <SocialMedia href="http://scribbes.harmelodic.com" title="Scribbles"></SocialMedia>
+                            <SocialMedia href="https://instagram.com/Harmelodic" title="Instagram"></SocialMedia>
+                            <SocialMedia href="https://youtube.com/Harmelodic" title="YouTube"></SocialMedia>
+                            <SocialMedia href="https://keybase.io/harmelodic" title="Keybase"></SocialMedia>
+                            <SocialMedia href="https://www.linkedin.com/in/harmelodic/" title="LinkedIn"></SocialMedia>
+                        </StyledSocialMediaLinks>
                     </Info>
                 </StyledFadeInDiv>
             </div>
