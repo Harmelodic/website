@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Menu from "../components/Menu";
 import { StyledFadeInDiv } from "../components/Stylings";
+import PatreonButton from "../components/PatreonButton";
 import SocialMedia from "../components/SocialMedia";
 
 const Info = styled.div`
@@ -19,21 +20,6 @@ const InfoTitle = styled.div`
     text-decoration: underline;
 `
 
-const PatreonButton = styled.a`
-    display: block;
-    width: 250px;
-    height: 59px;
-    margin: 10px auto 0 auto;
-    background-color: #fff;
-    background-image: url('/images/become_a_patron_button@2x.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    transition: 200ms opacity;
-
-    &:hover {
-        opacity: 0.8;
-    }
-`
 
 const StyledSocialMediaLinks = styled.div`
     min-width: 300px;
@@ -58,7 +44,7 @@ export default class Me extends React.Component {
                     </Info>
                     <Info>
                         <InfoTitle>Support Me</InfoTitle>
-                        <PatreonButton href="https://patreon.com/Harmelodic" target="_blank"></PatreonButton>
+                        <PatreonButton />
                     </Info>
                     <Info>
                         <InfoTitle>Social Media</InfoTitle>
