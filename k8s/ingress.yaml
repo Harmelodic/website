@@ -9,14 +9,7 @@ metadata:
     kubernetes.io/ingress.class: "nginx"
 spec:
   rules:
-  - host: flavour101.com
-    http:
-      paths:
-        - path: /
-          backend:
-            serviceName: main
-            servicePort: 80
-  - host: "*.flavour101.com"
+  - host: harmelodic.com
     http:
       paths:
         - path: /
