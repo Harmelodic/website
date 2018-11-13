@@ -9,15 +9,23 @@ const StyledSocialMedia = styled.a`
     text-decoration: none;
     transition: 200ms background;
 
-    background: #f6f6f6;
     &:hover {
+        background: #f3f3f3;
     }
+`
+
+const StyledImage = styled.img`
+    margin: 10px;
+    width: 40px;
+    height: 40px;
 `
 
 export default class SocialMedia extends React.Component {
     render() {
         return (
-            <StyledSocialMedia href={this.props.href} target="_blank"/>
+            <StyledSocialMedia href={this.props.href} target="_blank">
+                <StyledImage src={this.props.src}/>
+            </StyledSocialMedia>
         )
     }
 }

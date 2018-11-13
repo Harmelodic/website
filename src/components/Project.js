@@ -12,7 +12,7 @@ const StyledProject = styled.a`
     transition: background 300ms;
 
     &:hover {
-        background: #f6f6f6;
+        background: #f3f3f3;
         cursor: pointer;
     }
 `

@@ -74,9 +74,10 @@ export default class Me extends React.Component {
                         <InfoTitle>Social Media</InfoTitle>
                         <StyledSocialMediaLinks>
                             {
-                                this.state.socialMedia.map(media => {
+                                this.state.socialMedia.map((media, index) => {
                                     return (
                                         <SocialMedia
+                                            key={index}
                                             href={media.href}
                                             title={media.title}
                                             src={media.src}
