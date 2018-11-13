@@ -16,3 +16,10 @@ spec:
           backend:
             serviceName: main
             servicePort: 80
+  - host: "*.harmelodic.com"
+    http:
+      paths:
+        - path: /
+          backend:
+            serviceName: main
+            servicePort: 80
