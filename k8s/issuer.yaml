@@ -1,0 +1,20 @@
+apiVersion: certmanager.k8s.io/v1alpha1
+kind: Issuer
+metadata:
+  name: letsencrypt-staging
+spec:
+  acme:
+    server: https://acme-staging-v02.api.letsencrypt.org/directory
+    email: {{.DOMAIN_EMAIL}}
+    privateKeySecretRef:
+      name: letsencrypt-staging
+    dns01:
+      providers:
+      - name: route53
+        route53:
+          region: eu-west-1
+          hostedZoneID: {{.HOSTED_ZONE_ID}}
+          accessKeyID: {{.ROUTE53_ACCESS_KEY_ID}}
+          secretAccessKeySecretRef:
+            name: cert-manager-route53
+            key: secret-access-key
