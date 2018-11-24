@@ -28,4 +28,4 @@ spec:
   tls:
   - hosts:
     - "*.harmelodic.com"
-    secretName: tls-staging-cert
+    secretName: tls-staging-cert-wildcard-harmelodic
