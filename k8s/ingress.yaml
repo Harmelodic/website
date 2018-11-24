@@ -26,6 +26,6 @@ spec:
             serviceName: main
             servicePort: 80
   tls:
-  — secretName: tls-staging-cert
-    hosts:
+  - hosts:
     — "*.harmelodic.com"
+    secretName: tls-staging-cert
