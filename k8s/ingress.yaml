@@ -8,7 +8,6 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: "nginx"
     certmanager.k8s.io/issuer: letsencrypt-staging
-    kubernetes.io/tls-acme: “true”
 spec:
   rules:
   - host: harmelodic.com
