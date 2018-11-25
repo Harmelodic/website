@@ -7,12 +7,12 @@
     {
         "title": "bp-backend",
         "href": "https://gitlab.com/Harmelodic/bp-backend",
-        "src": "/images/open-source/bp-backend.png"
+        "src": "/images/open-source/bp-backend.svg"
     },
     {
         "title": "bp-frontend",
         "href": "https://gitlab.com/Harmelodic/bp-frontend",
-        "src": "/images/open-source/bp-frontend.png"
+        "src": "/images/open-source/bp-frontend.svg"
     },
     {
         "title": "Chrome Theme: Minimal Grey",
