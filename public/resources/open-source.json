@@ -17,12 +17,14 @@
     {
         "title": "Chrome Theme: Minimal Grey",
         "href": "https://gitlab.com/Harmelodic/chrome-theme-minimal-grey",
-        "src": "/images/open-source/Chrome-Theme-Minimal-Grey.png"
+        "src": "/images/open-source/Chrome-Theme-Minimal-Grey.svg",
+        "background": "#4e4e4e"
     },
     {
         "title": "dots",
         "href": "https://gitlab.com/Harmelodic/dots",
-        "src": "/images/open-source/dots.png"
+        "src": "/images/open-source/dots.svg",
+        "background": "#ab2e2e"
     },
     {
         "title": "imdb",
