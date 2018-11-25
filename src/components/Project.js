@@ -24,7 +24,7 @@ const StyledProjectImage = styled.div`
     height: 150px;
     border-radius: 100%;
     border: solid 1px #000;
-    background-color: #fff;
+    background-color: ${props => props.background ? props.background : "#fff"};
     background-image: url('${props => props.src}');
     background-size: contain;
     background-repeat: no-repeat;
@@ -53,7 +53,11 @@ export default class Project extends React.Component {
             <StyledProject href={this.props.href} target="_blank">
                 {
                     this.props.src ?
-                        <StyledProjectImage src={this.props.src} alt="project-image"></StyledProjectImage>
+                        <StyledProjectImage 
+                            src={this.props.src} 
+                            alt="project-image"
+                            background={this.props.background}
+                        />
                     :
                         <StyledProjectImage>No Logo</StyledProjectImage>
                 }

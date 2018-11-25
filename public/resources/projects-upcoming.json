@@ -8,7 +8,8 @@
     {
         "title": "Vyllian",
         "subtitle": "Tech Company",
-        "src": "https://gitlab.com/uploads/-/system/group/avatar/3962894/Logo_-_GitLab.png",
+        "src": "/images/projects/vyllian.svg",
+        "background": "#000",
         "href": "http://vyllian.com"
     }
 ]
