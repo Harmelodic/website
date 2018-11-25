@@ -1,8 +1,8 @@
 [
     {
-        "title": "ASPC",
+        "title": "aspc",
         "href": "https://gitlab.com/Harmelodic/aspc",
-        "src": "/images/open-source/ASPC.png"
+        "src": "/images/open-source/aspc.svg"
     },
     {
         "title": "bp-backend",
