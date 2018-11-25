@@ -29,11 +29,11 @@
     {
         "title": "imdb",
         "href": "https://gitlab.com/Harmelodic/imdb",
-        "src": "/images/open-source/imdb.png"
+        "src": "/images/open-source/imdb.svg"
     },
     {
         "title": "tdash",
         "href": "https://gitlab.com/Harmelodic/tdash",
-        "src": "/images/open-source/tdash.png"
+        "src": "/images/open-source/tdash.svg"
     }
 ]
