@@ -66,7 +66,8 @@ export default class Me extends React.Component {
                         <InfoTitle>Alias</InfoTitle>
                         Harmelodic
                     </Info>
-                    <Info>
+                    {/* TODO: Finish Patreon */}
+                    <Info style={{display: "none"}}> 
                         <InfoTitle>Support Me</InfoTitle>
                         <PatreonButton />
                     </Info>
