@@ -1,0 +1,3 @@
+Contact: https://keybase.io/harmelodic
+Encryption: https://keybase.io/harmelodic/pgp_keys.asc
+Preferred-Languages: en
