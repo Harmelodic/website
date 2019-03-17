@@ -39,6 +39,6 @@ deploy-dev:
     entrypoint: ["/bin/bash", "-c"]
   script:
   - echo "${KUBE_SERVER}"
-  - KUBE_NAMESPACE=default IMAGE_TAG="${CI_REGISTRY_IMAGE}:${CI_COMMIT_SHA}" kd --insecure-skip-tls-verify --timeout=5m0s -f ${CI_PROJECT_DIR}/k8s
+  - KUBE_NAMESPACE=harmelodic IMAGE_TAG="${CI_REGISTRY_IMAGE}:${CI_COMMIT_SHA}" kd --insecure-skip-tls-verify --timeout=5m0s -f ${CI_PROJECT_DIR}/k8s
   only:
   - master
