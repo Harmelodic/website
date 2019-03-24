@@ -23,7 +23,7 @@ const StyledImage = styled.img`
 export default class SocialMedia extends React.Component {
     render() {
         return (
-            <StyledSocialMedia href={this.props.href} target="_blank">
+            <StyledSocialMedia href={this.props.href} target="_blank" rel="me">
                 <StyledImage src={this.props.src}/>
             </StyledSocialMedia>
         )
