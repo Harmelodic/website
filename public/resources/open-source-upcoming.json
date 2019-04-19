@@ -3,5 +3,10 @@
         "title": "Chorus",
         "href": "https://gitlab.com/Chorus",
         "src": "/images/open-source/Chorus.svg"
+    },
+    {
+        "title": "react-ui-lib",
+        "href": "https://gitlab.com/harmelodic/react-ui-lib",
+        "src": "/images/open-source/react-ui-lib.svg"
     }
 ]
