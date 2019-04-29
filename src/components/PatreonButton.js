@@ -25,7 +25,7 @@ const StyledButton = styled.div`
 export default class PatreonButton extends React.Component {
     render() {
         return (
-            <StyledWrapper href="https://patreon.com/Harmelodic" target="_blank">
+            <StyledWrapper href="https://www.patreon.com/harmelodic" target="_blank">
                 <StyledButton />
             </StyledWrapper>
         )
