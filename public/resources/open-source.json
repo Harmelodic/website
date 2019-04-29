@@ -5,6 +5,11 @@
         "src": "/images/open-source/aspc.svg"
     },
     {
+        "title": ".atom (config)",
+        "href": "https://github.com/Harmelodic/.atom",
+        "src": "/images/open-source/atom.svg"
+    },
+    {
         "title": "bp-backend",
         "href": "https://gitlab.com/Harmelodic/bp-backend",
         "src": "/images/open-source/bp-backend.svg"
