@@ -1,8 +1,21 @@
 [
     {
+        "title": "Ceramic Pillow",
+        "subtitle": "Coming Soon",
+        "src": "",
+        "href": "http://ceramicpillow.com"
+    },
+    {
         "title": "Flavour 101",
         "subtitle": "Food Blog",
         "src": "/images/projects/flavour101.svg",
         "href": "http://flavour101.com"
+    },
+    {
+        "title": "Vyllian",
+        "subtitle": "Coming Soon",
+        "src": "/images/projects/vyllian.svg",
+        "background": "#000",
+        "href": "http://vyllian.com"
     }
 ]

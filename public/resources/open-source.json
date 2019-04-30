@@ -25,6 +25,12 @@
         "src": "/images/open-source/bp-frontend.svg"
     },
     {
+        "title": "Chorus",
+        "subtitle": "Coming Soon",
+        "href": "https://gitlab.com/Chorus",
+        "src": "/images/open-source/Chorus.svg"
+    },
+    {
         "title": "Chrome Theme: Minimal Grey",
         "href": "https://gitlab.com/Harmelodic/chrome-theme-minimal-grey",
         "src": "/images/open-source/Chrome-Theme-Minimal-Grey.svg",
@@ -40,6 +46,11 @@
         "title": "imdb",
         "href": "https://gitlab.com/Harmelodic/imdb",
         "src": "/images/open-source/imdb.svg"
+    },
+    {
+        "title": "react-ui-lib",
+        "href": "https://gitlab.com/harmelodic/react-ui-lib",
+        "src": ""
     },
     {
         "title": "tdash",

@@ -55,6 +55,7 @@ export default class OpenSource extends React.Component {
                                             src={project.src}
                                             background={project.background}
                                             title={project.title}
+                                            subtitle={project.subtitle}
                                             href={project.href}
                                         />
                                     )
