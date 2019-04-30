@@ -1,13 +1,18 @@
-[
-    {
-        "title": "aspc",
-        "href": "https://gitlab.com/Harmelodic/aspc",
-        "src": "/images/open-source/aspc.svg"
-    },
+[    
     {
         "title": ".atom (config)",
         "href": "https://github.com/Harmelodic/.atom",
         "src": "/images/open-source/atom.svg"
+    },
+    {
+        "title": ".code (config)",
+        "href": "https://github.com/Harmelodic/.code",
+        "src": "/images/open-source/vscode.svg"
+    },
+    {
+        "title": "aspc",
+        "href": "https://gitlab.com/Harmelodic/aspc",
+        "src": "/images/open-source/aspc.svg"
     },
     {
         "title": "bp-backend",
