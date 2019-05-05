@@ -43,14 +43,30 @@
         "background": "#ab2e2e"
     },
     {
+        "title": "Flavour 101",
+        "href": "https://gitlab.com/flavour101",
+        "src" : "/images/open-source/flavour101.svg"
+    },
+    {
         "title": "imdb",
         "href": "https://gitlab.com/Harmelodic/imdb",
         "src": "/images/open-source/imdb.svg"
     },
     {
+        "title": "main",
+        "href": "https://gitlab.com/Harmelodic/main",
+        "src": "/images/open-source/main.svg",
+        "background": "#000000"
+    },
+    {
         "title": "react-ui-lib",
         "href": "https://gitlab.com/harmelodic/react-ui-lib",
         "src": ""
+    },
+    {
+        "title": "scribbles",
+        "href": "https://gitlab.com/Harmelodic/scribbles",
+        "src": "/images/open-source/scribbles.svg"
     },
     {
         "title": "tdash",
