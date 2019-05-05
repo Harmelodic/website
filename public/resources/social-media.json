@@ -2,26 +2,26 @@
     {
         "href": "https://twitter.com/Harmelodic",
         "title": "Twitter (Personal)",
-        "src": "/images/social-media/twitter.svg"
+        "src": "/images/twitter.svg"
     },
     {
         "href": "https://instagram.com/Harmelodic",
         "title": "Instagram",
-        "src": "/images/social-media/instagram.svg"
+        "src": "/images/instagram.svg"
     },
     {
         "href": "https://youtube.com/Harmelodic",
         "title": "YouTube",
-        "src": "/images/social-media/youtube.svg"
+        "src": "/images/youtube.svg"
     },
     {
         "href": "https://keybase.io/harmelodic",
         "title": "Keybase",
-        "src": "/images/social-media/keybase.svg"
+        "src": "/images/keybase.svg"
     },
     {
         "href": "https://www.linkedin.com/in/harmelodic/",
         "title": "LinkedIn",
-        "src": "/images/social-media/linkedin.svg"
+        "src": "/images/linkedin.svg"
     }
 ]

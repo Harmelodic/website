@@ -2,60 +2,70 @@
     {
         "title": ".atom (config)",
         "href": "https://github.com/Harmelodic/.atom",
-        "src": "/images/open-source/atom.svg"
+        "src": "/images/atom.svg"
     },
     {
         "title": ".code (config)",
         "href": "https://github.com/Harmelodic/.code",
-        "src": "/images/open-source/vscode.svg"
+        "src": "/images/vscode.svg"
+    },
+    {
+        "title": "Acorn The Union",
+        "href": "https://gitlab.com/acornunion",
+        "src": "/images/acorn.svg"
     },
     {
         "title": "aspc",
         "href": "https://gitlab.com/Harmelodic/aspc",
-        "src": "/images/open-source/aspc.svg"
+        "src": "/images/aspc.svg"
     },
     {
         "title": "bp-backend",
         "href": "https://gitlab.com/Harmelodic/bp-backend",
-        "src": "/images/open-source/bp-backend.svg"
+        "src": "/images/bp-backend.svg"
     },
     {
         "title": "bp-frontend",
         "href": "https://gitlab.com/Harmelodic/bp-frontend",
-        "src": "/images/open-source/bp-frontend.svg"
+        "src": "/images/bp-frontend.svg"
+    },
+    {
+        "title": "cap-osce",
+        "href": "https://gitlab.com/cap-osce",
+        "src": "/images/cap-osce.svg"
     },
     {
         "title": "Chorus",
         "subtitle": "Coming Soon",
         "href": "https://gitlab.com/Chorus",
-        "src": "/images/open-source/Chorus.svg"
+        "src": "/images/Chorus.svg"
     },
     {
         "title": "Chrome Theme: Minimal Grey",
         "href": "https://gitlab.com/Harmelodic/chrome-theme-minimal-grey",
-        "src": "/images/open-source/Chrome-Theme-Minimal-Grey.svg",
+        "src": "/images/Chrome-Theme-Minimal-Grey.svg",
         "background": "#4e4e4e"
     },
     {
         "title": "dots",
         "href": "https://gitlab.com/Harmelodic/dots",
-        "src": "/images/open-source/dots.svg",
+        "src": "/images/dots.svg",
         "background": "#ab2e2e"
     },
     {
         "title": "Flavour 101",
         "href": "https://gitlab.com/flavour101",
-        "src" : "/images/open-source/flavour101.svg"
+        "src" : "/images/flavour101.svg"
     },
     {
         "title": "imdb",
         "href": "https://gitlab.com/Harmelodic/imdb",
-        "src": "/images/open-source/imdb.svg"
+        "src": "/images/imdb.svg"
     },
     {
         "title": "main",
         "href": "https://gitlab.com/Harmelodic/main",
-        "src": "/images/open-source/main.svg",
+        "src": "/images/main.svg",
         "background": "#000000"
     },
     {
@@ -66,11 +76,29 @@
     {
         "title": "scribbles",
         "href": "https://gitlab.com/Harmelodic/scribbles",
-        "src": "/images/open-source/scribbles.svg"
+        "src": "/images/scribbles.svg"
+    },
+    {
+        "title": "stackchat.github.io",
+        "src": "",
+        "href": "https://github.com/StackChat/stackchat.github.io"
     },
     {
         "title": "tdash",
         "href": "https://gitlab.com/Harmelodic/tdash",
-        "src": "/images/open-source/tdash.svg"
+        "src": "/images/tdash.svg"
+    },
+    {
+        "title": "teres",
+        "href": "https://gitlab.com/teres",
+        "src": "",
+        "subtitle": "Coming Soon"
+    },
+    {
+        "title": "Vyllian",
+        "href": "https://gitlab.com/vyllian",
+        "src": "/images/vyllian.svg",
+        "background": "#000",
+        "subtitle": "Coming Soon"
     }
 ]

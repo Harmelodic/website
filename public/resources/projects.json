@@ -8,19 +8,32 @@
     {
         "title": "Flavour 101",
         "subtitle": "Food Blog",
-        "src": "/images/projects/flavour101.svg",
+        "src": "/images/flavour101.svg",
         "href": "http://flavour101.com"
     },
     {
         "title": "Scribbles",
         "subtitle": "Personal Blog",
-        "src": "/images/projects/scribbles.svg",
+        "src": "/images/scribbles.svg",
         "href": "https://scribbles.harmelodic.com"
+    },
+    {
+        "title": "pos.sible",
+        "subtitle": "Coming Soon",
+        "src": "/images/pos.sible.svg",
+        "background": "#473d3b",
+        "href": "http://pos.sible.co"
+    },
+    {
+        "title": "StackChat",
+        "subtitle": "Podcast",
+        "src": "",
+        "href": "https://stackchat.github.io"
     },
     {
         "title": "Vyllian",
         "subtitle": "Coming Soon",
-        "src": "/images/projects/vyllian.svg",
+        "src": "/images/vyllian.svg",
         "background": "#000",
         "href": "http://vyllian.com"
     }
