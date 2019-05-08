@@ -58,9 +58,9 @@
         "src" : "/images/flavour101.svg"
     },
     {
-        "title": "imdb",
-        "href": "https://gitlab.com/Harmelodic/imdb",
-        "src": "/images/imdb.svg"
+        "title": "imdb-util",
+        "href": "https://gitlab.com/Harmelodic/imdb-util",
+        "src": "/images/imdb-util.svg"
     },
     {
         "title": "main",
