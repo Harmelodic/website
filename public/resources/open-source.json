@@ -58,6 +58,11 @@
         "src" : "/images/flavour101.svg"
     },
     {
+        "title": "glgc",
+        "href": "https://gitlab.com/Harmelodic/glgc",
+        "src": "/images/glgc.svg"
+    },
+    {
         "title": "imdb-util",
         "href": "https://gitlab.com/Harmelodic/imdb-util",
         "src": "/images/imdb-util.svg"
@@ -80,8 +85,8 @@
     },
     {
         "title": "stackchat.github.io",
-        "src": "",
-        "href": "https://github.com/StackChat/stackchat.github.io"
+        "href": "https://github.com/StackChat/stackchat.github.io",
+        "src": ""
     },
     {
         "title": "tdash",
