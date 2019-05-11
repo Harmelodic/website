@@ -58,11 +58,6 @@
         "src" : "/images/flavour101.svg"
     },
     {
-        "title": "glgc",
-        "href": "https://gitlab.com/Harmelodic/glgc",
-        "src": "/images/glgc.svg"
-    },
-    {
         "title": "imdb-util",
         "href": "https://gitlab.com/Harmelodic/imdb-util",
         "src": "/images/imdb-util.svg"
