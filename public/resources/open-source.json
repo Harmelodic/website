@@ -15,11 +15,6 @@
         "src": "/images/acorn.svg"
     },
     {
-        "title": "aspc",
-        "href": "https://gitlab.com/Harmelodic/aspc",
-        "src": "/images/aspc.svg"
-    },
-    {
         "title": "bp-backend",
         "href": "https://gitlab.com/Harmelodic/bp-backend",
         "src": "/images/bp-backend.svg"
