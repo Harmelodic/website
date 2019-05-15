@@ -58,6 +58,11 @@
         "src": "/images/imdb-util.svg"
     },
     {
+        "title": "interfaces",
+        "href": "https://gitlab.com/Harmelodic/interfaces",
+        "src": "/images/interfaces.svg"
+    },
+    {
         "title": "main",
         "href": "https://gitlab.com/Harmelodic/main",
         "src": "/images/main.svg",
