@@ -12,10 +12,10 @@
         "href": "http://flavour101.com"
     },
     {
-        "title": "Scribbles",
-        "subtitle": "Personal Blog",
-        "src": "/images/scribbles.svg",
-        "href": "https://scribbles.harmelodic.com"
+        "title": "interfaces",
+        "subtitle": "npm package (Node.js)",
+        "src": "/images/interfaces.svg",
+        "href": "https://www.npmjs.com/package/@harmelodic/interfaces"
     },
     {
         "title": "Pos.sible",
@@ -23,6 +23,18 @@
         "src": "/images/pos.sible.svg",
         "background": "#473d3b",
         "href": "http://pos.sible.co"
+    },
+    {
+        "title": "react-ui-lib",
+        "subtitle": "npm package (Browser)",
+        "src": "/images/react-ui-lib.svg",
+        "href": "https://www.npmjs.com/package/@harmelodic/react-ui-lib"
+    },
+    {
+        "title": "Scribbles",
+        "subtitle": "Personal Blog",
+        "src": "/images/scribbles.svg",
+        "href": "https://scribbles.harmelodic.com"
     },
     {
         "title": "StackChat",
