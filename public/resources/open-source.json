@@ -25,6 +25,11 @@
         "src": "/images/bp-frontend.svg"
     },
     {
+        "title": "bp-mobile",
+        "href": "https://gitlab.com/Harmelodic/bp-mobile",
+        "src": "/images/bp-mobile.svg"
+    },
+    {
         "title": "cap-osce",
         "href": "https://gitlab.com/cap-osce",
         "src": "/images/cap-osce.svg"
