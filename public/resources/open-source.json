@@ -11,6 +11,7 @@
     },
     {
         "title": "ACORN The Union",
+        "subtitle": "Contributor",
         "href": "https://gitlab.com/acornunion",
         "src": "/images/acorn.svg"
     },
@@ -31,6 +32,7 @@
     },
     {
         "title": "cap-osce",
+        "subtitle": "Contributor",
         "href": "https://gitlab.com/cap-osce",
         "src": "/images/cap-osce.svg"
     },
