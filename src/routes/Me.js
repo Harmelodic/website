@@ -6,6 +6,7 @@ import PatreonButton from "../components/PatreonButton";
 import SocialMedia from "../components/SocialMedia";
 import { Store } from "../redux/Store";
 import Middleware from "../redux/Middleware";
+import CircleImage from "../components/CircleImage";
 
 const Info = styled.div`
     max-width: 800px;
@@ -58,6 +59,9 @@ export default class Me extends React.Component {
             <div>
                 <Menu me={true} />
                 <StyledFadeInDiv>
+                    <Info>
+                        <CircleImage src="/images/headshot.jpg" />
+                    </Info>
                     <Info>
                         <InfoTitle>Name</InfoTitle>
                         Matt Smith
