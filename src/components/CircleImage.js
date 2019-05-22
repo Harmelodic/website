@@ -7,6 +7,7 @@ const StyledProjectImage = styled.div`
     height: 200px;
     border-radius: 100%;
     border: solid 1px #000;
+    background-color: #000;
     background-image: url('${props => props.src}');
     background-size: contain;
     background-repeat: no-repeat;
