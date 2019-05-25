@@ -91,6 +91,16 @@ export default class Me extends React.Component {
                             }
                         </StyledSocialMediaLinks>
                     </Info>
+                    <Info>
+                        <InfoTitle>Contact</InfoTitle>
+                        <StyledSocialMediaLinks>
+                            <SocialMedia
+                                href="mailto:matt@harmelodic.com"
+                                title="Email"
+                                src="/images/mail.svg"
+                            />
+                        </StyledSocialMediaLinks>
+                    </Info>
                 </StyledFadeInDiv>
             </div>
         )

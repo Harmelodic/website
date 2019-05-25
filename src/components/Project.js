@@ -25,12 +25,10 @@ const StyledProjectImage = styled.div`
     border-radius: 100%;
     border: solid 1px #000;
     background-color: ${props => props.background ? props.background : "#fff"};
-    background-image: url('${props => props.src}');
+    background-image: url('${props => props.src ? props.src : "/images/NoLogo.svg"}');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    font-size: 20px;
-    line-height: 150px;
 `
 
 const StyledProjectText = styled.div`
@@ -51,16 +49,11 @@ export default class Project extends React.Component {
     render() {
         return (
             <StyledProject href={this.props.href} target="_blank">
-                {
-                    this.props.src ?
-                        <StyledProjectImage 
-                            src={this.props.src} 
-                            alt="project-image"
-                            background={this.props.background}
-                        />
-                    :
-                        <StyledProjectImage>No Logo</StyledProjectImage>
-                }
+                <StyledProjectImage 
+                    src={this.props.src} 
+                    alt="project-image"
+                    background={this.props.background}
+                />
                 <StyledProjectText>
                     {this.props.title}
                     {this.props.subtitle && <StyledSubtitle>{this.props.subtitle}</StyledSubtitle>}
