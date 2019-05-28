@@ -66,7 +66,7 @@
     },
     {
         "title": "interfaces",
-        "href": "https://gitlab.com/Harmelodic/interfaces",
+        "href": "https://www.npmjs.com/package/@harmelodic/interfaces",
         "src": "/images/interfaces.svg"
     },
     {
@@ -77,7 +77,7 @@
     },
     {
         "title": "react-ui-lib",
-        "href": "https://gitlab.com/harmelodic/react-ui-lib",
+        "href": "https://www.npmjs.com/package/@harmelodic/react-ui-lib",
         "src": "/images/react-ui-lib.svg"
     },
     {
