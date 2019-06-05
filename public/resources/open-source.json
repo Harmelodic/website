@@ -102,7 +102,8 @@
         "title": "stackchat.github.io",
         "subtitle": "Podcast Website",
         "href": "https://github.com/StackChat/stackchat.github.io",
-        "src": ""
+        "src": "/images/stackchat.svg",
+        "background": "#ff024a"
     },
     {
         "title": "tdash",

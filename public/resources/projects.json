@@ -25,9 +25,10 @@
         "href": "https://scribbles.harmelodic.com"
     },
     {
-        "title": "StackChat",
+        "title": "Stackchat",
         "subtitle": "Podcast",
-        "src": "",
+        "src": "/images/stackchat.svg",
+        "background": "#ff024a",
         "href": "https://stackchat.github.io"
     },
     {
