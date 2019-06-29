@@ -1,127 +1,133 @@
 [    
-    {
-        "title": ".atom",
-        "subtitle": "Atom Config",
-        "href": "https://github.com/Harmelodic/.atom",
-        "src": "/images/atom.svg"
-    },
-    {
-        "title": ".code",
-        "subtitle": "VSCode Config",
-        "href": "https://github.com/Harmelodic/.code",
-        "src": "/images/vscode.svg"
-    },
-    {
-        "title": "ACORN The Union",
-        "subtitle": "Housing Union",
-        "href": "https://gitlab.com/acornunion",
-        "src": "/images/acorn.svg"
-    },
-    {
-        "title": "bp-backend",
-        "subtitle": "Backend Boilerplate Generator",
-        "href": "https://gitlab.com/Harmelodic/bp-backend",
-        "src": "/images/bp-backend.svg"
-    },
-    {
-        "title": "bp-frontend",
-        "subtitle": "Frontend Boilerplate Generator",
-        "href": "https://gitlab.com/Harmelodic/bp-frontend",
-        "src": "/images/bp-frontend.svg"
-    },
-    {
-        "title": "bp-mobile",
-        "subtitle": "Mobile Boilerplate Generator",
-        "href": "https://gitlab.com/Harmelodic/bp-mobile",
-        "src": "/images/bp-mobile.svg"
-    },
-    {
-        "title": "cap-osce",
-        "subtitle": "Capgemini OSCE Team",
-        "href": "https://gitlab.com/cap-osce",
-        "src": "/images/cap-osce.svg"
-    },
-    {
-        "title": "Chorus",
-        "subtitle": "Coming Soon",
-        "href": "https://gitlab.com/Chorus",
-        "src": "/images/Chorus.svg"
-    },
-    {
-        "title": "Minimal Grey",
-        "subtitle": "Chrome Theme",
-        "href": "https://gitlab.com/Harmelodic/chrome-theme-minimal-grey",
-        "src": "/images/Chrome-Theme-Minimal-Grey.svg",
-        "background": "#4e4e4e"
-    },
-    {
-        "title": "dots",
-        "subtitle": "Unix Config Files & Commands",
-        "href": "https://gitlab.com/Harmelodic/dots",
-        "src": "/images/dots.svg",
-        "background": "#ab2e2e"
-    },
-    {
-        "title": "Flavour 101",
-        "subtitle": "Food Blog",
-        "href": "https://gitlab.com/flavour101",
-        "src" : "/images/flavour101.svg"
-    },
-    {
-        "title": "imdb-util",
-        "subtitle": "IMDb Search Scripts",
-        "href": "https://gitlab.com/Harmelodic/imdb-util",
-        "src": "/images/imdb-util.svg"
-    },
-    {
-        "title": "interfaces",
-        "subtitle": "npm package (Node.js)",
-        "href": "https://www.npmjs.com/package/@harmelodic/interfaces",
-        "src": "/images/interfaces.svg"
-    },
-    {
-        "title": "main",
-        "subtitle": "Harmelodic Website",
-        "href": "https://gitlab.com/Harmelodic/main",
-        "src": "/images/main.svg",
-        "background": "#000000"
-    },
-    {
-        "title": "react-ui-lib",
-        "subtitle": "npm package (Browser)",
-        "href": "https://www.npmjs.com/package/@harmelodic/react-ui-lib",
-        "src": "/images/react-ui-lib.svg"
-    },
-    {
-        "title": "scribbles",
-        "subtitle": "Personal Blog",
-        "href": "https://gitlab.com/Harmelodic/scribbles",
-        "src": "/images/scribbles.svg"
-    },
-    {
-        "title": "stackchat.github.io",
-        "subtitle": "Podcast Website",
-        "href": "https://github.com/StackChat/stackchat.github.io",
-        "src": "/images/stackchat.svg",
-        "background": "#ff024a"
-    },
-    {
-        "title": "tdash",
-        "subtitle": "Tweetdeck Replacement",
-        "href": "https://gitlab.com/Harmelodic/tdash",
-        "src": "/images/tdash.svg"
-    },
-    {
-        "title": "teres",
-        "subtitle": "Coming Soon",
-        "href": "https://gitlab.com/teres",
-        "src": "/images/teres.svg"
-    },
-    {
-        "title": "Vyllian",
-        "subtitle": "Coming Soon",
-        "href": "https://gitlab.com/vyllian",
-        "src": "/images/vyllian.svg",
-        "background": "#000"
-    }
+  {
+    "title": ".atom",
+    "subtitle": "Atom Config",
+    "href": "https://github.com/Harmelodic/.atom",
+    "src": "/images/atom.svg"
+  },
+  {
+    "title": ".code",
+    "subtitle": "VSCode Config",
+    "href": "https://github.com/Harmelodic/.code",
+    "src": "/images/vscode.svg"
+  },
+  {
+    "title": "ACORN The Union",
+    "subtitle": "Housing Union",
+    "href": "https://gitlab.com/acornunion",
+    "src": "/images/acorn.svg"
+  },
+  {
+    "title": "bp-backend",
+    "subtitle": "Backend Boilerplate Generator",
+    "href": "https://gitlab.com/Harmelodic/bp-backend",
+    "src": "/images/bp-backend.svg"
+  },
+  {
+    "title": "bp-frontend",
+    "subtitle": "Frontend Boilerplate Generator",
+    "href": "https://gitlab.com/Harmelodic/bp-frontend",
+    "src": "/images/bp-frontend.svg"
+  },
+  {
+    "title": "bp-mobile",
+    "subtitle": "Mobile Boilerplate Generator",
+    "href": "https://gitlab.com/Harmelodic/bp-mobile",
+    "src": "/images/bp-mobile.svg"
+  },
+  {
+    "title": "cap-osce",
+    "subtitle": "Capgemini OSCE Team",
+    "href": "https://gitlab.com/cap-osce",
+    "src": "/images/cap-osce.svg"
+  },
+  {
+    "title": "Chorus",
+    "subtitle": "Coming Soon",
+    "href": "https://gitlab.com/Chorus",
+    "src": "/images/Chorus.svg"
+  },
+  {
+    "title": "Minimal Grey",
+    "subtitle": "Chrome Theme",
+    "href": "https://gitlab.com/Harmelodic/chrome-theme-minimal-grey",
+    "src": "/images/Chrome-Theme-Minimal-Grey.svg",
+    "background": "#4e4e4e"
+  },
+  {
+    "title": "dots",
+    "subtitle": "Unix Config Files & Commands",
+    "href": "https://gitlab.com/Harmelodic/dots",
+    "src": "/images/dots.svg",
+    "background": "#ab2e2e"
+  },
+  {
+    "title": "Flavour 101",
+    "subtitle": "Food Blog",
+    "href": "https://gitlab.com/flavour101",
+    "src" : "/images/flavour101.svg"
+  },
+  {
+    "title": "imdb-util",
+    "subtitle": "IMDb Search Scripts",
+    "href": "https://gitlab.com/Harmelodic/imdb-util",
+    "src": "/images/imdb-util.svg"
+  },
+  {
+    "title": "interfaces",
+    "subtitle": "npm package (Node.js)",
+    "href": "https://www.npmjs.com/package/@harmelodic/interfaces",
+    "src": "/images/interfaces.svg"
+  },
+  {
+    "title": "main",
+    "subtitle": "Harmelodic Website",
+    "href": "https://gitlab.com/Harmelodic/main",
+    "src": "/images/main.svg",
+    "background": "#000000"
+  },
+  {
+    "title": "Minotaur",
+    "subtitle": "ALM Monitor",
+    "href": "https://gitlab.com/minotaur-monitor",
+    "src": ""
+  },
+  {
+    "title": "react-ui-lib",
+    "subtitle": "npm package (Browser)",
+    "href": "https://www.npmjs.com/package/@harmelodic/react-ui-lib",
+    "src": "/images/react-ui-lib.svg"
+  },
+  {
+    "title": "scribbles",
+    "subtitle": "Personal Blog",
+    "href": "https://gitlab.com/Harmelodic/scribbles",
+    "src": "/images/scribbles.svg"
+  },
+  {
+    "title": "stackchat.github.io",
+    "subtitle": "Podcast Website",
+    "href": "https://github.com/StackChat/stackchat.github.io",
+    "src": "/images/stackchat.svg",
+    "background": "#ff024a"
+  },
+  {
+    "title": "tdash",
+    "subtitle": "Tweetdeck Replacement",
+    "href": "https://gitlab.com/Harmelodic/tdash",
+    "src": "/images/tdash.svg"
+  },
+  {
+    "title": "teres",
+    "subtitle": "Coming Soon",
+    "href": "https://gitlab.com/teres",
+    "src": "/images/teres.svg"
+  },
+  {
+    "title": "Vyllian",
+    "subtitle": "Coming Soon",
+    "href": "https://gitlab.com/vyllian",
+    "src": "/images/vyllian.svg",
+    "background": "#000"
+  }
 ]
