@@ -18,22 +18,22 @@
     "src": "/images/acorn.svg"
   },
   {
-    "title": "bp-backend",
-    "subtitle": "Backend Boilerplate Generator",
-    "href": "https://gitlab.com/Harmelodic/bp-backend",
-    "src": "/images/bp-backend.svg"
+    "title": "init-backend",
+    "subtitle": "Backend App Generator",
+    "href": "https://gitlab.com/Harmelodic/init-backend",
+    "src": "/images/init-backend.svg"
   },
   {
-    "title": "bp-frontend",
-    "subtitle": "Frontend Boilerplate Generator",
-    "href": "https://gitlab.com/Harmelodic/bp-frontend",
-    "src": "/images/bp-frontend.svg"
+    "title": "init-frontend",
+    "subtitle": "Frontend App Generator",
+    "href": "https://gitlab.com/Harmelodic/init-frontend",
+    "src": "/images/init-frontend.svg"
   },
   {
-    "title": "bp-mobile",
-    "subtitle": "Mobile Boilerplate Generator",
-    "href": "https://gitlab.com/Harmelodic/bp-mobile",
-    "src": "/images/bp-mobile.svg"
+    "title": "init-mobile",
+    "subtitle": "Mobile App Generator",
+    "href": "https://gitlab.com/Harmelodic/init-mobile",
+    "src": "/images/init-mobile.svg"
   },
   {
     "title": "cap-osce",
