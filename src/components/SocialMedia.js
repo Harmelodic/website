@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const StyledSocialMedia = styled.a`
     display: inline-block;
@@ -12,20 +12,25 @@ const StyledSocialMedia = styled.a`
     &:hover {
         background: #f3f3f3;
     }
-`
+`;
 
 const StyledImage = styled.img`
     margin: 10px;
     width: 40px;
     height: 40px;
-`
+`;
 
 export default class SocialMedia extends React.Component {
-    render() {
-        return (
-            <StyledSocialMedia title={this.props.title} href={this.props.href} target={this.props.href.includes("http") ? "_blank" : "_self"} rel="me">
-                <StyledImage src={this.props.src} alt={this.props.title}/>
-            </StyledSocialMedia>
-        )
-    }
+  render() {
+    return (
+      <StyledSocialMedia
+        title={this.props.title}
+        href={this.props.href}
+        target={this.props.href.includes('http') ? '_blank' : '_self'}
+        rel="me"
+      >
+        <StyledImage src={this.props.src} alt={this.props.title}/>
+      </StyledSocialMedia>
+    );
+  }
 }

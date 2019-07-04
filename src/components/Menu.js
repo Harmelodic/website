@@ -1,11 +1,11 @@
-import React from "react";
-import styled from "styled-components";
-import { Link } from "react-router-dom";
+import React from 'react';
+import styled from 'styled-components';
+import {Link} from 'react-router-dom';
 
 const StyledMenu = styled.div`
     height: 60px;
     text-align: center;
-`
+`;
 
 const MenuItem = styled(Link)`
     display: inline-block;
@@ -16,22 +16,26 @@ const MenuItem = styled(Link)`
     font-size: 18px;
     color: #000;
     text-decoration: none;
-    border-bottom: ${props => props.selected ? "solid 1px #000" : "1px"};
+    border-bottom: ${(props) => props.selected ? 'solid 1px #000' : '1px'};
 
     &:hover {
         border-bottom: solid 1px #000;
         cursor: pointer;
     }
-`
+`;
 
 export default class Menu extends React.Component {
-    render() {
-        return (
-            <StyledMenu>
-                <MenuItem to="/projects" selected={this.props.projects}>Projects</MenuItem>
-                <MenuItem to="/open-source" selected={this.props.openSource}>Open-source</MenuItem>
-                <MenuItem to="/me" selected={this.props.me}>Me</MenuItem>
-            </StyledMenu>
-        )
-    }
+  render() {
+    return (
+      <StyledMenu>
+        <MenuItem to="/projects" selected={this.props.projects}>
+          Projects
+        </MenuItem>
+        <MenuItem to="/open-source" selected={this.props.openSource}>
+          Open-source
+        </MenuItem>
+        <MenuItem to="/me" selected={this.props.me}>Me</MenuItem>
+      </StyledMenu>
+    );
+  }
 }

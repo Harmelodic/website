@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const StyledFadeInDiv = styled.div`
     @keyframes complete-fade-in {
@@ -11,12 +11,14 @@ export const StyledFadeInDiv = styled.div`
         }
     }
 
-    animation: complete-fade-in ${props => props.fadeInTime ? props.fadeInTime : "800ms"};
-`
+    animation: 
+      complete-fade-in 
+      ${(props) => props.fadeInTime ? props.fadeInTime : '800ms'};
+`;
 
 export const StyledProjects = styled.div`
     margin: 30px auto 0 auto;
     max-width: 1080px;
     text-align: center;
     white-space: normal;
-`
+`;

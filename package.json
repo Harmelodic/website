@@ -1,52 +1,57 @@
 {
-    "name": "main",
-    "version": "1.0.0",
-    "description": "The main Harmelodic website",
-    "main": "public/index.html",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "webpack-dev-server --inline --history-api-fallback --content-base ./public/ --hot --config webpack.dev.js",
-        "start:prod": "webpack-dev-server --inline --history-api-fallback --content-base ./public/ --hot --compress --config webpack.prod.js",
-        "build": "webpack --config webpack.prod.js",
-        "docker:build": "docker build -t $npm_package_name:latest .",
-        "docker:run": "docker run --name $npm_package_name -d -p 8080:80 $npm_package_name:latest",
-        "docker": "npm run build && npm run docker:build && npm run docker:run",
-        "docker:destroy": "docker stop $npm_package_name && docker rm $npm_package_name && docker rmi $npm_package_name"
-    },
-    "author": "Harmelodic",
-    "devDependencies": {
-        "@babel/core": "^7.4.3",
-        "@babel/preset-react": "^7.0.0",
-        "babel-loader": "^8.0.5",
-        "babel-minify-webpack-plugin": "^0.3.1",
-        "compression-webpack-plugin": "^2.0.0",
-        "react": "^16.8.6",
-        "react-dom": "^16.8.6",
-        "react-router-dom": "^5.0.0",
-        "redux": "^4.0.1",
-        "redux-thunk": "^2.3.0",
-        "styled-components": "^4.2.0",
-        "webpack": "^4.30.0",
-        "webpack-cli": "^3.3.1",
-        "webpack-dev-server": "^3.3.1",
-        "webpack-merge": "^4.2.1"
-    },
-    "dependencies": {},
-    "repository": {
-        "type": "git",
-        "url": "git+https://gitlab.com/Harmelodic/main.git"
-    },
-    "bugs": {
-        "url": "https://gitlab.com/Harmelodic/main/issues"
-    },
-    "homepage": "https://gitlab.com/Harmelodic/main#README",
-    "keywords": [
-        "frontend",
-        "react",
-        "harmelodic",
-        "boilerplate",
-        "template",
-        "redux"
-    ],
-    "license": "UNLICENSED"
+  "name": "main",
+  "version": "1.0.0",
+  "description": "The main Harmelodic website",
+  "main": "public/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint src/* --fix",
+    "start": "webpack-dev-server --inline --history-api-fallback --content-base ./public/ --hot --config webpack.dev.js",
+    "start:prod": "webpack-dev-server --inline --history-api-fallback --content-base ./public/ --hot --compress --config webpack.prod.js",
+    "build": "webpack --config webpack.prod.js",
+    "docker:build": "docker build -t $npm_package_name:latest .",
+    "docker:run": "docker run --name $npm_package_name -d -p 8080:80 $npm_package_name:latest",
+    "docker": "npm run build && npm run docker:build && npm run docker:run",
+    "docker:destroy": "docker stop $npm_package_name && docker rm $npm_package_name && docker rmi $npm_package_name"
+  },
+  "author": "Harmelodic",
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "babel-minify-webpack-plugin": "^0.3.1",
+    "compression-webpack-plugin": "^2.0.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.0",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0",
+    "styled-components": "^4.2.0",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.1",
+    "webpack-dev-server": "^3.3.1",
+    "webpack-merge": "^4.2.1"
+  },
+  "dependencies": {
+    "eslint": "^6.0.1",
+    "eslint-config-google": "^0.13.0",
+    "eslint-plugin-react": "^7.14.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/Harmelodic/main.git"
+  },
+  "bugs": {
+    "url": "https://gitlab.com/Harmelodic/main/issues"
+  },
+  "homepage": "https://gitlab.com/Harmelodic/main#README",
+  "keywords": [
+    "frontend",
+    "react",
+    "harmelodic",
+    "boilerplate",
+    "template",
+    "redux"
+  ],
+  "license": "UNLICENSED"
 }

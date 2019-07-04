@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const StyledProject = styled.a`
     display: inline-block;
@@ -15,7 +15,7 @@ const StyledProject = styled.a`
         background: #f3f3f3;
         cursor: pointer;
     }
-`
+`;
 
 const StyledProjectImage = styled.div`
     display: block;
@@ -24,41 +24,46 @@ const StyledProjectImage = styled.div`
     height: 150px;
     border-radius: 100%;
     border: solid 1px #000;
-    background-color: ${props => props.background ? props.background : "#fff"};
-    background-image: url('${props => props.src ? props.src : "/images/NoLogo.svg"}');
+    background-color:
+      ${(props) => props.background ? props.background : '#fff'};
+    background-image:
+      url('${(props) => props.src ? props.src : '/images/NoLogo.svg'}');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-`
+`;
 
 const StyledProjectText = styled.div`
     width: 100%;
     padding-bottom: 25px;
     font-size: 20px;
     line-height: 24px;
-`
+`;
 
 const StyledSubtitle = styled.span`
     display: block;
     font-size: 16px;
     color: #999;
     font-style: italic;
-`
+`;
 
 export default class Project extends React.Component {
-    render() {
-        return (
-            <StyledProject href={this.props.href} target="_blank">
-                <StyledProjectImage 
-                    src={this.props.src} 
-                    alt="project-image"
-                    background={this.props.background}
-                />
-                <StyledProjectText>
-                    {this.props.title}
-                    {this.props.subtitle && <StyledSubtitle>{this.props.subtitle}</StyledSubtitle>}
-                </StyledProjectText>
-            </StyledProject>
-        )
-    }
+  render() {
+    return (
+      <StyledProject href={this.props.href} target="_blank">
+        <StyledProjectImage
+          src={this.props.src}
+          alt="project-image"
+          background={this.props.background}
+        />
+        <StyledProjectText>
+          {this.props.title}
+          {
+            this.props.subtitle &&
+              <StyledSubtitle>{this.props.subtitle}</StyledSubtitle>
+          }
+        </StyledProjectText>
+      </StyledProject>
+    );
+  }
 }

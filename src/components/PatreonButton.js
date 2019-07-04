@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const StyledWrapper = styled.a`
     display: block;
@@ -7,7 +7,7 @@ const StyledWrapper = styled.a`
     width: 250px;
     height: 59px;
     background: #000;
-`
+`;
 
 const StyledButton = styled.div`
     width: 250px;
@@ -20,14 +20,14 @@ const StyledButton = styled.div`
     &:hover {
         opacity: 0.9;
     }
-`
+`;
 
 export default class PatreonButton extends React.Component {
-    render() {
-        return (
-            <StyledWrapper href="https://www.patreon.com/harmelodic" target="_blank">
-                <StyledButton />
-            </StyledWrapper>
-        )
-    }
+  render() {
+    return (
+      <StyledWrapper href="https://www.patreon.com/harmelodic" target="_blank">
+        <StyledButton />
+      </StyledWrapper>
+    );
+  }
 }
