@@ -93,6 +93,12 @@
     "src": ""
   },
   {
+    "title": "Ops",
+    "subtitle": "Reusable Terraform & other scripts",
+    "href": "https://gitlab.com/Harmelodic/ops",
+    "src": "/images/terraform.svg"
+  },
+  {
     "title": "react-ui-lib",
     "subtitle": "npm package (Browser)",
     "href": "https://www.npmjs.com/package/@harmelodic/react-ui-lib",

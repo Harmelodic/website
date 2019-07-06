@@ -34,7 +34,9 @@ const StyledProjectImage = styled.div`
 `;
 
 const StyledProjectText = styled.div`
-    width: 100%;
+    width: 190px;
+    padding-left: 5px;
+    padding-right: 5px;
     padding-bottom: 25px;
     font-size: 20px;
     line-height: 24px;
