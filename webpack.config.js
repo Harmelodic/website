@@ -1,24 +1,24 @@
-const SRC = __dirname + "/src/";
-const PUBLIC = __dirname + "/public/";
+const SRC = __dirname + '/src/';
+const PUBLIC = __dirname + '/public/';
 
 module.exports = {
-  entry: SRC + "index.js",
+  entry: SRC + 'index.js',
   output: {
     path: PUBLIC,
-    filename: "bundle.js"
+    filename: 'bundle.js',
   },
   module: {
     rules: [
       {
         test: /\.js$/,
-        loader: "babel-loader",
+        loader: 'babel-loader',
         exclude: /node_modules/,
         query: {
           presets: [
-            "@babel/preset-react"
-          ]
-        }
-      }
-    ]
-  }
+            '@babel/preset-react',
+          ],
+        },
+      },
+    ],
+  },
 };
