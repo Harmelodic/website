@@ -68,6 +68,12 @@
     "src" : "/images/flavour101.svg"
   },
   {
+    "title": "Foofie The Dog",
+    "subtitle": "\"Weird Al\" Yankovic Homage",
+    "href": "https://gitlab.com/Harmelodic/foofiethedog",
+    "src": ""
+  },
+  {
     "title": "imdb-util",
     "subtitle": "IMDb Search Scripts",
     "href": "https://gitlab.com/Harmelodic/imdb-util",
