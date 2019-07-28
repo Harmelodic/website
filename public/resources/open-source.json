@@ -71,7 +71,8 @@
     "title": "Foofie The Dog",
     "subtitle": "\"Weird Al\" Yankovic Homage",
     "href": "https://gitlab.com/Harmelodic/foofiethedog",
-    "src": ""
+    "src": "/images/foofiethedog.png",
+    "background": "#000000"
   },
   {
     "title": "imdb-util",

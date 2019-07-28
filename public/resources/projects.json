@@ -14,7 +14,8 @@
   {
     "title": "Foofie The Dog",
     "subtitle": "\"Weird Al\" Yankovic Homage",
-    "src": "",
+    "src": "/images/foofiethedog.png",
+    "background": "#000000",
     "href": "http://www.foofiethedog.com"
   },
   {
