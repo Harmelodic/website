@@ -18,24 +18,6 @@
     "src": "/images/acorn.svg"
   },
   {
-    "title": "init-backend",
-    "subtitle": "Backend App Generator",
-    "href": "https://gitlab.com/Harmelodic/init-backend",
-    "src": "/images/init-backend.svg"
-  },
-  {
-    "title": "init-frontend",
-    "subtitle": "Frontend App Generator",
-    "href": "https://gitlab.com/Harmelodic/init-frontend",
-    "src": "/images/init-frontend.svg"
-  },
-  {
-    "title": "init-mobile",
-    "subtitle": "Mobile App Generator",
-    "href": "https://gitlab.com/Harmelodic/init-mobile",
-    "src": "/images/init-mobile.svg"
-  },
-  {
     "title": "cap-osce",
     "subtitle": "Capgemini OSCE Team",
     "href": "https://gitlab.com/cap-osce",
@@ -43,16 +25,9 @@
   },
   {
     "title": "Chorus",
-    "subtitle": "Coming Soon",
+    "subtitle": "Audio-Media Application\nComing Soon",
     "href": "https://gitlab.com/chorus",
     "src": "/images/Chorus.svg"
-  },
-  {
-    "title": "Minimal Grey",
-    "subtitle": "Chrome Theme",
-    "href": "https://gitlab.com/Harmelodic/chrome-theme-minimal-grey",
-    "src": "/images/Chrome-Theme-Minimal-Grey.svg",
-    "background": "#4e4e4e"
   },
   {
     "title": "dots",
@@ -81,6 +56,24 @@
     "src": "/images/imdb-util.svg"
   },
   {
+    "title": "init-backend",
+    "subtitle": "Backend App Generator",
+    "href": "https://gitlab.com/Harmelodic/init-backend",
+    "src": "/images/init-backend.svg"
+  },
+  {
+    "title": "init-frontend",
+    "subtitle": "Frontend App Generator",
+    "href": "https://gitlab.com/Harmelodic/init-frontend",
+    "src": "/images/init-frontend.svg"
+  },
+  {
+    "title": "init-mobile",
+    "subtitle": "Mobile App Generator",
+    "href": "https://gitlab.com/Harmelodic/init-mobile",
+    "src": "/images/init-mobile.svg"
+  },
+  {
     "title": "interfaces",
     "subtitle": "npm package (Node.js)",
     "href": "https://www.npmjs.com/package/@harmelodic/interfaces",
@@ -94,8 +87,15 @@
     "background": "#000000"
   },
   {
+    "title": "Minimal Grey",
+    "subtitle": "Chrome Theme",
+    "href": "https://gitlab.com/Harmelodic/chrome-theme-minimal-grey",
+    "src": "/images/Chrome-Theme-Minimal-Grey.svg",
+    "background": "#4e4e4e"
+  },
+  {
     "title": "Minotaur",
-    "subtitle": "ALM Monitor",
+    "subtitle": "ALM Monitor\nETA: Sep 2019",
     "href": "https://gitlab.com/minotaur-monitor",
     "src": ""
   },
@@ -126,19 +126,19 @@
   },
   {
     "title": "tdash",
-    "subtitle": "Tweetdeck Replacement",
+    "subtitle": "Tweetdeck Replacement\nComing Soon",
     "href": "https://gitlab.com/Harmelodic/tdash",
     "src": "/images/tdash.svg"
   },
   {
     "title": "teres",
-    "subtitle": "Coming Soon",
+    "subtitle": "Operating System\nComing Eventually",
     "href": "https://gitlab.com/teres",
     "src": "/images/teres.svg"
   },
   {
     "title": "Vyllian",
-    "subtitle": "Coming Soon",
+    "subtitle": "Tech Company\nComing Eventually",
     "href": "https://gitlab.com/vyllian",
     "src": "/images/vyllian.svg",
     "background": "#000"

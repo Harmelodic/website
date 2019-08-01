@@ -1,7 +1,7 @@
 [
   {
     "title": "Ceramic Pillow",
-    "subtitle": "Coming Soon",
+    "subtitle": "Album\nComing Soon",
     "src": "",
     "href": "http://ceramicpillow.com"
   },
@@ -20,7 +20,7 @@
   },
   {
     "title": "Pos.sible",
-    "subtitle": "Coming Soon",
+    "subtitle": "Point of Sale System\nComing Eventually",
     "src": "/images/pos.sible.svg",
     "background": "#473d3b",
     "href": "http://pos.sible.co"
@@ -40,14 +40,14 @@
   },
   {
     "title": "Vyllian",
-    "subtitle": "Coming Soon",
+    "subtitle": "Tech Company\nComing Eventually",
     "src": "/images/vyllian.svg",
     "background": "#000",
     "href": "http://vyllian.com"
   },
   {
-    "title": "Whetstone Games Studio",
-    "subtitle": "Coming Eventually",
+    "title": "Whetstone",
+    "subtitle": "Games Studio\nComing Eventually",
     "src": "",
     "href": "http://whetstonegames.com"
   }

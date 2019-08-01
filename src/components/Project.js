@@ -62,7 +62,17 @@ export default class Project extends React.Component {
           {this.props.title}
           {
             this.props.subtitle &&
-              <StyledSubtitle>{this.props.subtitle}</StyledSubtitle>
+              <StyledSubtitle>
+                {
+                  this.props.subtitle
+                      .split('\n')
+                      .map((subtitleString) => {
+                        return (
+                          <div>{subtitleString}</div>
+                        );
+                      })
+                }
+              </StyledSubtitle>
           }
         </StyledProjectText>
       </StyledProject>
