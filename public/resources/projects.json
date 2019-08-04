@@ -3,7 +3,8 @@
     "title": "Ceramic Pillow",
     "subtitle": "Album\nComing Soon",
     "src": "",
-    "href": "http://ceramicpillow.com"
+    "href": "http://ceramicpillow.com",
+    "hidden": true
   },
   {
     "title": "Flavour 101",
@@ -23,7 +24,8 @@
     "subtitle": "Point of Sale System\nComing Eventually",
     "src": "/images/pos.sible.svg",
     "background": "#473d3b",
-    "href": "http://pos.sible.co"
+    "href": "http://pos.sible.co",
+    "hidden": true
   },
   {
     "title": "Scribbles",
@@ -43,12 +45,14 @@
     "subtitle": "Tech & Hardware Company\nComing Eventually",
     "src": "/images/vyllian.svg",
     "background": "#000",
-    "href": "http://vyllian.com"
+    "href": "http://vyllian.com",
+    "hidden": true
   },
   {
     "title": "Whetstone",
     "subtitle": "Games Studio\nComing Eventually",
     "src": "",
-    "href": "http://whetstonegames.com"
+    "href": "http://whetstonegames.com",
+    "hidden": true
   }
 ]

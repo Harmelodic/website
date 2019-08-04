@@ -27,7 +27,8 @@
     "title": "Chorus",
     "subtitle": "Audio-Media Application\nComing Soon",
     "href": "https://gitlab.com/chorus",
-    "src": "/images/Chorus.svg"
+    "src": "/images/Chorus.svg",
+    "hidden": true
   },
   {
     "title": "dots",
@@ -128,19 +129,22 @@
     "title": "tdash",
     "subtitle": "Tweetdeck Replacement\nComing Soon",
     "href": "https://gitlab.com/Harmelodic/tdash",
-    "src": "/images/tdash.svg"
+    "src": "/images/tdash.svg",
+    "hidden": true
   },
   {
     "title": "teres",
     "subtitle": "Operating System\nComing Eventually",
     "href": "https://gitlab.com/teres",
-    "src": "/images/teres.svg"
+    "src": "/images/teres.svg",
+    "hidden": true
   },
   {
     "title": "Vyllian",
     "subtitle": "Tech & Hardware Company\nComing Eventually",
     "href": "https://gitlab.com/vyllian",
     "src": "/images/vyllian.svg",
-    "background": "#000"
+    "background": "#000",
+    "hidden": true
   }
 ]

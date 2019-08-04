@@ -37,6 +37,7 @@ export default class Projects extends React.Component {
           <StyledProjects>
             {
               this.state.projects
+                  .filter((project) => !project.hidden)
                   .sort((a, b) => {
                     const titleA = a.title.toUpperCase();
                     const titleB = b.title.toUpperCase();

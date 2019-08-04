@@ -37,6 +37,7 @@ export default class OpenSource extends React.Component {
           <StyledProjects>
             {
               this.state.openSourceProjects
+                  .filter((project) => !project.hidden)
                   .sort((a, b) => {
                     const titleA = a.title.toUpperCase();
                     const titleB = b.title.toUpperCase();
