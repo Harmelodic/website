@@ -51,7 +51,8 @@
   {
     "title": "Whetstone",
     "subtitle": "Games Studio\nComing Eventually",
-    "src": "",
+    "src": "/images/whetstone.svg",
+    "background": "#1b1b1b",
     "href": "http://whetstonegames.com",
     "hidden": true
   }
