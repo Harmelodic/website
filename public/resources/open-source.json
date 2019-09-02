@@ -98,7 +98,8 @@
     "title": "Minotaur",
     "subtitle": "ALM Monitor\nETA: Sep 2019",
     "href": "https://gitlab.com/minotaur-monitor",
-    "src": ""
+    "src": "/images/minotaur.svg",
+    "background": "#000"
   },
   {
     "title": "Ops",
