@@ -20,6 +20,13 @@
     "href": "http://www.foofiethedog.com"
   },
   {
+    "title": "Minotaur",
+    "subtitle": "ALM Monitor",
+    "href": "https://www.minotaurproject.com/",
+    "src": "/images/minotaur.svg",
+    "background": "#000"
+  },
+  {
     "title": "Pos.sible",
     "subtitle": "Point of Sale System\nComing Eventually",
     "src": "/images/pos.sible.svg",
