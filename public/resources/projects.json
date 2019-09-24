@@ -20,6 +20,12 @@
     "href": "http://www.foofiethedog.com"
   },
   {
+    "title": "interfaces",
+    "subtitle": "npm package (Node.js)",
+    "href": "https://www.npmjs.com/package/@harmelodic/interfaces",
+    "src": "/images/interfaces.svg"
+  },
+  {
     "title": "Minotaur",
     "subtitle": "ALM Monitor",
     "href": "https://www.minotaurproject.com/",
@@ -33,6 +39,12 @@
     "background": "#473d3b",
     "href": "http://pos.sible.co",
     "hidden": true
+  },
+  {
+    "title": "react-ui-lib",
+    "subtitle": "npm package (Browser)",
+    "href": "https://www.npmjs.com/package/@harmelodic/react-ui-lib",
+    "src": "/images/react-ui-lib.svg"
   },
   {
     "title": "Scribbles",

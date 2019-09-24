@@ -77,7 +77,7 @@
   {
     "title": "interfaces",
     "subtitle": "npm package (Node.js)",
-    "href": "https://www.npmjs.com/package/@harmelodic/interfaces",
+    "href": "https://gitlab.com/Harmelodic/interfaces",
     "src": "/images/interfaces.svg"
   },
   {
@@ -90,8 +90,8 @@
   {
     "title": "Minimal Grey",
     "subtitle": "Chrome Theme",
-    "href": "https://gitlab.com/Harmelodic/chrome-theme-minimal-grey",
-    "src": "/images/Chrome-Theme-Minimal-Grey.svg",
+    "href": "https://gitlab.com/Harmelodic/minimal-grey",
+    "src": "/images/minimal-grey.svg",
     "background": "#4e4e4e"
   },
   {
@@ -110,7 +110,7 @@
   {
     "title": "react-ui-lib",
     "subtitle": "npm package (Browser)",
-    "href": "https://www.npmjs.com/package/@harmelodic/react-ui-lib",
+    "href": "https://gitlab.com/Harmelodic/react-ui-lib",
     "src": "/images/react-ui-lib.svg"
   },
   {
