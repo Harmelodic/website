@@ -78,7 +78,7 @@ export default class Me extends React.Component {
               src="/images/gitlab.svg"
               background=""
               title="GitLab Hero"
-              href="https://about.gitlab.com/community/heroes/members/"
+              href="https://gitlab.com/gitlab-com/www-gitlab-com/merge_requests/34774"
             />
             <Project
               src="/images/cloud-professional-architect.png"
