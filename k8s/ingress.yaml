@@ -31,4 +31,4 @@ spec:
   - hosts:
     - "*.harmelodic.com"
     - harmelodic.com
-    secretName: tls-cert-wildcard-harmelodic
+    secretName: tls-cert-wildcard-harmelodic-com
