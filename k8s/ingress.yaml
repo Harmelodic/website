@@ -8,9 +8,7 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: "nginx"
     kubernetes.io/tls-acme: "true"
-    certmanager.k8s.io/acme-dns01-provider: route53
-    certmanager.k8s.io/acme-challenge-type: dns01
-    certmanager.k8s.io/issuer: letsencrypt
+    cert-manager.io/issuer: letsencrypt
 spec:
   rules:
   - host: harmelodic.com
