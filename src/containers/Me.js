@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import Menu from '../components/Menu';
 import {StyledFadeInDiv} from '../components/Stylings';
-import PatreonButton from '../components/PatreonButton';
 import SocialMedia from '../components/SocialMedia';
 import {Store} from '../redux/Store';
 import Middleware from '../redux/Middleware';
@@ -86,10 +85,6 @@ export default class Me extends React.Component {
               title="Professional Cloud Architect"
               href="https://www.credential.net/bd886e12-4a18-4439-8c9a-680107c23547"
             />
-          </Info>
-          <Info>
-            <InfoTitle>Support Me</InfoTitle>
-            <PatreonButton />
           </Info>
           <Info>
             <InfoTitle>Social Media</InfoTitle>
