@@ -10,19 +10,11 @@ import Project from '../components/Project';
 
 const Info = styled.div`
     max-width: 800px;
-    margin: 40px auto;
-    font-size: 18px;
+    margin: 25px auto;
+    font-size: 20px;
     color: #000;
     text-align: center;
-    line-height: 30px;
 `;
-
-const InfoTitle = styled.div`
-    margin-top: 10px;
-    font-size: 24px;
-    text-decoration: underline;
-`;
-
 
 const StyledSocialMediaLinks = styled.div`
     min-width: 300px;
@@ -63,31 +55,12 @@ export default class Me extends React.Component {
             <CircleImage src="/images/headshot.jpg" />
           </Info>
           <Info>
-            <InfoTitle>Name</InfoTitle>
             Matt Smith
           </Info>
           <Info>
-            <InfoTitle>Alias</InfoTitle>
-            Harmelodic
-          </Info>
-
-          <Info>
-            <InfoTitle>Accreditations</InfoTitle>
-            <Project
-              src="/images/gitlab.svg"
-              background=""
-              title="GitLab Hero"
-              href="https://gitlab.com/gitlab-com/www-gitlab-com/merge_requests/34774"
-            />
-            <Project
-              src="/images/cloud-professional-architect.png"
-              background="#374850"
-              title="Professional Cloud Architect"
-              href="https://www.credential.net/bd886e12-4a18-4439-8c9a-680107c23547"
-            />
+            @Harmelodic
           </Info>
           <Info>
-            <InfoTitle>Social Media</InfoTitle>
             <StyledSocialMediaLinks>
               {
                 this.state.socialMedia.map((media, index) => {
@@ -104,14 +77,18 @@ export default class Me extends React.Component {
             </StyledSocialMediaLinks>
           </Info>
           <Info>
-            <InfoTitle>Contact</InfoTitle>
-            <StyledSocialMediaLinks>
-              <SocialMedia
-                href="mailto:matt@harmelodic.com"
-                title="Email"
-                src="/images/mail.svg"
-              />
-            </StyledSocialMediaLinks>
+            <Project
+              src="/images/gitlab.svg"
+              background=""
+              title="GitLab Hero"
+              href="https://gitlab.com/gitlab-com/www-gitlab-com/merge_requests/34774"
+            />
+            <Project
+              src="/images/cloud-professional-architect.png"
+              background="#374850"
+              title="Professional Cloud Architect"
+              href="https://www.credential.net/bd886e12-4a18-4439-8c9a-680107c23547"
+            />
           </Info>
         </StyledFadeInDiv>
       </div>

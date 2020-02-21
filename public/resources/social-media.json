@@ -23,5 +23,10 @@
         "href": "https://www.linkedin.com/in/harmelodic/",
         "title": "LinkedIn",
         "src": "/images/linkedin.svg"
+    },
+    {
+        "href": "mailto:matt@harmelodic.com",
+        "title": "Email",
+        "src": "/images/mail.svg"
     }
 ]
