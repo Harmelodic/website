@@ -10,10 +10,11 @@ import Project from '../components/Project';
 
 const Info = styled.div`
     max-width: 800px;
-    margin: 25px auto;
+    margin: 15px auto;
     font-size: 20px;
     color: #000;
     text-align: center;
+    line-height: 30px;
 `;
 
 const StyledSocialMediaLinks = styled.div`
@@ -56,9 +57,13 @@ export default class Me extends React.Component {
           </Info>
           <Info>
             Matt Smith
+            <br />
+            @Harmelodic
           </Info>
           <Info>
-            @Harmelodic
+          </Info>
+          <Info>
+            Software Engineer - Writer - Designer - Musician - Speaker
           </Info>
           <Info>
             <StyledSocialMediaLinks>

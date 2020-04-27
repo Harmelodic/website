@@ -28,13 +28,13 @@ export default class Menu extends React.Component {
   render() {
     return (
       <StyledMenu>
+        <MenuItem to="/" selected={this.props.me}>Me</MenuItem>
         <MenuItem to="/projects" selected={this.props.projects}>
           Projects
         </MenuItem>
         <MenuItem to="/open-source" selected={this.props.openSource}>
           Open-source
         </MenuItem>
-        <MenuItem to="/me" selected={this.props.me}>Me</MenuItem>
       </StyledMenu>
     );
   }
