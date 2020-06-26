@@ -12,8 +12,8 @@ export const initialiseStore = () => {
       rootReducer,
       initialState,
       composeEnhancers(
-          applyMiddleware(thunk)
-      )
+          applyMiddleware(thunk),
+      ),
   );
 };
 

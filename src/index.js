@@ -13,5 +13,5 @@ ReactDOM.render(
     <BrowserRouter>
       <App />
     </BrowserRouter>,
-    appRoot
+    appRoot,
 );

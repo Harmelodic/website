@@ -15,7 +15,7 @@ const httpCall = (method, url, body) => {
   return fetch(url, request)
       .catch((error) => {
         console.log(
-            `Error occurred in completing ${request.method} request to: ${url}`
+            `Error occurred in completing ${request.method} request to: ${url}`,
         );
         console.log(error);
       })
