@@ -18,12 +18,6 @@
     "src": "/images/acorn.svg"
   },
   {
-    "title": "cap-osce",
-    "subtitle": "Capgemini OSCE Team",
-    "href": "https://gitlab.com/cap-osce",
-    "src": "/images/cap-osce.svg"
-  },
-  {
     "title": "Chorus",
     "subtitle": "Audio-Media Application\nComing Soon",
     "href": "https://gitlab.com/vyllian/teres/chorus",
@@ -106,6 +100,12 @@
     "subtitle": "Reusable Terraform & other scripts",
     "href": "https://gitlab.com/Harmelodic/ops",
     "src": "/images/ops.svg"
+  },
+  {
+    "title": "Quaff",
+    "subtitle": "Capgemini OSCE Hackathon Project",
+    "href": "https://gitlab.com/cap-osce/quaff",
+    "src": "/images/quaff.svg"
   },
   {
     "title": "react-ui-lib",
