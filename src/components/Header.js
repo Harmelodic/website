@@ -1,8 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
+const size = 226;
+
 const StyledHeader = styled.div`
-    height: 300px;
+    height: ${size}px;
     background: #000;
 `;
 
@@ -12,8 +14,8 @@ const StyledLogo = styled.img`
     left: 50%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%)
-    height: 300px;
-    width: 300px;
+    height: ${size}px;
+    width: ${size}px;
     user-select: none;
 `;
 
@@ -22,7 +24,7 @@ const RainbowBar = styled.div`
     top: 50%;
     transform: translateY(-50%);
 
-    height: 9px;
+    height: 7px;
     background: black; /* For browsers that do not support gradients */
     background: linear-gradient(to right,
       red,

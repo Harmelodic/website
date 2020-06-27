@@ -1,11 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 
+const size = 60;
+
 const StyledSocialMedia = styled.a`
     display: inline-block;
     margin: 10px 10px 0 10px;
-    width: 60px;
-    height: 60px;
+    width: ${size}px;
+    height: ${size}px;
     text-decoration: none;
     transition: 200ms background;
 
@@ -15,9 +17,12 @@ const StyledSocialMedia = styled.a`
 `;
 
 const StyledImage = styled.img`
-    margin: 10px;
-    width: 40px;
-    height: 40px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 65%;
+    height: 65%;
 `;
 
 export default class SocialMedia extends React.Component {

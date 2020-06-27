@@ -3,8 +3,8 @@ import styled from 'styled-components';
 
 const StyledProjectImage = styled.div`
     display: inline-block;
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     border-radius: 100%;
     border: solid 1px #000;
     background-color: #000;

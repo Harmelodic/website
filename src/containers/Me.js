@@ -11,10 +11,10 @@ import Project from '../components/Project';
 const Info = styled.div`
     max-width: 800px;
     margin: 15px auto;
-    font-size: 20px;
+    font-size: 18px;
     color: #000;
     text-align: center;
-    line-height: 30px;
+    line-height: 24px;
 `;
 
 const StyledSocialMediaLinks = styled.div`
