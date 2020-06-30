@@ -9,7 +9,8 @@
     "title": ".code",
     "subtitle": "VSCode Config",
     "href": "https://github.com/Harmelodic/.code",
-    "src": "/images/vscode.svg"
+    "src": "/images/vscode.svg",
+    "size": 55
   },
   {
     "title": "Chorus",
@@ -48,13 +49,15 @@
     "title": "init-backend",
     "subtitle": "Backend App Generator",
     "href": "https://gitlab.com/Harmelodic/init-backend",
-    "src": "/images/init-backend.svg"
+    "src": "/images/init-backend.svg",
+    "size": 55
   },
   {
     "title": "init-frontend",
     "subtitle": "Frontend App Generator",
     "href": "https://gitlab.com/Harmelodic/init-frontend",
-    "src": "/images/init-frontend.svg"
+    "src": "/images/init-frontend.svg",
+    "size": 55
   },
   {
     "title": "init-mobile",
@@ -73,21 +76,24 @@
     "subtitle": "Harmelodic Website",
     "href": "https://gitlab.com/Harmelodic/main",
     "src": "/images/main.svg",
-    "background": "#000000"
+    "background": "#000000",
+    "size": 59
   },
   {
     "title": "Minimal Grey",
     "subtitle": "Chrome Theme",
     "href": "https://gitlab.com/Harmelodic/minimal-grey",
     "src": "/images/minimal-grey.svg",
-    "background": "#4e4e4e"
+    "background": "#4e4e4e",
+    "size": 40
   },
   {
     "title": "Minotaur",
     "subtitle": "ALM Monitor",
     "href": "https://gitlab.com/minotaur-monitor",
     "src": "/images/minotaur.svg",
-    "background": "#000"
+    "background": "#000",
+    "size": 100
   },
   {
     "title": "Ops",
@@ -99,7 +105,8 @@
     "title": "Quaff",
     "subtitle": "Capgemini OSCE Hackathon Project",
     "href": "https://gitlab.com/cap-osce/quaff",
-    "src": "/images/quaff.svg"
+    "src": "/images/quaff.svg",
+    "background": "#242424"
   },
   {
     "title": "react-ui-lib",
@@ -111,7 +118,8 @@
     "title": "scribbles",
     "subtitle": "Personal Blog",
     "href": "https://gitlab.com/Harmelodic/scribbles",
-    "src": "/images/scribbles.svg"
+    "src": "/images/scribbles.svg",
+    "size": 50
   },
   {
     "title": "stackchat.github.io",

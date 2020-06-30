@@ -17,20 +17,27 @@ const StyledProject = styled.a`
     }
 `;
 
-const StyledProjectImage = styled.div`
+const StyledProjectImageCircle = styled.div`
     display: block;
     margin: 25px;
     width: 150px;
     height: 150px;
     border-radius: 100%;
+    overflow: hidden;
     border: solid 1px #000;
     background-color:
       ${(props) => props.background ? props.background : '#fff'};
-    background-image:
-      url('${(props) => props.src ? props.src : '/images/NoLogo.svg'}');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+`;
+
+const StyledProjectImage = styled.img`
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+
+    display: block;
+    margin: 0 auto;
+    width: ${(props) => props.size ? props.size : '65'}%;
+    height: ${(props) => props.size ? props.size : '65'}%;
 `;
 
 const StyledProjectText = styled.div`
@@ -53,11 +60,13 @@ export default class Project extends React.Component {
   render() {
     return (
       <StyledProject href={this.props.href} target="_blank">
-        <StyledProjectImage
-          src={this.props.src}
-          alt="project-image"
-          background={this.props.background}
-        />
+        <StyledProjectImageCircle background={this.props.background}>
+          <StyledProjectImage
+            src={this.props.src ? this.props.src : '/images/NoLogo.svg'}
+            alt="project-image"
+            size={this.props.size}
+          />
+        </StyledProjectImageCircle>
         <StyledProjectText>
           {this.props.title}
           {
@@ -66,9 +75,9 @@ export default class Project extends React.Component {
                 {
                   this.props.subtitle
                       .split('\n')
-                      .map((subtitleString) => {
+                      .map((subtitleString, index) => {
                         return (
-                          <div>{subtitleString}</div>
+                          <div key={index}>{subtitleString}</div>
                         );
                       })
                 }

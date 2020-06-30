@@ -58,6 +58,7 @@ export default class Projects extends React.Component {
                         title={project.title}
                         subtitle={project.subtitle}
                         href={project.href}
+                        size={project.size}
                       />
                     );
                   })

@@ -30,7 +30,8 @@
     "subtitle": "ALM Monitor",
     "href": "https://www.minotaurproject.com/",
     "src": "/images/minotaur.svg",
-    "background": "#000"
+    "background": "#000",
+    "size": 100
   },
   {
     "title": "Pos.sible",
@@ -50,7 +51,8 @@
     "title": "Scribbles",
     "subtitle": "Personal Blog",
     "src": "/images/scribbles.svg",
-    "href": "https://scribbles.harmelodic.com"
+    "href": "https://scribbles.harmelodic.com",
+    "size": 50
   },
   {
     "title": "Stackchat",

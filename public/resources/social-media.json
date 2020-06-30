@@ -33,5 +33,15 @@
         "href": "mailto:matt@harmelodic.com",
         "title": "Email",
         "src": "/images/mail.svg"
+    },
+    {
+        "href": "https://gitlab.com/Harmelodic",
+        "title": "GitLab",
+        "src": "/images/gitlab.svg"
+    },
+    {
+        "href": "https://github.com/Harmelodic",
+        "title": "GitHub",
+        "src": "/images/github.svg"
     }
 ]

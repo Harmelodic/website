@@ -21,8 +21,8 @@ const StyledImage = styled.img`
     top: 50%;
     transform: translateY(-50%);
 
-    width: 65%;
-    height: 65%;
+    width: 55%;
+    height: 55%;
 `;
 
 export default class SocialMedia extends React.Component {

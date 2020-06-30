@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
@@ -9,37 +7,38 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="1000"
-   height="1000"
-   viewBox="0 0 264.58333 264.58334"
-   version="1.1"
-   id="svg8"
-   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
-   sodipodi:docname="vyllian.svg"
-   inkscape:export-filename="C:\Users\Matt\Downloads\Visus.png"
+   inkscape:export-ydpi="96"
    inkscape:export-xdpi="96"
-   inkscape:export-ydpi="96">
+   inkscape:export-filename="C:\Users\Matt\Downloads\Visus.png"
+   sodipodi:docname="vyllian.svg"
+   inkscape:version="1.0beta1 (32d4812, 2019-09-19)"
+   id="svg8"
+   version="1.1"
+   viewBox="0 0 264.58333 264.58334"
+   height="1000"
+   width="1000">
   <defs
      id="defs2" />
   <sodipodi:namedview
-     id="base"
-     pagecolor="#595959"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageopacity="0"
-     inkscape:pageshadow="2"
-     inkscape:zoom="0.49497475"
-     inkscape:cx="156.28099"
-     inkscape:cy="482.05469"
-     inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
-     showgrid="false"
-     units="px"
-     inkscape:window-width="1920"
-     inkscape:window-height="1081"
+     inkscape:document-rotation="0"
+     inkscape:window-maximized="0"
+     inkscape:window-y="23"
      inkscape:window-x="0"
-     inkscape:window-y="1"
-     inkscape:window-maximized="1" />
+     inkscape:window-height="907"
+     inkscape:window-width="1600"
+     units="px"
+     showgrid="false"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="mm"
+     inkscape:cy="560"
+     inkscape:cx="400"
+     inkscape:zoom="0.35"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#595959"
+     id="base" />
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -53,14 +52,14 @@
     </rdf:RDF>
   </metadata>
   <g
-     inkscape:label="Layer 1"
-     inkscape:groupmode="layer"
+     transform="translate(0,-32.41665)"
      id="layer1"
-     transform="translate(0,-32.41665)">
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1">
     <path
-       style="fill:#ffffff;stroke-width:0.07613317"
-       d="m 129.48872,251.52834 -2.82905,-6.06138 34.41667,-73.79099 c 18.92917,-40.58505 34.44625,-73.821242 34.4824,-73.858174 0.0718,-0.07335 13.4133,-4.702649 13.44926,-4.666688 0.0201,0.02011 -76.31186,163.717672 -76.57629,164.221532 -0.11291,0.21524 -0.138,0.16557 -2.94299,-5.8443 z M 98.914193,186.04542 c -12.092238,-25.89958 -21.96939,-47.13215 -21.949215,-47.18353 0.0359,-0.0914 104.427532,-36.23233 104.798532,-36.28178 0.15519,-0.0207 0.17905,-6.7e-4 0.13573,0.11421 -0.27374,0.72528 -60.84744,130.44124 -60.91239,130.44124 -0.0477,0 -9.98042,-21.19057 -22.072657,-47.09013 z m -25.657715,-55.0235 c -0.14734,-0.22533 -17.709845,-37.841355 -17.68112,-37.870082 0.0529,-0.0529 63.771562,22.023342 63.772732,22.094992 0.001,0.0634 -45.745632,15.9464 -45.929357,15.9464 -0.02763,0 -0.100649,-0.0771 -0.162255,-0.17131 z"
+       inkscape:connector-curvature="0"
        id="path3697"
-       inkscape:connector-curvature="0" />
+       d="m 128.17313,287.31077 -4.15689,-8.90635 50.57047,-108.42551 c 27.81376,-59.63404 50.61393,-108.469966 50.66705,-108.524232 0.1055,-0.107778 19.70896,-6.909883 19.7618,-6.857044 0.0295,0.02955 -112.12957,240.560166 -112.51812,241.300516 -0.1659,0.31626 -0.20277,0.24328 -4.32431,-8.58738 z M 83.248151,191.0928 C 65.480303,153.037 50.967213,121.83871 50.996858,121.76322 51.049608,121.62892 204.43847,68.52489 204.9836,68.452231 c 0.22803,-0.03042 0.26309,-9.85e-4 0.19944,0.167815 -0.40222,1.065697 -89.40678,191.665114 -89.50221,191.665114 -0.0701,0 -14.66483,-31.13657 -32.432679,-69.19235 z M 45.547737,110.24348 C 45.331242,109.91239 19.525603,54.640917 19.567811,54.598707 c 0.07773,-0.07773 93.703369,32.360213 93.705089,32.465492 10e-4,0.09316 -67.216794,23.431001 -67.486752,23.431001 -0.0406,0 -0.14789,-0.11329 -0.238411,-0.25172 z"
+       style="fill:#ffffff;stroke-width:0.111867" />
   </g>
 </svg>
