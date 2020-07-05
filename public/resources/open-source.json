@@ -129,6 +129,13 @@
     "background": "#ff024a"
   },
   {
+    "title": "Swearing Xylophone",
+    "subtitle": "A Limmy Experiment",
+    "href": "https://github.com/DaftLimmy/Swearing-Xylophone",
+    "src": "/images/swearing-xylophone.svg",
+    "size": 100
+  },
+  {
     "title": "tdash",
     "subtitle": "Tweetdeck Replacement\nComing Soon",
     "href": "https://gitlab.com/Harmelodic/tdash",
