@@ -63,7 +63,7 @@ export default class Me extends React.Component {
           <Info>
           </Info>
           <Info>
-            Software Engineer - Writer - Designer - Musician - Speaker
+            Engineer - Manager - Writer - Designer - Musician - Speaker
           </Info>
           <Info>
             <StyledSocialMediaLinks>
