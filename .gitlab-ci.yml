@@ -66,7 +66,7 @@ cloud-run:
         --image "${GCP_REGISTRY_IMAGE}:${CI_COMMIT_SHA}"
         --region europe-north1
         --platform managed
-        --port 8080
+        --port 80
         --set-env-vars=CONTENT_URI=$CONTENT_URI
         --allow-unauthenticated
   only:
