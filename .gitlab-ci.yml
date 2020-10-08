@@ -1,44 +1,73 @@
 image: docker:latest
 
 variables:
-  DOCKER_DRIVER: overlay
+  GCP_REGISTRY_IMAGE: "gcr.io/$GCP_PROJECT_ID/$CI_PROJECT_NAME"
 
 stages:
   - build
   - package
   - deploy
-  - clean
+
+# npm-test:
+#   stage: build
+#   image: node:14.8.0
+#   script:
+#     - npm i
+#     - npm test
 
 npm-build:
-  image: node:alpine
   stage: build
+  image: node:14.8.0
   script:
-  - npm i
-  - npm run build
+    - npm i
+    - npm run build
   artifacts:
     paths:
     - public/*
 
-docker-build:
+docker-gitlab:
   stage: package
   services:
-  - docker:dind
+    - docker:dind
+  before_script:
+    - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN ${CI_REGISTRY}
   script:
-  - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN ${CI_REGISTRY}
-  - docker build -t "${CI_REGISTRY_IMAGE}:${CI_COMMIT_SHA}" .
-  - docker tag "${CI_REGISTRY_IMAGE}:${CI_COMMIT_SHA}" "${CI_REGISTRY_IMAGE}:latest"
-  - docker push "${CI_REGISTRY_IMAGE}:${CI_COMMIT_SHA}"
-  - docker push "${CI_REGISTRY_IMAGE}:latest"
+    - docker build -t "${CI_REGISTRY_IMAGE}:${CI_COMMIT_SHA}" .
+    - docker tag "${CI_REGISTRY_IMAGE}:${CI_COMMIT_SHA}" "${CI_REGISTRY_IMAGE}:latest"
+    - docker push "${CI_REGISTRY_IMAGE}:${CI_COMMIT_SHA}"
+    - docker push "${CI_REGISTRY_IMAGE}:latest"
   only:
     - master
 
-deploy-dev:
-  stage: deploy
-  image:
-    name: quay.io/ukhomeofficedigital/kd:latest
-    entrypoint: ["/bin/bash", "-c"]
+docker-gcp:
+  stage: package
+  services:
+    - docker:dind
+  before_script:
+    - echo $GCP_SERVICE_KEY | docker login -u _json_key --password-stdin https://gcr.io
   script:
-  - echo "${KUBE_SERVER}"
-  - KUBE_NAMESPACE=harmelodic IMAGE_TAG="${CI_REGISTRY_IMAGE}:${CI_COMMIT_SHA}" kd --insecure-skip-tls-verify --timeout=5m0s -f ${CI_PROJECT_DIR}/k8s
+    - docker build -t "${GCP_REGISTRY_IMAGE}:${CI_COMMIT_SHA}" .
+    - docker tag "${GCP_REGISTRY_IMAGE}:${CI_COMMIT_SHA}" "${GCP_REGISTRY_IMAGE}:latest"
+    - docker push "${GCP_REGISTRY_IMAGE}:${CI_COMMIT_SHA}"
+    - docker push "${GCP_REGISTRY_IMAGE}:latest"
   only:
-  - master
+    - master
+
+cloud-run:
+  stage: deploy
+  image: google/cloud-sdk:latest
+  before_script:
+    - echo $GCP_SERVICE_KEY > gcloud-service-key.json && gcloud auth activate-service-account --key-file gcloud-service-key.json
+    - gcloud config set project $GCP_PROJECT_ID
+  script:
+    - >
+        gcloud run deploy
+        $CI_PROJECT_NAME
+        --image "${GCP_REGISTRY_IMAGE}:${CI_COMMIT_SHA}"
+        --region europe-north1
+        --platform managed
+        --port 8080
+        --set-env-vars=CONTENT_URI=$CONTENT_URI
+        --allow-unauthenticated
+  only:
+    - master
