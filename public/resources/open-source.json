@@ -60,12 +60,6 @@
     "size": 55
   },
   {
-    "title": "init-mobile",
-    "subtitle": "Mobile App Generator",
-    "href": "https://gitlab.com/Harmelodic/init-mobile",
-    "src": "/images/init-mobile.svg"
-  },
-  {
     "title": "interfaces",
     "subtitle": "npm package (Node.js)",
     "href": "https://gitlab.com/Harmelodic/interfaces",
@@ -117,7 +111,7 @@
   {
     "title": "scribbles",
     "subtitle": "Personal Blog",
-    "href": "https://gitlab.com/Harmelodic/scribbles",
+    "href": "https://gitlab.com/harmelodic-group/scribbles",
     "src": "/images/scribbles.svg",
     "size": 50
   },
