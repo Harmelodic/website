@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import Menu from '../components/Menu';
-import {StyledFadeInDiv} from '../components/Stylings';
+import { StyledFadeInDiv } from '../components/Stylings';
 import SocialMedia from '../components/SocialMedia';
-import {Store} from '../redux/Store';
+import { Store } from '../redux/Store';
 import Middleware from '../redux/Middleware';
 import CircleImage from '../components/CircleImage';
 import Project from '../components/Project';

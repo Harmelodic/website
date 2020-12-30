@@ -1,10 +1,10 @@
 import React from 'react';
 import Middleware from '../redux/Middleware';
-import {Store} from '../redux/Store';
+import { Store } from '../redux/Store';
 import Menu from '../components/Menu';
-import {StyledFadeInDiv} from '../components/Stylings';
+import { StyledFadeInDiv } from '../components/Stylings';
 import Project from '../components/Project';
-import {StyledProjects} from '../components/Stylings';
+import { StyledProjects } from '../components/Stylings';
 
 export default class Projects extends React.Component {
   constructor(props) {

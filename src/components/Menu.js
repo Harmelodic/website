@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const StyledMenu = styled.div`
     height: 60px;
@@ -29,6 +29,9 @@ export default class Menu extends React.Component {
     return (
       <StyledMenu>
         <MenuItem to="/" selected={this.props.me}>Me</MenuItem>
+        <MenuItem to="/blog" selected={this.props.blog}>
+          Blog
+        </MenuItem>
         <MenuItem to="/projects" selected={this.props.projects}>
           Projects
         </MenuItem>

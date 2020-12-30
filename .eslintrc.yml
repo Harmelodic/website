@@ -22,5 +22,6 @@ rules: {
       "ArrowFunctionExpression": false,
       "FunctionExpression": false
     }}
-  ]
+  ],
+  object-curly-spacing: [2, "always"]
 }
