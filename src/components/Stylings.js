@@ -16,7 +16,7 @@ export const StyledFadeInDiv = styled.div`
       ${(props) => props.fadeInTime ? props.fadeInTime : '800ms'};
 `;
 
-export const StyledProjects = styled.div`
+export const StyledPageContentContainer = styled.div`
     margin: 30px auto 0 auto;
     max-width: 1080px;
     text-align: center;

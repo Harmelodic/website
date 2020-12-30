@@ -8,6 +8,7 @@ const StyledPost = styled.a`
     padding: 30px;
     text-decoration: none;
     white-space: normal;
+    text-align: left;
     transition: all 150ms;
 
     &:hover {

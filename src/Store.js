@@ -21,4 +21,8 @@ const initialState = {
   projects: [],
   openSourceProjects: [],
   socialMedia: [],
+  blog: {
+    posts: [],
+    categories: [],
+  },
 };

@@ -2,9 +2,11 @@ import React from 'react';
 import Middleware from './Middleware';
 import { Store } from '../Store';
 import Menu from '../components/Menu';
-import { StyledFadeInDiv } from '../components/Stylings';
+import {
+  StyledFadeInDiv,
+  StyledPageContentContainer,
+} from '../components/Stylings';
 import Project from '../components/Project';
-import { StyledProjects } from '../components/Stylings';
 
 export default class OpenSource extends React.Component {
   constructor(props) {
@@ -34,7 +36,7 @@ export default class OpenSource extends React.Component {
       <div>
         <Menu openSource={true} />
         <StyledFadeInDiv>
-          <StyledProjects>
+          <StyledPageContentContainer>
             {
               this.state.openSourceProjects
                   .filter((project) => !project.hidden)
@@ -63,7 +65,7 @@ export default class OpenSource extends React.Component {
                     );
                   })
             }
-          </StyledProjects>
+          </StyledPageContentContainer>
         </StyledFadeInDiv>
       </div>
     );

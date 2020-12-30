@@ -1,4 +1,5 @@
-const {merge} = require('webpack-merge');
+const webpack = require('webpack');
+const { merge } = require('webpack-merge');
 const MinifyPlugin = require('babel-minify-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const config = require('./webpack.config.js');
@@ -13,6 +14,9 @@ module.exports = merge(config, {
       test: /\.js$|\.css$|\.html$/,
       threshold: 10240,
       minRatio: 0.8,
+    }),
+    new webpack.EnvironmentPlugin({
+      BLOG_API: 'https://api.scribbles.harmelodic.com',
     }),
   ],
 });
