@@ -2,9 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import Menu from '../components/Menu';
 import { StyledFadeInDiv } from '../components/Stylings';
-import SocialMedia from '../components/SocialMedia';
-import { Store } from '../redux/Store';
-import Middleware from '../redux/Middleware';
+import SocialMedia from './components/SocialMedia';
+import { Store } from '../Store';
+import Middleware from './Middleware';
 import CircleImage from '../components/CircleImage';
 import Project from '../components/Project';
 
@@ -24,7 +24,7 @@ const StyledSocialMediaLinks = styled.div`
     white-space: normal;
 `;
 
-export default class Me extends React.Component {
+export default class Home extends React.Component {
   constructor(props) {
     super(props);
 

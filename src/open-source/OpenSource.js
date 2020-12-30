@@ -1,28 +1,28 @@
 import React from 'react';
-import Middleware from '../redux/Middleware';
-import { Store } from '../redux/Store';
+import Middleware from './Middleware';
+import { Store } from '../Store';
 import Menu from '../components/Menu';
 import { StyledFadeInDiv } from '../components/Stylings';
 import Project from '../components/Project';
 import { StyledProjects } from '../components/Stylings';
 
-export default class Projects extends React.Component {
+export default class OpenSource extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      projects: Store.getState().projects,
+      openSourceProjects: Store.getState().openSourceProjects,
     };
   }
 
   componentDidMount() {
     this.unsubscribe = Store.subscribe(() => {
       this.setState({
-        projects: Store.getState().projects,
+        openSourceProjects: Store.getState().openSourceProjects,
       });
     });
 
-    Store.dispatch(Middleware.fetchProjects());
+    Store.dispatch(Middleware.fetchOpenSourceProjects());
   }
 
   componentWillUnmount() {
@@ -32,11 +32,11 @@ export default class Projects extends React.Component {
   render() {
     return (
       <div>
-        <Menu projects={true} />
+        <Menu openSource={true} />
         <StyledFadeInDiv>
           <StyledProjects>
             {
-              this.state.projects
+              this.state.openSourceProjects
                   .filter((project) => !project.hidden)
                   .sort((a, b) => {
                     const titleA = a.title.toUpperCase();
