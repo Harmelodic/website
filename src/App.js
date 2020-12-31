@@ -6,6 +6,7 @@ import Projects from './projects/Projects';
 import OpenSource from './open-source/OpenSource';
 import Home from './home/Home';
 import Blog from './blog/Blog';
+import TrackMobileView from './mobile-view/TrackMobileView';
 
 const StyledApp = styled.div`
     margin-bottom: 50vh;
@@ -23,6 +24,7 @@ export default class App extends React.Component {
           <Route exact path="/projects" component={Projects} />
           <Route exact path="/open-source" component={OpenSource} />
         </Switch>
+        <TrackMobileView />
       </StyledApp>
     );
   }

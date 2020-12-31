@@ -22,6 +22,7 @@ export default class Scribbles extends React.Component {
     super(props);
 
     this.state = {
+      mobileView: Store.getState().mobileView,
       posts: Store.getState().blog.posts,
       categories: Store.getState().blog.categories,
       filterBySearch: '',
@@ -55,6 +56,7 @@ export default class Scribbles extends React.Component {
   componentDidMount() {
     this.unsubscribe = Store.subscribe(() => {
       this.setState({
+        mobileView: Store.getState().mobileView,
         posts: Store.getState().blog.posts,
         categories: Store.getState().blog.categories,
       });

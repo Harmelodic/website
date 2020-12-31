@@ -18,6 +18,7 @@ export const initialiseStore = () => {
 };
 
 const initialState = {
+  mobileView: true,
   projects: [],
   openSourceProjects: [],
   socialMedia: [],
