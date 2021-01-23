@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const size = 226;
 
-const StyledHeader = styled.div`
+const StyledHeader = styled.header`
     height: ${size}px;
     background: #000;
 `;
@@ -44,7 +44,7 @@ export default class Header extends React.Component {
     return (
       <StyledHeader>
         <RainbowBar />
-        <StyledLogo src="/images/logo.svg" />
+        <StyledLogo src="/images/logo.svg" alt="Harmelodic Logo" />
       </StyledHeader>
     );
   }
