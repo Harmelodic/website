@@ -32,7 +32,7 @@ export default class SocialMedia extends React.Component {
         title={this.props.title}
         href={this.props.href}
         target={this.props.href.includes('http') ? '_blank' : '_self'}
-        rel="me"
+        rel="noopener"
       >
         <StyledImage src={this.props.src} alt={this.props.title}/>
       </StyledSocialMedia>

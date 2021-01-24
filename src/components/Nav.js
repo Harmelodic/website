@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-const StyledMenu = styled.div`
+const StyledMenu = styled.nav`
     height: 60px;
     text-align: center;
 `;
@@ -24,7 +24,7 @@ const MenuItem = styled(Link)`
     }
 `;
 
-export default class Menu extends React.Component {
+export default class Nav extends React.Component {
   render() {
     return (
       <StyledMenu>

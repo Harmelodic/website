@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledFadeInDiv = styled.div`
+export const Main = styled.main`
     @keyframes complete-fade-in {
         from {
             opacity: 0;
@@ -14,9 +14,7 @@ export const StyledFadeInDiv = styled.div`
     animation: 
       complete-fade-in 
       ${(props) => props.fadeInTime ? props.fadeInTime : '800ms'};
-`;
 
-export const StyledPageContentContainer = styled.div`
     margin: 30px auto 0 auto;
     max-width: 1080px;
     text-align: center;

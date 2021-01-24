@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import Menu from '../components/Menu';
-import { StyledFadeInDiv } from '../components/Stylings';
+import Nav from '../components/Nav';
+import { Main } from '../components/Main';
 import SocialMedia from './components/SocialMedia';
 import { Store } from '../Store';
 import Middleware from './Middleware';
@@ -50,8 +50,8 @@ export default class Home extends React.Component {
   render() {
     return (
       <div>
-        <Menu me={true} />
-        <StyledFadeInDiv>
+        <Nav me={true} />
+        <Main>
           <Info>
             <CircleImage src="/images/headshot.jpg" />
           </Info>
@@ -97,7 +97,7 @@ export default class Home extends React.Component {
               size={100}
             />
           </Info>
-        </StyledFadeInDiv>
+        </Main>
       </div>
     );
   }

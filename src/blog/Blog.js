@@ -1,12 +1,9 @@
 import React from 'react';
 import Middleware from './Middleware';
 import { Store } from '../Store';
-import Menu from '../components/Menu';
+import Nav from '../components/Nav';
 import styled from 'styled-components';
-import {
-  StyledFadeInDiv,
-  StyledPageContentContainer,
-} from '../components/Stylings';
+import { Main } from '../components/Main';
 import FilterByBox from './components/FilterByBox';
 import Post from './components/Post';
 import InputTextBox from './components/InputTextBox';
@@ -158,32 +155,30 @@ export default class Scribbles extends React.Component {
 
     return (
       <div>
-        <Menu blog={true} />
-        <StyledFadeInDiv>
-          <StyledPageContentContainer>
-            <StyledFilters mobileView={this.state.mobileView}>
-              {
-                categoryBox
-              }
-              <InputTextBox
-                placeholder="Filter..."
-                onChange={this.onFilterBySearch}
-                value={this.state.filterBySearch}
-              />
-              <Button
-                mobileView={this.state.mobileView}
-                // eslint-disable-next-line max-len
-                visible={(this.state.filterBySearch || this.state.filterByCategory)}
-                onClick={this.onClearFilters}
-              >
-                Clear filters
-              </Button>
-            </StyledFilters>
+        <Nav blog={true} />
+        <Main>
+          <StyledFilters mobileView={this.state.mobileView}>
             {
-              postsToRender
+              categoryBox
             }
-          </StyledPageContentContainer>
-        </StyledFadeInDiv>
+            <InputTextBox
+              placeholder="Filter..."
+              onChange={this.onFilterBySearch}
+              value={this.state.filterBySearch}
+            />
+            <Button
+              mobileView={this.state.mobileView}
+              // eslint-disable-next-line max-len
+              visible={(this.state.filterBySearch || this.state.filterByCategory)}
+              onClick={this.onClearFilters}
+            >
+              Clear filters
+            </Button>
+          </StyledFilters>
+          {
+            postsToRender
+          }
+        </Main>
       </div>
     );
   }
