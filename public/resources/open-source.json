@@ -96,6 +96,13 @@
     "src": "/images/ops.svg"
   },
   {
+    "title": "Professor Zorg's Guide to Alien Etiquette",
+    "subtitle": "Retro Game Tool",
+    "src": "/images/zorg.png",
+    "background": "#ffffff",
+    "href": "https://github.com/Harmelodic/zorg"
+  },
+  {
     "title": "Quaff",
     "subtitle": "Capgemini OSCE Hackathon Project",
     "href": "https://gitlab.com/cap-osce/quaff",
@@ -107,13 +114,6 @@
     "subtitle": "npm package (Browser)",
     "href": "https://gitlab.com/Harmelodic/react-ui-lib",
     "src": "/images/react-ui-lib.svg"
-  },
-  {
-    "title": "scribbles",
-    "subtitle": "Personal Blog",
-    "href": "https://gitlab.com/harmelodic-group/scribbles",
-    "src": "/images/scribbles.svg",
-    "size": 50
   },
   {
     "title": "stackchat.github.io",
