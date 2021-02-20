@@ -2,7 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 
 const ErrorMessage = styled.div`
-  font-size: 20px;
+  display: inline-block;
+  margin-top: 10px;
+  border: red solid 1px;
+  border-radius: 3px;
+  padding: 0 20px;
+  font-size: 18px;
   text-align: center;
 `;
 
@@ -12,6 +17,7 @@ export default class ErrorBoundary extends React.Component {
 
     this.state = {
       hasError: false,
+      errorMessage: '',
     };
   }
 
@@ -22,14 +28,16 @@ export default class ErrorBoundary extends React.Component {
   }
 
   componentDidCatch(error, errorInfo) {
-    console.log(error, errorInfo);
+    console.error(error, errorInfo);
   }
 
   render() {
     if (this.state.hasError) {
       return (
         <ErrorMessage>
-          <p>Error loading this web component.</p>
+          <p>
+            Error loading web component.
+          </p>
           <p>
             This is usually due to a network connection issue.
           </p>

@@ -2,12 +2,14 @@ const SRC = __dirname + '/src/';
 const PUBLIC = __dirname + '/public/';
 
 module.exports = {
-  entry: SRC + 'index.js',
-  output: {
-    path: PUBLIC + '/js/',
-    filename: '[name].bundle.js',
-    chunkFilename: '[name].[contenthash].bundle.js',
+  devServer: {
+    compress: true,
+    contentBase: PUBLIC,
+    historyApiFallback: true,
+    hot: true,
+    inline: true,
   },
+  entry: SRC + 'index.js',
   module: {
     rules: [
       {
@@ -21,5 +23,10 @@ module.exports = {
         },
       },
     ],
+  },
+  output: {
+    chunkFilename: 'js-[name].[contenthash].bundle.js',
+    filename: 'js-[name].bundle.js',
+    path: PUBLIC,
   },
 };

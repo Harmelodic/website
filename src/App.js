@@ -1,26 +1,31 @@
 import React, { Suspense, lazy } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import styled from 'styled-components';
-import Header from './components/Header';
-import TrackMobileView from './mobile-view/TrackMobileView';
 import ErrorBoundary from './ErrorBoundary';
 import Loading from './components/Loading';
 
+const Header = lazy(() => import('./components/Header'));
 const Home = lazy(() => import('./home'));
 const Blog = lazy(() => import('./blog'));
 const Projects = lazy(() => import('./projects'));
 const OpenSource = lazy(() => import('./open-source'));
+const TrackMobileView = lazy(() => import('./mobile-view/TrackMobileView'));
 
 const StyledApp = styled.div`
     margin-bottom: 50vh;
     white-space: normal;
+    text-align: center;
 `;
 
 export default class App extends React.Component {
   render() {
     return (
       <StyledApp>
-        <Header />
+        <ErrorBoundary>
+          <Suspense fallback={<div />}>
+            <Header />
+          </Suspense>
+        </ErrorBoundary>
         <ErrorBoundary>
           <Suspense fallback={<Loading />}>
             <Switch>
@@ -31,7 +36,11 @@ export default class App extends React.Component {
             </Switch>
           </Suspense>
         </ErrorBoundary>
-        <TrackMobileView />
+        <ErrorBoundary>
+          <Suspense fallback={<div />}>
+            <TrackMobileView />
+          </Suspense>
+        </ErrorBoundary>
       </StyledApp>
     );
   }
