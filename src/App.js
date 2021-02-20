@@ -6,10 +6,10 @@ import TrackMobileView from './mobile-view/TrackMobileView';
 import ErrorBoundary from './ErrorBoundary';
 import Loading from './components/Loading';
 
-const Home = lazy(() => import('./home/Home'));
-const Blog = lazy(() => import('./blog/Blog'));
-const Projects = lazy(() => import('./projects/Projects'));
-const OpenSource = lazy(() => import('./open-source/OpenSource'));
+const Home = lazy(() => import('./home'));
+const Blog = lazy(() => import('./blog'));
+const Projects = lazy(() => import('./projects'));
+const OpenSource = lazy(() => import('./open-source'));
 
 const StyledApp = styled.div`
     margin-bottom: 50vh;

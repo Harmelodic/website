@@ -53,7 +53,7 @@ export default class Home extends React.Component {
         <Nav me={true} />
         <Main>
           <Info>
-            <CircleImage src="/images/headshot.jpg" />
+            <CircleImage src="/images/headshot.webp" />
           </Info>
           <Info>
             Matt Smith
@@ -90,7 +90,7 @@ export default class Home extends React.Component {
               size={60}
             />
             <Project
-              src="/images/cloud-professional-architect.png"
+              src="/images/cloud-professional-architect.webp"
               background="#374850"
               title="Professional Cloud Architect"
               href="https://www.credential.net/bd886e12-4a18-4439-8c9a-680107c23547"
