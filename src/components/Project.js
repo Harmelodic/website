@@ -59,7 +59,7 @@ const StyledSubtitle = styled.span`
 export default class Project extends React.Component {
   render() {
     return (
-      <StyledProject href={this.props.href} target="_blank">
+      <StyledProject href={this.props.href} target="_blank" rel="noopener">
         <StyledProjectImageCircle background={this.props.background}>
           <StyledProjectImage
             src={this.props.src ? this.props.src : '/images/NoLogo.svg'}
