@@ -4,7 +4,7 @@ const PUBLIC = __dirname + '/public/';
 module.exports = {
   entry: SRC + 'index.js',
   output: {
-    path: PUBLIC,
+    path: PUBLIC + '/js/',
     filename: '[name].bundle.js',
     chunkFilename: '[name].[contenthash].bundle.js',
   },
