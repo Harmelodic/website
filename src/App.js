@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import styled from 'styled-components';
 import Header from './components/Header';
-import Projects from './projects/Projects';
-import OpenSource from './open-source/OpenSource';
-import Home from './home/Home';
-import Blog from './blog/Blog';
 import TrackMobileView from './mobile-view/TrackMobileView';
+import ErrorBoundary from './ErrorBoundary';
+import Loading from './components/Loading';
+
+const Home = lazy(() => import('./home/Home'));
+const Blog = lazy(() => import('./blog/Blog'));
+const Projects = lazy(() => import('./projects/Projects'));
+const OpenSource = lazy(() => import('./open-source/OpenSource'));
 
 const StyledApp = styled.div`
     margin-bottom: 50vh;
@@ -18,12 +21,16 @@ export default class App extends React.Component {
     return (
       <StyledApp>
         <Header />
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/blog" component={Blog} />
-          <Route exact path="/projects" component={Projects} />
-          <Route exact path="/open-source" component={OpenSource} />
-        </Switch>
+        <ErrorBoundary>
+          <Suspense fallback={<Loading />}>
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/blog" component={Blog} />
+              <Route exact path="/projects" component={Projects} />
+              <Route exact path="/open-source" component={OpenSource} />
+            </Switch>
+          </Suspense>
+        </ErrorBoundary>
         <TrackMobileView />
       </StyledApp>
     );

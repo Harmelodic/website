@@ -1,4 +1,4 @@
-public/bundle.js
-public/bundle.js.gz
-public/bundle.js.LICENSE.txt
+public/*bundle.js
+public/*bundle.js.gz
+public/*bundle.js.LICENSE.txt
 node_modules/

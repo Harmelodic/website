@@ -5,7 +5,8 @@ module.exports = {
   entry: SRC + 'index.js',
   output: {
     path: PUBLIC,
-    filename: 'bundle.js',
+    filename: '[name].bundle.js',
+    chunkFilename: '[name].[contenthash].bundle.js',
   },
   module: {
     rules: [
