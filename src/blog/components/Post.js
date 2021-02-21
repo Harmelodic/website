@@ -29,9 +29,10 @@ const StyledTitle = styled.div`
 
 const StyledSubtitle = styled.div`
     margin-top: 5px;
-    font-size: 16px;
-    color: #999;
+    font-size: 14px;
+    color: #666;
     line-height: 1.6em;
+    font-style: italic;
 `;
 
 export default class Post extends React.PureComponent {

@@ -51,8 +51,8 @@ const StyledProjectText = styled.div`
 
 const StyledSubtitle = styled.span`
     display: block;
-    font-size: 16px;
-    color: #999;
+    font-size: 14px;
+    color: #666;
     font-style: italic;
 `;
 
