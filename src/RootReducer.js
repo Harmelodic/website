@@ -1,8 +1,8 @@
 import { mobileViewReducer } from './mobile-view/Reducer';
-import { projectsReducer } from './projects/Reducer';
-import { openSourceProjectsReducer } from './open-source/Reducer';
-import { socialMediaReducer } from './home/Reducer';
-import { blogReducer } from './blog/Reducer';
+import { projectsReducer } from './containers/projects/Reducer';
+import { openSourceProjectsReducer } from './containers/open-source/Reducer';
+import { socialMediaReducer } from './containers/home/Reducer';
+import { blogReducer } from './containers/blog/Reducer';
 
 export const rootReducer = (state, action) => {
   return {

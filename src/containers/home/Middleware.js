@@ -1,4 +1,4 @@
-import FetchHandler from '../FetchHandler';
+import FetchHandler from '../../FetchHandler';
 import Actions from './Actions';
 
 export default class Middleware {

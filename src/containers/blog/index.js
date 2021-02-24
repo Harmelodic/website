@@ -1,14 +1,13 @@
 import React from 'react';
 import Middleware from './Middleware';
-import { Store } from '../Store';
-import Nav from '../components/Nav';
 import styled from 'styled-components';
-import { Main } from '../components/Main';
 import FilterByBox from './components/FilterByBox';
 import Post from './components/Post';
 import InputTextBox from './components/InputTextBox';
 import Button from './components/Button';
 import LoadingSign from './components/LoadingSign';
+import { Store } from '../../Store';
+import { Main } from '../../components/Main';
 
 const StyledFilters = styled.div`
     text-align: ${(props) => props.mobileView ? 'center' : 'left'};
@@ -54,6 +53,7 @@ export default class Scribbles extends React.Component {
   }
 
   componentDidMount() {
+    this.props.updatePath();
     this.unsubscribe = Store.subscribe(() => {
       this.setState({
         mobileView: Store.getState().mobileView,
@@ -154,32 +154,29 @@ export default class Scribbles extends React.Component {
     }
 
     return (
-      <div>
-        <Nav blog={true} />
-        <Main>
-          <StyledFilters mobileView={this.state.mobileView}>
-            {
-              categoryBox
-            }
-            <InputTextBox
-              placeholder="Filter..."
-              onChange={this.onFilterBySearch}
-              value={this.state.filterBySearch}
-            />
-            <Button
-              mobileView={this.state.mobileView}
-              // eslint-disable-next-line max-len
-              visible={(this.state.filterBySearch || this.state.filterByCategory)}
-              onClick={this.onClearFilters}
-            >
-              Clear filters
-            </Button>
-          </StyledFilters>
+      <Main>
+        <StyledFilters mobileView={this.state.mobileView}>
           {
-            postsToRender
+            categoryBox
           }
-        </Main>
-      </div>
+          <InputTextBox
+            placeholder="Filter..."
+            onChange={this.onFilterBySearch}
+            value={this.state.filterBySearch}
+          />
+          <Button
+            mobileView={this.state.mobileView}
+            // eslint-disable-next-line max-len
+            visible={(this.state.filterBySearch || this.state.filterByCategory)}
+            onClick={this.onClearFilters}
+          >
+            Clear filters
+          </Button>
+        </StyledFilters>
+        {
+          postsToRender
+        }
+      </Main>
     );
   }
 };

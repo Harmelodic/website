@@ -38,9 +38,6 @@ export default class ErrorBoundary extends React.Component {
           <p>
             Error loading web component.
           </p>
-          <p>
-            This is usually due to a network connection issue.
-          </p>
         </ErrorMessage>
       );
     }

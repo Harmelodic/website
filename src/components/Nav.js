@@ -26,16 +26,20 @@ const MenuItem = styled(Link)`
 
 export default class Nav extends React.Component {
   render() {
+    const { path } = this.props;
+
     return (
       <StyledMenu>
-        <MenuItem to="/" selected={this.props.me}>Me</MenuItem>
-        <MenuItem to="/blog" selected={this.props.blog}>
+        <MenuItem to="/" selected={path === '/'}>
+          Me
+        </MenuItem>
+        <MenuItem to="/blog" selected={path === '/blog'}>
           Blog
         </MenuItem>
-        <MenuItem to="/projects" selected={this.props.projects}>
+        <MenuItem to="/projects" selected={path === '/projects'}>
           Projects
         </MenuItem>
-        <MenuItem to="/open-source" selected={this.props.openSource}>
+        <MenuItem to="/open-source" selected={path === '/open-source'}>
           Open-source
         </MenuItem>
       </StyledMenu>

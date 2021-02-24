@@ -1,4 +1,4 @@
-import FetchHandler from '../FetchHandler';
+import FetchHandler from '../../FetchHandler';
 import Actions from './Actions';
 
 const blogAPI = process.env.BLOG_API || '';
