@@ -24,6 +24,14 @@ export default function App() {
     setPath(window.location.pathname)
   }
 
+  function RouteWithPathUpdate({ component: Component, ...routeProps }) {
+    return (
+      <Route {...routeProps} render={(props) => (
+        <Component {...props} updatePath={updatePath} />
+      )} />
+    )
+  }
+
   return (
     <StyledApp>
 
@@ -42,18 +50,10 @@ export default function App() {
       <ErrorBoundary>
         <Suspense fallback={<div />}>
           <Switch>
-            <Route exact path="/" render={(props) => (
-              <Home {...props} updatePath={updatePath} />
-            )} />
-            <Route exact path="/blog" render={(props) => (
-              <Blog {...props} updatePath={updatePath} />
-            )} />
-            <Route exact path="/projects" render={(props) => (
-              <Projects {...props} updatePath={updatePath} />
-            )} />
-            <Route exact path="/open-source" render={(props) => (
-              <OpenSource {...props} updatePath={updatePath} />
-            )} />
+            <RouteWithPathUpdate exact path="/" component={Home} />
+            <RouteWithPathUpdate exact path="/blog" component={Blog} />
+            <RouteWithPathUpdate exact path="/projects" component={Projects} />
+            <RouteWithPathUpdate exact path="/open-source" component={OpenSource} />
           </Switch>
         </Suspense>
       </ErrorBoundary>
