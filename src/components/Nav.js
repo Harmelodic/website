@@ -15,7 +15,7 @@ const MenuItem = styled(Link)`
     font-size: 18px;
     color: #000;
     text-decoration: none;
-    border-bottom: ${(props) => props.selected ? 'solid 1px #000' : '1px'};
+    border-bottom: ${props => props.selected ? 'solid 1px #000' : '1px'};
 
     &:hover {
         border-bottom: solid 1px #000;

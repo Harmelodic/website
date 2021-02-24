@@ -24,14 +24,14 @@ const StyledImage = styled.img`
     height: 55%;
 `;
 
-export default function SocialMedia() {
+export default function SocialMedia(props) {
   return (
     <StyledSocialMedia
-      title={this.props.title}
-      href={this.props.href}
-      target={this.props.href.includes('http') ? '_blank' : '_self'}
+      title={props.title}
+      href={props.href}
+      target={props.href.includes('http') ? '_blank' : '_self'}
       rel="noopener">
-      <StyledImage src={this.props.src} alt={this.props.title}/>
+      <StyledImage src={props.src} alt={props.title}/>
     </StyledSocialMedia>
   );
 }

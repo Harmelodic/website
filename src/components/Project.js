@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 
 const StyledProject = styled.a`
@@ -26,7 +25,7 @@ const StyledProjectImageCircle = styled.div`
     overflow: hidden;
     border: solid 1px #000;
     background-color:
-      ${(props) => props.background ? props.background : '#fff'};
+      ${props => props.background ? props.background : '#fff'};
 `;
 
 const StyledProjectImage = styled.img`
@@ -36,8 +35,8 @@ const StyledProjectImage = styled.img`
 
     display: block;
     margin: 0 auto;
-    width: ${(props) => props.size ? props.size : '65'}%;
-    height: ${(props) => props.size ? props.size : '65'}%;
+    width: ${props => props.size ? props.size : '65'}%;
+    height: ${props => props.size ? props.size : '65'}%;
 `;
 
 const StyledProjectText = styled.div`

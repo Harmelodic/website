@@ -1,31 +1,24 @@
-import React from 'react';
-import { Store } from '../Store.js';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import Actions from './Actions.js';
 
-export default class TrackMobileView extends React.Component {
-  constructor(props) {
-    super(props);
-    this.updateMobileViewTracker = this.updateMobileViewTracker.bind(this);
+export default function TrackMobileView() {
+  const dispatch = useDispatch();
+  function updateMobileViewTracker() {
+    dispatch(Actions.setMobileView(window.innerWidth > 900 ? false : true));
   }
 
-  componentDidMount() {
-    this.updateMobileViewTracker();
-    window.addEventListener('resize', this.updateMobileViewTracker);
-  }
+  useEffect(() => {
+    updateMobileViewTracker();
 
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.updateMobileViewTracker);
-  }
+    window.addEventListener('resize', updateMobileViewTracker);
 
-  updateMobileViewTracker() {
-    Store.dispatch(
-        Actions.setMobileView(window.innerWidth > 900 ? false : true),
-    );
-  }
+    return function cleanup() {
+      window.removeEventListener('resize', updateMobileViewTracker);
+    };
+  }, []);
 
-  render() {
-    return (
-      <div />
-    );
-  }
+  return (
+    <div />
+  );
 }

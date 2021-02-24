@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const Button = styled.button`
-    display: ${(props) => props.visible ? 'inline-block' : 'none'};
+    display: ${props => props.visible ? 'inline-block' : 'none'};
     height: 40px;
     margin: 0 20px 20px 20px;
     background: #fff;

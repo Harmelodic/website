@@ -21,7 +21,7 @@ export default class ErrorBoundary extends React.Component {
     };
   }
 
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(_) {
     return {
       hasError: true,
     };

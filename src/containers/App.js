@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react';
+import { Suspense, lazy, useState } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import styled from 'styled-components';
 import ErrorBoundary from './ErrorBoundary';
@@ -17,65 +17,53 @@ const StyledApp = styled.div`
     text-align: center;
 `;
 
-export default class App extends React.Component {
-  constructor(props) {
-    super(props);
+export default function App() {
+  const [path, setPath] = useState(window.location.pathname);
 
-    this.state = {
-      path: window.location.pathname
-    }
-
-    this.updatePath = this.updatePath.bind(this);
+  function updatePath() {
+    setPath(window.location.pathname)
   }
 
-  updatePath() {
-    this.setState({
-      path: window.location.pathname
-    })
-  }
+  return (
+    <StyledApp>
 
-  render() {
-    return (
-      <StyledApp>
+      <ErrorBoundary>
+        <Suspense fallback={<div />}>
+          <Header />
+        </Suspense>
+      </ErrorBoundary>
+      
+      <ErrorBoundary>
+        <Suspense fallback={<div />}>
+          <Nav path={path}/>
+        </Suspense>
+      </ErrorBoundary>
 
-        <ErrorBoundary>
-          <Suspense fallback={<div />}>
-            <Header />
-          </Suspense>
-        </ErrorBoundary>
-        
-        <ErrorBoundary>
-          <Suspense fallback={<div />}>
-            <Nav path={this.state.path}/>
-          </Suspense>
-        </ErrorBoundary>
+      <ErrorBoundary>
+        <Suspense fallback={<div />}>
+          <Switch>
+            <Route exact path="/" render={(props) => (
+              <Home {...props} updatePath={updatePath} />
+            )} />
+            <Route exact path="/blog" render={(props) => (
+              <Blog {...props} updatePath={updatePath} />
+            )} />
+            <Route exact path="/projects" render={(props) => (
+              <Projects {...props} updatePath={updatePath} />
+            )} />
+            <Route exact path="/open-source" render={(props) => (
+              <OpenSource {...props} updatePath={updatePath} />
+            )} />
+          </Switch>
+        </Suspense>
+      </ErrorBoundary>
 
-        <ErrorBoundary>
-          <Suspense fallback={<div />}>
-            <Switch>
-              <Route exact path="/" render={(props) => (
-                <Home {...props} updatePath={this.updatePath} />
-              )} />
-              <Route exact path="/blog" render={(props) => (
-                <Blog {...props} updatePath={this.updatePath} />
-              )} />
-              <Route exact path="/projects" render={(props) => (
-                <Projects {...props} updatePath={this.updatePath} />
-              )} />
-              <Route exact path="/open-source" render={(props) => (
-                <OpenSource {...props} updatePath={this.updatePath} />
-              )} />
-            </Switch>
-          </Suspense>
-        </ErrorBoundary>
-
-        <ErrorBoundary>
-          <Suspense fallback={<div />}>
-            <TrackMobileView />
-          </Suspense>
-        </ErrorBoundary>
-        
-      </StyledApp>
-    );
-  }
+      <ErrorBoundary>
+        <Suspense fallback={<div />}>
+          <TrackMobileView />
+        </Suspense>
+      </ErrorBoundary>
+      
+    </StyledApp>
+  );
 }

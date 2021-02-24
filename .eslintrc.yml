@@ -14,6 +14,13 @@ parserOptions:
 plugins:
   - react
 rules: {
+  arrow-parens: [2, "as-needed", {
+    "requireForBlockBody": true
+  }],
+  max-len: [2, {
+    "code": 100
+  }],
+  object-curly-spacing: [2, "always"],
   react/jsx-uses-vars: ["error"],
   require-jsdoc: ["error", {
     "require": {
@@ -23,6 +30,5 @@ rules: {
       "ArrowFunctionExpression": false,
       "FunctionExpression": false
     }}
-  ],
-  object-curly-spacing: [2, "always"]
+  ]
 }

@@ -7,7 +7,7 @@ const StyledProjectImage = styled.div`
     border-radius: 100%;
     border: solid 1px #000;
     background-color: #000;
-    background-image: url('${(props) => props.src}');
+    background-image: url('${props => props.src}');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -15,8 +15,8 @@ const StyledProjectImage = styled.div`
     line-height: 150px;
 `;
 
-export default function CircleImage() {
+export default function CircleImage(props) {
   return (
-    <StyledProjectImage src={this.props.src} />
+    <StyledProjectImage src={props.src} />
   );
 }

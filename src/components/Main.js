@@ -13,7 +13,7 @@ export const Main = styled.main`
 
     animation: 
       complete-fade-in 
-      ${(props) => props.fadeInTime ? props.fadeInTime : '800ms'};
+      ${props => props.fadeInTime ? props.fadeInTime : '800ms'};
 
     margin: 30px auto 0 auto;
     max-width: 1080px;

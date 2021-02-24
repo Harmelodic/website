@@ -8,7 +8,7 @@ export default class Middleware {
     return (dispatch) => {
       dispatch(Actions.startedLoadingPosts());
       FetchHandler.request('GET', `${blogAPI}/post`)
-          .then((response) => response.json().then((data) => {
+          .then(response => response.json().then((data) => {
             dispatch(Actions.setPosts(data));
             dispatch(Actions.finishedLoadingPosts());
           }));
@@ -19,7 +19,7 @@ export default class Middleware {
     return (dispatch) => {
       dispatch(Actions.startedLoadingCategories());
       FetchHandler.request('GET', `${blogAPI}/category`)
-          .then((response) => response.json().then((data) => {
+          .then(response => response.json().then((data) => {
             dispatch(Actions.setCategories(data));
             dispatch(Actions.finishedLoadingCategories());
           }));
