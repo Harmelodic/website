@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 
 const StyledProjectImage = styled.div`
@@ -16,10 +15,8 @@ const StyledProjectImage = styled.div`
     line-height: 150px;
 `;
 
-export default class CircleImage extends React.PureComponent {
-  render() {
-    return (
-      <StyledProjectImage src={this.props.src} />
-    );
-  }
+export default function CircleImage() {
+  return (
+    <StyledProjectImage src={this.props.src} />
+  );
 }

@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 
 const StyledPost = styled.a`
@@ -35,23 +34,21 @@ const StyledSubtitle = styled.div`
     font-style: italic;
 `;
 
-export default class Post extends React.PureComponent {
-  render() {
-    return (
-      <StyledPost href={this.props.link}>
-        <StyledTitle className="heading">{this.props.title}</StyledTitle>
-        <StyledSubtitle>
-          {
-            this.props.datePosted
-          }
-        </StyledSubtitle>
+export default function Post(props) {
+  return (
+    <StyledPost href={props.link}>
+      <StyledTitle className="heading">{props.title}</StyledTitle>
+      <StyledSubtitle>
         {
-          this.props.lastUpdated !== this.props.datePosted &&
-            <StyledSubtitle>
-              {`Last Updated: ${this.props.lastUpdated}`}
-            </StyledSubtitle>
+          props.datePosted
         }
-      </StyledPost>
-    );
-  }
+      </StyledSubtitle>
+      {
+        props.lastUpdated !== props.datePosted &&
+          <StyledSubtitle>
+            {`Last Updated: ${props.lastUpdated}`}
+          </StyledSubtitle>
+      }
+    </StyledPost>
+  );
 }

@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 
 const size = 60;
@@ -25,17 +24,14 @@ const StyledImage = styled.img`
     height: 55%;
 `;
 
-export default class SocialMedia extends React.Component {
-  render() {
-    return (
-      <StyledSocialMedia
-        title={this.props.title}
-        href={this.props.href}
-        target={this.props.href.includes('http') ? '_blank' : '_self'}
-        rel="noopener"
-      >
-        <StyledImage src={this.props.src} alt={this.props.title}/>
-      </StyledSocialMedia>
-    );
-  }
+export default function SocialMedia() {
+  return (
+    <StyledSocialMedia
+      title={this.props.title}
+      href={this.props.href}
+      target={this.props.href.includes('http') ? '_blank' : '_self'}
+      rel="noopener">
+      <StyledImage src={this.props.src} alt={this.props.title}/>
+    </StyledSocialMedia>
+  );
 }

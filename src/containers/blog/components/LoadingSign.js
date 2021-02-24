@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 
 export const StyledLoadingSign = styled.div`
@@ -6,12 +5,10 @@ export const StyledLoadingSign = styled.div`
   padding: 20px;
 `;
 
-export default class LoadingSign extends React.PureComponent {
-  render() {
-    return (
-      <StyledLoadingSign>
-        Loading...
-      </StyledLoadingSign>
-    );
-  }
-};
+export default function LoadingSign() {
+  return (
+    <StyledLoadingSign>
+      Loading...
+    </StyledLoadingSign>
+  );
+}

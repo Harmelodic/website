@@ -56,35 +56,33 @@ const StyledSubtitle = styled.span`
     font-style: italic;
 `;
 
-export default class Project extends React.Component {
-  render() {
-    return (
-      <StyledProject href={this.props.href} target="_blank" rel="noopener">
-        <StyledProjectImageCircle background={this.props.background}>
-          <StyledProjectImage
-            src={this.props.src ? this.props.src : '/images/NoLogo.svg'}
-            alt="project-image"
-            size={this.props.size}
-          />
-        </StyledProjectImageCircle>
-        <StyledProjectText>
-          {this.props.title}
-          {
-            this.props.subtitle &&
-              <StyledSubtitle>
-                {
-                  this.props.subtitle
-                      .split('\n')
-                      .map((subtitleString, index) => {
-                        return (
-                          <div key={index}>{subtitleString}</div>
-                        );
-                      })
-                }
-              </StyledSubtitle>
-          }
-        </StyledProjectText>
-      </StyledProject>
-    );
-  }
+export default function Project(props) {
+  return (
+    <StyledProject href={props.href} target="_blank" rel="noopener">
+      <StyledProjectImageCircle background={props.background}>
+        <StyledProjectImage
+          src={props.src ? props.src : '/images/NoLogo.svg'}
+          alt="project-image"
+          size={props.size}
+        />
+      </StyledProjectImageCircle>
+      <StyledProjectText>
+        {props.title}
+        {
+          props.subtitle &&
+            <StyledSubtitle>
+              {
+                props.subtitle
+                    .split('\n')
+                    .map((subtitleString, index) => {
+                      return (
+                        <div key={index}>{subtitleString}</div>
+                      );
+                    })
+              }
+            </StyledSubtitle>
+        }
+      </StyledProjectText>
+    </StyledProject>
+  );
 }

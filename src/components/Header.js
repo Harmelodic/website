@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 
 const size = 226;
@@ -39,13 +38,11 @@ const RainbowBar = styled.div`
     ); /* Standard syntax (must be last) */
 `;
 
-export default class Header extends React.Component {
-  render() {
-    return (
-      <StyledHeader>
-        <RainbowBar />
-        <StyledLogo src="/images/logo.svg" alt="Harmelodic Logo" />
-      </StyledHeader>
-    );
-  }
+export default function Header() {
+  return (
+    <StyledHeader>
+      <RainbowBar />
+      <StyledLogo src="/images/logo.svg" alt="Harmelodic Logo" />
+    </StyledHeader>
+  );
 }
