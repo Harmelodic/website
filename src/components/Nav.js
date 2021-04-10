@@ -22,7 +22,8 @@ const StyledMenu = styled.div`
 
 const MenuHeaderIcon = styled(CircleImage)`
     display: flex;
-    margin: 40px 0;
+    margin: 55px 0;
+    border: solid 1px #fff;
 `;
 
 const MenuItem = styled(Link)`
