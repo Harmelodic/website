@@ -6,10 +6,10 @@ const StyledNav = styled.nav`
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
-    min-height: 100vh;
     align-items: center;
+    min-height: 100vh;
     min-width: 300px;
-    border-right: solid 1px #aaa;
+    background: #191919;
 `;
 
 const StyledMenu = styled.div`
@@ -30,15 +30,15 @@ const MenuItem = styled(Link)`
     height: 60px;
     line-height: 60px;
     font-size: 18px;
-    color: ${props => props.selected ? '#fff' : '#000'};
+    color: ${props => props.selected ? '#000' : '#fff'};
     text-decoration: none;
-    background: ${props => props.selected ? '#333' : 'rgba(0,0,0,0)'};
+    background: ${props => props.selected ? '#fff' : 'rgba(0,0,0,0)'};
     text-align: center;
     transition: background: 200ms;
 
     &:hover {
         cursor: pointer;
-        background: ${props => props.selected ? '#333' : '#f3f3f3'};
+        background: ${props => props.selected ? '#fff' : '#333'};
     }
 `;
 
