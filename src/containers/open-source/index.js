@@ -11,6 +11,7 @@ const OpenSourceMain = styled(Main)`
     align-items: flex-start;
     align-content: flex-start;
     padding-top: 20px;
+    max-width: 100%;
 `;
 
 export default function OpenSource(props) {

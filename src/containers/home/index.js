@@ -12,15 +12,14 @@ const HomeMain = styled(Main)`
     align-items: flex-start;
 `;
 
-const InfoHeader = styled.div`
+const InfoHeader = styled.h2`
+    margin: 0;
     padding: 30px 0 5px 0;
     font-size: 22px;
     font-weight: 500;
 `;
 
 const Info = styled.div`
-    display: flex;
-    flex-flow: row wrap;
     padding-left: 30px;
     max-width: 800px;
     font-size: 18px;
@@ -33,6 +32,14 @@ const StyledSocialMediaLinks = styled.div`
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: flex-start;
+`;
+
+const StyledCertifications = styled.div`
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
 `;
 
 export default function Home(props) {
@@ -87,20 +94,22 @@ export default function Home(props) {
 
       <InfoHeader>Certifications</InfoHeader>
       <Info>
-        <Project
-          src="/images/gitlab.svg"
-          background=""
-          title="GitLab Hero"
-          href="https://gitlab.com/gitlab-com/www-gitlab-com/merge_requests/34774"
-          size={60}
-        />
-        <Project
-          src="/images/cloud-professional-architect.webp"
-          background="#374850"
-          title="Professional Cloud Architect"
-          href="https://www.credential.net/bd886e12-4a18-4439-8c9a-680107c23547"
-          size={100}
-        />
+        <StyledCertifications>
+          <Project
+            src="/images/gitlab.svg"
+            background=""
+            title="GitLab Hero"
+            href="https://gitlab.com/gitlab-com/www-gitlab-com/merge_requests/34774"
+            size={60}
+          />
+          <Project
+            src="/images/cloud-professional-architect.webp"
+            background="#374850"
+            title="Professional Cloud Architect"
+            href="https://www.credential.net/bd886e12-4a18-4439-8c9a-680107c23547"
+            size={100}
+          />
+        </StyledCertifications>
       </Info>
 
     </HomeMain>
