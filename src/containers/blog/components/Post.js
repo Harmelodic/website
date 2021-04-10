@@ -1,9 +1,11 @@
 import styled from 'styled-components';
 
 const StyledPost = styled.a`
-    display: block;
+    display: flex;
+    flex-flow: column nowrap;
+    width: calc(100% - 60px);
     margin-bottom: 0;
-    border-bottom: solid 1px #666;
+    border-bottom: dashed 1px #666;
     padding: 30px;
     text-decoration: none;
     white-space: normal;
@@ -21,12 +23,14 @@ const StyledPost = styled.a`
 `;
 
 const StyledTitle = styled.div`
+    display: flex;
     font-size: 20px;
     color: #555;
 `;
 
 
 const StyledSubtitle = styled.div`
+    display: flex;
     margin-top: 5px;
     font-size: 14px;
     color: #666;

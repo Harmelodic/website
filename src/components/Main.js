@@ -15,8 +15,11 @@ export const Main = styled.main`
       complete-fade-in 
       ${props => props.fadeInTime ? props.fadeInTime : '800ms'};
 
-    margin: 30px auto 0 auto;
+    display: flex;
+    padding-left: 20px;
+    width: 100%;
+    min-width: 300px;
     max-width: 1080px;
-    text-align: center;
-    white-space: normal;
+
+    padding-bottom: 40vh;
 `;

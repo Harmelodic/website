@@ -4,23 +4,35 @@ import styled from 'styled-components';
 import Middleware from './Middleware';
 import SocialMedia from './components/SocialMedia';
 import { Main } from '../../components/Main';
-import CircleImage from '../../components/CircleImage';
 import Project from '../../components/Project';
 
+const HomeMain = styled(Main)`
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+`;
+
+const InfoHeader = styled.div`
+    padding: 30px 0 5px 0;
+    font-size: 22px;
+    font-weight: 500;
+`;
+
 const Info = styled.div`
+    display: flex;
+    flex-flow: row wrap;
+    padding-left: 30px;
     max-width: 800px;
-    margin: 15px auto;
     font-size: 18px;
     color: #000;
-    text-align: center;
-    line-height: 24px;
+    line-height: 28px;
 `;
 
 const StyledSocialMediaLinks = styled.div`
-    min-width: 300px;
-    display: block;
-    margin: 0 auto;
-    white-space: normal;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
 `;
 
 export default function Home(props) {
@@ -33,20 +45,29 @@ export default function Home(props) {
   const socialMedia = useSelector(store => store.socialMedia);
 
   return (
-    <Main>
-      <Info>
-        <CircleImage src="/images/headshot.webp" />
-      </Info>
+    <HomeMain>
+
+      <InfoHeader>Name</InfoHeader>
       <Info>
         Matt Smith
-        <br />
-        @Harmelodic
       </Info>
+
+      <InfoHeader>Alias</InfoHeader>
       <Info>
+          Harmelodic
       </Info>
+
+      <InfoHeader>Roles</InfoHeader>
       <Info>
-        Software Engineer - Consultant - Writer - Designer - Musician
+        Software Engineer<br />
+        Consultant<br />
+        Writer<br />
+        Designer<br />
+        Musician<br />
+        Dungeon Master<br />
       </Info>
+
+      <InfoHeader>Socials</InfoHeader>
       <Info>
         <StyledSocialMediaLinks>
           {
@@ -63,6 +84,8 @@ export default function Home(props) {
           }
         </StyledSocialMediaLinks>
       </Info>
+
+      <InfoHeader>Certifications</InfoHeader>
       <Info>
         <Project
           src="/images/gitlab.svg"
@@ -79,6 +102,7 @@ export default function Home(props) {
           size={100}
         />
       </Info>
-    </Main>
+
+    </HomeMain>
   );
 }

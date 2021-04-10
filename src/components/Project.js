@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 
 const StyledProject = styled.a`
-    display: inline-block;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
     margin: 5px;
     width: 200px;
-    text-align: center;
     text-decoration: none;
-    vertical-align: top;
     color: #000;
     transition: background 300ms;
 
@@ -17,7 +18,9 @@ const StyledProject = styled.a`
 `;
 
 const StyledProjectImageCircle = styled.div`
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 25px;
     width: 150px;
     height: 150px;
@@ -29,27 +32,26 @@ const StyledProjectImageCircle = styled.div`
 `;
 
 const StyledProjectImage = styled.img`
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-
-    display: block;
-    margin: 0 auto;
     width: ${props => props.size ? props.size : '65'}%;
     height: ${props => props.size ? props.size : '65'}%;
 `;
 
 const StyledProjectText = styled.div`
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
     width: 190px;
     padding-left: 5px;
     padding-right: 5px;
     padding-bottom: 25px;
     font-size: 20px;
     line-height: 24px;
+    white-space: normal;
+    text-align: center;
 `;
 
 const StyledSubtitle = styled.span`
-    display: block;
+    display: flex;
     font-size: 14px;
     color: #666;
     font-style: italic;

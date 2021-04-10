@@ -1,8 +1,17 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import styled from 'styled-components';
 import Middleware from './Middleware';
 import { Main } from '../../components/Main';
 import Project from '../../components/Project';
+
+const OpenSourceMain = styled(Main)`
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    padding-top: 20px;
+`;
 
 export default function OpenSource(props) {
   const dispatch = useDispatch();
@@ -14,7 +23,7 @@ export default function OpenSource(props) {
   const openSourceProjects = useSelector(store => store.openSourceProjects);
 
   return (
-    <Main>
+    <OpenSourceMain>
       {
         openSourceProjects
             .filter(project => !project.hidden)
@@ -43,6 +52,6 @@ export default function OpenSource(props) {
               );
             })
       }
-    </Main>
+    </OpenSourceMain>
   );
 }

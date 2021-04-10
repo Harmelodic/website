@@ -3,8 +3,10 @@ import styled from 'styled-components';
 const size = 60;
 
 const StyledSocialMedia = styled.a`
-    display: inline-block;
-    margin: 10px 10px 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
     width: ${size}px;
     height: ${size}px;
     text-decoration: none;
@@ -16,10 +18,6 @@ const StyledSocialMedia = styled.a`
 `;
 
 const StyledImage = styled.img`
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-
     width: 55%;
     height: 55%;
 `;

@@ -9,7 +9,17 @@ import Button from './components/Button';
 import LoadingSign from './components/LoadingSign';
 import { Main } from '../../components/Main';
 
+const BlogMain = styled(Main)`
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 0;
+`;
+
 const StyledFilters = styled.div`
+    display: flex;
+    flex-flow: row wrap;
+    margin: 20px 0 0 20px;
     text-align: ${props => props.mobileView ? 'center' : 'left'};
     white-space: normal;
 `;
@@ -110,7 +120,7 @@ export default function Blog(props) {
   }
 
   return (
-    <Main>
+    <BlogMain>
       <StyledFilters mobileView={mobileView}>
         {
           categoryBox
@@ -135,6 +145,6 @@ export default function Blog(props) {
       {
         postsToRender
       }
-    </Main>
+    </BlogMain>
   );
 };

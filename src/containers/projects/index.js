@@ -1,8 +1,17 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import styled from 'styled-components';
 import Middleware from './Middleware';
 import { Main } from '../../components/Main';
 import Project from '../../components/Project';
+
+const ProjectsMain = styled(Main)`
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    padding-top: 20px;
+`;
 
 export default function Projects(props) {
   const dispatch = useDispatch();
@@ -14,7 +23,7 @@ export default function Projects(props) {
   const projects = useSelector(store => store.projects);
 
   return (
-    <Main>
+    <ProjectsMain>
       {
         projects
             .filter(project => !project.hidden)
@@ -43,6 +52,6 @@ export default function Projects(props) {
               );
             })
       }
-    </Main>
+    </ProjectsMain>
   );
 }
