@@ -4,11 +4,10 @@ import styled from 'styled-components';
 import { ErrorBoundary } from '../ErrorBoundary';
 
 const Nav = lazy(() => import('./nav/Nav'));
-const Home = lazy(() => import('./main/home'));
-const Blog = lazy(() => import('./main/blog'));
-const Projects = lazy(() => import('./main/projects'));
-const OpenSource = lazy(() => import('./main/open-source'));
-const TrackMobileView = lazy(() => import('./mobile-view/TrackMobileView'));
+const Home = lazy(() => import('./main/home/Home'));
+const Blog = lazy(() => import('./main/blog/Blog'));
+const Projects = lazy(() => import('./main/projects/Projects'));
+const OpenSource = lazy(() => import('./main/open-source/OpenSource'));
 
 const StyledApp = styled.div`
     display: flex;
@@ -48,12 +47,6 @@ export function App() {
             <RouteWithPathUpdate exact path="/projects" component={Projects} />
             <RouteWithPathUpdate exact path="/open-source" component={OpenSource} />
           </Switch>
-        </Suspense>
-      </ErrorBoundary>
-
-      <ErrorBoundary>
-        <Suspense fallback={<div />}>
-          <TrackMobileView />
         </Suspense>
       </ErrorBoundary>
 

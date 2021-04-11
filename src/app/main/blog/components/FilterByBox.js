@@ -14,9 +14,8 @@ export const FilterByBox = styled.select`
         5px 5px;
     background-repeat: no-repeat;
     
-    display: inline-block;
     height: 40px;
-    margin: 0 20px 20px 0;
+    margin: 10px;
     border: solid 1px #bbb;
     border-radius: 5px;
     padding: 0 35px 0 15px;

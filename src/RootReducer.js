@@ -1,4 +1,3 @@
-import { mobileViewReducer } from './app/mobile-view/reducer';
 import { projectsReducer } from './app/main/projects/reducer';
 import { openSourceProjectsReducer } from './app/main/open-source/reducer';
 import { socialMediaReducer } from './app/main/home/reducer';
@@ -6,7 +5,6 @@ import { blogReducer } from './app/main/blog/reducer';
 
 export const rootReducer = (state, action) => {
   return {
-    mobileView: mobileViewReducer(state.mobileView, action),
     projects: projectsReducer(state.projects, action),
     openSourceProjects:
       openSourceProjectsReducer(state.openSourceProjects, action),

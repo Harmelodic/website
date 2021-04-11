@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Button = styled.button`
     display: ${props => props.visible ? 'inline-block' : 'none'};
     height: 40px;
-    margin: 0 20px 20px 20px;
+    margin: 10px;
     background: #fff;
     border: solid 1px #bbb;
     border-radius: 5px;

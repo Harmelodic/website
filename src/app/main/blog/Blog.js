@@ -19,8 +19,7 @@ const BlogMain = styled(Main)`
 const StyledFilters = styled.div`
     display: flex;
     flex-flow: row wrap;
-    margin: 20px 0 0 20px;
-    text-align: ${props => props.mobileView ? 'center' : 'left'};
+    margin: 20px;
     white-space: normal;
 `;
 
@@ -36,7 +35,6 @@ export default function Blog(props) {
   const [filterBySearch, setFilterBySearch] = useState('');
   const [filterByCategory, setFilterByCategory] = useState('');
 
-  const mobileView = useSelector(store => store.mobileView);
   const posts = useSelector(store => store.blog.posts);
   const loadingPostsStatus = useSelector(store => store.blog.loadingPostsStatus);
   const categories = useSelector(store => store.blog.categories);
@@ -122,7 +120,7 @@ export default function Blog(props) {
 
   return (
     <BlogMain>
-      <StyledFilters mobileView={mobileView}>
+      <StyledFilters>
         {
           categoryBox
         }
@@ -132,8 +130,6 @@ export default function Blog(props) {
           value={filterBySearch}
         />
         <Button
-          mobileView={mobileView}
-          // eslint-disable-next-line max-len
           visible={(filterBySearch || filterByCategory)}
           onClick={() => {
             setFilterBySearch('');
