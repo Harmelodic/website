@@ -66,6 +66,7 @@ export default function Home(props) {
 
       <InfoHeader>Roles</InfoHeader>
       <Info>
+        he/him<br />
         Software Engineer<br />
         Consultant<br />
         Writer<br />
