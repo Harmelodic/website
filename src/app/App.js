@@ -1,9 +1,9 @@
 import { Suspense, lazy, useState } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import styled from 'styled-components';
-import ErrorBoundary from './ErrorBoundary';
+import { ErrorBoundary } from '../ErrorBoundary';
 
-const Nav = lazy(() => import('../components/Nav'));
+const Nav = lazy(() => import('./nav/Nav'));
 const Home = lazy(() => import('./main/home'));
 const Blog = lazy(() => import('./main/blog'));
 const Projects = lazy(() => import('./main/projects'));
@@ -16,19 +16,19 @@ const StyledApp = styled.div`
     justify-content: flex-start;
 `;
 
-export default function App() {
+export function App() {
   const [path, setPath] = useState(window.location.pathname);
 
   function updatePath() {
-    setPath(window.location.pathname)
+    setPath(window.location.pathname);
   }
 
   function RouteWithPathUpdate({ component: Component, ...routeProps }) {
     return (
-      <Route {...routeProps} render={(props) => (
+      <Route {...routeProps} render={props => (
         <Component {...props} updatePath={updatePath} />
       )} />
-    )
+    );
   }
 
   return (
@@ -56,7 +56,7 @@ export default function App() {
           <TrackMobileView />
         </Suspense>
       </ErrorBoundary>
-      
+
     </StyledApp>
   );
 }

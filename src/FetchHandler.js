@@ -1,4 +1,4 @@
-export default class FetchHandler {
+export class FetchHandler {
   static request(method, url, body) {
     const request = {};
     request.method = method.toUpperCase();
