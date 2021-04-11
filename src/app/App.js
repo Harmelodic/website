@@ -1,7 +1,7 @@
 import { Suspense, lazy, useState } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import styled from 'styled-components';
-import { ErrorBoundary } from '../ErrorBoundary';
+import { ErrorBoundary } from './ErrorBoundary';
 
 const Nav = lazy(() => import('./nav/Nav'));
 const Home = lazy(() => import('./main/home/Home'));

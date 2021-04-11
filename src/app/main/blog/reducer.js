@@ -7,7 +7,7 @@ import {
   FINISHED_LOADING_CATEGORIES,
 } from './actions';
 
-export const blogReducer = (state, action) => {
+export function blogReducer(state, action) {
   return {
     posts: postsReducer(state.posts, action),
     loadingPostsStatus:
@@ -18,7 +18,7 @@ export const blogReducer = (state, action) => {
   };
 };
 
-const postsReducer = (state, action) => {
+function postsReducer(state, action) {
   let posts = Object.assign([], state);
 
   switch (action.type) {
@@ -30,7 +30,7 @@ const postsReducer = (state, action) => {
   return posts;
 };
 
-const categoriesReducer = (state, action) => {
+function categoriesReducer(state, action) {
   let categories = Object.assign([], state);
 
   switch (action.type) {
@@ -42,7 +42,7 @@ const categoriesReducer = (state, action) => {
   return categories;
 };
 
-const loadingPostsStatusReducer = (state, action) => {
+function loadingPostsStatusReducer(state, action) {
   let loadingPostsStatus = state;
 
   switch (action.type) {
@@ -60,7 +60,7 @@ const loadingPostsStatusReducer = (state, action) => {
 };
 
 
-const loadingCategoriesStatusReducer = (state, action) => {
+function loadingCategoriesStatusReducer(state, action) {
   let loadingCategoriesStatus = state;
 
   switch (action.type) {

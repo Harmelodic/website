@@ -1,6 +1,6 @@
 import { SET_OPEN_SOURCE_PROJECTS } from './actions';
 
-export const openSourceProjectsReducer = (openSourceProjectsState, action) => {
+export function openSourceProjectsReducer(openSourceProjectsState, action) {
   let openSourceProjects = Object.assign([], openSourceProjectsState);
 
   switch (action.type) {

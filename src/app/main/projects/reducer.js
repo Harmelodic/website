@@ -1,6 +1,6 @@
 import { SET_PROJECTS } from './actions';
 
-export const projectsReducer = (projectsState, action) => {
+export function projectsReducer(projectsState, action) {
   let projects = Object.assign([], projectsState);
 
   switch (action.type) {

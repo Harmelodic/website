@@ -1,4 +1,4 @@
-import { request } from '../../../fetchHandler';
+import { request } from '../../fetchHandler';
 import { Actions } from './actions';
 
 export function fetchSocialMedia() {
