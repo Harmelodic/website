@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { Middleware } from './middleware';
+import { fetchOpenSourceProjects } from './middleware';
 import { Main } from '../Main';
 import { Project } from '../Project';
 
@@ -16,9 +16,10 @@ const OpenSourceMain = styled(Main)`
 
 export default function OpenSource(props) {
   const dispatch = useDispatch();
+
   useEffect(() => {
     props.updatePath();
-    dispatch(Middleware.fetchOpenSourceProjects());
+    dispatch(fetchOpenSourceProjects());
   }, []);
 
   const openSourceProjects = useSelector(store => store.openSourceProjects);

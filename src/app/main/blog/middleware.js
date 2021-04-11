@@ -3,26 +3,26 @@ import { Actions } from './actions';
 
 const blogAPI = process.env.BLOG_API || '';
 
-export class Middleware {
-  static fetchPosts() {
-    return (dispatch) => {
-      dispatch(Actions.startedLoadingPosts());
-      request('GET', `${blogAPI}/post`)
-          .then(response => response.json().then((data) => {
-            dispatch(Actions.setPosts(data));
-            dispatch(Actions.finishedLoadingPosts());
-          }));
-    };
-  }
+export function fetchPosts() {
+  return async (dispatch) => {
+    dispatch(Actions.startedLoadingPosts());
 
-  static fetchCategories() {
-    return (dispatch) => {
-      dispatch(Actions.startedLoadingCategories());
-      request('GET', `${blogAPI}/category`)
-          .then(response => response.json().then((data) => {
-            dispatch(Actions.setCategories(data));
-            dispatch(Actions.finishedLoadingCategories());
-          }));
-    };
-  }
-};
+    const response = await request('GET', `${blogAPI}/post`);
+    const data = await response.json();
+
+    dispatch(Actions.setPosts(data));
+    dispatch(Actions.finishedLoadingPosts());
+  };
+}
+
+export function fetchCategories() {
+  return async (dispatch) => {
+    dispatch(Actions.startedLoadingCategories());
+
+    const response = await request('GET', `${blogAPI}/category`);
+    const data = await response.json();
+
+    dispatch(Actions.setCategories(data));
+    dispatch(Actions.finishedLoadingCategories());
+  };
+}

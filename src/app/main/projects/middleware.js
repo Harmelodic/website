@@ -1,13 +1,10 @@
 import { request } from '../../../fetchHandler';
 import { Actions } from './actions';
 
-export class Middleware {
-  static fetchProjects() {
-    return (dispatch) => {
-      request('GET', '/resources/projects.json')
-          .then(response => response.json().then((data) => {
-            dispatch(Actions.setProjects(data));
-          }));
-    };
-  }
-};
+export function fetchProjects() {
+  return async (dispatch) => {
+    const response = await request('GET', '/resources/projects.json');
+    const data = await response.json();
+    dispatch(Actions.setProjects(data));
+  };
+}
