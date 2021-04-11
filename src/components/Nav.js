@@ -38,7 +38,6 @@ const MenuItem = styled(Link)`
     transition: background: 200ms;
 
     &:hover {
-        cursor: pointer;
         background: ${props => props.selected ? '#fff' : '#333'};
     }
 `;
