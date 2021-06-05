@@ -74,12 +74,19 @@
     "size": 59
   },
   {
-    "title": "Minimal Grey",
+    "title": "Minimal Grey Chrome",
     "subtitle": "Chrome Theme",
-    "href": "https://gitlab.com/Harmelodic/minimal-grey",
+    "href": "https://gitlab.com/Harmelodic/minimal-grey-chrome",
     "src": "/images/minimal-grey.svg",
     "background": "#4e4e4e",
     "size": 40
+  },
+  {
+    "title": "Minimal Grey Firefox",
+    "subtitle": "Firefox Theme",
+    "href": "https://gitlab.com/Harmelodic/minimal-grey-firefox",
+    "src": "/images/minimal-grey-firefox.png",
+    "background": "#ebebeb"
   },
   {
     "title": "Minotaur",
