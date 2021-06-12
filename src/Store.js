@@ -25,6 +25,14 @@ const initialState = {
   blog: {
     posts: [],
     categories: [],
+    postView: {
+      selectedPost: {},
+      markdownText: '',
+    },
+    lists: {
+      filmsSeen: [],
+      tvShowsSeen: [],
+    },
   },
 };
 

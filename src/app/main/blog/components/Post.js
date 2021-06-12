@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
-const StyledPost = styled.a`
+const StyledPost = styled(Link)`
     display: flex;
     flex-flow: column nowrap;
     width: calc(100% - 60px);
@@ -40,7 +41,7 @@ const StyledSubtitle = styled.div`
 
 export function Post(props) {
   return (
-    <StyledPost href={props.link}>
+    <StyledPost to={props.link}>
       <StyledTitle className="heading">{props.title}</StyledTitle>
       <StyledSubtitle>
         {

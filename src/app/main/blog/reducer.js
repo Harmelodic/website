@@ -1,3 +1,5 @@
+import { postViewReducer } from './post-view/reducer';
+import { listsReducer } from './lists/reducer';
 import {
   SET_POSTS,
   SET_CATEGORIES,
@@ -15,6 +17,8 @@ export function blogReducer(state, action) {
     categories: categoriesReducer(state.categories, action),
     loadingCategoriesStatus:
       loadingCategoriesStatusReducer(state.loadingCategoriesStatus, action),
+    postView: postViewReducer(state.postView, action),
+    lists: listsReducer(state.lists, action),
   };
 };
 

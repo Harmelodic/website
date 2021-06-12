@@ -103,7 +103,7 @@ export default function Blog(props) {
           return (
             <Post
               key={post.datePosted}
-              link={`https://scribbles.harmelodic.com/${post.route}/${post.datePosted}`}
+              link={`/blog/${post.route}/${post.datePosted}`}
               title={post.title}
               category={post.category}
               datePosted={
