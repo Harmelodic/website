@@ -7,10 +7,10 @@ import { App } from './app/App';
 const store = initialiseStore();
 
 ReactDOM.render(
-    <Provider store={store}>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </Provider>,
-    document.getElementById('app'),
+	<Provider store={store}>
+		<BrowserRouter>
+			<App />
+		</BrowserRouter>
+	</Provider>,
+	document.getElementById('app'),
 );

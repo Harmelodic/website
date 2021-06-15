@@ -13,49 +13,49 @@ const Projects = lazy(() => import('./main/projects/Projects'));
 const OpenSource = lazy(() => import('./main/open-source/OpenSource'));
 
 const StyledApp = styled.div`
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: flex-start;
 `;
 
 export function App() {
-  const [path, setPath] = useState(window.location.pathname);
+	const [path, setPath] = useState(window.location.pathname);
 
-  function updatePath() {
-    setPath(window.location.pathname);
-  }
+	function updatePath() {
+		setPath(window.location.pathname);
+	}
 
-  function RouteWithPathUpdate({ component: Component, ...routeProps }) {
-    return (
-      <Route {...routeProps} render={props => (
-        <Component {...props} updatePath={updatePath} />
-      )} />
-    );
-  }
+	function RouteWithPathUpdate({ component: Component, ...routeProps }) {
+		return (
+			<Route {...routeProps} render={props => (
+				<Component {...props} updatePath={updatePath} />
+			)} />
+		);
+	}
 
-  return (
-    <StyledApp>
+	return (
+		<StyledApp>
 
-      <ErrorBoundary>
-        <Suspense fallback={<div />}>
-          <Nav path={path}/>
-        </Suspense>
-      </ErrorBoundary>
+			<ErrorBoundary>
+				<Suspense fallback={<div />}>
+					<Nav path={path} />
+				</Suspense>
+			</ErrorBoundary>
 
-      <ErrorBoundary>
-        <Suspense fallback={<div />}>
-          <Switch>
-            <RouteWithPathUpdate exact path="/" component={Home} />
-            <RouteWithPathUpdate exact path="/blog" component={Blog} />
-            <RouteWithPathUpdate exact path="/blog/post/:id" component={PostView} />
-            <RouteWithPathUpdate exact path="/blog/list/1532228220000" component={FilmsSeen} />
-            <RouteWithPathUpdate exact path="/blog/list/1532228640000" component={TvShowsSeen} />
-            <RouteWithPathUpdate exact path="/projects" component={Projects} />
-            <RouteWithPathUpdate exact path="/open-source" component={OpenSource} />
-          </Switch>
-        </Suspense>
-      </ErrorBoundary>
+			<ErrorBoundary>
+				<Suspense fallback={<div />}>
+					<Switch>
+						<RouteWithPathUpdate exact path="/" component={Home} />
+						<RouteWithPathUpdate exact path="/blog" component={Blog} />
+						<RouteWithPathUpdate exact path="/blog/post/:id" component={PostView} />
+						<RouteWithPathUpdate exact path="/blog/list/1532228220000" component={FilmsSeen} />
+						<RouteWithPathUpdate exact path="/blog/list/1532228640000" component={TvShowsSeen} />
+						<RouteWithPathUpdate exact path="/projects" component={Projects} />
+						<RouteWithPathUpdate exact path="/open-source" component={OpenSource} />
+					</Switch>
+				</Suspense>
+			</ErrorBoundary>
 
-    </StyledApp>
-  );
+		</StyledApp>
+	);
 }
