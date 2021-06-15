@@ -20,12 +20,6 @@
 		"background": "#000000"
 	},
 	{
-		"title": "Chorus",
-		"subtitle": "Audio-Media Application",
-		"href": "https://gitlab.com/vyllian/apps/chorus",
-		"src": "/images/chorus.svg"
-	},
-	{
 		"title": "dots",
 		"subtitle": "Unix Config Files & Commands",
 		"href": "https://gitlab.com/Harmelodic/dots",
