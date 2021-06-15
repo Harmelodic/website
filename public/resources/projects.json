@@ -1,95 +1,64 @@
 [
-  {
-    "title": "Ceramic Pillow",
-    "subtitle": "Album\nComing Soon",
-    "src": "",
-    "href": "http://ceramicpillow.com",
-    "hidden": true
-  },
-  {
-    "title": "Flavour 101",
-    "subtitle": "Food Blog",
-    "src": "/images/flavour101.svg",
-    "href": "https://flavour101.com"
-  },
-  {
-    "title": "Foofie The Dog",
-    "subtitle": "\"Weird Al\" Yankovic Homage",
-    "src": "/images/foofiethedog.webp",
-    "background": "#000000",
-    "href": "http://www.foofiethedog.com"
-  },
-  {
-    "title": "interfaces",
-    "subtitle": "npm package (Node.js)",
-    "href": "https://www.npmjs.com/package/@harmelodic/interfaces",
-    "src": "/images/interfaces.svg"
-  },
-  {
-    "title": "Minimal Grey Chrome",
-    "subtitle": "Chrome Theme",
-    "href": "https://chrome.google.com/webstore/detail/minimal-grey/eibdijcbgalojjjeheligknccencdpng",
-    "src": "/images/minimal-grey.svg",
-    "background": "#4e4e4e",
-    "size": 40
-  },
-  {
-    "title": "Minimal Grey Firefox",
-    "subtitle": "Firefox Theme",
-    "href": "https://addons.mozilla.org/en-GB/firefox/addon/minimal-grey-theme/",
-    "src": "/images/minimal-grey-firefox.png",
-    "background": "#ebebeb"
-  },
-  {
-    "title": "Minotaur",
-    "subtitle": "ALM Monitor",
-    "href": "https://www.minotaurproject.com/",
-    "src": "/images/minotaur.svg",
-    "background": "#000",
-    "size": 100
-  },
-  {
-    "title": "Pos.sible",
-    "subtitle": "Point of Sale System\nComing Eventually",
-    "src": "/images/pos.sible.svg",
-    "background": "#473d3b",
-    "href": "http://pos.sible.co",
-    "hidden": true
-  },
-  {
-    "title": "Professor Zorg's Guide to Alien Etiquette",
-    "subtitle": "Retro Game Tool",
-    "src": "/images/zorg.webp",
-    "background": "#ffffff",
-    "href": "https://harmelodic.github.io/zorg"
-  },
-  {
-    "title": "react-ui-lib",
-    "subtitle": "npm package (Browser)",
-    "href": "https://www.npmjs.com/package/@harmelodic/react-ui-lib",
-    "src": "/images/react-ui-lib.svg"
-  },
-  {
-    "title": "Stackchat",
-    "subtitle": "Podcast",
-    "src": "/images/stackchat.svg",
-    "background": "#ff024a",
-    "href": "https://stackchat.github.io"
-  },
-  {
-    "title": "Vyllian",
-    "subtitle": "Tech & Hardware Company\nComing Eventually",
-    "src": "/images/vyllian.svg",
-    "background": "#000",
-    "href": "http://vyllian.com",
-    "hidden": true
-  },
-  {
-    "title": "Whetstone",
-    "subtitle": "Games Studio\nComing Eventually",
-    "src": "/images/whetstone.svg",
-    "background": "#1b1b1b",
-    "href": "http://whetstonegames.com",
-    "hidden": true
-  }
+	{
+		"title": "Flavour 101",
+		"subtitle": "Food Blog",
+		"src": "/images/flavour101.svg",
+		"href": "https://flavour101.com"
+	},
+	{
+		"title": "Foofie The Dog",
+		"subtitle": "\"Weird Al\" Yankovic Homage",
+		"src": "/images/foofiethedog.webp",
+		"background": "#000000",
+		"href": "http://www.foofiethedog.com"
+	},
+	{
+		"title": "interfaces",
+		"subtitle": "npm package (Node.js)",
+		"href": "https://www.npmjs.com/package/@harmelodic/interfaces",
+		"src": "/images/interfaces.svg"
+	},
+	{
+		"title": "Minimal Grey Chrome",
+		"subtitle": "Chrome Theme",
+		"href": "https://chrome.google.com/webstore/detail/minimal-grey/eibdijcbgalojjjeheligknccencdpng",
+		"src": "/images/minimal-grey.svg",
+		"background": "#4e4e4e",
+		"size": 40
+	},
+	{
+		"title": "Minimal Grey Firefox",
+		"subtitle": "Firefox Theme",
+		"href": "https://addons.mozilla.org/en-GB/firefox/addon/minimal-grey-theme/",
+		"src": "/images/minimal-grey-firefox.png",
+		"background": "#ebebeb"
+	},
+	{
+		"title": "Minotaur",
+		"subtitle": "ALM Monitor",
+		"href": "https://www.minotaurproject.com/",
+		"src": "/images/minotaur.svg",
+		"background": "#000",
+		"size": 100
+	},
+	{
+		"title": "Professor Zorg's Guide to Alien Etiquette",
+		"subtitle": "Retro Game Tool",
+		"src": "/images/zorg.webp",
+		"background": "#ffffff",
+		"href": "https://harmelodic.github.io/zorg"
+	},
+	{
+		"title": "react-ui-lib",
+		"subtitle": "npm package (Browser)",
+		"href": "https://www.npmjs.com/package/@harmelodic/react-ui-lib",
+		"src": "/images/react-ui-lib.svg"
+	},
+	{
+		"title": "Stackchat",
+		"subtitle": "Podcast",
+		"src": "/images/stackchat.svg",
+		"background": "#ff024a",
+		"href": "https://stackchat.github.io"
+	}
 ]

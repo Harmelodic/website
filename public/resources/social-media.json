@@ -1,37 +1,37 @@
 [
-    {
-        "href": "https://twitter.com/Harmelodic",
-        "title": "Twitter",
-        "src": "/images/twitter.svg"
-    },
-    {
-        "href": "https://youtube.com/Harmelodic",
-        "title": "YouTube",
-        "src": "/images/youtube.svg"
-    },
-    {
-        "href": "https://open.spotify.com/user/harmelodic2.0",
-        "title": "Spotify",
-        "src": "/images/spotify.svg"
-    },
-    {
-        "href": "https://www.linkedin.com/in/harmelodic/",
-        "title": "LinkedIn",
-        "src": "/images/linkedin.svg"
-    },
-    {
-        "href": "mailto:matt@harmelodic.com",
-        "title": "Email",
-        "src": "/images/mail.svg"
-    },
-    {
-        "href": "https://gitlab.com/Harmelodic",
-        "title": "GitLab",
-        "src": "/images/gitlab.svg"
-    },
-    {
-        "href": "https://github.com/Harmelodic",
-        "title": "GitHub",
-        "src": "/images/github.svg"
-    }
+	{
+		"href": "https://twitter.com/Harmelodic",
+		"title": "Twitter",
+		"src": "/images/twitter.svg"
+	},
+	{
+		"href": "https://youtube.com/Harmelodic",
+		"title": "YouTube",
+		"src": "/images/youtube.svg"
+	},
+	{
+		"href": "https://open.spotify.com/user/harmelodic2.0",
+		"title": "Spotify",
+		"src": "/images/spotify.svg"
+	},
+	{
+		"href": "https://www.linkedin.com/in/harmelodic/",
+		"title": "LinkedIn",
+		"src": "/images/linkedin.svg"
+	},
+	{
+		"href": "mailto:matt@harmelodic.com",
+		"title": "Email",
+		"src": "/images/mail.svg"
+	},
+	{
+		"href": "https://gitlab.com/Harmelodic",
+		"title": "GitLab",
+		"src": "/images/gitlab.svg"
+	},
+	{
+		"href": "https://github.com/Harmelodic",
+		"title": "GitHub",
+		"src": "/images/github.svg"
+	}
 ]

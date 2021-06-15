@@ -52,6 +52,7 @@ const StyledProjectText = styled.div`
 
 const StyledSubtitle = styled.span`
 	display: flex;
+	flex-flow: column nowrap;
 	font-size: 14px;
 	color: #666;
 	font-style: italic;
