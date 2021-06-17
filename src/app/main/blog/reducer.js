@@ -20,7 +20,7 @@ export function blogReducer(state, action) {
 		postView: postViewReducer(state.postView, action),
 		lists: listsReducer(state.lists, action),
 	};
-};
+}
 
 function postsReducer(state, action) {
 	let posts = Object.assign([], state);
@@ -32,7 +32,7 @@ function postsReducer(state, action) {
 	}
 
 	return posts;
-};
+}
 
 function categoriesReducer(state, action) {
 	let categories = Object.assign([], state);
@@ -44,7 +44,7 @@ function categoriesReducer(state, action) {
 	}
 
 	return categories;
-};
+}
 
 function loadingPostsStatusReducer(state, action) {
 	let loadingPostsStatus = state;
@@ -61,7 +61,7 @@ function loadingPostsStatusReducer(state, action) {
 	}
 
 	return loadingPostsStatus;
-};
+}
 
 
 function loadingCategoriesStatusReducer(state, action) {
@@ -79,4 +79,4 @@ function loadingCategoriesStatusReducer(state, action) {
 	}
 
 	return loadingCategoriesStatus;
-};
+}

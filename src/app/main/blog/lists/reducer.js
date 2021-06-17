@@ -5,7 +5,7 @@ export function listsReducer(state, action) {
 		filmsSeen: filmsSeenReducer(state.filmsSeen, action),
 		tvShowsSeen: tvShowsSeenReducer(state.tvShowsSeen, action),
 	};
-};
+}
 
 function filmsSeenReducer(filmsSeenState, action) {
 	let filmsSeen = Object.assign([], filmsSeenState);
@@ -17,7 +17,7 @@ function filmsSeenReducer(filmsSeenState, action) {
 	}
 
 	return filmsSeen;
-};
+}
 
 function tvShowsSeenReducer(tvShowsSeenState, action) {
 	let tvShowsSeen = Object.assign([], tvShowsSeenState);
@@ -29,5 +29,5 @@ function tvShowsSeenReducer(tvShowsSeenState, action) {
 	}
 
 	return tvShowsSeen;
-};
+}
 

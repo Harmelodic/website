@@ -27,7 +27,7 @@ const StyledSortLogo = styled.img`
 const StyledSortText = styled.div`
 	display: inline-block;
 	margin-right: 23px;
-	height: ${pickerHeight};
+	height: ${pickerHeight}px;
 	font-size: 18px;
 	line-height: 80px;
 	vertical-align: top;
@@ -35,7 +35,7 @@ const StyledSortText = styled.div`
 
 const StyledSortChoice = styled.div`
 	display: inline-block;
-	height: ${pickerHeight};
+	height: ${pickerHeight}px;
 	cursor: pointer;
 	color: ${props => props.isSelected ? '#333' : '#bbb'};
 	transition: color 150ms;
@@ -78,11 +78,11 @@ export default function SortPicker(props) {
 								onClick={() => {
 									props.onChangeSort(choice.sort);
 								}}
-								isSelected={!!(choice.sort === props.selectedChoice)}
+								isSelected={(choice.sort === props.selectedChoice)}
 							>
 								<StyledSortLogo
 									src={choice.img}
-									isSelected={!!(choice.sort === props.selectedChoice)}
+									isSelected={(choice.sort === props.selectedChoice)}
 								/>
 								<StyledSortText>{choice.display}</StyledSortText>
 							</StyledSortChoice>

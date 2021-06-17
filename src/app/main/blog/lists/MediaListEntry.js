@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const StyledMediaListEntry = styled.div`
-	width: 100%
+	width: 100%;
 	border-bottom: solid 1px #bbb;
 `;
 

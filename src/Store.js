@@ -16,7 +16,7 @@ export function initialiseStore() {
 			applyMiddleware(thunk),
 		),
 	);
-};
+}
 
 const initialState = {
 	projects: [],
@@ -44,4 +44,4 @@ function rootReducer(state, action) {
 		socialMedia: socialMediaReducer(state.socialMedia, action),
 		blog: blogReducer(state.blog, action),
 	};
-};
+}

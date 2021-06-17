@@ -50,7 +50,7 @@ export default function Blog(props) {
 
 	// Render Categories - with Loading fallback
 	let categoryBox;
-	if (loadingCategoriesStatus && categories.length == 0) {
+	if (loadingCategoriesStatus && categories.length === 0) {
 		categoryBox = (
 			<FilterByBox
 				onChange={() => setFilterByCategory(event.target.value)}
@@ -83,7 +83,7 @@ export default function Blog(props) {
 
 	// Render Posts - with Loading fallback
 	let postsToRender;
-	if (loadingPostsStatus && posts.length == 0) {
+	if (loadingPostsStatus && posts.length === 0) {
 		postsToRender = <LoadingSign />;
 	} else {
 		postsToRender = posts

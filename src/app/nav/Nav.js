@@ -35,7 +35,7 @@ const MenuItem = styled(Link)`
 	text-decoration: none;
 	background: ${props => props.selected ? '#fff' : 'rgba(0,0,0,0)'};
 	text-align: center;
-	transition: background: 200ms;
+	transition: background 200ms;
 	white-space: normal;
 
 	&:hover {

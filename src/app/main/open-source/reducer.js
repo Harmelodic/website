@@ -10,4 +10,4 @@ export function openSourceProjectsReducer(openSourceProjectsState, action) {
 	}
 
 	return openSourceProjects;
-};
+}

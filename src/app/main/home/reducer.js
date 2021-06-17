@@ -10,4 +10,4 @@ export function socialMediaReducer(socialMediaState, action) {
 	}
 
 	return socialMedia;
-};
+}

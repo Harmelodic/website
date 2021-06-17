@@ -7,4 +7,4 @@ export class Actions {
 			openSourceProjects: openSourceProjects,
 		};
 	}
-};
+}

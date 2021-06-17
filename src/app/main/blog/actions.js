@@ -43,4 +43,4 @@ export class Actions {
 			type: FINISHED_LOADING_CATEGORIES,
 		};
 	}
-};
+}

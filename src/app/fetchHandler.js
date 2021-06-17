@@ -6,7 +6,7 @@ export async function request(method, url, body) {
 	request.headers.append('Content-Type', 'application/json');
 
 	if (!(request.method === 'GET' || request.method === 'HEAD')) {
-		// To work with the Fetch API, the body needs to be stringified first.
+		// To work with the Fetch API, the body needs to be turned into a string first.
 		request.body = JSON.stringify(body);
 	}
 
@@ -15,10 +15,14 @@ export async function request(method, url, body) {
 		if (response.ok) {
 			return response;
 		} else {
-			throw response;
+			logError(request, url, error);
 		}
 	} catch (error) {
-		console.error(`Error occurred in completing ${request.method} request to: ${url}`);
-		console.error(error);
+		logError(request, url, error);
 	}
-};
+}
+
+function logError(request, url, error) {
+	console.error(`Error occurred in completing ${request.method} request to: ${url}`);
+	console.error(error);
+}

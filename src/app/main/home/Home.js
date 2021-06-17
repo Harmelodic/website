@@ -1,3 +1,5 @@
+// noinspection HtmlUnknownAnchorTarget
+
 import styled from 'styled-components';
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';

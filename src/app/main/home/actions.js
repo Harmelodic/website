@@ -7,4 +7,4 @@ export class Actions {
 			socialMedia: socialMedia,
 		};
 	}
-};
+}
