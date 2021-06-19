@@ -14,7 +14,7 @@ module.exports = merge(config, {
 			minRatio: 0.8,
 		}),
 		new webpack.EnvironmentPlugin({
-			BLOG_API: 'https://api.scribbles.harmelodic.com',
+			BLOG_API: 'https://blog-api.harmelodic.com',
 			BLOG_CONTENT_SERVER: 'https://harmelodic.gitlab.io/scribbles-content',
 		}),
 	],
