@@ -110,9 +110,9 @@ export default function PostView(props) {
 				<LoadingTextBlock margin={15} width={200} />
 				<LoadingTextBlock margin={15} width={100} />
 				<LoadingTextBlock margin={15} width={50} />
-				<LoadingTextBlock margin={15} width={200} />
+				<LoadingTextBlock margin={15} width={250} />
 				<LoadingTextBlock margin={15} width={50} />
-				<LoadingTextBlock margin={15} width={110} />
+				<LoadingTextBlock margin={15} width={150} />
 				<LoadingTextBlock margin={15} width={80} />
 				<br />
 				<br />
