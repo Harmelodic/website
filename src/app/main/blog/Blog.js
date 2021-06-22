@@ -6,7 +6,6 @@ import { FilterByBox } from './components/FilterByBox';
 import { Post } from './components/Post';
 import { InputTextBox } from './components/InputTextBox';
 import { Button } from './components/Button';
-import { LoadingSign } from './components/LoadingSign';
 import { Main } from '../Main';
 
 const BlogMain = styled(Main)`
@@ -56,7 +55,7 @@ export default function Blog(props) {
 				onChange={() => setFilterByCategory(event.target.value)}
 				value={filterByCategory}
 			>
-				<option value="">-</option>
+				<option value="">---------------------------</option>
 			</FilterByBox>
 		);
 	} else {
@@ -84,7 +83,13 @@ export default function Blog(props) {
 	// Render Posts - with Loading fallback
 	let postsToRender;
 	if (loadingPostsStatus && posts.length === 0) {
-		postsToRender = <LoadingSign />;
+		postsToRender = Array(9).fill('').map((_, index) => {
+			return (
+				<Post
+					key={index}
+					loading={true} />
+			);
+		});
 	} else {
 		postsToRender = posts
 			.sort((a, b) => b.datePosted - a.datePosted)

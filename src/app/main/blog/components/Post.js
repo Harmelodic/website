@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { LoadingTextBlock } from './LoadingTextBlock';
 
 const StyledPost = styled(Link)`
 	display: flex;
@@ -40,20 +41,33 @@ const StyledSubtitle = styled.div`
 `;
 
 export function Post(props) {
-	return (
-		<StyledPost to={props.link}>
-			<StyledTitle className="heading">{props.title}</StyledTitle>
-			<StyledSubtitle>
-				{
-					props.datePosted
-				}
-			</StyledSubtitle>
-			{
-				props.lastUpdated !== props.datePosted &&
+	if (props.loading) {
+		return (
+			<StyledPost to='#'>
+				<StyledTitle>
+					<LoadingTextBlock width={400} />
+				</StyledTitle>
 				<StyledSubtitle>
-					{`Last Updated: ${props.lastUpdated}`}
+					<LoadingTextBlock width={150} color='#ddd' />
 				</StyledSubtitle>
-			}
-		</StyledPost>
-	);
+			</StyledPost>
+		);
+	} else {
+		return (
+			<StyledPost to={props.link}>
+				<StyledTitle className="heading">{props.title}</StyledTitle>
+				<StyledSubtitle>
+					{
+						props.datePosted
+					}
+				</StyledSubtitle>
+				{
+					props.lastUpdated !== props.datePosted &&
+					<StyledSubtitle>
+						{`Last Updated: ${props.lastUpdated}`}
+					</StyledSubtitle>
+				}
+			</StyledPost>
+		);
+	}
 }

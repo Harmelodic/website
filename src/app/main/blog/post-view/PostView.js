@@ -5,6 +5,7 @@ import { Markdown } from '@harmelodic/react-ui-lib';
 import { Main } from '../../Main';
 import { clearSelectedPost, clearMarkdownText } from './actions';
 import { fetchPost, fetchMarkdown } from './middleware';
+import { LoadingTextBlock } from '../components/LoadingTextBlock';
 
 const StyledViewPost = styled(Main)`
 	flex-flow: column nowrap;
@@ -58,14 +59,6 @@ const PostHeading = styled.h1`
 	white-space: normal;
 `;
 
-const LoadingTextBlock = styled.div`
-	height: ${props => props.height ? props.height : '13'}px;
-	width: ${props => props.width}px;
-	border-radius: ${props => props.height ? props.height : '13'}px;
-	background: ${props => props.color ? props.color : '#ccc'};
-	margin: 10px;
-`;
-
 const Category = styled.div`
 	margin-top: 5px;
 	font-size: 18px;
@@ -114,13 +107,13 @@ export default function PostView(props) {
 				<LoadingTextBlock width={500} color='#888' />
 			</PostHeading>
 			<div>
-				<LoadingTextBlock width={200} />
-				<LoadingTextBlock width={100} />
-				<LoadingTextBlock width={50} />
-				<LoadingTextBlock width={200} />
-				<LoadingTextBlock width={50} />
-				<LoadingTextBlock width={110} />
-				<LoadingTextBlock width={80} />
+				<LoadingTextBlock margin={15} width={200} />
+				<LoadingTextBlock margin={15} width={100} />
+				<LoadingTextBlock margin={15} width={50} />
+				<LoadingTextBlock margin={15} width={200} />
+				<LoadingTextBlock margin={15} width={50} />
+				<LoadingTextBlock margin={15} width={110} />
+				<LoadingTextBlock margin={15} width={80} />
 				<br />
 				<br />
 				<br />
