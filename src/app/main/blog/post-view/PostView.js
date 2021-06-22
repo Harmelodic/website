@@ -51,7 +51,22 @@ const StyledViewPost = styled(Main)`
 	}
 `;
 
-const StyledCategory = styled.div`
+const PostHeading = styled.h1`
+	width: 100%;
+	padding-bottom: 15px;
+	border-bottom: solid #333 2px;
+	white-space: normal;
+`;
+
+const LoadingTextBlock = styled.div`
+	height: ${props => props.height ? props.height : '13'}px;
+	width: ${props => props.width}px;
+	border-radius: ${props => props.height ? props.height : '13'}px;
+	background: ${props => props.color ? props.color : '#ccc'};
+	margin: 10px;
+`;
+
+const Category = styled.div`
 	margin-top: 5px;
 	font-size: 18px;
 	color: #999;
@@ -81,14 +96,38 @@ export default function PostView(props) {
 
 	const title = selectedPost.title || '';
 
-	return (
+	const readyToRender = title && markdownText;
+
+	return readyToRender ? (
 		<StyledViewPost>
+			<PostHeading>{title}</PostHeading>
 			<Markdown
-				markdown={`<h1>${title}</h1>\n\n` + markdownText}
+				markdown={markdownText}
 				aTagAttributes='target="_blank" rel="nofollow"' />
-			<StyledCategory>
+			<Category>
 				{markdownText && selectedPost.category}
-			</StyledCategory>
+			</Category>
+		</StyledViewPost>
+	) : (
+		<StyledViewPost>
+			<PostHeading>
+				<LoadingTextBlock width={500} color='#888' />
+			</PostHeading>
+			<div>
+				<LoadingTextBlock width={200} />
+				<LoadingTextBlock width={100} />
+				<LoadingTextBlock width={50} />
+				<LoadingTextBlock width={200} />
+				<LoadingTextBlock width={50} />
+				<LoadingTextBlock width={110} />
+				<LoadingTextBlock width={80} />
+				<br />
+				<br />
+				<br />
+			</div>
+			<Category>
+				<LoadingTextBlock width={200} color='#ddd' />
+			</Category>
 		</StyledViewPost>
 	);
 }
