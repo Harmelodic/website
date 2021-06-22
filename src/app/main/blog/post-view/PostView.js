@@ -5,7 +5,7 @@ import { Markdown } from '@harmelodic/react-ui-lib';
 import { Main } from '../../Main';
 import { clearSelectedPost, clearMarkdownText } from './actions';
 import { fetchPost, fetchMarkdown } from './middleware';
-import { LoadingTextBlock } from '../components/LoadingTextBlock';
+import { LoadingTextBlock, HorizontalRule } from '../components/LoadingTextBlock';
 
 const StyledViewPost = styled(Main)`
 	flex-flow: column nowrap;
@@ -107,8 +107,8 @@ export default function PostView(props) {
 				<LoadingTextBlock width={500} color='#888' />
 			</PostHeading>
 			<div>
+				<LoadingTextBlock margin={15} width={300} />
 				<LoadingTextBlock margin={15} width={200} />
-				<LoadingTextBlock margin={15} width={100} />
 				<LoadingTextBlock margin={15} width={50} />
 				<LoadingTextBlock margin={15} width={250} />
 				<LoadingTextBlock margin={15} width={50} />
@@ -116,7 +116,37 @@ export default function PostView(props) {
 				<LoadingTextBlock margin={15} width={80} />
 				<br />
 				<br />
+				<LoadingTextBlock margin={15} width={200} color='#aaa' />
+				<HorizontalRule />
+				<LoadingTextBlock margin={15} width={250} />
+				<LoadingTextBlock margin={15} width={100} />
+				<LoadingTextBlock margin={15} width={500} />
+				<LoadingTextBlock margin={15} width={550} />
+				<LoadingTextBlock margin={15} width={80} />
 				<br />
+				<br />
+				<LoadingTextBlock margin={15} width={800} />
+				<LoadingTextBlock margin={15} width={500} />
+				<LoadingTextBlock margin={15} width={600} />
+				<LoadingTextBlock margin={15} width={400} />
+				<LoadingTextBlock margin={15} width={500} />
+				<br />
+				<br />
+				<LoadingTextBlock margin={15} width={80} color='#aaa' />
+				<LoadingTextBlock margin={15} width={500} />
+				<LoadingTextBlock margin={15} width={150} />
+				<LoadingTextBlock margin={15} width={80} />
+				<LoadingTextBlock margin={15} width={450} />
+				<br />
+				<br />
+				<LoadingTextBlock margin={15} width={300} color='#aaa' />
+				<HorizontalRule />
+				<LoadingTextBlock margin={15} width={50} />
+				<LoadingTextBlock margin={15} width={250} />
+				<LoadingTextBlock margin={15} width={50} />
+				<LoadingTextBlock margin={15} width={150} />
+				<LoadingTextBlock margin={15} width={80} />
+				<LoadingTextBlock margin={15} width={350} />
 			</div>
 			<Category>
 				<LoadingTextBlock width={200} color='#ddd' />
