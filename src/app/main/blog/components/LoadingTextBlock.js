@@ -7,9 +7,3 @@ export const LoadingTextBlock = styled.div`
     background: ${props => props.color ? props.color : '#ccc'};
     margin: ${props => props.margin ? props.margin : '5'}px;
 `;
-
-export const HorizontalRule = styled.div`
-    width: 100%;
-    height: 1px;
-    background: #888;
-`;
