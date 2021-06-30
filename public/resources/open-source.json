@@ -98,7 +98,7 @@
 	},
 	{
 		"title": "Ops",
-		"subtitle": "Reusable Terraform & other scripts",
+		"subtitle": "Ops code for personal projects",
 		"href": "https://gitlab.com/Harmelodic/ops",
 		"src": "/images/ops.svg"
 	},
