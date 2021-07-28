@@ -76,6 +76,7 @@ export default function Home(props) {
 				Designer<br />
 				Musician<br />
 				Dungeon Master<br />
+				58,020,581<a href="https://www.youtube.com/watch?v=p3Khnx0lUDE"></a><br />
 			</Info>
 
 			<InfoHeader>Socials</InfoHeader>
