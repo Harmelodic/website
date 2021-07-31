@@ -13,12 +13,6 @@
 		"href": "http://www.foofiethedog.com"
 	},
 	{
-		"title": "interfaces",
-		"subtitle": "npm package (Node.js)",
-		"href": "https://www.npmjs.com/package/@harmelodic/interfaces",
-		"src": "/images/interfaces.svg"
-	},
-	{
 		"title": "Minimal Grey Chrome",
 		"subtitle": "Chrome Theme",
 		"href": "https://chrome.google.com/webstore/detail/minimal-grey/eibdijcbgalojjjeheligknccencdpng",

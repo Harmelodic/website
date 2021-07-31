@@ -60,12 +60,6 @@
 		"size": 55
 	},
 	{
-		"title": "interfaces",
-		"subtitle": "npm package (Node.js)",
-		"href": "https://gitlab.com/Harmelodic/interfaces",
-		"src": "/images/interfaces.svg"
-	},
-	{
 		"title": "main",
 		"subtitle": "Harmelodic Website",
 		"href": "https://gitlab.com/Harmelodic/main",
