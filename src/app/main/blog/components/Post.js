@@ -30,7 +30,6 @@ const StyledTitle = styled.div`
 	color: #555;
 `;
 
-
 const StyledSubtitle = styled.div`
 	display: flex;
 	margin-top: 5px;

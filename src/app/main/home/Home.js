@@ -12,7 +12,7 @@ import { Project } from '../Project';
 const HomeMain = styled(Main)`
 	flex-flow: column nowrap;
 	justify-content: flex-start;
-	align-items: flex-start;
+	align-items: center;
 `;
 
 const StyledSocialMediaLinks = styled.div`
@@ -30,6 +30,12 @@ const StyledCertifications = styled.div`
 	align-content: flex-start;
 `;
 
+const Title = styled.div`
+	display: flex;
+	font-size: 35px;
+	margin: 80px 0 10px 0;
+`;
+
 export default function Home(props) {
 	const dispatch = useDispatch();
 
@@ -43,13 +49,8 @@ export default function Home(props) {
 	return (
 		<HomeMain>
 
-			<InfoBox title="Name">
-				Matt Smith
-			</InfoBox>
-
-			<InfoBox title="Alias">
-				Harmelodic
-			</InfoBox>
+			<Title>Matt Smith</Title>
+			<div>Harmelodic</div>
 
 			<InfoBox title="Roles">
 				he/him<br />
@@ -59,7 +60,7 @@ export default function Home(props) {
 				Designer<br />
 				Musician<br />
 				Dungeon Master<br />
-				58,020,581<a href="https://www.youtube.com/watch?v=p3Khnx0lUDE"></a><br />
+				<a href="https://www.youtube.com/watch?v=p3Khnx0lUDE">58,020,581</a><br />
 			</InfoBox>
 
 			<InfoBox title="Socials">

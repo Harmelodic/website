@@ -13,9 +13,10 @@ const Projects = lazy(() => import('./main/projects/Projects'));
 const OpenSource = lazy(() => import('./main/open-source/OpenSource'));
 
 const StyledApp = styled.div`
-		display: flex;
-		flex-flow: row nowrap;
-		justify-content: flex-start;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-start;
+	width: 100%;
 `;
 
 export function App() {

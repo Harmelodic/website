@@ -11,8 +11,7 @@ import { Main } from '../Main';
 const BlogMain = styled(Main)`
 	flex-flow: column nowrap;
 	justify-content: flex-start;
-	align-items: flex-start;
-	padding-left: 0;
+	align-items: center;
 `;
 
 const StyledFilters = styled.div`
@@ -20,6 +19,15 @@ const StyledFilters = styled.div`
 	flex-flow: row wrap;
 	margin: 20px;
 	white-space: normal;
+`;
+
+const Posts = styled.div`
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	width: 100%;
+	max-width: 900px;
 `;
 
 export default function Blog(props) {
@@ -144,9 +152,9 @@ export default function Blog(props) {
 					Clear filters
 				</Button>
 			</StyledFilters>
-			{
-				postsToRender
-			}
+			<Posts>
+				{postsToRender}
+			</Posts>
 		</BlogMain>
 	);
 };

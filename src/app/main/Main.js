@@ -16,10 +16,7 @@ export const Main = styled.main`
 		${props => props.fadeInTime ? props.fadeInTime : '800ms'};
 
 	display: flex;
-	padding-left: 20px;
 	width: 100%;
-	min-width: 300px;
-	max-width: 1080px;
 
 	padding-bottom: 40vh;
 `;
