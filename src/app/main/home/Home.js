@@ -5,6 +5,7 @@ import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchSocialMedia } from './middleware';
 import { SocialMedia } from './components/SocialMedia';
+import { InfoBox } from './components/InfoBox';
 import { Main } from '../Main';
 import { Project } from '../Project';
 
@@ -12,21 +13,6 @@ const HomeMain = styled(Main)`
 	flex-flow: column nowrap;
 	justify-content: flex-start;
 	align-items: flex-start;
-`;
-
-const InfoHeader = styled.h2`
-	margin: 0;
-	padding: 30px 0 5px 0;
-	font-size: 22px;
-	font-weight: 500;
-`;
-
-const Info = styled.div`
-	padding-left: 30px;
-	max-width: 800px;
-	font-size: 18px;
-	color: #000;
-	line-height: 28px;
 `;
 
 const StyledSocialMediaLinks = styled.div`
@@ -57,18 +43,15 @@ export default function Home(props) {
 	return (
 		<HomeMain>
 
-			<InfoHeader>Name</InfoHeader>
-			<Info>
+			<InfoBox title="Name">
 				Matt Smith
-			</Info>
+			</InfoBox>
 
-			<InfoHeader>Alias</InfoHeader>
-			<Info>
+			<InfoBox title="Alias">
 				Harmelodic
-			</Info>
+			</InfoBox>
 
-			<InfoHeader>Roles</InfoHeader>
-			<Info>
+			<InfoBox title="Roles">
 				he/him<br />
 				Software Engineer<br />
 				Consultant<br />
@@ -77,10 +60,9 @@ export default function Home(props) {
 				Musician<br />
 				Dungeon Master<br />
 				58,020,581<a href="https://www.youtube.com/watch?v=p3Khnx0lUDE"></a><br />
-			</Info>
+			</InfoBox>
 
-			<InfoHeader>Socials</InfoHeader>
-			<Info>
+			<InfoBox title="Socials">
 				<StyledSocialMediaLinks>
 					{
 						socialMedia.map((media, index) => {
@@ -95,10 +77,9 @@ export default function Home(props) {
 						})
 					}
 				</StyledSocialMediaLinks>
-			</Info>
+			</InfoBox>
 
-			<InfoHeader>Certifications</InfoHeader>
-			<Info>
+			<InfoBox title="Certifications">
 				<StyledCertifications>
 					<Project
 						src="/images/gitlab.svg"
@@ -115,8 +96,7 @@ export default function Home(props) {
 						size={100}
 					/>
 				</StyledCertifications>
-			</Info>
-
+			</InfoBox>
 		</HomeMain>
 	);
 }
