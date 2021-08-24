@@ -7,7 +7,7 @@ const StyledNav = styled.div`
 	flex-flow: column nowrap;
 	justify-content: flex-start;
 	align-items: center;
-	min-height: 100vh;
+	height: 100vh;
 	min-width: 300px;
 	max-width: 300px;
 	background: #191919;
@@ -53,7 +53,7 @@ export default function Nav(props) {
 				<MenuItem to="/" selected={path === '/'}>
 					Me
 				</MenuItem>
-				<MenuItem to="/blog" selected={path === '/blog'}>
+				<MenuItem to="/blog" selected={path.match(/^\/blog/) !== null}>
 					Blog
 				</MenuItem>
 				<MenuItem to="/projects" selected={path === '/projects'}>
