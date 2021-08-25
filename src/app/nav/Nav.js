@@ -7,7 +7,6 @@ const StyledNav = styled.div`
 	flex-flow: column nowrap;
 	justify-content: flex-start;
 	align-items: center;
-	height: 100vh;
 	min-width: 300px;
 	max-width: 300px;
 	background: #191919;
