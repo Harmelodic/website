@@ -8,11 +8,19 @@ import { fetchPost, fetchMarkdown } from './middleware';
 import { LoadingTextBlock } from '../components/LoadingTextBlock';
 import { HorizontalRule } from '../components/HorizontalRule';
 
-const StyledViewPost = styled(Main)`
+const PostViewMain = styled(Main)`
 	flex-flow: column nowrap;
 	justify-content: flex-start;
-	align-items: flex-start;
-	padding-left: 10px;
+	align-items: center;
+`;
+
+const PostViewWrapper = styled.div`
+	display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 900px;
 
 	// Markdown re-styling
 	--link-color: #0645ad;
@@ -41,10 +49,10 @@ const StyledViewPost = styled(Main)`
 	& > .heading, h3, h4, h5, h6 {
 		padding-top: 15px;
 	}
-
+	
 	// Creating a gap for clean #anchor linking
-	& > div > h1:before, 
-	& > div > h2:before, 
+	& > div > h1:before,
+	& > div > h2:before,
 	& > div > h3:before {
 		content: "";
 		display: block;
@@ -93,65 +101,69 @@ export default function PostView(props) {
 	const readyToRender = title && markdownText;
 
 	return readyToRender ? (
-		<StyledViewPost>
-			<PostHeading>{title}</PostHeading>
-			<Markdown
-				markdown={markdownText}
-				aTagAttributes='target="_blank" rel="nofollow"' />
-			<Category>
-				{markdownText && selectedPost.category}
-			</Category>
-		</StyledViewPost>
+		<PostViewMain>
+			<PostViewWrapper>
+				<PostHeading>{title}</PostHeading>
+				<Markdown
+					markdown={markdownText}
+					aTagAttributes='target="_blank" rel="nofollow"' />
+				<Category>
+					{markdownText && selectedPost.category}
+				</Category>
+			</PostViewWrapper>
+		</PostViewMain>
 	) : (
-		<StyledViewPost>
-			<PostHeading>
-				<LoadingTextBlock width={500} color='#888' />
-			</PostHeading>
-			<div>
-				<LoadingTextBlock margin={15} width={300} />
-				<LoadingTextBlock margin={15} width={200} />
-				<LoadingTextBlock margin={15} width={50} />
-				<LoadingTextBlock margin={15} width={250} />
-				<LoadingTextBlock margin={15} width={50} />
-				<LoadingTextBlock margin={15} width={150} />
-				<LoadingTextBlock margin={15} width={80} />
-				<br />
-				<br />
-				<LoadingTextBlock margin={15} width={200} color='#aaa' />
-				<HorizontalRule />
-				<LoadingTextBlock margin={15} width={250} />
-				<LoadingTextBlock margin={15} width={100} />
-				<LoadingTextBlock margin={15} width={500} />
-				<LoadingTextBlock margin={15} width={550} />
-				<LoadingTextBlock margin={15} width={80} />
-				<br />
-				<br />
-				<LoadingTextBlock margin={15} width={800} />
-				<LoadingTextBlock margin={15} width={500} />
-				<LoadingTextBlock margin={15} width={600} />
-				<LoadingTextBlock margin={15} width={400} />
-				<LoadingTextBlock margin={15} width={500} />
-				<br />
-				<br />
-				<LoadingTextBlock margin={15} width={80} color='#aaa' />
-				<LoadingTextBlock margin={15} width={500} />
-				<LoadingTextBlock margin={15} width={150} />
-				<LoadingTextBlock margin={15} width={80} />
-				<LoadingTextBlock margin={15} width={450} />
-				<br />
-				<br />
-				<LoadingTextBlock margin={15} width={300} color='#aaa' />
-				<HorizontalRule />
-				<LoadingTextBlock margin={15} width={50} />
-				<LoadingTextBlock margin={15} width={250} />
-				<LoadingTextBlock margin={15} width={50} />
-				<LoadingTextBlock margin={15} width={150} />
-				<LoadingTextBlock margin={15} width={80} />
-				<LoadingTextBlock margin={15} width={350} />
-			</div>
-			<Category>
-				<LoadingTextBlock width={200} color='#ddd' />
-			</Category>
-		</StyledViewPost>
+		<PostViewMain>
+			<PostViewWrapper>
+				<PostHeading>
+					<LoadingTextBlock width={500} color='#888' />
+				</PostHeading>
+				<div>
+					<LoadingTextBlock margin={15} width={300} />
+					<LoadingTextBlock margin={15} width={200} />
+					<LoadingTextBlock margin={15} width={50} />
+					<LoadingTextBlock margin={15} width={250} />
+					<LoadingTextBlock margin={15} width={50} />
+					<LoadingTextBlock margin={15} width={150} />
+					<LoadingTextBlock margin={15} width={80} />
+					<br />
+					<br />
+					<LoadingTextBlock margin={15} width={200} color='#aaa' />
+					<HorizontalRule />
+					<LoadingTextBlock margin={15} width={250} />
+					<LoadingTextBlock margin={15} width={100} />
+					<LoadingTextBlock margin={15} width={500} />
+					<LoadingTextBlock margin={15} width={550} />
+					<LoadingTextBlock margin={15} width={80} />
+					<br />
+					<br />
+					<LoadingTextBlock margin={15} width={800} />
+					<LoadingTextBlock margin={15} width={500} />
+					<LoadingTextBlock margin={15} width={600} />
+					<LoadingTextBlock margin={15} width={400} />
+					<LoadingTextBlock margin={15} width={500} />
+					<br />
+					<br />
+					<LoadingTextBlock margin={15} width={80} color='#aaa' />
+					<LoadingTextBlock margin={15} width={500} />
+					<LoadingTextBlock margin={15} width={150} />
+					<LoadingTextBlock margin={15} width={80} />
+					<LoadingTextBlock margin={15} width={450} />
+					<br />
+					<br />
+					<LoadingTextBlock margin={15} width={300} color='#aaa' />
+					<HorizontalRule />
+					<LoadingTextBlock margin={15} width={50} />
+					<LoadingTextBlock margin={15} width={250} />
+					<LoadingTextBlock margin={15} width={50} />
+					<LoadingTextBlock margin={15} width={150} />
+					<LoadingTextBlock margin={15} width={80} />
+					<LoadingTextBlock margin={15} width={350} />
+				</div>
+				<Category>
+					<LoadingTextBlock width={200} color='#ddd' />
+				</Category>
+			</PostViewWrapper>
+		</PostViewMain>
 	);
 }
