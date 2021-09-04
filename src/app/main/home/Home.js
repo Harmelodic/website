@@ -33,7 +33,7 @@ const StyledCertifications = styled.div`
 const Title = styled.div`
 	display: flex;
 	font-size: 35px;
-	margin: 80px 0 10px 0;
+	margin: 50px 0 10px 0;
 `;
 
 export default function Home(props) {

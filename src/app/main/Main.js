@@ -17,6 +17,5 @@ export const Main = styled.main`
 
 	display: flex;
 	width: 100%;
-
-	padding-bottom: 40vh;
+	padding: 20px 20px 40vh 20px;
 `;

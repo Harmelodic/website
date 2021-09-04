@@ -7,7 +7,6 @@ const ProjectsMain = styled(Main)`
 	justify-content: flex-start;
 	align-items: flex-start;
 	align-content: flex-start;
-	padding-top: 20px;
 	max-width: 100%;
 `;
 
