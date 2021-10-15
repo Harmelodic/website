@@ -1,8 +1,8 @@
-import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 import { CircleImage } from './CircleImage';
 
-const StyledNav = styled.div`
+const StyledMenu = styled.div`
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: flex-start;
@@ -13,7 +13,13 @@ const StyledNav = styled.div`
 	background: #191919;
 `;
 
-const Menu = styled.nav`
+const MenuHeaderIcon = styled(CircleImage)`
+	display: flex;
+	margin: 55px 0;
+	border: solid 1px #fff;
+`;
+
+const Nav = styled.nav`
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: flex-start;
@@ -21,13 +27,7 @@ const Menu = styled.nav`
 	width: 100%;
 `;
 
-const MenuHeaderIcon = styled(CircleImage)`
-	display: flex;
-	margin: 55px 0;
-	border: solid 1px #fff;
-`;
-
-const MenuItem = styled(Link)`
+const NavItem = styled(Link)`
 	width: 100%;
 	padding: 20px 0;
 	font-size: 18px;
@@ -43,26 +43,26 @@ const MenuItem = styled(Link)`
 	}
 `;
 
-export default function Nav(props) {
+export default function Menu(props) {
 	const { path } = props;
 
 	return (
-		<StyledNav>
+		<StyledMenu>
 			<MenuHeaderIcon src="/images/headshot.webp" />
-			<Menu>
-				<MenuItem to="/" selected={path === '/'}>
+			<Nav>
+				<NavItem to="/" selected={path === '/'}>
 					Me
-				</MenuItem>
-				<MenuItem to="/blog" selected={path.match(/^\/blog/) !== null}>
+				</NavItem>
+				<NavItem to="/blog" selected={path.match(/^\/blog/) !== null}>
 					Blog
-				</MenuItem>
-				<MenuItem to="/projects" selected={path === '/projects'}>
+				</NavItem>
+				<NavItem to="/projects" selected={path === '/projects'}>
 					Projects
-				</MenuItem>
-				<MenuItem to="/open-source" selected={path === '/open-source'}>
+				</NavItem>
+				<NavItem to="/open-source" selected={path === '/open-source'}>
 					Open-source
-				</MenuItem>
-			</Menu>
-		</StyledNav>
+				</NavItem>
+			</Nav>
+		</StyledMenu>
 	);
 }

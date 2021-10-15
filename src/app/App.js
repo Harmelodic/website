@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import styled from 'styled-components';
 import { ErrorBoundary } from './ErrorBoundary';
 
-const Nav = lazy(() => import('./nav/Nav'));
+const Nav = lazy(() => import('./menu/Menu'));
 const Home = lazy(() => import('./main/home/Home'));
 const Blog = lazy(() => import('./main/blog/Blog'));
 const PostView = lazy(() => import('./main/blog/post-view/PostView'));
