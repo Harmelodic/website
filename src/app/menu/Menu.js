@@ -9,7 +9,7 @@ const StyledMenu = styled.div`
 	align-items: center;
 	min-width: 300px;
 	max-width: 300px;
-	min-height: 100vh;
+	height: 100vh;
 	background: #191919;
 `;
 

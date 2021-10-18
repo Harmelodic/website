@@ -8,6 +8,7 @@ import { SocialMedia } from './components/SocialMedia';
 import { InfoBox } from './components/InfoBox';
 import { Main } from '../Main';
 import { Project } from '../Project';
+import { ReadingSpace } from '../ReadingSpace';
 
 const HomeMain = styled(Main)`
 	flex-flow: column nowrap;
@@ -98,6 +99,7 @@ export default function Home(props) {
 					/>
 				</StyledCertifications>
 			</InfoBox>
+			<ReadingSpace />
 		</HomeMain>
 	);
 }

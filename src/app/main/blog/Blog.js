@@ -7,6 +7,7 @@ import { Post } from './components/Post';
 import { InputTextBox } from './components/InputTextBox';
 import { Button } from './components/Button';
 import { Main } from '../Main';
+import { ReadingSpace } from '../ReadingSpace';
 
 const BlogMain = styled(Main)`
 	flex-flow: column nowrap;
@@ -155,6 +156,7 @@ export default function Blog(props) {
 			<Posts>
 				{postsToRender}
 			</Posts>
+			<ReadingSpace />
 		</BlogMain>
 	);
 };

@@ -16,6 +16,9 @@ export const Main = styled.main`
 		${props => props.fadeInTime ? props.fadeInTime : '800ms'};
 
 	display: flex;
+	flex-flow: row wrap;
 	width: 100%;
-	padding: 20px 20px 40vh 20px;
+	max-height: 100vh;
+	padding: 0 20px;
+	overflow-y: auto;
 `;
