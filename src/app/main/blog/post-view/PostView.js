@@ -33,10 +33,10 @@ const PostViewWrapper = styled.div`
 	--keyboard-outer-boxshadow: rgba(12, 13, 14, 0.2);
 	--keyboard-inner-boxshadow: #fff;
 
-	// Header styling
-	& > .heading, h1, h2, h3, h4, h5, h6 {
+	& > div {
 		font-family: Helvetica, sans-serif;
 	}
+
 	& > div > h1 {
 		padding-bottom: 15px;
 		border-bottom: solid #333 2px;
