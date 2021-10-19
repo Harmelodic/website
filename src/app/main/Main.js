@@ -17,6 +17,7 @@ export const Main = styled.main`
 
 	display: flex;
 	flex-flow: row wrap;
+	align-items: flex-start;
 	width: 100%;
 	max-height: 100vh;
 	padding: 0 20px;
