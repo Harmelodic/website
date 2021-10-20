@@ -7,6 +7,7 @@ import { clearSelectedPost, clearMarkdownText } from './actions';
 import { fetchPost, fetchMarkdown } from './middleware';
 import { LoadingTextBlock } from '../components/LoadingTextBlock';
 import { HorizontalRule } from '../components/HorizontalRule';
+import { ReadingSpace } from '../../ReadingSpace';
 
 const PostViewMain = styled(Main)`
 	flex-flow: column nowrap;
@@ -111,6 +112,7 @@ export default function PostView(props) {
 					{markdownText && selectedPost.category}
 				</Category>
 			</PostViewWrapper>
+			<ReadingSpace />
 		</PostViewMain>
 	) : (
 		<PostViewMain>
@@ -164,6 +166,7 @@ export default function PostView(props) {
 					<LoadingTextBlock width={200} color='#ddd' />
 				</Category>
 			</PostViewWrapper>
+			<ReadingSpace />
 		</PostViewMain>
 	);
 }
