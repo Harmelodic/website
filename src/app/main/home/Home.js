@@ -84,6 +84,13 @@ export default function Home(props) {
 			<InfoBox title="Certifications">
 				<StyledCertifications>
 					<Project
+						src="/images/cloud-professional-architect.webp"
+						background="#374850"
+						title="Professional Cloud Architect"
+						href="https://www.credential.net/bd886e12-4a18-4439-8c9a-680107c23547"
+						size={100}
+					/>
+					<Project
 						src="/images/gitlab.svg"
 						background=""
 						title="GitLab Hero"
@@ -91,11 +98,11 @@ export default function Home(props) {
 						size={60}
 					/>
 					<Project
-						src="/images/cloud-professional-architect.webp"
-						background="#374850"
-						title="Professional Cloud Architect"
-						href="https://www.credential.net/bd886e12-4a18-4439-8c9a-680107c23547"
-						size={100}
+						src="/images/certificate.svg"
+						background=""
+						title="BSc Digital &amp; Technology Solutions"
+						href="https://www.aston.ac.uk"
+						size={65}
 					/>
 				</StyledCertifications>
 			</InfoBox>
