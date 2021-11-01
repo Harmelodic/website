@@ -91,6 +91,13 @@ export default function Home(props) {
 						size={100}
 					/>
 					<Project
+						src="/images/CFI.webp"
+						background=""
+						title="Codecademy Chapter Co-Leader"
+						href="https://community.codecademy.com/coding-for-immigrants/"
+						size={100}
+					/>
+					<Project
 						src="/images/gitlab.svg"
 						background=""
 						title="GitLab Hero"
