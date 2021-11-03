@@ -11,6 +11,7 @@ const FilmsSeen = lazy(() => import('./main/blog/lists/FilmsSeen'));
 const TvShowsSeen = lazy(() => import('./main/blog/lists/TvShowsSeen'));
 const Projects = lazy(() => import('./main/projects/Projects'));
 const OpenSource = lazy(() => import('./main/open-source/OpenSource'));
+const WorkHistory = lazy(() => import('./main/work-history/WorkHistory'));
 
 const StyledApp = styled.div`
 	display: flex;
@@ -53,6 +54,7 @@ export function App() {
 						<RouteWithPathUpdate exact path="/blog/list/1532228640000" component={TvShowsSeen} />
 						<RouteWithPathUpdate exact path="/projects" component={Projects} />
 						<RouteWithPathUpdate exact path="/open-source" component={OpenSource} />
+						<RouteWithPathUpdate exact path="/work-history" component={WorkHistory} />
 					</Switch>
 				</Suspense>
 			</ErrorBoundary>

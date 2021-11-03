@@ -7,7 +7,7 @@ import { Post } from './components/Post';
 import { InputTextBox } from './components/InputTextBox';
 import { Button } from './components/Button';
 import { Main } from '../Main';
-import { ReadingSpace } from '../ReadingSpace';
+import { ReadingSpace } from '../components/ReadingSpace';
 
 const BlogMain = styled(Main)`
 	flex-flow: column nowrap;

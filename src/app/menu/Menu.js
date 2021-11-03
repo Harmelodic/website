@@ -62,6 +62,7 @@ export default function Menu(props) {
 				<NavItem to="/open-source" selected={path === '/open-source'}>
 					Open-source
 				</NavItem>
+				{/* TODO: Add work-history NavItem here */}
 			</Nav>
 		</StyledMenu>
 	);

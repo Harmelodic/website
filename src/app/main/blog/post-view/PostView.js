@@ -7,7 +7,7 @@ import { clearSelectedPost, clearMarkdownText } from './actions';
 import { fetchPost, fetchMarkdown } from './middleware';
 import { LoadingTextBlock } from '../components/LoadingTextBlock';
 import { HorizontalRule } from '../components/HorizontalRule';
-import { ReadingSpace } from '../../ReadingSpace';
+import { ReadingSpace } from '../../components/ReadingSpace';
 
 const PostViewMain = styled(Main)`
 	flex-flow: column nowrap;

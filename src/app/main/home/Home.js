@@ -7,8 +7,9 @@ import { fetchSocialMedia } from './middleware';
 import { SocialMedia } from './components/SocialMedia';
 import { InfoBox } from './components/InfoBox';
 import { Main } from '../Main';
-import { Project } from '../Project';
-import { ReadingSpace } from '../ReadingSpace';
+import { Project } from '../components/Project';
+import { ReadingSpace } from '../components/ReadingSpace';
+import { Title } from '../components/Title';
 
 const HomeMain = styled(Main)`
 	flex-flow: column nowrap;
@@ -29,12 +30,6 @@ const StyledCertifications = styled.div`
 	justify-content: flex-start;
 	align-items: flex-start;
 	align-content: flex-start;
-`;
-
-const Title = styled.div`
-	display: flex;
-	font-size: 35px;
-	margin: 50px 0 10px 0;
 `;
 
 export default function Home(props) {
