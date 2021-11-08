@@ -28,14 +28,6 @@
 		"background": "#ebebeb"
 	},
 	{
-		"title": "Minotaur",
-		"subtitle": "ALM Monitor",
-		"href": "https://www.minotaurproject.com/",
-		"src": "/images/minotaur.svg",
-		"background": "#000",
-		"size": 100
-	},
-	{
 		"title": "Professor Zorg's Guide to Alien Etiquette",
 		"subtitle": "Retro Game Tool",
 		"src": "/images/zorg.webp",
