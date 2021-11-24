@@ -8,7 +8,7 @@ export function postViewReducer(state, action) {
 		selectedPost: selectedPostReducer(state.selectedPost, action),
 		markdownText: markdownTextReducer(state.markdownText, action),
 	};
-};
+}
 
 function selectedPostReducer(selectedPostState, action) {
 	let selectedPost = Object.assign({}, selectedPostState);
@@ -20,7 +20,7 @@ function selectedPostReducer(selectedPostState, action) {
 	}
 
 	return selectedPost;
-};
+}
 
 function markdownTextReducer(markdownTextState, action) {
 	let markdownText = markdownTextState;

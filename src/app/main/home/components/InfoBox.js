@@ -42,4 +42,4 @@ export function InfoBox(props) {
 			<Info>{props.children}</Info>
 		</StyledInfoBox>
 	);
-};
+}

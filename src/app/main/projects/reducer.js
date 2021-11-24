@@ -10,4 +10,4 @@ export function projectsReducer(projectsState, action) {
 	}
 
 	return projects;
-};
+}

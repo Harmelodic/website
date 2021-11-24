@@ -61,7 +61,7 @@ export default function Blog(props) {
 	if (loadingCategoriesStatus && categories.length === 0) {
 		categoryBox = (
 			<FilterByBox
-				onChange={() => setFilterByCategory(event.target.value)}
+				onChange={(event) => setFilterByCategory(event.target.value)}
 				value={filterByCategory}
 			>
 				<option value="">---------------------------</option>
@@ -70,7 +70,7 @@ export default function Blog(props) {
 	} else {
 		categoryBox = (
 			<FilterByBox
-				onChange={() => setFilterByCategory(event.target.value)}
+				onChange={(event) => setFilterByCategory(event.target.value)}
 				value={filterByCategory}
 			>
 				<option value="">All Categories</option>
@@ -140,7 +140,7 @@ export default function Blog(props) {
 				}
 				<InputTextBox
 					placeholder="Filter..."
-					onChange={() => setFilterBySearch(event.target.value)}
+					onChange={(event) => setFilterBySearch(event.target.value)}
 					value={filterBySearch}
 				/>
 				<Button
