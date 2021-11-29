@@ -35,9 +35,7 @@ export class ErrorBoundary extends React.Component {
 		if (this.state.hasError) {
 			return (
 				<ErrorMessage>
-					<p>
-						Error loading web component.
-					</p>
+					<p>Error loading web component.</p>
 				</ErrorMessage>
 			);
 		}
