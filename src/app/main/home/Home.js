@@ -4,12 +4,12 @@ import styled from 'styled-components';
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchSocialMedia } from './middleware';
-import { SocialMedia } from './components/SocialMedia';
-import { InfoBox } from './components/InfoBox';
+import { SocialMedia } from '../../../lib/SocialMedia';
+import { InfoBox } from '../../../lib/InfoBox';
 import { Main } from '../Main';
-import { Project } from '../components/Project';
-import { ReadingSpace } from '../components/ReadingSpace';
-import { Title } from '../components/Title';
+import { Project } from '../../../lib/Project';
+import { ReadingSpace } from '../../../lib/ReadingSpace';
+import { Title } from '../../../lib/Title';
 
 const HomeMain = styled(Main)`
 	flex-flow: column nowrap;

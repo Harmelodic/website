@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchOpenSourceProjects } from './middleware';
-import { ProjectList } from '../components/ProjectList';
+import { ProjectList } from '../../../lib/ProjectList';
 import { Main } from '../Main';
-import { ReadingSpace } from '../components/ReadingSpace';
+import { ReadingSpace } from '../../../lib/ReadingSpace';
 
 export default function OpenSource(props) {
 	const dispatch = useDispatch();

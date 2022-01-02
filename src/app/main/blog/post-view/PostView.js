@@ -5,9 +5,9 @@ import { Markdown } from '@harmelodic/react-ui-lib';
 import { Main } from '../../Main';
 import { clearSelectedPost, clearMarkdownText } from './actions';
 import { fetchPost, fetchMarkdown } from './middleware';
-import { LoadingTextBlock } from '../components/LoadingTextBlock';
-import { HorizontalRule } from '../components/HorizontalRule';
-import { ReadingSpace } from '../../components/ReadingSpace';
+import { LoadingTextBlock } from '../../../../lib/LoadingTextBlock';
+import { HorizontalRule } from '../../../../lib/HorizontalRule';
+import { ReadingSpace } from '../../../../lib/ReadingSpace';
 
 const PostViewMain = styled(Main)`
 	flex-flow: column nowrap;

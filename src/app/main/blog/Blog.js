@@ -2,12 +2,12 @@ import styled from 'styled-components';
 import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchPosts, fetchCategories } from './middleware';
-import { FilterByBox } from './components/FilterByBox';
-import { Post } from './components/Post';
-import { InputTextBox } from './components/InputTextBox';
-import { Button } from './components/Button';
+import { FilterByBox } from '../../../lib/FilterByBox';
+import { Post } from '../../../lib/Post';
+import { InputTextBox } from '../../../lib/InputTextBox';
+import { Button } from '../../../lib/Button';
 import { Main } from '../Main';
-import { ReadingSpace } from '../components/ReadingSpace';
+import { ReadingSpace } from '../../../lib/ReadingSpace';
 
 const BlogMain = styled(Main)`
 	flex-flow: column nowrap;

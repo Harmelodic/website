@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Main } from '../Main';
-import { Title } from '../components/Title';
-import { ReadingSpace } from '../components/ReadingSpace';
+import { Title } from '../../../lib/Title';
+import { ReadingSpace } from '../../../lib/ReadingSpace';
 import { useEffect } from 'react';
 
 const WorkHistoryMain = styled(Main)`

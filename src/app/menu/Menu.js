@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { CircleImage } from './CircleImage';
+import { CircleImage } from '../../lib/CircleImage';
 
 const StyledMenu = styled.div`
 	display: flex;
