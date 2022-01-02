@@ -20,7 +20,7 @@ const HomeMain = styled(Main)`
 const StyledSocialMediaLinks = styled.div`
 	display: flex;
 	flex-flow: row wrap;
-	justify-content: flex-start;
+	justify-content: center;
 	align-items: flex-start;
 `;
 
@@ -30,6 +30,17 @@ const StyledCertifications = styled.div`
 	justify-content: flex-start;
 	align-items: flex-start;
 	align-content: flex-start;
+`;
+
+const Roles = styled.div`
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: flex-start;
+	font-size: 18px;
+	line-height: 32px;
+	text-align: center;
+	margin-top: 35px;
 `;
 
 export default function Home(props) {
@@ -46,9 +57,9 @@ export default function Home(props) {
 		<HomeMain>
 
 			<Title>Matt Smith</Title>
-			<div>Harmelodic</div>
 
-			<InfoBox title="Roles">
+			<Roles>
+				Harmelodic<br/>
 				he/him<br />
 				Software Engineer<br />
 				Consultant<br />
@@ -56,8 +67,7 @@ export default function Home(props) {
 				Designer<br />
 				Musician<br />
 				Dungeon Master<br />
-				<a href="https://www.youtube.com/watch?v=p3Khnx0lUDE">58,020,581</a><br />
-			</InfoBox>
+			</Roles>
 
 			<InfoBox title="Socials">
 				<StyledSocialMediaLinks>

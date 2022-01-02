@@ -7,9 +7,8 @@ const StyledInfoBox = styled.div`
     align-items: flex-start;
     width: 100%;
     max-width: 700px;
-    border: solid #000 1px;
     border-radius: 5px;
-    margin-top: 35px;
+    margin-top: 60px;
 `;
 
 const Title = styled.div`
@@ -32,6 +31,7 @@ const Info = styled.div`
     padding: 20px;
     color: #000;
     line-height: 28px;
+    width: calc(100% - 40px);
 `;
 
 export function InfoBox(props) {
