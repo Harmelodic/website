@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { CircleImage } from '../../lib/CircleImage';
+import { BowtieBanner } from '../../lib/BowtieBanner';
 
 const StyledMenu = styled.div`
 	display: flex;
@@ -15,9 +16,10 @@ const StyledMenu = styled.div`
 
 const MenuHeaderIcon = styled(CircleImage)`
 	display: flex;
-	margin: 55px 0;
+	margin-top: 55px;
 	border: solid 1px #fff;
 `;
+
 
 const Nav = styled.nav`
 	display: flex;
@@ -25,6 +27,7 @@ const Nav = styled.nav`
 	justify-content: flex-start;
 	align-items: center;
 	width: 100%;
+  	margin-top: 40px;
 `;
 
 const NavItem = styled(Link)`
@@ -43,12 +46,14 @@ const NavItem = styled(Link)`
 	}
 `;
 
+
 export default function Menu(props) {
 	const { path } = props;
 
 	return (
 		<StyledMenu>
 			<MenuHeaderIcon src="/images/headshot.webp" />
+			<BowtieBanner bannerHeight={80} rainbowHeight={3} />
 			<Nav>
 				<NavItem to="/" selected={path === '/'}>
 					Me
