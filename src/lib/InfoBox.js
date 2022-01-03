@@ -2,11 +2,9 @@ import styled from 'styled-components';
 
 const InfoBox = styled.div`
     display: flex;
-    width: 100%;
     max-width: 1000px;
-    border-radius: 5px;
-    margin-top: 35px;
-	padding: 20px;
+    border-top: solid 1px #333;
+	padding: 30px 0;
 	font-size: 18px;
 	line-height: 32px;
 	color: #000;
