@@ -6,7 +6,7 @@ const StyledProject = styled.a`
 	justify-content: flex-start;
 	align-items: center;
 	margin: 5px;
-	width: 200px;
+	width: 150px;
 	text-decoration: none;
 	color: #000;
 	transition: background 300ms;
@@ -22,8 +22,8 @@ const StyledProjectImageCircle = styled.div`
 	justify-content: center;
 	align-items: center;
 	margin: 25px;
-	width: 150px;
-	height: 150px;
+	width: 100px;
+	height: 100px;
 	border-radius: 100%;
 	overflow: hidden;
 	border: solid 1px #000;
@@ -40,25 +40,17 @@ const StyledProjectText = styled.div`
 	display: flex;
 	flex-flow: column nowrap;
 	align-items: center;
-	width: 190px;
+	width: calc(100% - 10px);
 	padding-left: 5px;
 	padding-right: 5px;
 	padding-bottom: 25px;
-	font-size: 20px;
-	line-height: 24px;
+	font-size: 16px;
+	line-height: 20px;
 	white-space: normal;
 	text-align: center;
 `;
 
-const StyledSubtitle = styled.span`
-	display: flex;
-	flex-flow: column nowrap;
-	font-size: 14px;
-	color: #666;
-	font-style: italic;
-`;
-
-export function Project(props) {
+export function ProjectSmall(props) {
 	return (
 		<StyledProject href={props.href} target="_blank" rel="noopener">
 			<StyledProjectImageCircle background={props.background}>
@@ -68,23 +60,7 @@ export function Project(props) {
 					size={props.size}
 				/>
 			</StyledProjectImageCircle>
-			<StyledProjectText>
-				{props.title}
-				{
-					props.subtitle &&
-					<StyledSubtitle>
-						{
-							props.subtitle
-								.split('\n')
-								.map((subtitleString, index) => {
-									return (
-										<div key={index}>{subtitleString}</div>
-									);
-								})
-						}
-					</StyledSubtitle>
-				}
-			</StyledProjectText>
+			<StyledProjectText>{props.title}</StyledProjectText>
 		</StyledProject>
 	);
 }

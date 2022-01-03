@@ -1,4 +1,4 @@
-import { Project } from './Project';
+import { ProjectLarge } from './ProjectLarge';
 
 export function ProjectList(props) {
 	return props.projects
@@ -16,7 +16,7 @@ export function ProjectList(props) {
 		})
 		.map((project, index) => {
 			return (
-				<Project
+				<ProjectLarge
 					key={index}
 					src={project.src}
 					background={project.background}
