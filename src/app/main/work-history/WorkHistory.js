@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { Main } from '../Main';
 import { Title } from '../../../lib/Title';
 import { ReadingSpace } from '../../../lib/ReadingSpace';
-import { useEffect } from 'react';
 
 const WorkHistoryMain = styled(Main)`
   	flex-flow: column nowrap;
@@ -10,11 +9,7 @@ const WorkHistoryMain = styled(Main)`
   	align-items: center;
 `;
 
-export default function WorkHistory(props) {
-	useEffect(() => {
-		props.updatePath();
-	}, []);
-
+export default function WorkHistory() {
 	return (
 		<WorkHistoryMain>
 			<Title>Work History</Title>

@@ -31,11 +31,10 @@ const Posts = styled.div`
 	max-width: 900px;
 `;
 
-export default function Blog(props) {
+export default function Blog() {
 	const dispatch = useDispatch();
 
 	useEffect(() => {
-		props.updatePath();
 		dispatch(fetchPosts());
 		dispatch(fetchCategories());
 	}, []);

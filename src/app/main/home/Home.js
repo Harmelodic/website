@@ -17,11 +17,10 @@ const HomeMain = styled(Main)`
 	align-items: center;
 `;
 
-export default function Home(props) {
+export default function Home() {
 	const dispatch = useDispatch();
 
 	useEffect(() => {
-		props.updatePath();
 		dispatch(fetchSocialMedia());
 	}, []);
 

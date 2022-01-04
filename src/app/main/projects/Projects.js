@@ -6,11 +6,10 @@ import { Main } from '../Main';
 import { ReadingSpace } from '../../../lib/ReadingSpace';
 
 
-export default function Projects(props) {
+export default function Projects() {
 	const dispatch = useDispatch();
 
 	useEffect(() => {
-		props.updatePath();
 		dispatch(fetchProjects());
 	}, []);
 

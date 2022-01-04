@@ -5,11 +5,10 @@ import { ProjectList } from '../../../lib/ProjectList';
 import { Main } from '../Main';
 import { ReadingSpace } from '../../../lib/ReadingSpace';
 
-export default function OpenSource(props) {
+export default function OpenSource() {
 	const dispatch = useDispatch();
 
 	useEffect(() => {
-		props.updatePath();
 		dispatch(fetchOpenSourceProjects());
 	}, []);
 

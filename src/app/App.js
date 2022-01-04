@@ -1,4 +1,4 @@
-import { Suspense, lazy, useState } from 'react';
+import { Suspense, lazy, useState, useEffect } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import styled from 'styled-components';
 import { ErrorBoundary } from './ErrorBoundary';
@@ -21,40 +21,26 @@ const StyledApp = styled.div`
 `;
 
 export function App() {
-	const [path, setPath] = useState(window.location.pathname);
-
-	function updatePath() {
-		setPath(window.location.pathname);
-	}
-
-	function RouteWithPathUpdate({ component: Component, ...routeProps }) {
-		return (
-			<Route {...routeProps} render={props => (
-				<Component {...props} updatePath={updatePath} />
-			)} />
-		);
-	}
-
 	return (
 		<StyledApp>
 
 			<ErrorBoundary>
 				<Suspense fallback={<div />}>
-					<Menu path={path} />
+					<Route component={Menu} />
 				</Suspense>
 			</ErrorBoundary>
 
 			<ErrorBoundary>
 				<Suspense fallback={<div />}>
 					<Switch>
-						<RouteWithPathUpdate exact path="/" component={Home} />
-						<RouteWithPathUpdate exact path="/blog" component={Blog} />
-						<RouteWithPathUpdate exact path="/blog/post/:id" component={PostView} />
-						<RouteWithPathUpdate exact path="/blog/list/1532228220000" component={FilmsSeen} />
-						<RouteWithPathUpdate exact path="/blog/list/1532228640000" component={TvShowsSeen} />
-						<RouteWithPathUpdate exact path="/projects" component={Projects} />
-						<RouteWithPathUpdate exact path="/open-source" component={OpenSource} />
-						<RouteWithPathUpdate exact path="/work-history" component={WorkHistory} />
+						<Route exact path="/" component={Home} />
+						<Route exact path="/blog" component={Blog} />
+						<Route exact path="/blog/post/:id" component={PostView} />
+						<Route exact path="/blog/list/1532228220000" component={FilmsSeen} />
+						<Route exact path="/blog/list/1532228640000" component={TvShowsSeen} />
+						<Route exact path="/projects" component={Projects} />
+						<Route exact path="/open-source" component={OpenSource} />
+						<Route exact path="/work-history" component={WorkHistory} />
 					</Switch>
 				</Suspense>
 			</ErrorBoundary>

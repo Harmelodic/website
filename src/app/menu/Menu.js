@@ -48,7 +48,9 @@ const NavItem = styled(Link)`
 
 
 export default function Menu(props) {
-	const { path } = props;
+	const { location } = props;
+
+	const path = location.pathname // location is from react-router props
 
 	return (
 		<StyledMenu>
