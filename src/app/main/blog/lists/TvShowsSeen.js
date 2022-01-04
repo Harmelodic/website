@@ -12,13 +12,6 @@ const TvShowsSeenMain = styled(Main)`
 	align-items: center;
 `;
 
-const TvShowsSeenContent = styled.div`
-	flex-flow: column nowrap;
-	justify-content: flex-start;
-	align-items: center;
-	max-width: 900px;
-`;
-
 export default function TvShowsSeen() {
 	const tvShowsSeen = useSelector(store => store.blog.lists.tvShowsSeen);
 
@@ -41,61 +34,59 @@ export default function TvShowsSeen() {
 
 	return (
 		<TvShowsSeenMain>
-			<TvShowsSeenContent>
-				<h1 style={{ textAlign: 'center' }}>TV Shows I've Seen</h1>
-				<SortPicker
-					selectedChoice={sort}
-					onChangeSort={onChangeSort}
-				/>
-				{
-					tvShowsSeen.length === 0 && <div style={{ padding: '20px' }}>Loading...</div>
-				}
-				{
-					tvShowsSeenWithPosition
-						.sort((tvShowA, tvShowB) => {
-							switch (sort) {
-								case 'alphabetical':
-									return tvShowA.primary_title
-										.localeCompare(tvShowB.primary_title);
-								case 'chronological':
-									return tvShowA.start_year - tvShowB.start_year;
-								default:
-									// Favourite
-									return tvShowA.position - tvShowB.position;
-							}
-						})
-						.map((tvShow) => {
-							return (
-								<MediaListEntry
-									key={tvShow.tconst}
-									details={tvShow}
-									descriptionTexts={[
-										`Original Release: ${
-											tvShow.start_year
-										}-${
-											tvShow.end_year ? tvShow.end_year : 'Present'
-										}`,
+			<h1 style={{ textAlign: 'center' }}>TV Shows I've Seen</h1>
+			<SortPicker
+				selectedChoice={sort}
+				onChangeSort={onChangeSort}
+			/>
+			{
+				tvShowsSeen.length === 0 && <div style={{ padding: '20px' }}>Loading...</div>
+			}
+			{
+				tvShowsSeenWithPosition
+					.sort((tvShowA, tvShowB) => {
+						switch (sort) {
+							case 'alphabetical':
+								return tvShowA.primary_title
+									.localeCompare(tvShowB.primary_title);
+							case 'chronological':
+								return tvShowA.start_year - tvShowB.start_year;
+							default:
+								// Favourite
+								return tvShowA.position - tvShowB.position;
+						}
+					})
+					.map((tvShow) => {
+						return (
+							<MediaListEntry
+								key={tvShow.tconst}
+								details={tvShow}
+								descriptionTexts={[
+									`Original Release: ${
+										tvShow.start_year
+									}-${
+										tvShow.end_year ? tvShow.end_year : 'Present'
+									}`,
 
-										`Creator${
-											tvShow.creators.length > 1 ? 's' : ''
-										}:${
-											tvShow.creators
-												.map(creator => '\n\t' + creator)
-												.join(',')
-										}`,
+									`Creator${
+										tvShow.creators.length > 1 ? 's' : ''
+									}:${
+										tvShow.creators
+											.map(creator => '\n\t' + creator)
+											.join(',')
+									}`,
 
-										`Genres:${
-											tvShow.genres
-												.split(',')
-												.map(genre => ' ' + genre)
-												.join(',')
-										}`,
-									]}
-								/>
-							);
-						})
-				}
-			</TvShowsSeenContent>
+									`Genres:${
+										tvShow.genres
+											.split(',')
+											.map(genre => ' ' + genre)
+											.join(',')
+									}`,
+								]}
+							/>
+						);
+					})
+			}
 		</TvShowsSeenMain>
 	);
 }

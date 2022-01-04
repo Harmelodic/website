@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 const StyledMediaListEntry = styled.div`
 	width: 100%;
+  	max-width: 900px;
 	border-bottom: solid 1px #bbb;
 `;
 

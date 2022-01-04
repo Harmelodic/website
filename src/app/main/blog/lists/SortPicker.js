@@ -6,6 +6,7 @@ const StyledSortPicker = styled.div`
     justify-content: space-evenly;
     align-items: center;
 	width: 100%;
+  	max-width: 900px;
 	height: 80px;
 	border-bottom: solid 1px #bbb;
 `;
