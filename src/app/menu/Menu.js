@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 import { CircleImage } from '../../lib/CircleImage';
 import { BowtieBanner } from '../../lib/BowtieBanner';
@@ -30,7 +30,7 @@ const Nav = styled.nav`
   	margin-top: 40px;
 `;
 
-const NavItem = styled(Link)`
+const NavItem = styled(NavLink)`
 	width: 100%;
 	padding: 20px 0;
 	font-size: 18px;
@@ -47,26 +47,26 @@ const NavItem = styled(Link)`
 `;
 
 
-export default function Menu(props) {
-	const { location } = props;
+export default function Menu() {
 
-	const path = location.pathname // location is from react-router props
+	let location = useLocation();
+	const path = location.pathname;
 
 	return (
 		<StyledMenu>
 			<MenuHeaderIcon src="/images/headshot.webp" />
 			<BowtieBanner bannerHeight={80} rainbowHeight={3} />
 			<Nav>
-				<NavItem to="/" selected={path === '/'}>
+				<NavItem end to="/" selected={path === '/'}>
 					Me
 				</NavItem>
 				<NavItem to="/blog" selected={path.match(/^\/blog/) !== null}>
 					Blog
 				</NavItem>
-				<NavItem to="/projects" selected={path === '/projects'}>
+				<NavItem end to="/projects" selected={path === '/projects'}>
 					Projects
 				</NavItem>
-				<NavItem to="/open-source" selected={path === '/open-source'}>
+				<NavItem end to="/open-source" selected={path === '/open-source'}>
 					Open-source
 				</NavItem>
 			</Nav>

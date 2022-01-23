@@ -11,14 +11,14 @@ stages:
 
 npm-test:
   stage: test
-  image: node:16
+  image: node:17
   script:
     - npm i
     - npm test
 
 npm-build:
   stage: build
-  image: node:16
+  image: node:17
   script:
     - npm -v
     - npm i

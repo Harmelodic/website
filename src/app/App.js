@@ -1,5 +1,5 @@
-import { Suspense, lazy, useState, useEffect } from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Suspense, lazy } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import styled from 'styled-components';
 import { ErrorBoundary } from './ErrorBoundary';
 
@@ -26,22 +26,24 @@ export function App() {
 
 			<ErrorBoundary>
 				<Suspense fallback={<div />}>
-					<Route component={Menu} />
+					<Routes>
+						<Route path="*" element={<Menu />} />
+					</Routes>
 				</Suspense>
 			</ErrorBoundary>
 
 			<ErrorBoundary>
 				<Suspense fallback={<div />}>
-					<Switch>
-						<Route exact path="/" component={Home} />
-						<Route exact path="/blog" component={Blog} />
-						<Route exact path="/blog/post/:id" component={PostView} />
-						<Route exact path="/blog/list/1532228220000" component={FilmsSeen} />
-						<Route exact path="/blog/list/1532228640000" component={TvShowsSeen} />
-						<Route exact path="/projects" component={Projects} />
-						<Route exact path="/open-source" component={OpenSource} />
-						<Route exact path="/work-history" component={WorkHistory} />
-					</Switch>
+					<Routes>
+						<Route exact path="/" element={<Home />} />
+						<Route exact path="/blog" element={<Blog />} />
+						<Route exact path="/blog/post/:id" element={<PostView />} />
+						<Route exact path="/blog/list/1532228220000" element={<FilmsSeen />} />
+						<Route exact path="/blog/list/1532228640000" element={<TvShowsSeen />} />
+						<Route exact path="/projects" element={<Projects />} />
+						<Route exact path="/open-source" element={<OpenSource />} />
+						<Route exact path="/work-history" element={<WorkHistory />} />
+					</Routes>
 				</Suspense>
 			</ErrorBoundary>
 
