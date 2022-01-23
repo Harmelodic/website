@@ -49,7 +49,7 @@ const NavItem = styled(NavLink)`
 
 export default function Menu() {
 
-	let location = useLocation();
+	const location = useLocation();
 	const path = location.pathname;
 
 	return (

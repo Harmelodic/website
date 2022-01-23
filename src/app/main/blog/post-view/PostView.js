@@ -8,6 +8,7 @@ import { fetchPost, fetchMarkdown } from './middleware';
 import { LoadingTextBlock } from '../../../../lib/LoadingTextBlock';
 import { HorizontalRule } from '../../../../lib/HorizontalRule';
 import { ReadingSpace } from '../../../../lib/ReadingSpace';
+import { useParams } from 'react-router-dom';
 
 const PostViewMain = styled(Main)`
 	flex-flow: column nowrap;
@@ -76,9 +77,11 @@ const Category = styled.div`
 	font-style: italic;
 `;
 
-export default function PostView(props) {
+export default function PostView() {
 	const selectedPost = useSelector(store => store.blog.postView.selectedPost);
 	const markdownText = useSelector(store => store.blog.postView.markdownText);
+
+	const params = useParams();
 
 	const dispatch = useDispatch();
 	useEffect(() => {
@@ -88,7 +91,7 @@ export default function PostView(props) {
 	}, [selectedPost.datePosted]);
 
 	useEffect(() => {
-		dispatch(fetchPost(parseInt(props.match.params.id)));
+		dispatch(fetchPost(parseInt(params.id)));
 		window.scroll(0, 0);
 
 		return function cleanup() {
