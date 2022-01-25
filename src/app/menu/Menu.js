@@ -11,7 +11,7 @@ const StyledMenu = styled.div`
 	min-width: 300px;
 	max-width: 300px;
 	height: 100vh;
-	background: #191919;
+	background: ${props => props.theme.nav.background};
 `;
 
 const MenuHeaderIcon = styled(CircleImage)`
@@ -34,15 +34,15 @@ const NavItem = styled(NavLink)`
 	width: 100%;
 	padding: 20px 0;
 	font-size: 18px;
-	color: ${props => props.selected ? '#000' : '#fff'};
+	color: ${props => props.selected ? props.theme. nav.textColorSelected : props.theme.nav.textColor};
 	text-decoration: none;
-	background: ${props => props.selected ? '#fff' : 'rgba(0,0,0,0)'};
+	background: ${props => props.selected ? props.theme.nav.itemBackground : props.theme.transparent};
 	text-align: center;
 	transition: background 200ms;
 	white-space: normal;
 
 	&:hover {
-		background: ${props => props.selected ? '#fff' : '#333'};
+		background: ${props => props.selected ? props.theme.nav.itemBackground : props.theme.nav.itemHover};
 	}
 `;
 

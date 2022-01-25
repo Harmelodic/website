@@ -8,7 +8,7 @@ const StyledSortPicker = styled.div`
 	width: 100%;
   	max-width: 900px;
 	height: 80px;
-	border-bottom: solid 1px #bbb;
+	border-bottom: solid 1px ${props => props.theme.sortPicker.border};
 `;
 
 const SortLogo = styled.img`
@@ -16,7 +16,7 @@ const SortLogo = styled.img`
     margin-left: 25px;
 	width: 30px;
 	height: 30px;
-	background: ${props => props.isSelected ? '#333' : '#bbb'};
+	background: ${props => props.selected ? props.theme.sortPicker.selected : props.theme.sortPicker.unselected};
 	transition: background 150ms;
 `;
 
@@ -26,15 +26,15 @@ const SortChoice = styled.div`
     align-items: center;
 	height: 100%;
 	cursor: pointer;
-	color: ${props => props.isSelected ? '#333' : '#bbb'};
+	color: ${props => props.selected ? props.theme.sortPicker.selected : props.theme.sortPicker.unselected};
 	transition: color 150ms;
 
 	&:hover {
-		color: #000;
+		color: ${props => props.theme.sortPicker.selected};
 	}
 
 	&:hover ${SortLogo} {
-		background: #333;
+		background: ${props => props.theme.sortPicker.selected};
 	}
 `;
 
@@ -77,11 +77,11 @@ export default function SortPicker(props) {
 							onClick={() => {
 								props.onChangeSort(choice.sort);
 							}}
-							isSelected={(choice.sort === props.selectedChoice)}
+							selected={(choice.sort === props.selectedChoice)}
 						>
 							<SortLogo
 								src={choice.img}
-								isSelected={(choice.sort === props.selectedChoice)}
+								selected={(choice.sort === props.selectedChoice)}
 							/>
 							<SortText>{choice.display}</SortText>
 						</SortChoice>

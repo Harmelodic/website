@@ -1,9 +1,10 @@
 import styled from 'styled-components';
+import { defaultMergeProps } from 'react-redux/lib/connect/mergeProps';
 
 const StyledMediaListEntry = styled.div`
 	width: 100%;
   	max-width: 900px;
-	border-bottom: solid 1px #bbb;
+	border-bottom: solid 1px ${props => props.theme.listSeparator};
 `;
 
 const StyledHalf = styled.div`
@@ -26,7 +27,7 @@ const StyledPicture = styled.img`
 	margin: 20px 0;
 	width: calc(5 * ${pictureSizeFactor}px);
 	height: calc(7.2 * ${pictureSizeFactor}px);
-	border: solid 1px #333;
+	border: solid 1px ${props => props.theme.img.border};
 `;
 
 const StyledDetailsWrapper = styled.div`
@@ -38,7 +39,7 @@ const StyledDetailsWrapper = styled.div`
 
 const StyledDetailsText = styled.div`
 	padding: 5px 0;
-	color: #999999;
+	color: ${props => props.theme.description};
 	font-size: 18px;
 	font-style: italic;
 `;
@@ -51,7 +52,7 @@ const StyledPosition = styled(StyledDetailsText)`
 const StyledTitle = styled.div`
 	font-size: 20px;
 	font-weight: bold;
-	color: #000000;
+	color: ${props => props.theme.title};
 `;
 
 export default function MediaListEntry(props) {

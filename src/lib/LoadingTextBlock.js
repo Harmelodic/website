@@ -15,7 +15,7 @@ export const LoadingTextBlock = styled.div`
         ${props => props.color ? props.color : '#ccc'} 80%,
         ${props => props.color ? props.color : '#ccc'} 100%);
     background-repeat: no-repeat;
-    background-size: 700 100px; 
+    background-size: 700 100px;
     
     animation-duration: 1300ms;
     animation-fill-mode: forwards; 

@@ -25,15 +25,15 @@ const PostViewWrapper = styled.div`
     max-width: 900px;
 
 	// Markdown re-styling
-	--link-color: #0645ad;
-	--link-active-color: #df0000;
-	--code-block-background: #000;
-	--code-block-color: #fff;
-	--blockquote-colour: #2e70b1;
-	--keyboard-text-color: #242729;
-	--keyboard-border-color: #adb3b9;
-	--keyboard-outer-boxshadow: rgba(12, 13, 14, 0.2);
-	--keyboard-inner-boxshadow: #fff;
+	--link-color: ${props => props.theme.blog.linkColor};
+	--link-active-color: ${props => props.theme.blog.linkActiveColor};
+	--code-block-background: ${props => props.theme.blog.codeBlockBackground};
+	--code-block-color: ${props => props.theme.blog.codeBlockColor};
+	--blockquote-colour: ${props => props.theme.blog.blockquoteColour};
+	--keyboard-text-color: ${props => props.theme.blog.keyboardTextColor};
+	--keyboard-border-color: ${props => props.theme.blog.keyboardBorderColor};
+	--keyboard-outer-boxshadow: ${props => props.theme.blog.keyboardOuterBoxShadow};
+	--keyboard-inner-boxshadow: ${props => props.theme.blog.keyboardInnerBoxShadow};
 
 	& > div {
 		font-family: Helvetica, sans-serif;
@@ -41,12 +41,12 @@ const PostViewWrapper = styled.div`
 
 	& > div > h1 {
 		padding-bottom: 15px;
-		border-bottom: solid #333 2px;
+		border-bottom: solid ${props => props.theme.blog.h1Border} 2px;
 	}
 	& > div > h2 {
 		padding-top: 20px;
 		padding-bottom: 10px;
-		border-bottom: solid #888 1px;
+		border-bottom: solid ${props => props.theme.blog.h2Border} 1px;
 	}
 	& > .heading, h3, h4, h5, h6 {
 		padding-top: 15px;
@@ -66,14 +66,14 @@ const PostViewWrapper = styled.div`
 const PostHeading = styled.h1`
 	width: 100%;
 	padding-bottom: 15px;
-	border-bottom: solid #333 2px;
+	border-bottom: solid ${props => props.theme.blog.h1Border} 2px;
 	white-space: normal;
 `;
 
 const Category = styled.div`
 	margin-top: 5px;
 	font-size: 18px;
-	color: #999;
+	color: ${props => props.theme.blog.category};
 	font-style: italic;
 `;
 
