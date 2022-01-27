@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import styled from 'styled-components';
+import styled, { useTheme } from 'styled-components';
 import { Markdown } from '@harmelodic/react-ui-lib';
 import { Main } from '../../Main';
 import { clearSelectedPost, clearMarkdownText } from './actions';
@@ -25,15 +25,15 @@ const PostViewWrapper = styled.div`
     max-width: 900px;
 
 	// Markdown re-styling
-	--link-color: ${props => props.theme.blog.linkColor};
-	--link-active-color: ${props => props.theme.blog.linkActiveColor};
-	--code-block-background: ${props => props.theme.blog.codeBlockBackground};
-	--code-block-color: ${props => props.theme.blog.codeBlockColor};
-	--blockquote-colour: ${props => props.theme.blog.blockquoteColour};
-	--keyboard-text-color: ${props => props.theme.blog.keyboardTextColor};
-	--keyboard-border-color: ${props => props.theme.blog.keyboardBorderColor};
-	--keyboard-outer-boxshadow: ${props => props.theme.blog.keyboardOuterBoxShadow};
-	--keyboard-inner-boxshadow: ${props => props.theme.blog.keyboardInnerBoxShadow};
+	--link-color: ${props => props.theme.blog.postView.linkColor};
+	--link-active-color: ${props => props.theme.blog.postView.linkActiveColor};
+	--code-block-background: ${props => props.theme.blog.postView.codeBlockBackground};
+	--code-block-color: ${props => props.theme.blog.postView.codeBlockColor};
+	--blockquote-colour: ${props => props.theme.blog.postView.blockquoteColour};
+	--keyboard-text-color: ${props => props.theme.blog.postView.keyboardTextColor};
+	--keyboard-border-color: ${props => props.theme.blog.postView.keyboardBorderColor};
+	--keyboard-outer-boxshadow: ${props => props.theme.blog.postView.keyboardOuterBoxShadow};
+	--keyboard-inner-boxshadow: ${props => props.theme.blog.postView.keyboardInnerBoxShadow};
 
 	& > div {
 		font-family: Helvetica, sans-serif;
@@ -41,12 +41,12 @@ const PostViewWrapper = styled.div`
 
 	& > div > h1 {
 		padding-bottom: 15px;
-		border-bottom: solid ${props => props.theme.blog.h1Border} 2px;
+		border-bottom: solid ${props => props.theme.blog.postView.h1Border} 2px;
 	}
 	& > div > h2 {
 		padding-top: 20px;
 		padding-bottom: 10px;
-		border-bottom: solid ${props => props.theme.blog.h2Border} 1px;
+		border-bottom: solid ${props => props.theme.blog.postView.h2Border} 1px;
 	}
 	& > .heading, h3, h4, h5, h6 {
 		padding-top: 15px;
@@ -66,14 +66,14 @@ const PostViewWrapper = styled.div`
 const PostHeading = styled.h1`
 	width: 100%;
 	padding-bottom: 15px;
-	border-bottom: solid ${props => props.theme.blog.h1Border} 2px;
+	border-bottom: solid ${props => props.theme.blog.postView.h1Border} 2px;
 	white-space: normal;
 `;
 
 const Category = styled.div`
 	margin-top: 5px;
 	font-size: 18px;
-	color: ${props => props.theme.blog.category};
+	color: ${props => props.theme.blog.postView.category};
 	font-style: italic;
 `;
 
@@ -102,6 +102,8 @@ export default function PostView() {
 
 	const title = selectedPost.title || '';
 
+	const theme = useTheme();
+
 	const readyToRender = title && markdownText;
 
 	return readyToRender ? (
@@ -121,7 +123,7 @@ export default function PostView() {
 		<PostViewMain>
 			<PostViewWrapper>
 				<PostHeading>
-					<LoadingTextBlock width={500} color='#888' />
+					<LoadingTextBlock width={500} color={theme.blog.loading.h1} />
 				</PostHeading>
 				<div>
 					<LoadingTextBlock margin={15} width={300} />
@@ -133,7 +135,7 @@ export default function PostView() {
 					<LoadingTextBlock margin={15} width={80} />
 					<br />
 					<br />
-					<LoadingTextBlock margin={15} width={200} color='#aaa' />
+					<LoadingTextBlock margin={15} width={200} color={theme.blog.loading.h2} />
 					<HorizontalRule />
 					<LoadingTextBlock margin={15} width={250} />
 					<LoadingTextBlock margin={15} width={100} />
@@ -149,14 +151,14 @@ export default function PostView() {
 					<LoadingTextBlock margin={15} width={500} />
 					<br />
 					<br />
-					<LoadingTextBlock margin={15} width={80} color='#aaa' />
+					<LoadingTextBlock margin={15} width={100} color={theme.blog.loading.h2} />
 					<LoadingTextBlock margin={15} width={500} />
 					<LoadingTextBlock margin={15} width={150} />
 					<LoadingTextBlock margin={15} width={80} />
 					<LoadingTextBlock margin={15} width={450} />
 					<br />
 					<br />
-					<LoadingTextBlock margin={15} width={300} color='#aaa' />
+					<LoadingTextBlock margin={15} width={300} color={theme.blog.loading.h2} />
 					<HorizontalRule />
 					<LoadingTextBlock margin={15} width={50} />
 					<LoadingTextBlock margin={15} width={250} />
@@ -166,7 +168,7 @@ export default function PostView() {
 					<LoadingTextBlock margin={15} width={350} />
 				</div>
 				<Category>
-					<LoadingTextBlock width={200} color='#ddd' />
+					<LoadingTextBlock width={200} color={theme.blog.loading.category} />
 				</Category>
 			</PostViewWrapper>
 			<ReadingSpace />

@@ -3,11 +3,11 @@ import styled from 'styled-components';
 const InfoBox = styled.div`
     display: flex;
     max-width: 1000px;
-    border-top: solid 1px #333;
+    border-top: solid 1px ${props => props.theme.infoBox.border};
 	padding: 30px 0;
 	font-size: 18px;
 	line-height: 32px;
-	color: #000;
+	color: ${props => props.theme.infoBox.color};
   	text-align: center;
 `;
 

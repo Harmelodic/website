@@ -4,12 +4,12 @@ export const Button = styled.button`
 	display: ${props => props.visible ? 'inline-block' : 'none'};
 	height: 40px;
 	margin: 10px;
-	background: #fff;
-	border: solid 1px #bbb;
+	background: ${props => props.theme.button.background};
+	border: solid 1px ${props => props.theme.button.border};
 	border-radius: 5px;
 	padding: 0 15px;
 	font-size: 18px;
-	color: #888;
+	color: ${props => props.theme.button.color};
 	transition: border 200ms, color 200ms;
 
 	&:focus {
@@ -17,7 +17,7 @@ export const Button = styled.button`
 	}
 
 	&:active {
-		color: #333;
-		border: solid 1px #333;
+		color: ${props => props.theme.button.activeColor};
+		border: solid 1px ${props => props.theme.button.activeBorder};
 	}
 `;

@@ -1,5 +1,3 @@
-// noinspection HtmlUnknownAnchorTarget
-
 import styled from 'styled-components';
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
@@ -60,28 +58,24 @@ export default function Home() {
 			<RowInfoBox>
 				<ProjectSmall
 					src="/images/cloud-professional-architect.webp"
-					background="#374850"
 					title="Professional Cloud Architect"
 					href="https://www.credential.net/bd886e12-4a18-4439-8c9a-680107c23547"
-					size={100}
+					size={108}
 				/>
 				<ProjectSmall
 					src="/images/CFI.webp"
-					background=""
 					title="Codecademy Chapter Co-Leader"
 					href="https://community.codecademy.com/coding-for-immigrants/"
 					size={100}
 				/>
 				<ProjectSmall
 					src="/images/gitlab.svg"
-					background=""
 					title="GitLab Hero"
 					href="https://gitlab.com/gitlab-com/www-gitlab-com/merge_requests/34774"
 					size={60}
 				/>
 				<ProjectSmall
 					src="/images/certificate.svg"
-					background=""
 					title="BSc Digital &amp; Technology Solutions"
 					href="https://www.aston.ac.uk"
 					size={65}

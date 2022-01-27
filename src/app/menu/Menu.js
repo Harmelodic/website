@@ -17,7 +17,7 @@ const StyledMenu = styled.div`
 const MenuHeaderIcon = styled(CircleImage)`
 	display: flex;
 	margin-top: 55px;
-	border: solid 1px #fff;
+	border: solid 1px ${props => props.theme.nav.iconBorder};
 `;
 
 
