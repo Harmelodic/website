@@ -7,8 +7,9 @@ export const Button = styled.button`
 	background: ${props => props.theme.button.cancel.background};
     border: none;
 	padding: 0 15px;
-	font-size: 18px;
+	font-size: 14px;
 	color: ${props => props.theme.text.normal};
+    text-transform: uppercase;
 	transition: background 200ms, color 200ms;
 
     &:hover {

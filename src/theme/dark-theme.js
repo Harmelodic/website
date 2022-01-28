@@ -6,9 +6,9 @@ export const darkTheme = {
 	},
 	button: {
 		cancel: {
-			background: '#333',
+			background: 'rgba(0,0,0,0)',
 			hover: {
-				background: '#3d3d3d'
+				background: '#383838'
 			},
 			active: {
 				background: '#333'

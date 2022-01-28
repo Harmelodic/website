@@ -6,18 +6,18 @@ export const lightTheme = {
 	},
 	button: {
 		cancel: {
-			background: '#eee',
+			background: 'rgba(0,0,0,0)',
 			hover: {
-				background: '#ddd'
+				background: '#eee'
 			},
 			active: {
-				background: '#ccc'
+				background: '#ddd'
 			}
 		},
 		item: {
 			background: 'rgba(0,0,0,0)',
 			hover: {
-				background: '#f3f3f3'
+				background: '#eee'
 			},
 			active: {
 				background: '#ddd'

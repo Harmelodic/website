@@ -149,7 +149,7 @@ export default function Blog() {
 						setFilterByCategory('');
 					}}
 				>
-					Clear filters
+					Reset
 				</Button>
 			</StyledFilters>
 			<Posts>
