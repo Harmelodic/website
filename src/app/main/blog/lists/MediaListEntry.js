@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const StyledMediaListEntry = styled.div`
 	width: 100%;
   	max-width: 900px;
-	border-bottom: solid 1px ${props => props.theme.listSeparator};
+	border-bottom: solid 1px ${props => props.theme.separator};
 `;
 
 const StyledHalf = styled.div`

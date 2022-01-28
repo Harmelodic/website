@@ -17,12 +17,16 @@ export const InputTextBox = styled.input`
 		transition: color 200ms;
 	}
 
+  	&:hover {
+	    border: solid 1px ${props => props.theme.input.hover.border};
+	}
+
 	&:focus {
 		outline: none;
 		border: solid 1px ${props => props.theme.input.focus.border};
 	}
 
 	&:focus::placeholder {
-		color: ${props => props.theme.input.focus.placeholderColor};
+		color: ${props => props.theme.transparent};
 	}
 `;

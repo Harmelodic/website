@@ -7,6 +7,7 @@ const StyledPost = styled(Link)`
 	flex-flow: column nowrap;
 	width: calc(100% - 60px);
 	margin-bottom: 0;
+    background: ${props => props.theme.button.item.background};
 	border-bottom: dashed 1px ${props => props.theme.blog.posts.borderBottom};
 	padding: 30px;
 	text-decoration: none;
@@ -15,11 +16,11 @@ const StyledPost = styled(Link)`
 	transition: all 150ms;
 
 	&:hover {
-		background: ${props => props.theme.hover.background};
+		background: ${props => props.theme.button.item.hover.background};
 	}
 
 	&:active {
-		background: ${props => props.theme.blog.posts.activeBackground};
+		background: ${props => props.theme.button.item.active.background};
 	}
 `;
 

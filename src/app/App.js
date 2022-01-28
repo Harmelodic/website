@@ -18,6 +18,9 @@ const StyledApp = styled.div`
 	flex-flow: row nowrap;
 	justify-content: flex-start;
 	width: 100%;
+  
+  	font-family: ${props => props.theme.font.family};
+  	font-weight: ${props => props.theme.font.weight};
 `;
 
 export function App() {

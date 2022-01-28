@@ -7,13 +7,18 @@ const StyledProject = styled.a`
 	align-items: center;
 	margin: 5px;
 	width: 150px;
+    background: ${props => props.theme.button.item.background};
 	text-decoration: none;
 	color: ${props => props.theme.text.title};
 	transition: background 300ms;
 
 	&:hover {
-		background: ${props => props.theme.hover.background};
+		background: ${props => props.theme.button.item.hover.background};
 		cursor: pointer;
+	}
+  
+    &:active {
+        background: ${props => props.theme.button.item.active.background};
 	}
 `;
 
@@ -26,9 +31,9 @@ const StyledProjectImageCircle = styled.div`
 	height: 100px;
 	border-radius: 100%;
 	overflow: hidden;
-	border: solid 1px ${props => props.theme.circleImage.border};
+	border: solid 1px ${props => props.theme.img.border};
 	background-color:
-	  ${props => props.background ? props.background : props.theme.circleImage.background};
+	  ${props => props.background ? props.background : props.theme.img.background};
 `;
 
 const StyledProjectImage = styled.img`

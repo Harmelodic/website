@@ -7,7 +7,7 @@ const StyledSortPicker = styled.div`
     align-items: center;
 	width: 100%;
   	max-width: 900px;
-	border-bottom: solid 1px ${props => props.theme.input.border};
+	border-bottom: solid 1px ${props => props.theme.separator};
 `;
 
 const SortLogo = styled.img`

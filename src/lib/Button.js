@@ -4,20 +4,23 @@ export const Button = styled.button`
 	display: ${props => props.visible ? 'inline-block' : 'none'};
 	height: 40px;
 	margin: 10px;
-	background: ${props => props.theme.button.background};
-	border: solid 1px ${props => props.theme.button.border};
-	border-radius: 5px;
+	background: ${props => props.theme.button.cancel.background};
+    border: none;
 	padding: 0 15px;
 	font-size: 18px;
-	color: ${props => props.theme.button.color};
+	color: ${props => props.theme.text.normal};
 	transition: border 200ms, color 200ms;
+
+    &:hover {
+	    background: ${props => props.theme.button.cancel.hover.background};
+	    color: ${props => props.theme.text.normal};
+	}
 
 	&:focus {
 		outline: none;
 	}
 
 	&:active {
-		color: ${props => props.theme.button.activeColor};
-		border: solid 1px ${props => props.theme.button.activeBorder};
+	    background: ${props => props.theme.button.cancel.active.background};
 	}
 `;

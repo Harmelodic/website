@@ -1,67 +1,48 @@
 export const lightTheme = {
-	rainbow: {
-		one: 'red',
-		two: 'orange',
-		three: 'yellow',
-		four: 'green',
-		five: 'cyan',
-		six: 'blue',
-		seven: 'indigo',
-		eight: 'violet',
-		nine: 'red'
-	},
-	hover: {
-		background: '#f3f3f3'
-	},
-	nav: {
-		icon: {
-			border: '#fff'
-		},
-		background: '#191919',
-		item: {
-			selected: {
-				background: '#fff',
-				color: '#000'
-			},
-			hover: {
-				background: '#333'
-			},
-			color: '#fff'
-		},
-	},
-	loadingTextBlock: {
-		default: '#ccc',
-		wave: 'rgba(255,255,255,0.5)',
+	// General styling
+	font: {
+		family: "Helvetica, 'Segoe UI', sans-serif",
+		weight: 300
 	},
 	button: {
-		background: '#fff',
-		border: '#bbb',
-		color: '#888',
-		activeColor: '#333',
-		activeBorder: '#333'
-	},
-	circleImage: {
-		border: '#000',
-		background: '#fff'
-	},
-	horizontalRule: '#888',
-	infoBox: {
-		border: '#333',
-		color: '#000'
+		cancel: {
+			background: '#eee',
+			hover: {
+				background: '#ddd'
+			},
+			active: {
+				background: '#ccc'
+			}
+		},
+		item: {
+			background: 'rgba(0,0,0,0)',
+			hover: {
+				background: '#f3f3f3'
+			},
+			active: {
+				background: '#ddd'
+			}
+		}
 	},
 	input: {
-		icon: '#bbb',
+		background: '#fff',
 		border: '#bbb',
-		focus: {
-			color: '#333',
+		icon: '#bbb',
+		color: '#888',
+		hover: {
 			border: '#333',
-			placeholderColor: 'rgba(0,0,0,0)'
+		},
+		focus: {
+			border: '#333',
+		},
+		active: {
+			border: '#333',
 		}
 	},
 	text: {
 		title: '#000',
 		subtitle: '#999',
-		normal: '#000',
+		normal: '#333',
 		placeholder: '#aaa',
 		link: '#0645ad',
 		linkActive: '#df0000',
@@ -79,13 +60,56 @@ export const lightTheme = {
 			}
 		}
 	},
+	img: {
+		border: '#333',
+		background: '#fff'
+	},
+	separator: '#888',
+	transparent: 'rgb(0,0,0,0)',
+	error: '#f00',
+
+
+	// Special styling
+	loadingTextBlock: {
+		default: '#ccc',
+		wave: 'rgba(255,255,255,0.5)',
+	},
+	rainbow: {
+		one: 'red',
+		two: 'orange',
+		three: 'yellow',
+		four: 'green',
+		five: 'cyan',
+		six: 'blue',
+		seven: 'indigo',
+		eight: 'violet',
+		nine: 'red'
+	},
+
+
+	// Site-specific styling
+	nav: {
+		background: '#191919',
+		icon: {
+			border: '#fff'
+		},
+		item: {
+			color: '#fff',
+			selected: {
+				background: '#fff',
+				color: '#000'
+			},
+			hover: {
+				background: '#333'
+			}
+		},
+	},
 	blog: {
 		posts: {
 			loading: {
 				subtitleColor: '#ddd'
 			},
 			borderBottom: '#666',
-			activeBackground: '#ddd',
 		},
 		loading: {
 			category: '#ddd',
@@ -97,10 +121,4 @@ export const lightTheme = {
 			h2Border: '#888',
 		}
 	},
-	img: {
-		border: '#333',
-	},
-	listSeparator: '#bbb',
-	transparent: 'rgb(0,0,0,0)',
-	error: '#f00'
 }
