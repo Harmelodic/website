@@ -9,15 +9,10 @@ export const Button = styled.button`
 	padding: 0 15px;
 	font-size: 18px;
 	color: ${props => props.theme.text.normal};
-	transition: border 200ms, color 200ms;
+	transition: background 200ms, color 200ms;
 
     &:hover {
 	    background: ${props => props.theme.button.cancel.hover.background};
-	    color: ${props => props.theme.text.normal};
-	}
-
-	&:focus {
-		outline: none;
 	}
 
 	&:active {

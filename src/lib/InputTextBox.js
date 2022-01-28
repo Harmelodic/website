@@ -22,7 +22,6 @@ export const InputTextBox = styled.input`
 	}
 
 	&:focus {
-		outline: none;
 		border: solid 1px ${props => props.theme.input.focus.border};
 	}
 
