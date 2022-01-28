@@ -8,7 +8,7 @@ const StyledPost = styled(Link)`
 	width: calc(100% - 60px);
 	margin-bottom: 0;
     background: ${props => props.theme.button.item.background};
-	border-bottom: dashed 1px ${props => props.theme.blog.posts.borderBottom};
+	border-bottom: dashed 1px ${props => props.theme.separator};
 	padding: 30px;
 	text-decoration: none;
 	white-space: normal;
@@ -46,10 +46,10 @@ export function Post(props) {
 		return (
 			<StyledPost to='#'>
 				<StyledTitle>
-					<LoadingTextBlock width={400} />
+					<LoadingTextBlock width={400} color={theme.text.loading.normal} />
 				</StyledTitle>
 				<StyledSubtitle>
-					<LoadingTextBlock width={150} color={theme.blog.posts.loading.subtitleColor} />
+					<LoadingTextBlock width={150} color={theme.text.loading.subtitle} />
 				</StyledSubtitle>
 			</StyledPost>
 		);

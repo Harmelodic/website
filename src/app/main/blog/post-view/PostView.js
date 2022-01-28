@@ -41,12 +41,12 @@ const PostViewWrapper = styled.div`
 
 	& > div > h1 {
 		padding-bottom: 15px;
-		border-bottom: solid ${props => props.theme.blog.postView.h1Border} 2px;
+		border-bottom: solid ${props => props.theme.separator} 2px;
 	}
 	& > div > h2 {
 		padding-top: 20px;
 		padding-bottom: 10px;
-		border-bottom: solid ${props => props.theme.blog.postView.h2Border} 1px;
+		border-bottom: solid ${props => props.theme.separator} 1px;
 	}
 	& > .heading, h3, h4, h5, h6 {
 		padding-top: 15px;
@@ -66,7 +66,7 @@ const PostViewWrapper = styled.div`
 const PostHeading = styled.h1`
 	width: 100%;
 	padding-bottom: 15px;
-	border-bottom: solid ${props => props.theme.blog.postView.h1Border} 2px;
+	border-bottom: solid ${props => props.theme.separator} 2px;
 	white-space: normal;
 `;
 
@@ -123,7 +123,7 @@ export default function PostView() {
 		<PostViewMain>
 			<PostViewWrapper>
 				<PostHeading>
-					<LoadingTextBlock width={500} color={theme.blog.loading.h1} />
+					<LoadingTextBlock width={500} color={theme.text.loading.title} />
 				</PostHeading>
 				<div>
 					<LoadingTextBlock margin={15} width={300} />
@@ -135,7 +135,7 @@ export default function PostView() {
 					<LoadingTextBlock margin={15} width={80} />
 					<br />
 					<br />
-					<LoadingTextBlock margin={15} width={200} color={theme.blog.loading.h2} />
+					<LoadingTextBlock margin={15} width={200} color={theme.text.loading.title} />
 					<HorizontalRule />
 					<LoadingTextBlock margin={15} width={250} />
 					<LoadingTextBlock margin={15} width={100} />
@@ -151,14 +151,14 @@ export default function PostView() {
 					<LoadingTextBlock margin={15} width={500} />
 					<br />
 					<br />
-					<LoadingTextBlock margin={15} width={100} color={theme.blog.loading.h2} />
+					<LoadingTextBlock margin={15} width={100} color={theme.text.loading.title} />
 					<LoadingTextBlock margin={15} width={500} />
 					<LoadingTextBlock margin={15} width={150} />
 					<LoadingTextBlock margin={15} width={80} />
 					<LoadingTextBlock margin={15} width={450} />
 					<br />
 					<br />
-					<LoadingTextBlock margin={15} width={300} color={theme.blog.loading.h2} />
+					<LoadingTextBlock margin={15} width={300} color={theme.text.loading.title} />
 					<HorizontalRule />
 					<LoadingTextBlock margin={15} width={50} />
 					<LoadingTextBlock margin={15} width={250} />
@@ -168,7 +168,7 @@ export default function PostView() {
 					<LoadingTextBlock margin={15} width={350} />
 				</div>
 				<Category>
-					<LoadingTextBlock width={200} color={theme.blog.loading.category} />
+					<LoadingTextBlock width={200} color={theme.text.loading.subtitle} />
 				</Category>
 			</PostViewWrapper>
 			<ReadingSpace />

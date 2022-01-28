@@ -5,15 +5,15 @@ export const LoadingTextBlock = styled.div`
     width: ${props => props.width}px;
     margin: ${props => props.margin ? props.margin : '5'}px;
     border-radius: ${props => props.height ? props.height : '13'}px;
-    background: ${props => props.color ? props.color : props.theme.loadingTextBlock.default} no-repeat;
+    background: ${props => props.color ? props.color : props.theme.text.loading.normal} no-repeat;
     background-image: linear-gradient(
         to right,
-        ${props => props.color ? props.color : props.theme.loadingTextBlock.default} 0%,
-        ${props => props.theme.loadingTextBlock.wave} 20%,
-        ${props => props.color ? props.color : props.theme.loadingTextBlock.default} 40%,
-        ${props => props.color ? props.color : props.theme.loadingTextBlock.default} 60%,
-        ${props => props.color ? props.color : props.theme.loadingTextBlock.default} 80%,
-        ${props => props.color ? props.color : props.theme.loadingTextBlock.default} 100%
+        ${props => props.color ? props.color : props.theme.text.loading.normal} 0%,
+        ${props => props.theme.text.loading.wave} 20%,
+        ${props => props.color ? props.color : props.theme.text.loading.normal} 40%,
+        ${props => props.color ? props.color : props.theme.text.loading.normal} 60%,
+        ${props => props.color ? props.color : props.theme.text.loading.normal} 80%,
+        ${props => props.color ? props.color : props.theme.text.loading.normal} 100%
     );
     background-size: 700px 100px;
     

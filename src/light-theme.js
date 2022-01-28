@@ -43,6 +43,7 @@ export const lightTheme = {
 		title: '#000',
 		subtitle: '#999',
 		normal: '#333',
+		negative: '#fff',
 		placeholder: '#aaa',
 		link: '#0645ad',
 		linkActive: '#df0000',
@@ -58,6 +59,12 @@ export const lightTheme = {
 				outer: 'rgba(12, 13, 14, 0.2)',
 				inner: '#fff'
 			}
+		},
+		loading: {
+			title: '#888',
+			subtitle: '#ddd',
+			normal: '#ccc',
+			wave: 'rgba(255,255,255,0.5)'
 		}
 	},
 	img: {
@@ -70,10 +77,6 @@ export const lightTheme = {
 
 
 	// Special styling
-	loadingTextBlock: {
-		default: '#ccc',
-		wave: 'rgba(255,255,255,0.5)',
-	},
 	rainbow: {
 		one: 'red',
 		two: 'orange',
@@ -94,31 +97,12 @@ export const lightTheme = {
 			border: '#fff'
 		},
 		item: {
-			color: '#fff',
 			selected: {
 				background: '#fff',
-				color: '#000'
 			},
 			hover: {
 				background: '#333'
 			}
 		},
-	},
-	blog: {
-		posts: {
-			loading: {
-				subtitleColor: '#ddd'
-			},
-			borderBottom: '#666',
-		},
-		loading: {
-			category: '#ddd',
-			h1: '#888',
-			h2: '#aaa'
-		},
-		postView: {
-			h1Border: '#333',
-			h2Border: '#888',
-		}
 	},
 }
