@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchPosts, fetchCategories } from './middleware';
-import { FilterByBox } from '../../../lib/FilterByBox';
+import { SelectBox } from '../../../lib/SelectBox';
 import { Post } from '../../../lib/Post';
 import { InputTextBox } from '../../../lib/InputTextBox';
 import { Button } from '../../../lib/Button';
@@ -59,16 +59,16 @@ export default function Blog() {
 	let categoryBox;
 	if (loadingCategoriesStatus && categories.length === 0) {
 		categoryBox = (
-			<FilterByBox
+			<SelectBox
 				onChange={(event) => setFilterByCategory(event.target.value)}
 				value={filterByCategory}
 			>
 				<option value="">---------------------------</option>
-			</FilterByBox>
+			</SelectBox>
 		);
 	} else {
 		categoryBox = (
-			<FilterByBox
+			<SelectBox
 				onChange={(event) => setFilterByCategory(event.target.value)}
 				value={filterByCategory}
 			>
@@ -84,7 +84,7 @@ export default function Blog() {
 						);
 					})
 				}
-			</FilterByBox>
+			</SelectBox>
 		);
 	}
 

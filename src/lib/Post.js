@@ -15,7 +15,7 @@ const StyledPost = styled(Link)`
 	transition: all 150ms;
 
 	&:hover {
-		background: ${props => props.theme.blog.posts.hoverBackground};
+		background: ${props => props.theme.hover.background};
 	}
 
 	&:active {
@@ -26,14 +26,14 @@ const StyledPost = styled(Link)`
 const StyledTitle = styled.div`
 	display: flex;
 	font-size: 20px;
-	color: ${props => props.theme.blog.posts.titleColor};
+	color: ${props => props.theme.text.title};
 `;
 
 const StyledSubtitle = styled.div`
 	display: flex;
 	margin-top: 5px;
 	font-size: 14px;
-	color: ${props => props.theme.blog.posts.subtitleColor};
+	color: ${props => props.theme.text.subtitle};
 	line-height: 1.6em;
 	font-style: italic;
 `;

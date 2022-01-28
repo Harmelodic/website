@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const FilterByBox = styled.select`
+export const SelectBox = styled.select`
 	appearance: none;
 
 	background-image:
@@ -20,11 +20,11 @@ export const FilterByBox = styled.select`
 	border-radius: 5px;
 	padding: 0 35px 0 15px;
 	font-size: 18px;
-	color: ${props => props.theme.input.color};
+	color: ${props => props.theme.text.normal};
 	transition: border 200ms;
 
 	&::placeholder {
-		color: ${props => props.theme.input.placeholderColor};
+		color: ${props => props.theme.text.placeholder};
 		transition: color 200ms;
 	}
 

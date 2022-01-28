@@ -9,11 +9,11 @@ export const InputTextBox = styled.input`
 	border-radius: 5px;
 	padding: 0 15px;
 	font-size: 18px;
-	color: ${props => props.theme.input.color};
+	color: ${props => props.theme.text.normal};
 	transition: border 200ms;
 
 	&::placeholder {
-		color: ${props => props.theme.input.placeholderColor};
+		color: ${props => props.theme.text.placeholder};
 		transition: color 200ms;
 	}
 

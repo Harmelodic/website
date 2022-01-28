@@ -13,7 +13,7 @@ const StyledSocialMedia = styled.a`
 	transition: 200ms background;
 
 	&:hover {
-		background: ${props => props.theme.socialMedia.hover.background};
+		background: ${props => props.theme.hover.background};
 	}
 `;
 

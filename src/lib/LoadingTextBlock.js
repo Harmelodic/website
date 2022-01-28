@@ -9,7 +9,7 @@ export const LoadingTextBlock = styled.div`
     background-image: linear-gradient(
         to right,
         ${props => props.color ? props.color : props.theme.loadingTextBlock.default} 0%,
-        ${props => props.theme.blog.loading.wave} 20%,
+        ${props => props.theme.loadingTextBlock.wave} 20%,
         ${props => props.color ? props.color : props.theme.loadingTextBlock.default} 40%,
         ${props => props.color ? props.color : props.theme.loadingTextBlock.default} 60%,
         ${props => props.color ? props.color : props.theme.loadingTextBlock.default} 80%,

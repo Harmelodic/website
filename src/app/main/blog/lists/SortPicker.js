@@ -7,8 +7,7 @@ const StyledSortPicker = styled.div`
     align-items: center;
 	width: 100%;
   	max-width: 900px;
-	height: 80px;
-	border-bottom: solid 1px ${props => props.theme.sortPicker.border};
+	border-bottom: solid 1px ${props => props.theme.input.border};
 `;
 
 const SortLogo = styled.img`
@@ -16,7 +15,7 @@ const SortLogo = styled.img`
     margin-left: 25px;
 	width: 30px;
 	height: 30px;
-	background: ${props => props.selected ? props.theme.sortPicker.selected : props.theme.sortPicker.unselected};
+	background: ${props => props.selected ? props.theme.input.focus.color : props.theme.input.placeholderColor};
 	transition: background 150ms;
 `;
 
@@ -26,15 +25,15 @@ const SortChoice = styled.div`
     align-items: center;
 	height: 100%;
 	cursor: pointer;
-	color: ${props => props.selected ? props.theme.sortPicker.selected : props.theme.sortPicker.unselected};
+	color: ${props => props.selected ? props.theme.input.focus.color : props.theme.input.placeholderColor};
 	transition: color 150ms;
 
 	&:hover {
-		color: ${props => props.theme.sortPicker.selected};
+		color: ${props => props.theme.input.focus.color};
 	}
 
 	&:hover ${SortLogo} {
-		background: ${props => props.theme.sortPicker.selected};
+		background: ${props => props.theme.input.focus.color};
 	}
 `;
 

@@ -14,15 +14,15 @@ const RainbowBar = styled.div`
     height: ${props => props.rainbowHeight}px;
     background: black; /* For browsers that do not support gradients */
     background: linear-gradient(to right,
-      red,
-      orange,
-      yellow,
-      green,
-      cyan,
-      blue,
-      indigo,
-      violet,
-      red
+      ${props => props.theme.rainbow.one},
+      ${props => props.theme.rainbow.two},
+      ${props => props.theme.rainbow.three},
+      ${props => props.theme.rainbow.four},
+      ${props => props.theme.rainbow.five},
+	  ${props => props.theme.rainbow.six},
+      ${props => props.theme.rainbow.seven},
+      ${props => props.theme.rainbow.eight},
+      ${props => props.theme.rainbow.nine}
     ); /* Standard syntax (must be last) */
 `;
 

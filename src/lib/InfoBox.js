@@ -7,7 +7,7 @@ const InfoBox = styled.div`
 	padding: 30px 0;
 	font-size: 18px;
 	line-height: 32px;
-	color: ${props => props.theme.infoBox.color};
+	color: ${props => props.theme.text.normal};
   	text-align: center;
 `;
 

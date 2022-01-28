@@ -25,15 +25,15 @@ const PostViewWrapper = styled.div`
     max-width: 900px;
 
 	// Markdown re-styling
-	--link-color: ${props => props.theme.blog.postView.linkColor};
-	--link-active-color: ${props => props.theme.blog.postView.linkActiveColor};
-	--code-block-background: ${props => props.theme.blog.postView.codeBlockBackground};
-	--code-block-color: ${props => props.theme.blog.postView.codeBlockColor};
-	--blockquote-colour: ${props => props.theme.blog.postView.blockquoteColour};
-	--keyboard-text-color: ${props => props.theme.blog.postView.keyboardTextColor};
-	--keyboard-border-color: ${props => props.theme.blog.postView.keyboardBorderColor};
-	--keyboard-outer-boxshadow: ${props => props.theme.blog.postView.keyboardOuterBoxShadow};
-	--keyboard-inner-boxshadow: ${props => props.theme.blog.postView.keyboardInnerBoxShadow};
+	--link-color: ${props => props.theme.text.link};
+	--link-active-color: ${props => props.theme.text.linkActive};
+	--code-block-background: ${props => props.theme.text.code.background};
+	--code-block-color: ${props => props.theme.text.code.color};
+	--blockquote-colour: ${props => props.theme.text.blockquote};
+	--keyboard-text-color: ${props => props.theme.text.keyboard.color};
+	--keyboard-border-color: ${props => props.theme.text.keyboard.border};
+	--keyboard-outer-boxshadow: ${props => props.theme.text.keyboard.boxShadow.outer};
+	--keyboard-inner-boxshadow: ${props => props.theme.text.keyboard.boxShadow.inner};
 
 	& > div {
 		font-family: Helvetica, sans-serif;
@@ -73,7 +73,7 @@ const PostHeading = styled.h1`
 const Category = styled.div`
 	margin-top: 5px;
 	font-size: 18px;
-	color: ${props => props.theme.blog.postView.category};
+	color: ${props => props.theme.text.subtitle};
 	font-style: italic;
 `;
 

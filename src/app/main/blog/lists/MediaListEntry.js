@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { defaultMergeProps } from 'react-redux/lib/connect/mergeProps';
 
 const StyledMediaListEntry = styled.div`
 	width: 100%;
@@ -39,7 +38,7 @@ const StyledDetailsWrapper = styled.div`
 
 const StyledDetailsText = styled.div`
 	padding: 5px 0;
-	color: ${props => props.theme.description};
+	color: ${props => props.theme.text.subtitle};
 	font-size: 18px;
 	font-style: italic;
 `;
@@ -52,7 +51,7 @@ const StyledPosition = styled(StyledDetailsText)`
 const StyledTitle = styled.div`
 	font-size: 20px;
 	font-weight: bold;
-	color: ${props => props.theme.title};
+	color: ${props => props.theme.text.title};
 `;
 
 export default function MediaListEntry(props) {
