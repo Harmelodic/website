@@ -22,4 +22,5 @@ export const Main = styled.main`
 	max-height: 100vh;
 	padding: 0 20px;
 	overflow-y: auto;
+    background: ${props => props.theme.main.background}
 `;

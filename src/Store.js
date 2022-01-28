@@ -4,6 +4,7 @@ import { projectsReducer } from './app/main/projects/reducer';
 import { openSourceProjectsReducer } from './app/main/open-source/reducer';
 import { socialMediaReducer } from './app/main/home/reducer';
 import { blogReducer } from './app/main/blog/reducer';
+import { themeReducer } from './theme/reducer';
 
 export function initialiseStore() {
 	const composeEnhancers =
@@ -19,6 +20,7 @@ export function initialiseStore() {
 }
 
 const initialState = {
+	theme: 'light',
 	projects: [],
 	openSourceProjects: [],
 	socialMedia: [],
@@ -38,6 +40,7 @@ const initialState = {
 
 function rootReducer(state, action) {
 	return {
+		theme: themeReducer(state.theme, action),
 		projects: projectsReducer(state.projects, action),
 		openSourceProjects:
 			openSourceProjectsReducer(state.openSourceProjects, action),

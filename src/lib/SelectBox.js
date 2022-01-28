@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const SelectBox = styled.select`
 	appearance: none;
 
+    background: ${props => props.theme.input.background};
 	background-image:
 		linear-gradient(45deg, transparent 50%, ${props => props.theme.input.icon} 50%),
 		linear-gradient(135deg, ${props => props.theme.input.icon} 50%, transparent 50%);

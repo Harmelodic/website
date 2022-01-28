@@ -91,6 +91,9 @@ export const lightTheme = {
 
 
 	// Site-specific styling
+	main: {
+		background: '#fff'
+	},
 	nav: {
 		background: '#191919',
 		icon: {

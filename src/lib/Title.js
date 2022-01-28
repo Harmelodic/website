@@ -4,4 +4,5 @@ export const Title = styled.div`
 	display: flex;
 	font-size: 38px;
 	margin: 100px 0 30px 0;
+    color: ${props => props.theme.text.title};
 `;

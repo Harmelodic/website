@@ -5,6 +5,7 @@ export const InputTextBox = styled.input`
 	max-width: 200px;
 	height: 38px;
 	margin: 10px;
+    background: ${props => props.theme.input.background};
 	border: solid 1px ${props => props.theme.input.border};
 	border-radius: 5px;
 	padding: 0 15px;
