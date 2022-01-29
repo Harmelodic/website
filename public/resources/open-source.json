@@ -1,4 +1,4 @@
-[    
+[
 	{
 		"title": ".atom",
 		"subtitle": "Atom Config",
@@ -30,7 +30,8 @@
 		"title": "Flavour 101",
 		"subtitle": "Food Blog",
 		"href": "https://gitlab.com/flavour101",
-		"src" : "/images/flavour101.svg"
+		"src" : "/images/flavour101.svg",
+		"background": "#ffffff"
 	},
 	{
 		"title": "Foofie The Dog",
@@ -50,6 +51,7 @@
 		"subtitle": "Backend App Generator",
 		"href": "https://gitlab.com/Harmelodic/init-backend",
 		"src": "/images/init-backend.svg",
+		"background": "#ffffff",
 		"size": 55
 	},
 	{
@@ -57,6 +59,7 @@
 		"subtitle": "Frontend App Generator",
 		"href": "https://gitlab.com/Harmelodic/init-frontend",
 		"src": "/images/init-frontend.svg",
+		"background": "#ffffff",
 		"size": 55
 	},
 	{

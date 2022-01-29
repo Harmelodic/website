@@ -20,7 +20,7 @@ export function initialiseStore() {
 }
 
 const initialState = {
-	theme: 'light',
+	theme: 'dark',
 	projects: [],
 	openSourceProjects: [],
 	socialMedia: [],

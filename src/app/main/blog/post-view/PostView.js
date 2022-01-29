@@ -42,6 +42,7 @@ const PostViewWrapper = styled.div`
 	& > div > h1 {
 		padding-bottom: 15px;
 		border-bottom: solid ${props => props.theme.separator} 2px;
+	    color: ${props => props.theme.text.title};
 	}
 	& > div > h2 {
 		padding-top: 20px;
@@ -68,6 +69,7 @@ const PostHeading = styled.h1`
 	padding-bottom: 15px;
 	border-bottom: solid ${props => props.theme.separator} 2px;
 	white-space: normal;
+    color: ${props => props.theme.text.title};
 `;
 
 const Category = styled.div`
