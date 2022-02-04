@@ -15,7 +15,7 @@
 	{
 		"title": "Advent of Code",
 		"subtitle": "Xmas Challenge Answers",
-		"href": "https://gitlab.com/Harmelodic/advent-of-code",
+		"href": "https://github.com/Harmelodic/advent-of-code",
 		"src": "/images/advent-of-code.svg",
 		"background": "#000000"
 	},
@@ -29,35 +29,27 @@
 	{
 		"title": "Flavour 101",
 		"subtitle": "Food Blog",
-		"href": "https://gitlab.com/flavour101",
+		"href": "https://github.com/flavour101",
 		"src" : "/images/flavour101.svg",
 		"background": "#ffffff"
 	},
 	{
 		"title": "Foofie The Dog",
 		"subtitle": "\"Weird Al\" Yankovic Homage",
-		"href": "https://gitlab.com/Harmelodic/foofiethedog",
+		"href": "https://github.com/Harmelodic/foofiethedog",
 		"src": "/images/foofiethedog.webp",
 		"background": "#000000"
 	},
 	{
 		"title": "imdb-util",
 		"subtitle": "IMDb Search Scripts",
-		"href": "https://gitlab.com/Harmelodic/imdb-util",
+		"href": "https://github.com/Harmelodic/imdb-util",
 		"src": "/images/imdb-util.svg"
-	},
-	{
-		"title": "init-backend",
-		"subtitle": "Backend App Generator",
-		"href": "https://gitlab.com/Harmelodic/init-backend",
-		"src": "/images/init-backend.svg",
-		"background": "#ffffff",
-		"size": 55
 	},
 	{
 		"title": "init-frontend",
 		"subtitle": "Frontend App Generator",
-		"href": "https://gitlab.com/Harmelodic/init-frontend",
+		"href": "https://github.com/Harmelodic/init-frontend",
 		"src": "/images/init-frontend.svg",
 		"background": "#ffffff",
 		"size": 55
@@ -65,7 +57,7 @@
 	{
 		"title": "main",
 		"subtitle": "Harmelodic Website",
-		"href": "https://gitlab.com/Harmelodic/main",
+		"href": "https://github.com/Harmelodic/main",
 		"src": "/images/main.svg",
 		"background": "#000000",
 		"size": 59
@@ -73,7 +65,7 @@
 	{
 		"title": "Minimal Grey Chrome",
 		"subtitle": "Chrome Theme",
-		"href": "https://gitlab.com/Harmelodic/minimal-grey-chrome",
+		"href": "https://github.com/Harmelodic/minimal-grey-chrome",
 		"src": "/images/minimal-grey.svg",
 		"background": "#4e4e4e",
 		"size": 40
@@ -81,22 +73,14 @@
 	{
 		"title": "Minimal Grey Firefox",
 		"subtitle": "Firefox Theme",
-		"href": "https://gitlab.com/Harmelodic/minimal-grey-firefox",
+		"href": "https://github.com/Harmelodic/minimal-grey-firefox",
 		"src": "/images/minimal-grey-firefox.png",
 		"background": "#ebebeb"
 	},
 	{
-		"title": "Minotaur",
-		"subtitle": "ALM Monitor",
-		"href": "https://gitlab.com/minotaur-monitor",
-		"src": "/images/minotaur.svg",
-		"background": "#000",
-		"size": 100
-	},
-	{
 		"title": "Ops",
 		"subtitle": "Ops code for personal projects",
-		"href": "https://gitlab.com/Harmelodic/ops",
+		"href": "https://github.com/Harmelodic/ops",
 		"src": "/images/ops.svg"
 	},
 	{
@@ -116,7 +100,7 @@
 	{
 		"title": "react-ui-lib",
 		"subtitle": "npm package (Browser)",
-		"href": "https://gitlab.com/Harmelodic/react-ui-lib",
+		"href": "https://github.com/Harmelodic/react-ui-lib",
 		"src": "/images/react-ui-lib.svg"
 	},
 	{
