@@ -1,11 +1,14 @@
 name: master
 on:
-  - push
+  push:
+    branches:
+      - master
 jobs:
   npm-test:
     runs-on: ubuntu-latest
     container: node:17
     steps:
+      - uses: actions/checkout@v2
       - run: |
           npm i
           npm test
@@ -16,6 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     container: node:17
     steps:
+      - uses: actions/checkout@v2
       - run: |
           npm i
           npm run build
