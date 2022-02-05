@@ -7,12 +7,7 @@
 		"test": "echo \"No tests specified\" && exit 0",
 		"lint": "eslint src/* --fix",
 		"start": "webpack serve --config webpack.dev.js",
-		"start:prod": "webpack serve --config webpack.prod.js",
-		"build": "webpack --config webpack.prod.js",
-		"docker:build": "docker build -t $npm_package_name:latest .",
-		"docker:run": "docker run --name $npm_package_name -d -p 8080:80 $npm_package_name:latest",
-		"docker": "npm run build && npm run docker:build && npm run docker:run",
-		"docker:destroy": "docker stop $npm_package_name && docker rm $npm_package_name && docker rmi $npm_package_name"
+		"build": "webpack --config webpack.prod.js"
 	},
 	"author": "Harmelodic",
 	"devDependencies": {
@@ -39,19 +34,18 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://gitlab.com/Harmelodic/main.git"
+		"url": "git+https://github.com/Harmelodic/main.git"
 	},
 	"bugs": {
-		"url": "https://gitlab.com/Harmelodic/main/issues"
+		"url": "https://github.com/Harmelodic/main/issues"
 	},
-	"homepage": "https://gitlab.com/Harmelodic/main#README",
+	"homepage": "https://github.com/Harmelodic/main#README",
 	"keywords": [
 		"frontend",
 		"react",
 		"harmelodic",
-		"boilerplate",
-		"template",
-		"redux"
+		"redux",
+		"main"
 	],
 	"license": "UNLICENSED"
 }
