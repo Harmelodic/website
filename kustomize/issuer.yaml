@@ -1,11 +1,11 @@
-apiVersion: cert-manager.io/v1alpha2
+apiVersion: cert-manager.io/v1
 kind: Issuer
 metadata:
   name: letsencrypt
 spec:
   acme:
     server: https://acme-v02.api.letsencrypt.org/directory
-    email: {{.DOMAIN_EMAIL}}
+    email: matt+letsencrypt@harmelodic.com
     privateKeySecretRef:
       name: letsencrypt
     solvers:
@@ -15,8 +15,8 @@ spec:
         dns01:
           route53:
             region: eu-west-1
-            hostedZoneID: {{.HOSTED_ZONE_ID}}
-            accessKeyID: {{.ROUTE53_ACCESS_KEY_ID}}
+            hostedZoneID: Z14W1WI9S3BGB5
+            accessKeyID: AKIAINZD2OD26V5HWOVQ
             secretAccessKeySecretRef:
               name: cert-manager-route53
               key: secret-access-key
