@@ -13,7 +13,7 @@
 	"devDependencies": {
 		"@babel/core": "^7.14.6",
 		"@babel/preset-react": "^7.14.5",
-		"@harmelodic/react-ui-lib": "^3.4.3",
+		"@harmelodic/react-ui-lib": "3.4.6",
 		"babel-loader": "^8.2.2",
 		"compression-webpack-plugin": "^9.2.0",
 		"eslint": "^8.7.0",
