@@ -11,10 +11,10 @@
 	},
 	"author": "Harmelodic",
 	"devDependencies": {
-		"@babel/core": "7.16.12",
+		"@babel/core": "7.17.9",
 		"@babel/preset-react": "7.16.7",
 		"@harmelodic/react-ui-lib": "3.4.6",
-		"babel-loader": "8.2.3",
+		"babel-loader": "8.2.5",
 		"compression-webpack-plugin": "9.2.0",
 		"eslint": "8.14.0",
 		"eslint-config-google": "0.14.0",
