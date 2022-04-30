@@ -5,7 +5,7 @@ module.exports = {
 	devServer: {
 		compress: true,
 		static: {
-			directory: PUBLIC
+			directory: PUBLIC,
 		},
 		historyApiFallback: true,
 		hot: true,

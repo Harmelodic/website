@@ -1,28 +1,28 @@
 export const darkTheme = {
 	// General styling
 	font: {
-		family: "Helvetica, 'Segoe UI', sans-serif",
-		weight: 300
+		family: 'Helvetica, \'Segoe UI\', sans-serif',
+		weight: 300,
 	},
 	button: {
 		cancel: {
 			background: 'rgba(0,0,0,0)',
 			hover: {
-				background: '#383838'
+				background: '#383838',
 			},
 			active: {
-				background: '#333'
-			}
+				background: '#333',
+			},
 		},
 		item: {
 			background: 'rgba(0,0,0,0)',
 			hover: {
-				background: '#383838'
+				background: '#383838',
 			},
 			active: {
-				background: '#333'
-			}
-		}
+				background: '#333',
+			},
+		},
 	},
 	input: {
 		background: '#222',
@@ -37,7 +37,7 @@ export const darkTheme = {
 		},
 		active: {
 			border: '#eee',
-		}
+		},
 	},
 	text: {
 		title: '#fff',
@@ -49,7 +49,7 @@ export const darkTheme = {
 		linkActive: '#f17171',
 		code: {
 			color: '#fff',
-			background: '#000'
+			background: '#000',
 		},
 		blockquote: '#2e70b1',
 		keyboard: {
@@ -57,19 +57,19 @@ export const darkTheme = {
 			border: '#adb3b9',
 			boxShadow: {
 				outer: 'rgba(12, 13, 14, 0.2)',
-				inner: '#fff'
-			}
+				inner: '#fff',
+			},
 		},
 		loading: {
 			title: '#888',
 			subtitle: '#ddd',
 			normal: '#ccc',
-			wave: 'rgba(255,255,255,0.5)'
-		}
+			wave: 'rgba(255,255,255,0.5)',
+		},
 	},
 	img: {
 		border: '#eee',
-		background: '#222'
+		background: '#222',
 	},
 	separator: '#888',
 	transparent: 'rgb(0,0,0,0)',
@@ -86,26 +86,26 @@ export const darkTheme = {
 		six: 'blue',
 		seven: 'indigo',
 		eight: 'violet',
-		nine: 'red'
+		nine: 'red',
 	},
 
 
 	// Site-specific styling
 	main: {
-		background: '#222'
+		background: '#222',
 	},
 	nav: {
 		background: '#191919',
 		icon: {
-			border: '#fff'
+			border: '#fff',
 		},
 		item: {
 			selected: {
 				background: '#333',
 			},
 			hover: {
-				background: '#444'
-			}
+				background: '#444',
+			},
 		},
 	},
-}
+};

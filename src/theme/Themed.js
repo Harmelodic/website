@@ -4,15 +4,14 @@ import { lightTheme } from './light-theme';
 import { darkTheme } from './dark-theme';
 
 export function Themed(props) {
-
 	const selectedTheme = useSelector(store => store.theme);
 
 	let theme;
 	switch (selectedTheme) {
-		case "light":
+		case 'light':
 			theme = lightTheme;
 			break;
-		case "dark":
+		case 'dark':
 			theme = darkTheme;
 			break;
 		default:
@@ -20,11 +19,11 @@ export function Themed(props) {
 			break;
 	}
 
-	document.getElementsByTagName("body").item(0).style.background = theme.main.background
+	document.getElementsByTagName('body').item(0).style.background = theme.main.background;
 
 	return (
 		<ThemeProvider theme={theme}>
 			{props.children}
 		</ThemeProvider>
-	)
+	);
 }

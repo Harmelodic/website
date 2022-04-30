@@ -60,7 +60,7 @@ export default function Blog() {
 	if (loadingCategoriesStatus && categories.length === 0) {
 		categoryBox = (
 			<SelectBox
-				onChange={(event) => setFilterByCategory(event.target.value)}
+				onChange={event => setFilterByCategory(event.target.value)}
 				value={filterByCategory}
 			>
 				<option value="">---------------------------</option>
@@ -69,7 +69,7 @@ export default function Blog() {
 	} else {
 		categoryBox = (
 			<SelectBox
-				onChange={(event) => setFilterByCategory(event.target.value)}
+				onChange={event => setFilterByCategory(event.target.value)}
 				value={filterByCategory}
 			>
 				<option value="">All Categories</option>
@@ -139,7 +139,7 @@ export default function Blog() {
 				}
 				<InputTextBox
 					placeholder="Filter..."
-					onChange={(event) => setFilterBySearch(event.target.value)}
+					onChange={event => setFilterBySearch(event.target.value)}
 					value={filterBySearch}
 				/>
 				<Button

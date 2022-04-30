@@ -12,5 +12,5 @@ ReactDOM.render(
 			<App />
 		</Themed>
 	</Provider>,
-	document.getElementById('app')
+	document.getElementById('app'),
 );

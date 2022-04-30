@@ -1,28 +1,28 @@
 export const lightTheme = {
 	// General styling
 	font: {
-		family: "Helvetica, 'Segoe UI', sans-serif",
-		weight: 300
+		family: 'Helvetica, \'Segoe UI\', sans-serif',
+		weight: 300,
 	},
 	button: {
 		cancel: {
 			background: 'rgba(0,0,0,0)',
 			hover: {
-				background: '#eee'
+				background: '#eee',
 			},
 			active: {
-				background: '#ddd'
-			}
+				background: '#ddd',
+			},
 		},
 		item: {
 			background: 'rgba(0,0,0,0)',
 			hover: {
-				background: '#eee'
+				background: '#eee',
 			},
 			active: {
-				background: '#ddd'
-			}
-		}
+				background: '#ddd',
+			},
+		},
 	},
 	input: {
 		background: '#fff',
@@ -37,7 +37,7 @@ export const lightTheme = {
 		},
 		active: {
 			border: '#333',
-		}
+		},
 	},
 	text: {
 		title: '#000',
@@ -49,7 +49,7 @@ export const lightTheme = {
 		linkActive: '#df0000',
 		code: {
 			color: '#fff',
-			background: '#000'
+			background: '#000',
 		},
 		blockquote: '#2e70b1',
 		keyboard: {
@@ -57,19 +57,19 @@ export const lightTheme = {
 			border: '#adb3b9',
 			boxShadow: {
 				outer: 'rgba(12, 13, 14, 0.2)',
-				inner: '#fff'
-			}
+				inner: '#fff',
+			},
 		},
 		loading: {
 			title: '#888',
 			subtitle: '#ddd',
 			normal: '#ccc',
-			wave: 'rgba(255,255,255,0.5)'
-		}
+			wave: 'rgba(255,255,255,0.5)',
+		},
 	},
 	img: {
 		border: '#333',
-		background: '#fff'
+		background: '#fff',
 	},
 	separator: '#888',
 	transparent: 'rgb(0,0,0,0)',
@@ -86,26 +86,26 @@ export const lightTheme = {
 		six: 'blue',
 		seven: 'indigo',
 		eight: 'violet',
-		nine: 'red'
+		nine: 'red',
 	},
 
 
 	// Site-specific styling
 	main: {
-		background: '#fff'
+		background: '#fff',
 	},
 	nav: {
 		background: '#191919',
 		icon: {
-			border: '#fff'
+			border: '#fff',
 		},
 		item: {
 			selected: {
 				background: '#fff',
 			},
 			hover: {
-				background: '#333'
-			}
+				background: '#333',
+			},
 		},
 	},
-}
+};
