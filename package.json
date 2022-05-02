@@ -19,7 +19,7 @@
 		"eslint": "8.14.0",
 		"eslint-config-google": "0.14.0",
 		"eslint-plugin-react": "7.29.4",
-		"marked": "4.0.14",
+		"marked": "4.0.15",
 		"react": "18.1.0",
 		"react-dom": "18.1.0",
 		"react-redux": "8.0.1",
