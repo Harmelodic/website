@@ -1,19 +1,12 @@
-import styled from 'styled-components';
 import { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { fetchSocialMedia } from './middleware';
 import { SocialMedia } from '../../../lib/SocialMedia';
-import { RowInfoBox, ColumnInfoBox } from '../../../lib/InfoBox';
+import { ColumnInfoBox, RowInfoBox } from '../../../lib/InfoBox';
 import { Main } from '../Main';
 import { ReadingSpace } from '../../../lib/ReadingSpace';
 import { Title } from '../../../lib/Title';
 import { ProjectSmall } from '../../../lib/ProjectSmall';
-
-const HomeMain = styled(Main)`
-	flex-flow: column nowrap;
-	justify-content: flex-start;
-	align-items: center;
-`;
 
 export default function Home() {
 	const dispatch = useDispatch();
@@ -25,7 +18,7 @@ export default function Home() {
 	const socialMedia = useSelector(store => store.socialMedia);
 
 	return (
-		<HomeMain>
+		<Main>
 
 			<Title>Matt Smith</Title>
 
@@ -81,7 +74,7 @@ export default function Home() {
 					size={65}
 				/>
 			</RowInfoBox>
-			<ReadingSpace />
-		</HomeMain>
+			<ReadingSpace/>
+		</Main>
 	);
 }

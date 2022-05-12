@@ -1,16 +1,17 @@
-import ReactDOM from 'react-dom';
-import { App } from './app/App';
-import { Themed } from './theme/Themed';
+import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
+import { App } from './app/App';
 import { initialiseStore } from './Store';
+import { Themed } from './theme/Themed';
 
 const store = initialiseStore();
 
-ReactDOM.render(
+const root = createRoot(document.getElementById('app'));
+
+root.render(
 	<Provider store={store}>
 		<Themed>
-			<App />
+			<App/>
 		</Themed>
 	</Provider>,
-	document.getElementById('app'),
 );

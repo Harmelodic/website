@@ -36,12 +36,6 @@
 		"href": "https://harmelodic.github.io/zorg"
 	},
 	{
-		"title": "react-ui-lib",
-		"subtitle": "npm package (Browser)",
-		"href": "https://www.npmjs.com/package/@harmelodic/react-ui-lib",
-		"src": "/images/react-ui-lib.svg"
-	},
-	{
 		"title": "Stackchat",
 		"subtitle": "Podcast",
 		"src": "/images/stackchat.svg",

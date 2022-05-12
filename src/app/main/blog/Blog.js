@@ -1,34 +1,29 @@
-import styled from 'styled-components';
 import { useEffect, useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { fetchPosts, fetchCategories } from './middleware';
-import { SelectBox } from '../../../lib/SelectBox';
-import { Post } from '../../../lib/Post';
-import { InputTextBox } from '../../../lib/InputTextBox';
+import { useDispatch, useSelector } from 'react-redux';
+import styled from 'styled-components';
 import { Button } from '../../../lib/Button';
-import { Main } from '../Main';
+import { InputTextBox } from '../../../lib/InputTextBox';
+import { Post } from '../../../lib/Post';
 import { ReadingSpace } from '../../../lib/ReadingSpace';
-
-const BlogMain = styled(Main)`
-	flex-flow: column nowrap;
-	justify-content: flex-start;
-	align-items: center;
-`;
+import { SelectBox } from '../../../lib/SelectBox';
+import { Title } from '../../../lib/Title';
+import { Main } from '../Main';
+import { fetchCategories, fetchPosts } from './middleware';
 
 const StyledFilters = styled.div`
-	display: flex;
-	flex-flow: row wrap;
-	margin: 20px;
-	white-space: normal;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 20px;
+  white-space: normal;
 `;
 
 const Posts = styled.div`
-	display: flex;
-	flex-flow: column nowrap;
-	justify-content: flex-start;
-	align-items: center;
-	width: 100%;
-	max-width: 900px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  max-width: 900px;
 `;
 
 export default function Blog() {
@@ -95,7 +90,7 @@ export default function Blog() {
 			return (
 				<Post
 					key={index}
-					loading={true} />
+					loading={true}/>
 			);
 		});
 	} else {
@@ -126,13 +121,14 @@ export default function Blog() {
 						lastUpdated={
 							new Date(post.lastUpdated)
 								.toLocaleString('en-GB', dateFormatOptions)
-						} />
+						}/>
 				);
 			});
 	}
 
 	return (
-		<BlogMain>
+		<Main>
+			<Title>Blog</Title>
 			<StyledFilters>
 				{
 					categoryBox
@@ -155,7 +151,7 @@ export default function Blog() {
 			<Posts>
 				{postsToRender}
 			</Posts>
-			<ReadingSpace />
-		</BlogMain>
+			<ReadingSpace/>
+		</Main>
 	);
 };

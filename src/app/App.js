@@ -11,6 +11,7 @@ const FilmsSeen = lazy(() => import('./main/blog/lists/FilmsSeen'));
 const TvShowsSeen = lazy(() => import('./main/blog/lists/TvShowsSeen'));
 const Projects = lazy(() => import('./main/projects/Projects'));
 const OpenSource = lazy(() => import('./main/open-source/OpenSource'));
+const Bookmarks = lazy(() => import('./main/bookmarks/Bookmarks'));
 const WorkHistory = lazy(() => import('./main/work-history/WorkHistory'));
 
 const StyledApp = styled.div`
@@ -47,6 +48,7 @@ export function App() {
 							<Route exact path="/blog/list/1532228640000" element={<TvShowsSeen />} />
 							<Route exact path="/projects" element={<Projects />} />
 							<Route exact path="/open-source" element={<OpenSource />} />
+							<Route exact path="/bookmarks" element={<Bookmarks />} />
 							<Route exact path="/work-history" element={<WorkHistory />} />
 						</Routes>
 					</Suspense>
