@@ -1,6 +1,6 @@
 # website
 
-Code for personal website found at [harmelodic.com](https://harmelodic.com)
+My personal website, found at [harmelodic.com](https://harmelodic.com)
 
 ## TODO
 
