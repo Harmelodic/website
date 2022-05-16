@@ -4,6 +4,11 @@ The main Harmelodic website
 
 ## TODO
 
+- Add a top bar containing
+   - Accessibility Settings menu (inc. Theme Switcher)
+   - GitHub Source Link
+   - Side menu open/close
+   - Cookie settings / info
 - CRM-y article system
 - Theming system with cookies
 - Accessibility theming (dark theme, colour blindness, high-contrast)
