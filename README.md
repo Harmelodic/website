@@ -1,6 +1,6 @@
-# main
+# website
 
-The main Harmelodic website
+Code for personal website found at [harmelodic.com](https://harmelodic.com)
 
 ## TODO
 
