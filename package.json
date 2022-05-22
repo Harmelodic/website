@@ -1,7 +1,7 @@
 {
-	"name": "main",
+	"name": "website",
 	"version": "1.0.0",
-	"description": "The main Harmelodic website",
+	"description": "The Harmelodic website",
 	"main": "public/index.html",
 	"scripts": {
 		"test": "echo \"No tests specified\" && exit 0",
@@ -34,18 +34,18 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/Harmelodic/main.git"
+		"url": "git+https://github.com/Harmelodic/website.git"
 	},
 	"bugs": {
-		"url": "https://github.com/Harmelodic/main/issues"
+		"url": "https://github.com/Harmelodic/website/issues"
 	},
-	"homepage": "https://github.com/Harmelodic/main#README",
+	"homepage": "https://github.com/Harmelodic/website#README",
 	"keywords": [
 		"frontend",
 		"react",
 		"harmelodic",
 		"redux",
-		"main"
+		"website"
 	],
 	"license": "UNLICENSED"
 }
