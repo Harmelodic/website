@@ -26,9 +26,8 @@ export default function Home() {
 				<span>he/him</span>
 				<span>Harmelodic</span>
 				<span>Software Engineer</span>
-				<span>Consultant</span>
+				<span>Open-source Contributor</span>
 				<span>Writer</span>
-				<span>Designer</span>
 				<span>Musician</span>
 				<span>Dungeon Master</span>
 			</ColumnInfoBox>
