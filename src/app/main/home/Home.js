@@ -26,9 +26,9 @@ export default function Home() {
 				<span>he/him</span>
 				<span>Harmelodic</span>
 				<span>Software Engineer</span>
-				<span>Open-source Contributor</span>
-				<span>Writer</span>
 				<span>Musician</span>
+				<span>Rock Climber</span>
+				<span>Writer</span>
 				<span>Dungeon Master</span>
 			</ColumnInfoBox>
 
@@ -61,6 +61,12 @@ export default function Home() {
 					size={100}
 				/>
 				<ProjectSmall
+					src="/images/cncf.svg"
+					title="CNCF Contributor"
+					href="https://www.cncf.io/"
+					size={60}
+				/>
+				<ProjectSmall
 					src="/images/gitlab.svg"
 					title="GitLab Hero"
 					href="https://gitlab.com/gitlab-com/www-gitlab-com/merge_requests/34774"
@@ -73,6 +79,7 @@ export default function Home() {
 					size={65}
 				/>
 			</RowInfoBox>
+
 			<ReadingSpace/>
 		</Main>
 	);

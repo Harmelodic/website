@@ -5,9 +5,9 @@
 		"src": "/images/twitter.svg"
 	},
 	{
-		"href": "https://youtube.com/Harmelodic",
-		"title": "YouTube",
-		"src": "/images/youtube.svg"
+		"href": "https://github.com/Harmelodic",
+		"title": "GitHub",
+		"src": "/images/github.svg"
 	},
 	{
 		"href": "https://open.spotify.com/user/harmelodic2.0",
@@ -20,18 +20,13 @@
 		"src": "/images/linkedin.svg"
 	},
 	{
+		"href": "https://youtube.com/Harmelodic",
+		"title": "YouTube",
+		"src": "/images/youtube.svg"
+	},
+	{
 		"href": "mailto:matt@harmelodic.com",
 		"title": "Email",
 		"src": "/images/mail.svg"
-	},
-	{
-		"href": "https://gitlab.com/Harmelodic",
-		"title": "GitLab",
-		"src": "/images/gitlab.svg"
-	},
-	{
-		"href": "https://github.com/Harmelodic",
-		"title": "GitHub",
-		"src": "/images/github.svg"
 	}
 ]
