@@ -17,3 +17,11 @@ jobs:
       - run: npm test
       - run: npm run build
       - run: docker build . -t "website:$GITHUB_SHA"
+      - name: 'Authenticate to Google Cloud'
+        uses: google-github-actions/auth@v0.8.0
+        with:
+          workload_identity_provider: projects/401363556022/locations/global/workloadIdentityPools/automation/providers/github
+          service_account: automation@automation-220928.iam.gserviceaccount.com
+      - run: gcloud auth configure-docker europe-north1-docker.pkg.dev
+      - run: docker tag "website:$GITHUB_SHA" "europe-north1-docker.pkg.dev/personal-artifacts-353012/harmelodic/website:$GITHUB_SHA"
+      - run: docker push "europe-north1-docker.pkg.dev/personal-artifacts-353012/harmelodic/website:$GITHUB_SHA"

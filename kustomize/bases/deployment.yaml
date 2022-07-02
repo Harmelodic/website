@@ -15,7 +15,7 @@ spec:
       serviceAccountName: website
       containers:
         - name: website
-          image: "eu.gcr.io/harmelodic-images/website:v0"
+          image: "europe-north1-docker.pkg.dev/personal-artifacts-353012/harmelodic/website:v0"
           imagePullPolicy: Always
           ports:
             - containerPort: 80
