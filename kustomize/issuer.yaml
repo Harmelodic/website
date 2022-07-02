@@ -13,10 +13,6 @@ spec:
           dnsZones:
             - "harmelodic.com"
         dns01:
-          route53:
-            region: eu-west-1
-            hostedZoneID: Z14W1WI9S3BGB5
-            accessKeyID: AKIAINZD2OD26V5HWOVQ
-            secretAccessKeySecretRef:
-              name: cert-manager-route53
-              key: secret-access-key
+          cloudDNS:
+            project: personal-prod-host-698399
+            hostedZoneName: harmelodic-com
