@@ -12,6 +12,7 @@ spec:
       - selector:
           dnsZones:
             - "harmelodic.com"
+            - "*.harmelodic.com"
         dns01:
           cloudDNS:
             project: personal-prod-host-698399
