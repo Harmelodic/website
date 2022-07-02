@@ -3,7 +3,6 @@ kind: Ingress
 metadata:
   name: website
   annotations:
-    kubernetes.io/tls-acme: "true"
     cert-manager.io/issuer: letsencrypt # Will generate Certificate
 spec:
   ingressClassName: public
