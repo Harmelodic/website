@@ -27,8 +27,20 @@ spec:
             limits:
               memory: 0.5Gi
               cpu: "1"
-          readinessProbe:
+          startupProbe:
             initialDelaySeconds: 10
+            periodSeconds: 10
+            failureThreshold: 5
+            httpGet:
+              port: 80
+              path: /health
+          livenessProbe:
+            periodSeconds: 30
+            failureThreshold: 5
+            httpGet:
+              port: 80
+              path: /health
+          readinessProbe:
             periodSeconds: 10
             failureThreshold: 60
             httpGet:
