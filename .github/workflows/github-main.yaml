@@ -28,3 +28,5 @@ jobs:
       - run: gcloud auth configure-docker europe-north1-docker.pkg.dev
       - run: docker tag "website:$GITHUB_SHA" "europe-north1-docker.pkg.dev/personal-artifacts-353012/harmelodic/website:$GITHUB_SHA"
       - run: docker push "europe-north1-docker.pkg.dev/personal-artifacts-353012/harmelodic/website:$GITHUB_SHA"
+      - run: docker tag "website:$GITHUB_SHA" "europe-north1-docker.pkg.dev/personal-artifacts-353012/harmelodic/website:latest"
+      - run: docker push "europe-north1-docker.pkg.dev/personal-artifacts-353012/harmelodic/website:latest"
