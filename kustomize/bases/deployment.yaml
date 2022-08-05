@@ -23,11 +23,11 @@ spec:
               name: http
           resources:
             requests:
-              memory: 0.2Gi
-              cpu: 500m
+              memory: 100Mi
+              cpu: 100m
             limits:
-              memory: 0.5Gi
-              cpu: "1"
+              memory: 300Mi
+              cpu: 300m
           startupProbe:
             initialDelaySeconds: 10
             periodSeconds: 10
