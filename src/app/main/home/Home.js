@@ -49,10 +49,10 @@ export default function Home() {
 
 			<RowInfoBox>
 				<ProjectSmall
-					src="/images/cloud-professional-architect.webp"
-					title="Professional Cloud Architect"
+					src="/images/cloud-architect.webp"
+					title="Cloud Architect"
 					href="https://www.credential.net/bd886e12-4a18-4439-8c9a-680107c23547"
-					size={108}
+					size={100}
 				/>
 				<ProjectSmall
 					src="/images/CFI.webp"
