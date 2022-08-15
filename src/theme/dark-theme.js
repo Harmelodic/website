@@ -101,10 +101,10 @@ export const darkTheme = {
 		},
 		item: {
 			selected: {
-				background: '#333',
+				background: '#222',
 			},
 			hover: {
-				background: '#444',
+				background: '#333',
 			},
 		},
 	},
