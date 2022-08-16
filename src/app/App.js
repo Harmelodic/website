@@ -13,6 +13,7 @@ const Projects = lazy(() => import('./main/projects/Projects'));
 const OpenSource = lazy(() => import('./main/open-source/OpenSource'));
 const Bookmarks = lazy(() => import('./main/bookmarks/Bookmarks'));
 const WorkHistory = lazy(() => import('./main/work-history/WorkHistory'));
+const Running = lazy(() => import('./main/running/Running'));
 
 const StyledApp = styled.div`
 	display: flex;
@@ -50,6 +51,7 @@ export function App() {
 							<Route exact path="/open-source" element={<OpenSource />} />
 							<Route exact path="/bookmarks" element={<Bookmarks />} />
 							<Route exact path="/work-history" element={<WorkHistory />} />
+							<Route exact path="/running" element={<Running />} />
 						</Routes>
 					</Suspense>
 				</ErrorBoundary>
