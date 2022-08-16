@@ -7,6 +7,7 @@ import { Post } from '../../../lib/Post';
 import { ReadingSpace } from '../../../lib/ReadingSpace';
 import { SelectBox } from '../../../lib/SelectBox';
 import { Title } from '../../../lib/Title';
+import { ColumnInfoBox, RowInfoBox } from '../../../lib/InfoBox';
 import { Main } from '../Main';
 import { fetchCategories, fetchPosts } from './middleware';
 
@@ -93,6 +94,8 @@ export default function Blog() {
 					loading={true}/>
 			);
 		});
+	} else if (!loadingPostsStatus && posts.length === 0) {
+		postsToRender = <RowInfoBox>No posts found at this time.</RowInfoBox>;
 	} else {
 		postsToRender = posts
 			.sort((a, b) => b.datePosted - a.datePosted)
