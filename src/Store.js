@@ -6,6 +6,7 @@ import { socialMediaReducer } from './app/main/home/reducer';
 import { blogReducer } from './app/main/blog/reducer';
 import { workHistoryReducer } from './app/main/work-history/reducer';
 import { themeReducer } from './theme/reducer';
+import { viewModeReducer } from './viewMode/reducer';
 
 export function initialiseStore() {
 	const composeEnhancers =
@@ -22,6 +23,7 @@ export function initialiseStore() {
 
 const initialState = {
 	theme: 'light',
+	viewMode: 'desktop',
 	projects: [],
 	openSourceProjects: [],
 	socialMedia: [],
@@ -43,6 +45,7 @@ const initialState = {
 function rootReducer(state, action) {
 	return {
 		theme: themeReducer(state.theme, action),
+		viewMode: viewModeReducer(state.viewMode, action),
 		projects: projectsReducer(state.projects, action),
 		openSourceProjects:
 			openSourceProjectsReducer(state.openSourceProjects, action),

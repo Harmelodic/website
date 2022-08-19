@@ -1,7 +1,9 @@
-import { Suspense, lazy } from 'react';
+import { Suspense, lazy, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import styled from 'styled-components';
 import { ErrorBoundary } from './ErrorBoundary';
+import { fetchSocialMedia } from './main/home/middleware';
 
 const Menu = lazy(() => import('./menu/Menu'));
 const Home = lazy(() => import('./main/home/Home'));
@@ -14,18 +16,34 @@ const OpenSource = lazy(() => import('./main/open-source/OpenSource'));
 const WorkHistory = lazy(() => import('./main/work-history/WorkHistory'));
 const Running = lazy(() => import('./main/running/Running'));
 
-const StyledApp = styled.div`
+const StyledAbstractApp = styled.div`
 	display: flex;
-	flex-flow: row nowrap;
 	justify-content: flex-start;
 	width: 100%;
-  
-  	font-family: ${props => props.theme.font.family};
-  	font-weight: ${props => props.theme.font.weight};
-    color: ${props => props.theme.text.normal};
+	
+	font-family: ${props => props.theme.font.family};
+	font-weight: ${props => props.theme.font.weight};
+	color: ${props => props.theme.text.normal};
+`;
+
+const StyledDesktopApp = styled(StyledAbstractApp)`
+	flex-flow: row nowrap;
+`;
+
+const StyledMobileApp = styled(StyledAbstractApp)`
+	flex-flow: column nowrap;
 `;
 
 export function App() {
+	const viewMode = useSelector(store => store.viewMode);
+
+	let StyledApp;
+	if (viewMode === 'desktop') {
+		StyledApp = StyledDesktopApp;
+	} else {
+		StyledApp = StyledMobileApp;
+	}
+
 	return (
 		<BrowserRouter>
 			<StyledApp>

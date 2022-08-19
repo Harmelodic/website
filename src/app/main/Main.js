@@ -19,7 +19,6 @@ export const Main = styled.main`
   align-items: center;
   width: 100%;
   max-height: 100vh;
-  padding: 0 20px;
   overflow-y: auto;
   background: ${props => props.theme.main.background};
 `;
