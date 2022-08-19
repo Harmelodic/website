@@ -68,12 +68,12 @@ export default function Menu() {
 				<NavItem end to="/open-source" selected={path === '/open-source'}>
 					Open-source
 				</NavItem>
-				{/*<NavItem end to="/bookmarks" selected={path === '/bookmarks'}>*/}
-				{/*	Bookmarks*/}
-				{/*</NavItem>*/}
-				{/*<NavItem end to="/work-history" selected={path === '/work-history'}>*/}
-				{/*	Work History*/}
-				{/*</NavItem>*/}
+				<NavItem end to="/work-history" selected={path === '/work-history'}>
+					Work History
+				</NavItem>
+				<NavItem end to="/running" selected={path === '/running'}>
+					Running
+				</NavItem>
 			</Nav>
 		</StyledMenu>
 	);

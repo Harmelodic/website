@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Main } from '../Main';
+import { RowInfoBox } from '../../../lib/InfoBox';
 import { Title } from '../../../lib/Title';
 import { ReadingSpace } from '../../../lib/ReadingSpace';
 
@@ -13,6 +14,7 @@ export default function Running() {
 	return (
 		<WorkHistoryMain>
 			<Title>Running</Title>
+			<RowInfoBox>Coming Soon</RowInfoBox>
 			<ReadingSpace/>
 		</WorkHistoryMain>
 	);
