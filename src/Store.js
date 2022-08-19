@@ -4,6 +4,7 @@ import { projectsReducer } from './app/main/projects/reducer';
 import { openSourceProjectsReducer } from './app/main/open-source/reducer';
 import { socialMediaReducer } from './app/main/home/reducer';
 import { blogReducer } from './app/main/blog/reducer';
+import { workHistoryReducer } from './app/main/work-history/reducer';
 import { themeReducer } from './theme/reducer';
 
 export function initialiseStore() {
@@ -24,6 +25,7 @@ const initialState = {
 	projects: [],
 	openSourceProjects: [],
 	socialMedia: [],
+	workHistory: [],
 	blog: {
 		posts: [],
 		categories: [],
@@ -46,5 +48,6 @@ function rootReducer(state, action) {
 			openSourceProjectsReducer(state.openSourceProjects, action),
 		socialMedia: socialMediaReducer(state.socialMedia, action),
 		blog: blogReducer(state.blog, action),
+		workHistory: workHistoryReducer(state.workHistory, action),
 	};
 }

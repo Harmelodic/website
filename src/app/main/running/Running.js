@@ -1,8 +1,9 @@
 import styled from 'styled-components';
-import { Main } from '../Main';
-import { RowInfoBox } from '../../../lib/InfoBox';
-import { Title } from '../../../lib/Title';
+import { FlexBox } from '../../../lib/FlexBox';
+import { ColumnInfoBox } from '../../../lib/InfoBox';
 import { ReadingSpace } from '../../../lib/ReadingSpace';
+import { Title } from '../../../lib/Title';
+import { Main } from '../Main';
 
 const WorkHistoryMain = styled(Main)`
   flex-flow: column nowrap;
@@ -14,7 +15,14 @@ export default function Running() {
 	return (
 		<WorkHistoryMain>
 			<Title>Running</Title>
-			<RowInfoBox>Coming Soon</RowInfoBox>
+			<ColumnInfoBox>
+				<FlexBox>I'm on Strava:</FlexBox>
+				<FlexBox>
+					<a href="https://www.strava.com/athletes/Harmelodic" target="_blank" rel="noopener">
+						@Harmelodic
+					</a>
+				</FlexBox>
+			</ColumnInfoBox>
 			<ReadingSpace/>
 		</WorkHistoryMain>
 	);

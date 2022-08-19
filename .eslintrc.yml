@@ -17,7 +17,7 @@ rules:
   {
     arrow-parens: [2, "as-needed", { "requireForBlockBody": true }],
     indent: ["error", "tab", { "SwitchCase": 1 }],
-    max-len: [2, { "code": 100 }],
+    max-len: [2, { "code": 120 }],
     object-curly-spacing: [2, "always"],
     no-tabs: ["error", { allowIndentationTabs: true }],
     react/jsx-uses-vars: ["error"],
