@@ -5,7 +5,7 @@ import { fetchWorkHistory } from './middleware';
 import { ColumnInfoBox } from '../../../lib/InfoBox';
 import { Title } from '../../../lib/Title';
 import { ReadingSpace } from '../../../lib/ReadingSpace';
-import { FlexBox } from '../../../lib/FlexBox';
+import { FlexDiv } from '../../../lib/FlexDiv';
 
 export default function WorkHistory() {
 	const dispatch = useDispatch();
@@ -23,9 +23,9 @@ export default function WorkHistory() {
 				workHistory.map((placement, index) => {
 					return (
 						<ColumnInfoBox key={index}>
-							<FlexBox>{placement.highest_role} @ {placement.company}</FlexBox>
-							<FlexBox>{placement.from} - {placement.to}</FlexBox>
-							<FlexBox>{placement.highest_salary}</FlexBox>
+							<FlexDiv>{placement.highest_role} @ {placement.company}</FlexDiv>
+							<FlexDiv>{placement.from} - {placement.to}</FlexDiv>
+							<FlexDiv>{placement.highest_salary}</FlexDiv>
 						</ColumnInfoBox>
 					);
 				})

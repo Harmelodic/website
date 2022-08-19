@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { FlexBox } from '../../../lib/FlexBox';
+import { FlexDiv } from '../../../lib/FlexDiv';
 import { ColumnInfoBox } from '../../../lib/InfoBox';
 import { ReadingSpace } from '../../../lib/ReadingSpace';
 import { Title } from '../../../lib/Title';
@@ -16,12 +16,12 @@ export default function Running() {
 		<WorkHistoryMain>
 			<Title>Running</Title>
 			<ColumnInfoBox>
-				<FlexBox>I'm on Strava:</FlexBox>
-				<FlexBox>
+				<FlexDiv>I'm on Strava:</FlexDiv>
+				<FlexDiv>
 					<a href="https://www.strava.com/athletes/Harmelodic" target="_blank" rel="noopener">
 						@Harmelodic
 					</a>
-				</FlexBox>
+				</FlexDiv>
 			</ColumnInfoBox>
 			<ReadingSpace/>
 		</WorkHistoryMain>
