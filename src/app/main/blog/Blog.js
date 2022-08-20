@@ -7,13 +7,14 @@ import { Post } from '../../../lib/Post';
 import { ReadingSpace } from '../../../lib/ReadingSpace';
 import { SelectBox } from '../../../lib/SelectBox';
 import { Title } from '../../../lib/Title';
-import { ColumnInfoBox, RowInfoBox } from '../../../lib/InfoBox';
+import { RowInfoBox } from '../../../lib/InfoBox';
 import { Main } from '../Main';
 import { fetchCategories, fetchPosts } from './middleware';
 
 const StyledFilters = styled.div`
   display: flex;
   flex-flow: row wrap;
+  justify-content: center;
   margin: 20px;
   white-space: normal;
 `;

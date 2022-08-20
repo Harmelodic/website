@@ -4,20 +4,20 @@
 		"from": "May 2021",
 		"to": "Current",
 		"highest_role": "Software Engineer",
-		"highest_salary": "69,000 kr per month"
+		"highest_salary": "69,000 kr / month"
 	},
 	{
 		"company": "Klarna",
 		"from": "August 2020",
 		"to": "May 2021",
 		"highest_role": "Engineering Manager",
-		"highest_salary": "68,967 kr per month"
+		"highest_salary": "68,967 kr / month"
 	},
 	{
 		"company": "Capgemini",
 		"from": "September 2014",
 		"to": "August 2020",
 		"highest_role": "Software Engineer Lead",
-		"highest_salary": "£49,425 per year"
+		"highest_salary": "£49,425 / year"
 	}
 ]
