@@ -11,7 +11,7 @@
 	},
 	"author": "Harmelodic",
 	"devDependencies": {
-		"@babel/core": "7.18.10",
+		"@babel/core": "7.18.13",
 		"@babel/preset-react": "7.18.6",
 		"@harmelodic/react-ui-lib": "3.4.8",
 		"babel-loader": "8.2.5",
