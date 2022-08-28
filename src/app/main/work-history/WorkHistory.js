@@ -21,7 +21,8 @@ export default function WorkHistory() {
 			<Title>Work History</Title>
 			<ColumnInfoBox>
 				I believe in Pay Transparency, which is why below I have listed the highest salary I achieved for each
-				role. <br />
+				role.
+				<br /><br />
 				If you believe you are being underpaid for your work, then please raise this with your employer or
 				union.
 			</ColumnInfoBox>

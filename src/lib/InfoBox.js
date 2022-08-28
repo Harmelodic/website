@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 const InfoBox = styled.div`
     display: flex;
+    width: 100%;
     max-width: 1000px;
     border-top: solid 1px ${props => props.theme.separator};
 	padding: 30px 0;
@@ -9,6 +10,8 @@ const InfoBox = styled.div`
 	line-height: 32px;
 	color: ${props => props.theme.text.normal};
   	text-align: center;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
 `;
 
 export const ColumnInfoBox = styled(InfoBox)`
