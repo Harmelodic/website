@@ -4,7 +4,7 @@ const InfoBox = styled.div`
     display: flex;
     max-width: 1000px;
     border-top: solid 1px ${props => props.theme.separator};
-    margin: 0 5px;
+    margin: 0 10px;
 	padding: 30px 15px;
 	font-size: 18px;
 	line-height: 32px;

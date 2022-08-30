@@ -5,7 +5,7 @@ import { setViewModeToDesktop, setViewModeToMobile } from './actions';
 export function ViewModeTracker() {
 	const dispatch = useDispatch();
 
-	const widthToChangeModes = 670;
+	const widthToChangeModes = 900;
 
 	function updateWindowDimensions() {
 		if (window.innerWidth >= widthToChangeModes) {
