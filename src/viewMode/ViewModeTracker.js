@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { setViewModeToDesktop, setViewModeToMobile } from './actions';
+import { viewMode } from './viewMode';
 
 export function ViewModeTracker() {
 	const dispatch = useDispatch();
@@ -9,9 +9,9 @@ export function ViewModeTracker() {
 
 	function updateWindowDimensions() {
 		if (window.innerWidth >= widthToChangeModes) {
-			dispatch(setViewModeToDesktop());
+			dispatch(viewMode.actions.setToDesktop());
 		} else if (window.innerWidth < widthToChangeModes) {
-			dispatch(setViewModeToMobile());
+			dispatch(viewMode.actions.setToMobile());
 		}
 	}
 

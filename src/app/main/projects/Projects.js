@@ -1,11 +1,12 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchProjects } from './middleware';
+import { fetchProjects } from './projectsState';
 import styled from 'styled-components';
 import { ProjectList } from '../../../lib/ProjectList';
 import { Main } from '../Main';
 import { ReadingSpace } from '../../../lib/ReadingSpace';
 import { Title } from '../../../lib/Title';
+import { projectsSelector } from './projectsState';
 
 const Content = styled.div`
   display: flex;
@@ -22,7 +23,7 @@ export default function Projects() {
 		dispatch(fetchProjects());
 	}, []);
 
-	const projects = useSelector(store => store.projects);
+	const projects = useSelector(projectsSelector);
 
 	return (
 		<Main>

@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchSocialMedia } from './middleware';
+import { fetchSocialMedia, socialMediaSelector } from './socialMedia';
 import { SocialMedia } from '../../../lib/SocialMedia';
 import { ColumnInfoBox, RowInfoBox } from '../../../lib/InfoBox';
 import { Main } from '../Main';
@@ -15,7 +15,7 @@ export default function Home() {
 		dispatch(fetchSocialMedia());
 	}, []);
 
-	const socialMedia = useSelector(store => store.socialMedia);
+	const socialMedia = useSelector(socialMediaSelector);
 
 	return (
 		<Main>

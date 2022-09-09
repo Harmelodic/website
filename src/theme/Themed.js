@@ -2,9 +2,10 @@ import { useSelector } from 'react-redux';
 import { ThemeProvider } from 'styled-components';
 import { lightTheme } from './light-theme';
 import { darkTheme } from './dark-theme';
+import { themeSelector } from './theme';
 
 export function Themed(props) {
-	const selectedTheme = useSelector(store => store.theme);
+	const selectedTheme = useSelector(themeSelector);
 
 	let theme;
 	switch (selectedTheme) {

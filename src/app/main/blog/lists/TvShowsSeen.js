@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchTvShowsSeen } from './middleware';
+import { tvShowsSeenSelector, fetchTvShowsSeen } from './tvShowsSeenState';
 import MediaListEntry from './MediaListEntry.js';
 import SortPicker from './SortPicker.js';
 import styled from 'styled-components';
@@ -13,7 +13,7 @@ const TvShowsSeenMain = styled(Main)`
 `;
 
 export default function TvShowsSeen() {
-	const tvShowsSeen = useSelector(store => store.blog.lists.tvShowsSeen);
+	const tvShowsSeen = useSelector(tvShowsSeenSelector);
 
 	const [sort, setSort] = useState('favourite');
 

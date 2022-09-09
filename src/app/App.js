@@ -2,8 +2,8 @@ import { Suspense, lazy, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import styled from 'styled-components';
+import { viewModeSelector } from '../viewMode/viewMode';
 import { ErrorBoundary } from './ErrorBoundary';
-import { fetchSocialMedia } from './main/home/middleware';
 
 const Menu = lazy(() => import('./menu/Menu'));
 const Home = lazy(() => import('./main/home/Home'));
@@ -35,7 +35,7 @@ const StyledMobileApp = styled(StyledAbstractApp)`
 `;
 
 export function App() {
-	const viewMode = useSelector(store => store.viewMode);
+	const viewMode = useSelector(viewModeSelector);
 
 	let StyledApp;
 	if (viewMode === 'desktop') {

@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import styled from 'styled-components';
-import { fetchOpenSourceProjects } from './middleware';
+import { fetchOpenSourceProjects, openSourceProjectsSelector } from './openSourceProjects';
 import { ProjectList } from '../../../lib/ProjectList';
 import { Main } from '../Main';
 import { ReadingSpace } from '../../../lib/ReadingSpace';
@@ -22,7 +22,7 @@ export default function OpenSource() {
 		dispatch(fetchOpenSourceProjects());
 	}, []);
 
-	const openSourceProjects = useSelector(store => store.openSourceProjects);
+	const openSourceProjects = useSelector(openSourceProjectsSelector);
 
 	return (
 		<Main>

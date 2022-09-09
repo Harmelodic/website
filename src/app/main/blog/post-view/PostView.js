@@ -3,8 +3,9 @@ import { useSelector, useDispatch } from 'react-redux';
 import styled, { useTheme } from 'styled-components';
 import { Markdown } from '@harmelodic/react-ui-lib';
 import { Main } from '../../Main';
-import { clearSelectedPost, clearMarkdownText } from './actions';
-import { fetchPost, fetchMarkdown } from './middleware';
+import {
+	fetchPost, fetchMarkdown, selectedPostSelector, markdownTextSelector, selectedPost, markdownText
+} from './postViewState';
 import { LoadingTextBlock } from '../../../../lib/LoadingTextBlock';
 import { HorizontalRule } from '../../../../lib/HorizontalRule';
 import { ReadingSpace } from '../../../../lib/ReadingSpace';
@@ -80,43 +81,43 @@ const Category = styled.div`
 `;
 
 export default function PostView() {
-	const selectedPost = useSelector(store => store.blog.postView.selectedPost);
-	const markdownText = useSelector(store => store.blog.postView.markdownText);
+	const post = useSelector(selectedPostSelector);
+	const textToRender = useSelector(markdownTextSelector);
 
 	const params = useParams();
 
 	const dispatch = useDispatch();
 	useEffect(() => {
-		if (selectedPost.datePosted) {
-			dispatch(fetchMarkdown(selectedPost.fileName));
+		if (post.datePosted) {
+			dispatch(fetchMarkdown(post.fileName));
 		}
-	}, [selectedPost.datePosted]);
+	}, [post.datePosted]);
 
 	useEffect(() => {
 		dispatch(fetchPost(parseInt(params.id)));
 		window.scroll(0, 0);
 
 		return function cleanup() {
-			dispatch(clearSelectedPost());
-			dispatch(clearMarkdownText());
+			dispatch(selectedPost.actions.clear());
+			dispatch(markdownText.actions.clear());
 		};
 	}, []);
 
-	const title = selectedPost.title || '';
+	const title = post.title || '';
 
 	const theme = useTheme();
 
-	const readyToRender = title && markdownText;
+	const readyToRender = title && textToRender;
 
 	return readyToRender ? (
 		<PostViewMain>
 			<PostViewWrapper>
 				<PostHeading>{title}</PostHeading>
 				<Markdown
-					markdown={markdownText}
+					markdown={textToRender}
 					aTagAttributes='target="_blank" rel="nofollow"' />
 				<Category>
-					{markdownText && selectedPost.category}
+					{textToRender && post.category}
 				</Category>
 			</PostViewWrapper>
 			<ReadingSpace />

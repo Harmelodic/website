@@ -1,56 +1,37 @@
-import { createStore, applyMiddleware, compose } from 'redux';
-import thunk from 'redux-thunk';
-import { projectsReducer } from './app/main/projects/reducer';
-import { openSourceProjectsReducer } from './app/main/open-source/reducer';
-import { socialMediaReducer } from './app/main/home/reducer';
-import { blogReducer } from './app/main/blog/reducer';
-import { workHistoryReducer } from './app/main/work-history/reducer';
-import { themeReducer } from './theme/reducer';
-import { viewModeReducer } from './viewMode/reducer';
+import { configureStore } from '@reduxjs/toolkit';
+import { categories, loadingCategoriesStatus } from './app/main/blog/categories';
+import filmsSeenReducer from './app/main/blog/lists/filmsSeenState';
+import tvShowsSeenReducer from './app/main/blog/lists/tvShowsSeenState';
+import { markdownText, selectedPost } from './app/main/blog/post-view/postViewState';
+import { loadingPostsStatus, posts } from './app/main/blog/posts';
+import projectsReducer from './app/main/projects/projectsState';
+import openSourceProjectsReducer from './app/main/open-source/openSourceProjects';
+import socialMediaReducer from './app/main/home/socialMedia';
+import workHistoryReducer from './app/main/work-history/workHistoryState';
+import themeReducer from './theme/theme';
+import viewModeReducer from './viewMode/viewMode';
 
 export function initialiseStore() {
-	const composeEnhancers =
-		window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+	return configureStore({
+		reducer: {
+			theme: themeReducer,
+			viewMode: viewModeReducer,
+			projects: projectsReducer,
+			openSourceProjects: openSourceProjectsReducer,
+			socialMedia: socialMediaReducer,
 
-	return createStore(
-		rootReducer,
-		initialState,
-		composeEnhancers(
-			applyMiddleware(thunk),
-		),
-	);
-}
+			posts: posts.reducer,
+			loadingPostsStatus: loadingPostsStatus.reducer,
+			categories: categories.reducer,
+			loadingCategoriesStatus: loadingCategoriesStatus.reducer,
 
-const initialState = {
-	theme: 'light',
-	viewMode: 'desktop',
-	projects: [],
-	openSourceProjects: [],
-	socialMedia: [],
-	workHistory: [],
-	blog: {
-		posts: [],
-		categories: [],
-		postView: {
-			selectedPost: {},
-			markdownText: '',
+			selectedPost: selectedPost.reducer,
+			markdownText: markdownText.reducer,
+
+			filmsSeen: filmsSeenReducer,
+			tvShowsSeen: tvShowsSeenReducer,
+
+			workHistory: workHistoryReducer,
 		},
-		lists: {
-			filmsSeen: [],
-			tvShowsSeen: [],
-		},
-	},
-};
-
-function rootReducer(state, action) {
-	return {
-		theme: themeReducer(state.theme, action),
-		viewMode: viewModeReducer(state.viewMode, action),
-		projects: projectsReducer(state.projects, action),
-		openSourceProjects:
-			openSourceProjectsReducer(state.openSourceProjects, action),
-		socialMedia: socialMediaReducer(state.socialMedia, action),
-		blog: blogReducer(state.blog, action),
-		workHistory: workHistoryReducer(state.workHistory, action),
-	};
+	});
 }

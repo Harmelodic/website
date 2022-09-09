@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Main } from '../Main';
-import { fetchWorkHistory } from './middleware';
+import { fetchWorkHistory, workHistorySelector } from './workHistoryState';
 import { ColumnInfoBox } from '../../../lib/InfoBox';
 import { Title } from '../../../lib/Title';
 import { ReadingSpace } from '../../../lib/ReadingSpace';
@@ -14,7 +14,7 @@ export default function WorkHistory() {
 		dispatch(fetchWorkHistory());
 	}, []);
 
-	const workHistory = useSelector(store => store.workHistory);
+	const workHistory = useSelector(workHistorySelector);
 
 	return (
 		<Main>

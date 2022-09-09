@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { CircleImage } from '../../lib/CircleImage';
 import { BowtieBanner } from '../../lib/BowtieBanner';
 import { ReadingSpace } from '../../lib/ReadingSpace';
+import { viewModeSelector } from '../../viewMode/viewMode';
 
 const StyledAbstractMenu = styled.div`
 	display: flex;
@@ -61,7 +62,7 @@ export default function Menu() {
 	const location = useLocation();
 	const path = location.pathname;
 
-	const viewMode = useSelector(store => store.viewMode);
+	const viewMode = useSelector(viewModeSelector);
 
 	if (viewMode === 'desktop') {
 		return (

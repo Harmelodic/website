@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchFilmsSeen } from './middleware';
 import MediaListEntry from './MediaListEntry';
+import { filmsSeenSelector, fetchFilmsSeen } from './filmsSeenState';
 import SortPicker from './SortPicker';
 import { Main } from '../../Main';
 import styled from 'styled-components';
@@ -13,7 +13,7 @@ const FilmsSeenMain = styled(Main)`
 `;
 
 export default function FilmsSeen() {
-	const filmsSeen = useSelector(store => store.blog.lists.filmsSeen);
+	const filmsSeen = useSelector(filmsSeenSelector);
 
 	const [sort, setSort] = useState('favourite');
 

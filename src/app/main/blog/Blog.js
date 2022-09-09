@@ -9,7 +9,14 @@ import { SelectBox } from '../../../lib/SelectBox';
 import { Title } from '../../../lib/Title';
 import { RowInfoBox } from '../../../lib/InfoBox';
 import { Main } from '../Main';
-import { fetchCategories, fetchPosts } from './middleware';
+import {
+	categoriesSelector, fetchCategories,
+	loadingCategoriesStatusSelector,
+} from './categories';
+import {
+	postsSelector,
+	loadingPostsStatusSelector, fetchPosts,
+} from './posts';
 
 const StyledFilters = styled.div`
   display: flex;
@@ -39,10 +46,10 @@ export default function Blog() {
 	const [filterBySearch, setFilterBySearch] = useState('');
 	const [filterByCategory, setFilterByCategory] = useState('');
 
-	const posts = useSelector(store => store.blog.posts);
-	const loadingPostsStatus = useSelector(store => store.blog.loadingPostsStatus);
-	const categories = useSelector(store => store.blog.categories);
-	const loadingCategoriesStatus = useSelector(store => store.blog.loadingCategoriesStatus);
+	const posts = useSelector(postsSelector);
+	const loadingPostsStatus = useSelector(loadingPostsStatusSelector);
+	const categories = useSelector(categoriesSelector);
+	const loadingCategoriesStatus = useSelector(loadingCategoriesStatusSelector);
 
 	const dateFormatOptions = {
 		year: 'numeric',
