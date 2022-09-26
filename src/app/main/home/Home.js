@@ -55,7 +55,7 @@ export default function Home() {
 					size={100}
 				/>
 				<ProjectSmall
-					src="/images/CFI.webp"
+					src="/images/cfi.png"
 					title="Codecademy Chapter Co-Leader"
 					href="https://community.codecademy.com/coding-for-immigrants/"
 					size={100}
