@@ -26,14 +26,14 @@ const StyledPost = styled(Link)`
 
 const StyledTitle = styled.div`
 	display: flex;
-	font-size: 20px;
+	font-size: 1.2rem;
 	color: ${props => props.theme.text.title};
 `;
 
 const StyledSubtitle = styled.div`
 	display: flex;
 	margin-top: 5px;
-	font-size: 14px;
+	font-size: 0.8rem;
 	color: ${props => props.theme.text.subtitle};
 	line-height: 1.6em;
 	font-style: italic;

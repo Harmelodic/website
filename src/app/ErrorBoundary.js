@@ -7,7 +7,7 @@ const ErrorMessage = styled.div`
 	border: ${props => props.theme.error} solid 1px;
 	border-radius: 3px;
 	padding: 0 20px;
-	font-size: 18px;
+	font-size: 1rem;
 	text-align: center;
 `;
 

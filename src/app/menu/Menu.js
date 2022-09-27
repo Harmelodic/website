@@ -44,7 +44,7 @@ const Nav = styled.nav`
 const NavItem = styled(NavLink)`
 	width: 100%;
 	padding: 20px 0;
-	font-size: 18px;
+	font-size: 1rem;
 	color: ${props => props.selected ? props.theme.text.title : props.theme.text.negative};
 	text-decoration: none;
 	background: ${props => props.selected ? props.theme.nav.item.selected.background : props.theme.transparent};

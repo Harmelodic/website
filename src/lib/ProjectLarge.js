@@ -49,7 +49,7 @@ const StyledProjectText = styled.div`
 	padding-left: 5px;
 	padding-right: 5px;
 	padding-bottom: 25px;
-	font-size: 20px;
+	font-size: 1.2rem;
 	line-height: 24px;
 	white-space: normal;
 	text-align: center;
@@ -58,7 +58,7 @@ const StyledProjectText = styled.div`
 const StyledSubtitle = styled.span`
 	display: flex;
 	flex-flow: column nowrap;
-	font-size: 14px;
+	font-size: 0.8rem;
 	color: ${props => props.theme.text.subtitle};
 	font-style: italic;
 `;

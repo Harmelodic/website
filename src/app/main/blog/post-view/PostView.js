@@ -75,7 +75,7 @@ const PostHeading = styled.h1`
 
 const Category = styled.div`
 	margin-top: 5px;
-	font-size: 18px;
+	font-size: 1rem;
 	color: ${props => props.theme.text.subtitle};
 	font-style: italic;
 `;

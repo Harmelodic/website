@@ -39,7 +39,7 @@ const StyledDetailsWrapper = styled.div`
 const StyledDetailsText = styled.div`
 	padding: 5px 0;
 	color: ${props => props.theme.text.subtitle};
-	font-size: 18px;
+	font-size: 1rem;
 	font-style: italic;
 `;
 
@@ -49,7 +49,7 @@ const StyledPosition = styled(StyledDetailsText)`
 `;
 
 const StyledTitle = styled.div`
-	font-size: 20px;
+	font-size: 1.2rem;
 	font-weight: bold;
 	color: ${props => props.theme.text.title};
 `;

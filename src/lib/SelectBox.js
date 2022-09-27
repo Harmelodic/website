@@ -20,7 +20,7 @@ export const SelectBox = styled.select`
 	border: solid 1px ${props => props.theme.input.border};
 	border-radius: 5px;
 	padding: 0 35px 0 15px;
-	font-size: 18px;
+	font-size: 1rem;
 	color: ${props => props.theme.text.normal};
 	transition: border 200ms;
 

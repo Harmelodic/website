@@ -11,5 +11,5 @@ export const CircleImage = styled.div`
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
-	font-size: 20px;
+	font-size: 1.2rem;
 `;

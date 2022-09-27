@@ -41,7 +41,7 @@ const SortText = styled.div`
 	display: flex;
 	margin-left: 25px;
 	height: 100%;
-	font-size: 18px;
+	font-size: 1rem;
 	line-height: 80px;
 	vertical-align: top;
 `;

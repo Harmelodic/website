@@ -56,7 +56,7 @@ export default function Home() {
 				/>
 				<ProjectSmall
 					src="/images/cfi.png"
-					title="Codecademy Chapter Co-Leader"
+					title='Co-Leader & Director'
 					href="https://community.codecademy.com/coding-for-immigrants/"
 					size={100}
 				/>
