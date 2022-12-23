@@ -53,7 +53,8 @@ const NavItem = styled(NavLink)`
 	white-space: normal;
 
 	&:hover {
-		background:${props => props.selected ? props.theme.nav.item.selected.background : props.theme.nav.item.hover.background};
+		background:
+			${props =>props.selected ?props.theme.nav.item.selected.background : props.theme.nav.item.hover.background};
 	}
 `;
 
@@ -64,64 +65,44 @@ export default function Menu() {
 
 	const viewMode = useSelector(viewModeSelector);
 
-	if (viewMode === 'desktop') {
-		return (
-			<StyledDesktopMenu>
-				<MenuHeaderIcon src="/images/headshot.webp" />
-				<BowtieBanner bannerHeight={80} rainbowHeight={3} />
-				<Nav>
-					<NavItem end to="/" selected={path === '/'}>
-						Me
-					</NavItem>
-					<NavItem to="/blog" selected={path.match(/^\/blog/) !== null}>
-						Blog
-					</NavItem>
-					<NavItem end to="/projects" selected={path === '/projects'}>
-						Projects
-					</NavItem>
-					<NavItem end to="/open-source" selected={path === '/open-source'}>
-						Open-source
-					</NavItem>
-					<NavItem end to="/work-history" selected={path === '/work-history'}>
-						Work History
-					</NavItem>
-					<NavItem end to="/running" selected={path === '/running'}>
-						Running
-					</NavItem>
-					<ReadingSpace height="20px" />
-				</Nav>
-			</StyledDesktopMenu>
-		);
-	} else if (viewMode === 'mobile') {
-		return (
-			<StyledMobileMenu>
-				<MenuHeaderIcon src="/images/headshot.webp" />
-				<Nav>
-					<NavItem end to="/" selected={path === '/'}>
-						Me
-					</NavItem>
-					<NavItem to="/blog" selected={path.match(/^\/blog/) !== null}>
-						Blog
-					</NavItem>
-					<NavItem end to="/projects" selected={path === '/projects'}>
-						Projects
-					</NavItem>
-					<NavItem end to="/open-source" selected={path === '/open-source'}>
-						Open-source
-					</NavItem>
-					<NavItem end to="/work-history" selected={path === '/work-history'}>
-						Work History
-					</NavItem>
-					<NavItem end to="/running" selected={path === '/running'}>
-						Running
-					</NavItem>
-					<ReadingSpace height="20px" />
-				</Nav>
-			</StyledMobileMenu>
-		);
-	} else {
-		return (
-			<div />
-		);
+	let Menu;
+	switch (viewMode) {
+		case 'desktop':
+			Menu = StyledDesktopMenu;
+			break;
+		case 'mobile':
+			Menu = StyledMobileMenu;
+			break;
+		default:
+			Menu = StyledDesktopMenu;
+			break;
 	}
+
+	return (
+		<Menu>
+			<MenuHeaderIcon src="/images/headshot.webp" />
+			<BowtieBanner bannerHeight={80} rainbowHeight={3} />
+			<Nav>
+				<NavItem end to="/" selected={path === '/'}>
+					Me
+				</NavItem>
+				<NavItem to="/blog" selected={path.match(/^\/blog/) !== null}>
+					Blog
+				</NavItem>
+				<NavItem end to="/projects" selected={path === '/projects'}>
+					Projects
+				</NavItem>
+				<NavItem end to="/open-source" selected={path === '/open-source'}>
+					Open-source
+				</NavItem>
+				<NavItem end to="/work-history" selected={path === '/work-history'}>
+					Work History
+				</NavItem>
+				<NavItem end to="/running" selected={path === '/running'}>
+					Running
+				</NavItem>
+				<ReadingSpace height="20px" />
+			</Nav>
+		</Menu>
+	);
 }
