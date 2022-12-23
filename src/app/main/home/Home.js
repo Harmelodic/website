@@ -1,6 +1,3 @@
-import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchSocialMedia, socialMediaSelector } from './socialMedia';
 import { SocialMedia } from '../../../lib/SocialMedia';
 import { ColumnInfoBox, RowInfoBox } from '../../../lib/InfoBox';
 import { Main } from '../Main';
@@ -9,14 +6,6 @@ import { Title } from '../../../lib/Title';
 import { ProjectSmall } from '../../../lib/ProjectSmall';
 
 export default function Home() {
-	const dispatch = useDispatch();
-
-	useEffect(() => {
-		dispatch(fetchSocialMedia());
-	}, []);
-
-	const socialMedia = useSelector(socialMediaSelector);
-
 	return (
 		<Main>
 
@@ -33,18 +22,36 @@ export default function Home() {
 			</ColumnInfoBox>
 
 			<RowInfoBox>
-				{
-					socialMedia.map((media, index) => {
-						return (
-							<SocialMedia
-								key={index}
-								href={media.href}
-								title={media.title}
-								src={media.src}
-							/>
-						);
-					})
-				}
+				<SocialMedia
+					href="https://twitter.com/Harmelodic"
+					title="Twitter"
+					src="/images/twitter.svg"
+				/>
+				<SocialMedia
+					href="https://github.com/Harmelodic"
+					title="GitHub"
+					src="/images/github.svg"
+				/>
+				<SocialMedia
+					href="https://open.spotify.com/user/harmelodic2.0"
+					title="Spotify"
+					src="/images/spotify.svg"
+				/>
+				<SocialMedia
+					href="https://www.linkedin.com/in/harmelodic/"
+					title="LinkedIn"
+					src="/images/linkedin.svg"
+				/>
+				<SocialMedia
+					href="https://youtube.com/Harmelodic"
+					title="YouTube"
+					src="/images/youtube.svg"
+				/>
+				<SocialMedia
+					href="mailto:matt@harmelodic.com"
+					title="Email"
+					src="/images/mail.svg"
+				/>
 			</RowInfoBox>
 
 			<RowInfoBox>
