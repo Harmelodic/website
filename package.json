@@ -17,7 +17,7 @@
 		"@reduxjs/toolkit": "1.9.1",
 		"babel-loader": "9.1.0",
 		"compression-webpack-plugin": "10.0.0",
-		"eslint": "8.30.0",
+		"eslint": "8.31.0",
 		"eslint-config-google": "0.14.0",
 		"eslint-plugin-react": "7.31.11",
 		"marked": "4.2.5",
