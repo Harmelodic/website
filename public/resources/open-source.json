@@ -73,14 +73,6 @@
 		"size": 55
 	},
 	{
-		"title": "main",
-		"subtitle": "Harmelodic Website",
-		"href": "https://github.com/Harmelodic/main",
-		"src": "/images/main.svg",
-		"background": "#000000",
-		"size": 59
-	},
-	{
 		"title": "Minimal Grey Chrome",
 		"subtitle": "Chrome Theme",
 		"href": "https://github.com/Harmelodic/minimal-grey-chrome",
@@ -153,5 +145,13 @@
 		"subtitle": "npm package (Browser)",
 		"href": "https://github.com/Harmelodic/web-ui",
 		"src": "/images/web-ui.svg"
+	},
+	{
+		"title": "website",
+		"subtitle": "This Website",
+		"href": "https://github.com/Harmelodic/website",
+		"src": "/images/website.svg",
+		"background": "#000000",
+		"size": 50
 	}
 ]
