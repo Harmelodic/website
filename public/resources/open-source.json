@@ -20,6 +20,16 @@
 		"background": "#000000"
 	},
 	{
+		"title": "automation-infrastructure",
+		"subtitle": "GitOps code",
+		"href": "https://github.com/Harmelodic/automation-infrastructure"
+	},
+	{
+		"title": "blog",
+		"subtitle": "Java microservice",
+		"href": "https://github.com/Harmelodic/automation-infrastructure"
+	},
+	{
 		"title": "dots",
 		"subtitle": "Unix Config Files & Commands",
 		"href": "https://github.com/Harmelodic/dots",
@@ -55,6 +65,14 @@
 		"size": 55
 	},
 	{
+		"title": "init-microservice",
+		"subtitle": "Microservice Template",
+		"href": "https://github.com/Harmelodic/init-microservice",
+		"src": "/images/init-microservice.svg",
+		"background": "#ffffff",
+		"size": 55
+	},
+	{
 		"title": "main",
 		"subtitle": "Harmelodic Website",
 		"href": "https://github.com/Harmelodic/main",
@@ -78,10 +96,19 @@
 		"background": "#ebebeb"
 	},
 	{
-		"title": "Ops",
-		"subtitle": "Ops code for personal projects",
-		"href": "https://github.com/Harmelodic/ops",
-		"src": "/images/ops.svg"
+		"title": "personal-apps",
+		"subtitle": "GitOps code",
+		"href": "https://github.com/Harmelodic/personal-base-infrastructure"
+	},
+	{
+		"title": "personal-base-infrastructure",
+		"subtitle": "GitOps code",
+		"href": "https://github.com/Harmelodic/personal-base-infrastructure"
+	},
+	{
+		"title": "personal-env-infrastructure",
+		"subtitle": "GitOps code",
+		"href": "https://github.com/Harmelodic/personal-env-infrastructure"
 	},
 	{
 		"title": "Professor Zorg's Guide to Alien Etiquette",
@@ -91,17 +118,21 @@
 		"href": "https://github.com/Harmelodic/zorg"
 	},
 	{
+		"title": "redate",
+		"subtitle": "Rust CLI program",
+		"href": "https://github.com/Harmelodic/redate"
+	},
+	{
+		"title": "renovate-config",
+		"subtitle": "Centralised Renovate Config",
+		"href": "https://github.com/Harmelodic/renovate-config"
+	},
+	{
 		"title": "Quaff",
 		"subtitle": "Capgemini OSCE Hackathon Project",
 		"href": "https://gitlab.com/cap-osce/quaff",
 		"src": "/images/quaff.svg",
 		"background": "#242424"
-	},
-	{
-		"title": "react-ui-lib",
-		"subtitle": "npm package (Browser)",
-		"href": "https://github.com/Harmelodic/react-ui-lib",
-		"src": "/images/react-ui-lib.svg"
 	},
 	{
 		"title": "stackchat.github.io",
@@ -116,5 +147,11 @@
 		"href": "https://github.com/DaftLimmy/Swearing-Xylophone",
 		"src": "/images/swearing-xylophone.svg",
 		"size": 100
+	},
+	{
+		"title": "web-ui",
+		"subtitle": "npm package (Browser)",
+		"href": "https://github.com/Harmelodic/web-ui",
+		"src": "/images/web-ui.svg"
 	}
 ]
