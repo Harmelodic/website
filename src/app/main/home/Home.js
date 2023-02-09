@@ -33,11 +33,6 @@ export default function Home() {
 					src="/images/github.svg"
 				/>
 				<SocialMedia
-					href="https://open.spotify.com/user/harmelodic2.0"
-					title="Spotify"
-					src="/images/spotify.svg"
-				/>
-				<SocialMedia
 					href="https://www.linkedin.com/in/harmelodic/"
 					title="LinkedIn"
 					src="/images/linkedin.svg"

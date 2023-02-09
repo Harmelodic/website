@@ -6,7 +6,6 @@ import { markdownText, selectedPost } from './app/main/blog/post-view/postViewSt
 import { loadingPostsStatus, posts } from './app/main/blog/posts';
 import projectsReducer from './app/main/projects/projectsState';
 import openSourceProjectsReducer from './app/main/open-source/openSourceProjects';
-import socialMediaReducer from './app/main/home/socialMedia';
 import themeReducer from './theme/theme';
 import viewModeReducer from './viewMode/viewMode';
 
@@ -17,7 +16,6 @@ export function initialiseStore() {
 			viewMode: viewModeReducer,
 			projects: projectsReducer,
 			openSourceProjects: openSourceProjectsReducer,
-			socialMedia: socialMediaReducer,
 
 			posts: posts.reducer,
 			loadingPostsStatus: loadingPostsStatus.reducer,
