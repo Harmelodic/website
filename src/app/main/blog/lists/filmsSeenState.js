@@ -4,16 +4,16 @@ import { request } from '../../../fetchHandler';
 export const filmsSeen = createSlice({
 	name: 'filmsSeen',
 	initialState: {
-		value: []
+		value: [],
 	},
 	reducers: {
 		setFilmsSeen: (state, action) => {
-			state.value = action.payload
-		}
-	}
-})
+			state.value = action.payload;
+		},
+	},
+});
 
-export const filmsSeenSelector = (state) => state.filmsSeen.value;
+export const filmsSeenSelector = state => state.filmsSeen.value;
 
 export default filmsSeen.reducer;
 

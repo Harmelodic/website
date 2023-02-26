@@ -4,14 +4,14 @@ import { request } from '../../fetchHandler';
 export const projects = createSlice({
 	name: 'projects',
 	initialState: {
-		value: []
+		value: [],
 	},
 	reducers: {
 		setProjects: (state, action) => {
-			state.value = action.payload
-		}
-	}
-})
+			state.value = action.payload;
+		},
+	},
+});
 
 export function fetchProjects() {
 	return async (dispatch) => {
@@ -21,6 +21,6 @@ export function fetchProjects() {
 	};
 }
 
-export const projectsSelector = (state) => state.projects.value;
+export const projectsSelector = state => state.projects.value;
 
 export default projects.reducer;

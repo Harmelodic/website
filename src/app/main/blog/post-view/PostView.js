@@ -4,7 +4,7 @@ import styled, { useTheme } from 'styled-components';
 import { Markdown } from '@harmelodic/react-ui-lib';
 import { Main } from '../../Main';
 import {
-	fetchPost, fetchMarkdown, selectedPostSelector, markdownTextSelector, selectedPost, markdownText
+	fetchPost, fetchMarkdown, selectedPostSelector, markdownTextSelector, selectedPost, markdownText,
 } from './postViewState';
 import { LoadingTextBlock } from '../../../../lib/LoadingTextBlock';
 import { HorizontalRule } from '../../../../lib/HorizontalRule';

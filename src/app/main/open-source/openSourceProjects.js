@@ -4,14 +4,14 @@ import { request } from '../../fetchHandler';
 export const openSourceProjects = createSlice({
 	name: 'openSourceProjects',
 	initialState: {
-		value: []
+		value: [],
 	},
 	reducers: {
 		setOpenSourceProjects: (state, action) => {
-			state.value = action.payload
+			state.value = action.payload;
 		},
-	}
-})
+	},
+});
 
 export function fetchOpenSourceProjects() {
 	return async (dispatch) => {
@@ -21,6 +21,6 @@ export function fetchOpenSourceProjects() {
 	};
 }
 
-export const openSourceProjectsSelector = (state) => state.openSourceProjects.value;
+export const openSourceProjectsSelector = state => state.openSourceProjects.value;
 
 export default openSourceProjects.reducer;

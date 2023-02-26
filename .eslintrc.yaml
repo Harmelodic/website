@@ -1,6 +1,6 @@
 env:
   browser: true
-  es6: true
+  es2022: true
 extends: google
 globals:
   Atomics: readonly
@@ -8,17 +8,18 @@ globals:
 parserOptions:
   ecmaFeatures:
     jsx: true
-  ecmaVersion: 2018
+  ecmaVersion: 2022
   sourceType: module
   allowImportExportEverywhere: true
 plugins:
   - react
 rules:
   {
-    arrow-parens: [2, "as-needed", { "requireForBlockBody": true }],
+    arrow-parens: ["error", "as-needed", { "requireForBlockBody": true }],
     indent: ["error", "tab", { "SwitchCase": 1 }],
-    max-len: [2, { "code": 120 }],
-    object-curly-spacing: [2, "always"],
+    max-len: ["error", { "code": 120 }],
+    object-curly-spacing: ["error", "always"],
+    no-mixed-spaces-and-tabs: ["error", "smart-tabs"],
     no-tabs: ["error", { allowIndentationTabs: true }],
     react/jsx-uses-vars: ["error"],
     require-jsdoc:

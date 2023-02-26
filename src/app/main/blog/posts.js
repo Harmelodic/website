@@ -4,33 +4,33 @@ import { request } from '../../fetchHandler';
 export const posts = createSlice({
 	name: 'posts',
 	initialState: {
-		value: []
+		value: [],
 	},
 	reducers: {
 		setPosts: (state, action) => {
-			state.value = action.payload
-		}
-	}
-})
+			state.value = action.payload;
+		},
+	},
+});
 
-export const postsSelector = (state) => state.posts.value;
+export const postsSelector = state => state.posts.value;
 
 export const loadingPostsStatus = createSlice({
 	name: 'loadingPostsStatus',
 	initialState: {
-		value: false
+		value: false,
 	},
 	reducers: {
-		started: state => {
-			state.value = true
+		started: (state) => {
+			state.value = true;
 		},
-		finished: state => {
-			state.value = false
-		}
-	}
-})
+		finished: (state) => {
+			state.value = false;
+		},
+	},
+});
 
-export const loadingPostsStatusSelector = (state) => state.loadingPostsStatus.value;
+export const loadingPostsStatusSelector = state => state.loadingPostsStatus.value;
 
 const blogAPI = process.env.BLOG_API || '';
 

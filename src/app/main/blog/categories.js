@@ -4,33 +4,33 @@ import { request } from '../../fetchHandler';
 export const categories = createSlice({
 	name: 'categories',
 	initialState: {
-		value: []
+		value: [],
 	},
 	reducers: {
 		setCategories: (state, action) => {
-			state.value = action.payload
-		}
-	}
-})
+			state.value = action.payload;
+		},
+	},
+});
 
-export const categoriesSelector = (state) => state.categories.value;
+export const categoriesSelector = state => state.categories.value;
 
 export const loadingCategoriesStatus = createSlice({
 	name: 'loadingCategoriesStatus',
 	initialState: {
-		value: false
+		value: false,
 	},
 	reducers: {
-		started: state => {
-			state.value = true
+		started: (state) => {
+			state.value = true;
 		},
-		finished: state => {
-			state.value = false
-		}
-	}
-})
+		finished: (state) => {
+			state.value = false;
+		},
+	},
+});
 
-export const loadingCategoriesStatusSelector = (state) => state.loadingCategoriesStatus.value;
+export const loadingCategoriesStatusSelector = state => state.loadingCategoriesStatus.value;
 
 const blogAPI = process.env.BLOG_API || '';
 

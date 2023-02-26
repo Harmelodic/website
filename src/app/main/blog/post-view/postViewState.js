@@ -4,36 +4,36 @@ import { request } from '../../../fetchHandler';
 export const selectedPost = createSlice({
 	name: 'selectedPost',
 	initialState: {
-		value: {}
+		value: {},
 	},
 	reducers: {
 		setSelectedPost: (state, action) => {
-			state.value = action.payload
+			state.value = action.payload;
 		},
 		clear: (state) => {
-			state.value = {}
-		}
-	}
-})
+			state.value = {};
+		},
+	},
+});
 
-export const selectedPostSelector = (state) => state.selectedPost.value;
+export const selectedPostSelector = state => state.selectedPost.value;
 
 export const markdownText = createSlice({
 	name: 'markdownText',
 	initialState: {
-		value: ''
+		value: '',
 	},
 	reducers: {
 		setMarkdownText: (state, action) => {
-			state.value = action.payload
+			state.value = action.payload;
 		},
 		clear: (state) => {
-			state.value = ''
-		}
-	}
-})
+			state.value = '';
+		},
+	},
+});
 
-export const markdownTextSelector = (state) => state.markdownText.value;
+export const markdownTextSelector = state => state.markdownText.value;
 
 const blogAPI = process.env.BLOG_API || '';
 const blogContentServer = process.env.BLOG_CONTENT_SERVER || '';

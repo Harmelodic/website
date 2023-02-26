@@ -4,16 +4,16 @@ import { request } from '../../../fetchHandler';
 export const tvShowsSeen = createSlice({
 	name: 'tvShowsSeen',
 	initialState: {
-		value: []
+		value: [],
 	},
 	reducers: {
 		setTvShowsSeen: (state, action) => {
-			state.value = action.payload
-		}
-	}
-})
+			state.value = action.payload;
+		},
+	},
+});
 
-export const tvShowsSeenSelector = (state) => state.tvShowsSeen.value;
+export const tvShowsSeenSelector = state => state.tvShowsSeen.value;
 
 export default tvShowsSeen.reducer;
 
