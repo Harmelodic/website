@@ -1,4 +1,5 @@
 name: main
+
 on:
   push:
     branches:
@@ -21,8 +22,7 @@ jobs:
       - run: npm test
       - run: npm run build
       - run: docker build . -t "website:$GITHUB_SHA"
-      - name: 'Authenticate to Google Cloud'
-        uses: google-github-actions/auth@v1.0.0
+      - uses: google-github-actions/auth@v1.0.0
         with:
           workload_identity_provider: projects/401363556022/locations/global/workloadIdentityPools/automation/providers/github
           service_account: automation@automation-220928.iam.gserviceaccount.com
