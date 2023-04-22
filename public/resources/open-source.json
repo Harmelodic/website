@@ -22,7 +22,9 @@
 	{
 		"title": "automation-infrastructure",
 		"subtitle": "GitOps code",
-		"href": "https://github.com/Harmelodic/automation-infrastructure"
+		"href": "https://github.com/Harmelodic/automation-infrastructure",
+		"src": "/images/operations.svg",
+		"background": "#844fba"
 	},
 	{
 		"title": "blog",
@@ -90,17 +92,23 @@
 	{
 		"title": "personal-apps",
 		"subtitle": "GitOps code",
-		"href": "https://github.com/Harmelodic/personal-base-infrastructure"
+		"href": "https://github.com/Harmelodic/personal-base-infrastructure",
+		"src": "/images/operations.svg",
+		"background": "#844fba"
 	},
 	{
 		"title": "personal-base-infrastructure",
 		"subtitle": "GitOps code",
-		"href": "https://github.com/Harmelodic/personal-base-infrastructure"
+		"href": "https://github.com/Harmelodic/personal-base-infrastructure",
+		"src": "/images/operations.svg",
+		"background": "#844fba"
 	},
 	{
 		"title": "personal-env-infrastructure",
 		"subtitle": "GitOps code",
-		"href": "https://github.com/Harmelodic/personal-env-infrastructure"
+		"href": "https://github.com/Harmelodic/personal-env-infrastructure",
+		"src": "/images/operations.svg",
+		"background": "#844fba"
 	},
 	{
 		"title": "Professor Zorg's Guide to Alien Etiquette",
@@ -117,7 +125,10 @@
 	{
 		"title": "renovate-config",
 		"subtitle": "Centralised Renovate Config",
-		"href": "https://github.com/Harmelodic/renovate-config"
+		"href": "https://github.com/Harmelodic/renovate-config",
+		"src": "/images/renovate.svg",
+		"background": "#497c9b",
+		"size": 125
 	},
 	{
 		"title": "Quaff",
