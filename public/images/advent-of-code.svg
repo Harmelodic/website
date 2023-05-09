@@ -1,1 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" id="svg5" width="48" height="48" version="1.1" viewBox="0 0 12.7 12.7"><g id="layer1"><g id="text341" aria-label="*" style="font-size:17.5329px;line-height:1.25;fill:#ff0;stroke-width:.438324"><path d="M 4.246045,10.251078 3.5096632,9.7250905 5.4032164,6.832162 2.5628866,5.604859 2.843413,4.7983456 5.7714073,5.7626551 5.9292034,2.4489371 H 6.7707826 L 6.9285787,5.7626551 9.856573,4.7983456 10.137099,5.604859 7.2967696,6.832162 9.1903228,9.7250905 8.453941,10.251078 6.349993,7.4633464 Z" style="font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro, Normal'" id="path1767"/></g></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" version="1.1" viewBox="0 0 12.7 12.7">
+    <g>
+        <g aria-label="*" style="font-size:17.5329px;line-height:1.25;fill:#ff0;stroke-width:.438324">
+            <path d="M 4.246045,10.251078 3.5096632,9.7250905 5.4032164,6.832162 2.5628866,5.604859 2.843413,4.7983456 5.7714073,5.7626551 5.9292034,2.4489371 H 6.7707826 L 6.9285787,5.7626551 9.856573,4.7983456 10.137099,5.604859 7.2967696,6.832162 9.1903228,9.7250905 8.453941,10.251078 6.349993,7.4633464 Z"
+                  style="font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro, Normal'"/>
+        </g>
+    </g>
+</svg>

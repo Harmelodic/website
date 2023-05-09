@@ -1,1 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" id="svg4" width="500" height="500" version="1.1"><metadata id="metadata10"/><g id="g827" transform="translate(1.33086e-6,-3.727874)"><text id="text814" x="249.344" y="246.516" style="font-style:normal;font-variant:normal;font-weight:400;font-stretch:normal;font-size:192px;line-height:1.25;font-family:Georgia;-inkscape-font-specification:'Georgia, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0;word-spacing:0;writing-mode:lr-tb;text-anchor:middle;fill:#c70000;fill-opacity:1;stroke:none" xml:space="preserve"><tspan id="tspan812" x="249.344" y="246.516">X</tspan></text><text id="text818" x="249.805" y="326.55" style="font-style:normal;font-weight:400;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0;word-spacing:0;fill:#000;fill-opacity:1;stroke:none" xml:space="preserve"><tspan style="font-style:normal;font-variant:normal;font-weight:400;font-stretch:normal;font-size:53.33333206px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle" id="tspan816" x="249.805" y="326.55">Logo Coming</tspan><tspan style="font-style:normal;font-variant:normal;font-weight:400;font-stretch:normal;font-size:53.33333206px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle" id="tspan820" x="249.805" y="393.216">Soon</tspan></text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" version="1.1">
+    <g transform="translate(1.33086e-6,-3.727874)">
+        <text x="250" y="250"
+              style="font-style:normal;font-variant:normal;font-weight:400;font-stretch:normal;font-size:192px;line-height:1.25;font-family:Georgia;-inkscape-font-specification:'Georgia, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0;word-spacing:0;writing-mode:lr-tb;text-anchor:middle;fill:#c70000;fill-opacity:1;stroke:none"
+              xml:space="preserve">
+            <tspan x="450" y="250">X</tspan>
+        </text>
+        <text x="250" y="325"
+              style="font-style:normal;font-weight:400;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0;word-spacing:0;fill:#000;fill-opacity:1;stroke:none"
+              xml:space="preserve">
+            <tspan style="font-style:normal;font-variant:normal;font-weight:400;font-stretch:normal;font-size:53.33333206px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle"
+                   x="320" y="325">Logo Coming</tspan>
+            <tspan style="font-style:normal;font-variant:normal;font-weight:400;font-stretch:normal;font-size:53.33333206px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle"
+                   x="290" y="400">Soon</tspan>
+        </text>
+    </g>
+</svg>

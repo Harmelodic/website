@@ -1,1 +1,30 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" id="svg25" width="300" height="300" x="0" y="0" fill="#000" enable-background="new 0 0 48 48" version="1.1" viewBox="0 0 48 48" xml:space="preserve"><g id="layer1"><g id="g23" transform="translate(0,2.88)" style="fill:#f4e3d7"><path id="path9" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M 28.221,36.2 H 7.056 C 3.725,36.2 1,33.475 1,30.147 V 10.149 C 1,6.818 3.725,4.094 7.056,4.094 h 33.893 c 3.328,0 6.051,2.724 6.051,6.055 v 19.998 c 0,3.327 -2.723,6.053 -6.051,6.053 h -2.502" style="fill:#f4e3d7"/><g id="g17" style="fill:#f4e3d7"><line id="line11" x1="9.854" x2="38.151" y1="11.065" y2="11.065" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" style="fill:#f4e3d7"/><line id="line13" x1="9.854" x2="18.456" y1="19.768" y2="19.768" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" style="fill:#f4e3d7"/><line id="line15" x1="9.854" x2="18.456" y1="28.47" y2="28.47" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" style="fill:#f4e3d7"/></g></g></g><g id="layer2"><polyline id="polyline21" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="28.221 31.092 28.221 43.905 32.874 40.396 37.622 43.905 37.622 30.902" style="fill:#d40000;stroke:#ffd308;stroke-opacity:1" transform="translate(0,2.868)"/></g><g id="layer3"><path id="path19" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="m 40.90851,27.047 c 0,4.452 -3.605,8.059 -8.061,8.059 -4.445,0 -8.055,-3.606 -8.055,-8.059 0,-4.452 3.609,-8.057 8.055,-8.057 4.456,0 8.061,3.605 8.061,8.057 z" style="fill:#d40000;stroke:#ffd308;stroke-opacity:1"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" x="0" y="0" fill="#000"
+     enable-background="new 0 0 48 48" version="1.1" viewBox="0 0 48 48" xml:space="preserve">
+    <g>
+        <g transform="translate(0,2.88)" style="fill:#f4e3d7">
+            <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"
+                  stroke-width="2"
+                  d="M 28.221,36.2 H 7.056 C 3.725,36.2 1,33.475 1,30.147 V 10.149 C 1,6.818 3.725,4.094 7.056,4.094 h 33.893 c 3.328,0 6.051,2.724 6.051,6.055 v 19.998 c 0,3.327 -2.723,6.053 -6.051,6.053 h -2.502"
+                  style="fill:#f4e3d7"/>
+            <g style="fill:#f4e3d7">
+                <line x1="9.854" x2="38.151" y1="11.065" y2="11.065" fill="none" stroke="#000" stroke-linecap="round"
+                      stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" style="fill:#f4e3d7"/>
+                <line x1="9.854" x2="18.456" y1="19.768" y2="19.768" fill="none" stroke="#000" stroke-linecap="round"
+                      stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" style="fill:#f4e3d7"/>
+                <line x1="9.854" x2="18.456" y1="28.47" y2="28.47" fill="none" stroke="#000" stroke-linecap="round"
+                      stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" style="fill:#f4e3d7"/>
+                </g>
+            </g>
+        </g>
+    <g>
+        <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"
+                  stroke-width="2" points="28.221 31.092 28.221 43.905 32.874 40.396 37.622 43.905 37.622 30.902"
+                  style="fill:#d40000;stroke:#ffd308;stroke-opacity:1" transform="translate(0,2.868)"/>
+    </g>
+    <g>
+        <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"
+              stroke-width="2"
+              d="m 40.90851,27.047 c 0,4.452 -3.605,8.059 -8.061,8.059 -4.445,0 -8.055,-3.606 -8.055,-8.059 0,-4.452 3.609,-8.057 8.055,-8.057 4.456,0 8.061,3.605 8.061,8.057 z"
+              style="fill:#d40000;stroke:#ffd308;stroke-opacity:1"/>
+    </g>
+</svg>

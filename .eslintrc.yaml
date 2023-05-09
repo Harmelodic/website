@@ -15,13 +15,13 @@ plugins:
   - react
 rules:
   {
-    arrow-parens: ["error", "as-needed", { "requireForBlockBody": true }],
-    indent: ["error", "tab", { "SwitchCase": 1 }],
-    max-len: ["error", { "code": 120 }],
-    object-curly-spacing: ["error", "always"],
-    no-mixed-spaces-and-tabs: ["error", "smart-tabs"],
-    no-tabs: ["error", { allowIndentationTabs: true }],
-    react/jsx-uses-vars: ["error"],
+    arrow-parens: [ "error", "as-needed", { "requireForBlockBody": true } ],
+    indent: [ "error", "tab", { "SwitchCase": 1 } ],
+    max-len: [ "error", { "code": 120 } ],
+    object-curly-spacing: [ "error", "always" ],
+    no-mixed-spaces-and-tabs: [ "error", "smart-tabs" ],
+    no-tabs: [ "error", { allowIndentationTabs: true } ],
+    react/jsx-uses-vars: [ "error" ],
     require-jsdoc:
       [
         "error",

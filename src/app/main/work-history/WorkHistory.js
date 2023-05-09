@@ -21,7 +21,7 @@ export default function WorkHistory() {
 					Software Engineer @ Nordnet
 				</FlexDiv>
 				<FlexDiv>May 2021 - Current</FlexDiv>
-				<FlexDiv style={{ fontSize: '0.8rem' }}>69,000 kr / month</FlexDiv>
+				<FlexDiv style={{ fontSize: '0.8rem' }}>73,500 kr / month</FlexDiv>
 				<FlexDiv>
 					&
 				</FlexDiv>
