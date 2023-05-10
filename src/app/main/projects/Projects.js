@@ -1,12 +1,11 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchProjects } from './projectsState';
+import { fetchProjects, projectsSelector } from './projectsState';
 import styled from 'styled-components';
-import { ProjectList } from '../../../lib/ProjectList';
 import { Main } from '../Main';
 import { ReadingSpace } from '../../../lib/ReadingSpace';
 import { Title } from '../../../lib/Title';
-import { projectsSelector } from './projectsState';
+import { ProjectLarge } from '../../../lib/ProjectLarge';
 
 const Content = styled.div`
   display: flex;
@@ -29,7 +28,34 @@ export default function Projects() {
 		<Main>
 			<Title>Projects</Title>
 			<Content>
-				<ProjectList projects={projects}/>
+				{
+					projects
+						.filter(project => !project.hidden)
+						.sort((a, b) => {
+							const titleA = a.title.toUpperCase();
+							const titleB = b.title.toUpperCase();
+							if (titleA < titleB) {
+								return -1;
+							}
+							if (titleA > titleB) {
+								return 1;
+							}
+							return 0;
+						})
+						.map((project, index) => {
+							return (
+								<ProjectLarge
+									key={index}
+									src={project.src}
+									background={project.background}
+									title={project.title}
+									subtitle={project.subtitle}
+									href={project.href}
+									size={project.size}
+								/>
+							);
+						})
+				}
 				<ReadingSpace/>
 			</Content>
 		</Main>
