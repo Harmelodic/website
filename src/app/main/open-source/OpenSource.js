@@ -28,7 +28,7 @@ export default function OpenSource() {
 
 	return (
 		<Main>
-			<Title>Open-source</Title>
+			<Title>Open Source</Title>
 			<ColumnInfoBox>
 				<FlexDiv>
 					<span>Sourced from </span>

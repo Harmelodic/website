@@ -7,6 +7,8 @@ const StyledEntry = styled.a`
 	align-items: flex-start;
 	margin: 0;
 	width: 25%;
+	min-width: 250px;
+	max-width: 400px;
 	padding: 15px;
     background: ${props => props.theme.button.item.background};
 	text-decoration: none;

@@ -93,7 +93,7 @@ export default function Menu() {
 					Projects
 				</NavItem>
 				<NavItem end to="/open-source" selected={path === '/open-source'}>
-					Open-source
+					Open Source
 				</NavItem>
 				<NavItem end to="/work-history" selected={path === '/work-history'}>
 					Work History
