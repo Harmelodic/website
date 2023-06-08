@@ -57,8 +57,8 @@ spec:
               port: 80
               path: /health
           securityContext:
-            allowPrivilegeEscalation: false
-            privileged: false
+            allowPrivilegeEscalation: true
+            privileged: true # nginx (base image) wants to run master process as root
             readOnlyRootFilesystem: false # nginx (base image) wants to create temp files
             capabilities:
               drop:
