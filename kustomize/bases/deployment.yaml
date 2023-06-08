@@ -8,12 +8,24 @@ spec:
       app: website
   replicas: 1
   revisionHistoryLimit: 0
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
   template:
     metadata:
       labels:
         app: website
     spec:
       serviceAccountName: website
+      securityContext:
+        seccompProfile:
+          type: RuntimeDefault
+        runAsUser: 1000
+        runAsGroup: 3000
+        fsGroup: 2000
+        runAsNonRoot: true
       containers:
         - name: website
           image: "europe-north1-docker.pkg.dev/personal-artifacts-353012/harmelodic/website:latest"
@@ -44,8 +56,10 @@ spec:
             httpGet:
               port: 80
               path: /health
-  strategy:
-    type: RollingUpdate
-    rollingUpdate:
-      maxSurge: 1
-      maxUnavailable: 0
+          securityContext:
+            allowPrivilegeEscalation: false
+            privileged: false
+            readOnlyRootFilesystem: true
+            capabilities:
+              drop:
+                - all
