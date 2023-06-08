@@ -22,7 +22,7 @@ spec:
       securityContext:
         seccompProfile:
           type: RuntimeDefault
-        runAsUser: 1000
+        runAsUser: 0 # nginx (base image) wants to run master process as root
         runAsGroup: 3000
         fsGroup: 2000
         runAsNonRoot: false # nginx (base image) wants to run master process as root
