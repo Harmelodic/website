@@ -22,10 +22,10 @@ spec:
       securityContext:
         seccompProfile:
           type: RuntimeDefault
+        runAsNonRoot: false # nginx (base image) wants to run master process as root
         runAsUser: 0 # nginx (base image) wants to run master process as root
         runAsGroup: 3000
         fsGroup: 2000
-        runAsNonRoot: false # nginx (base image) wants to run master process as root
       containers:
         - name: website
           image: "europe-north1-docker.pkg.dev/personal-artifacts-353012/harmelodic/website:latest"
