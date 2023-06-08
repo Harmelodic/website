@@ -25,7 +25,7 @@ spec:
         runAsUser: 1000
         runAsGroup: 3000
         fsGroup: 2000
-        runAsNonRoot: true
+        runAsNonRoot: false # nginx (base image) wants to run master process as root
       containers:
         - name: website
           image: "europe-north1-docker.pkg.dev/personal-artifacts-353012/harmelodic/website:latest"
@@ -57,7 +57,7 @@ spec:
               port: 80
               path: /health
           securityContext:
-            allowPrivilegeEscalation: true
+            allowPrivilegeEscalation: true # nginx (base image) wants to run master process as root
             privileged: true # nginx (base image) wants to run master process as root
             readOnlyRootFilesystem: false # nginx (base image) wants to create temp files
             capabilities:
