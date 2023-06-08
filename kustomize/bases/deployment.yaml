@@ -62,4 +62,4 @@ spec:
             readOnlyRootFilesystem: false # nginx (base image) wants to create temp files
             capabilities:
               drop:
-                - all
+                - ALL
