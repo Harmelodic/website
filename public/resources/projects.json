@@ -4,7 +4,8 @@
 		"subtitle": "Food Blog",
 		"src": "/images/flavour101.svg",
 		"background": "#ffffff",
-		"href": "https://flavour101.com"
+		"href": "https://flavour101.com",
+		"hidden": true
 	},
 	{
 		"title": "Foofie The Dog",
