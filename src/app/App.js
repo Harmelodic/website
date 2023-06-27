@@ -11,7 +11,7 @@ const Blog = lazy(() => import('./main/blog/Blog'));
 const PostView = lazy(() => import('./main/blog/post-view/PostView'));
 const FilmsSeen = lazy(() => import('./main/blog/lists/FilmsSeen'));
 const TvShowsSeen = lazy(() => import('./main/blog/lists/TvShowsSeen'));
-const Projects = lazy(() => import('./main/projects/Projects'));
+const Creations = lazy(() => import('./main/creations/Creations'));
 const OpenSource = lazy(() => import('./main/open-source/OpenSource'));
 const WorkHistory = lazy(() => import('./main/work-history/WorkHistory'));
 const Running = lazy(() => import('./main/running/Running'));
@@ -64,7 +64,7 @@ export function App() {
 							<Route exact path="/blog/post/:id" element={<PostView />} />
 							<Route exact path="/blog/list/1532228220000" element={<FilmsSeen />} />
 							<Route exact path="/blog/list/1532228640000" element={<TvShowsSeen />} />
-							<Route exact path="/projects" element={<Projects />} />
+							<Route exact path="/creations" element={<Creations />} />
 							<Route exact path="/open-source" element={<OpenSource />} />
 							<Route exact path="/work-history" element={<WorkHistory />} />
 							<Route exact path="/running" element={<Running />} />

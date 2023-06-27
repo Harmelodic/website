@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchProjects, projectsSelector } from './projectsState';
+import { fetchCreations, creationsSelector } from './creationsState';
 import styled from 'styled-components';
 import { Main } from '../Main';
 import { ReadingSpace } from '../../../lib/ReadingSpace';
@@ -15,22 +15,22 @@ const Content = styled.div`
   width: 80%;
 `;
 
-export default function Projects() {
+export default function Creations() {
 	const dispatch = useDispatch();
 
 	useEffect(() => {
-		dispatch(fetchProjects());
+		dispatch(fetchCreations());
 	}, []);
 
-	const projects = useSelector(projectsSelector);
+	const creations = useSelector(creationsSelector);
 
 	return (
 		<Main>
-			<Title>Projects</Title>
+			<Title>Creations</Title>
 			<Content>
 				{
-					projects
-						.filter(project => !project.hidden)
+					creations
+						.filter(creation => !creation.hidden)
 						.sort((a, b) => {
 							const titleA = a.title.toUpperCase();
 							const titleB = b.title.toUpperCase();
@@ -42,16 +42,16 @@ export default function Projects() {
 							}
 							return 0;
 						})
-						.map((project, index) => {
+						.map((creation) => {
 							return (
 								<ProjectLarge
-									key={index}
-									src={project.src}
-									background={project.background}
-									title={project.title}
-									subtitle={project.subtitle}
-									href={project.href}
-									size={project.size}
+									key={creation.src}
+									src={creation.src}
+									background={creation.background}
+									title={creation.title}
+									subtitle={creation.subtitle}
+									href={creation.href}
+									size={creation.size}
 								/>
 							);
 						})

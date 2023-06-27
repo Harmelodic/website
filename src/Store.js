@@ -4,7 +4,7 @@ import filmsSeenReducer from './app/main/blog/lists/filmsSeenState';
 import tvShowsSeenReducer from './app/main/blog/lists/tvShowsSeenState';
 import { markdownText, selectedPost } from './app/main/blog/post-view/postViewState';
 import { loadingPostsStatus, posts } from './app/main/blog/posts';
-import projectsReducer from './app/main/projects/projectsState';
+import creationsReducer from './app/main/creations/creationsState';
 import openSourceProjectsReducer from './app/main/open-source/openSourceProjects';
 import themeReducer from './theme/theme';
 import viewModeReducer from './viewMode/viewMode';
@@ -14,7 +14,7 @@ export function initialiseStore() {
 		reducer: {
 			theme: themeReducer,
 			viewMode: viewModeReducer,
-			projects: projectsReducer,
+			creations: creationsReducer,
 			openSourceProjects: openSourceProjectsReducer,
 
 			posts: posts.reducer,

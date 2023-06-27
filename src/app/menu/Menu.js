@@ -89,8 +89,8 @@ export default function Menu() {
 				<NavItem to="/blog" selected={path.match(/^\/blog/) !== null}>
 					Blog
 				</NavItem>
-				<NavItem end to="/projects" selected={path === '/projects'}>
-					Projects
+				<NavItem end to="/creations" selected={path === '/creations'}>
+					Creations
 				</NavItem>
 				<NavItem end to="/open-source" selected={path === '/open-source'}>
 					Open Source
