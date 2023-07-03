@@ -1,0 +1,61 @@
+import { NavLink, useLocation } from 'react-router-dom';
+import styled from 'styled-components';
+
+const Nav = styled.nav`
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	max-width: 1000px;
+	height: 100%;
+	margin: 0 auto;
+`;
+
+const NavItem = styled(NavLink)`
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	height: 100%;
+	padding: 0 20px;
+	font-size: 1rem;
+	color: ${props => props.selected ? '#000' : '#fff'};
+	text-decoration: none;
+	background: ${props => props.selected ? '#fff' : 'rgba(0,0,0,0)'};
+	text-align: center;
+	transition: background 200ms;
+	white-space: normal;
+
+	&:hover {
+		background: ${props => props.selected ? '#fff' : 'rgba(0,0,0,0.2)'};
+	}
+`;
+
+
+export default function Bar() {
+	const location = useLocation();
+	const path = location.pathname;
+
+	return (
+		<Nav>
+			<NavItem end to="/" selected={path === '/'}>
+				Me
+			</NavItem>
+			<NavItem to="/blog" selected={path.match(/^\/blog/) !== null}>
+				Blog
+			</NavItem>
+			<NavItem end to="/creations" selected={path === '/creations'}>
+				Creations
+			</NavItem>
+			<NavItem end to="/open-source" selected={path === '/open-source'}>
+				Open Source
+			</NavItem>
+			<NavItem end to="/work-history" selected={path === '/work-history'}>
+				Work History
+			</NavItem>
+			<NavItem end to="/running" selected={path === '/running'}>
+				Running
+			</NavItem>
+		</Nav>
+	);
+}

@@ -32,7 +32,9 @@ export default function OpenSource() {
 			<ColumnInfoBox>
 				<FlexDiv>
 					<span>Sourced from </span>
-					<a href="https://github.com/Harmelodic" target="_blank" rel="noopener">my GitHub</a>:
+					<a href="https://github.com/Harmelodic?tab=repositories"
+					   target="_blank"
+					   rel="noopener">my GitHub</a>:
 				</FlexDiv>
 			</ColumnInfoBox>
 			<Content>

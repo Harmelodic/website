@@ -4,10 +4,18 @@ import { Main } from '../Main';
 import { ReadingSpace } from '../../../lib/ReadingSpace';
 import { Title } from '../../../lib/Title';
 import { ProjectSmall } from '../../../lib/ProjectSmall';
+import { CircleImage } from '../../../lib/CircleImage';
+import styled from 'styled-components';
+
+const ImageOfMe = styled(CircleImage)`
+	margin-top: 50px;
+	border: solid 1px #000;
+`;
 
 export default function Home() {
 	return (
 		<Main>
+			<ImageOfMe src="/images/headshot.webp" />
 
 			<Title>Matt Smith</Title>
 
