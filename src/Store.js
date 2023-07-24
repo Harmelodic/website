@@ -7,13 +7,11 @@ import { loadingPostsStatus, posts } from './app/main/blog/posts';
 import creationsReducer from './app/main/creations/creationsState';
 import openSourceProjectsReducer from './app/main/open-source/openSourceProjects';
 import themeReducer from './theme/theme';
-import viewModeReducer from './viewMode/viewMode';
 
 export function initialiseStore() {
 	return configureStore({
 		reducer: {
 			theme: themeReducer,
-			viewMode: viewModeReducer,
 			creations: creationsReducer,
 			openSourceProjects: openSourceProjectsReducer,
 
