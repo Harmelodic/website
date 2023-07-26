@@ -21,15 +21,15 @@ const NavItem = styled(NavLink)`
 	height: 100%;
 	padding: 0 20px;
 	font-size: 1rem;
-	color: ${props => props.selected ? '#000' : '#fff'};
+	color: #fff;
 	text-decoration: none;
-	background: ${props => props.selected ? '#fff' : 'rgba(0,0,0,0)'};
+	background: ${props => props.selected ? 'rgb(0,130,0)' : 'rgba(0,0,0,0)'};
 	text-align: center;
 	transition: background 200ms;
 	white-space: normal;
 
 	&:hover {
-		background: ${props => props.selected ? '#fff' : 'rgba(0,0,0,0.2)'};
+		background: ${props => props.selected ? 'rgb(0,130,0)' : 'rgba(0,255,0,0.15)'};
 	}
 `;
 
