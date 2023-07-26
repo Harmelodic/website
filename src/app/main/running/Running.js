@@ -4,6 +4,7 @@ import { ColumnInfoBox } from '../../../lib/InfoBox';
 import { ReadingSpace } from '../../../lib/ReadingSpace';
 import { Title } from '../../../lib/Title';
 import { Main } from '../Main';
+import {Hyperlink} from "../../../lib/Hyperlink";
 
 const WorkHistoryMain = styled(Main)`
   flex-flow: column nowrap;
@@ -18,9 +19,9 @@ export default function Running() {
 			<ColumnInfoBox>
 				<FlexDiv>I'm on Strava:</FlexDiv>
 				<FlexDiv>
-					<a href="https://www.strava.com/athletes/Harmelodic" target="_blank" rel="noopener">
+					<Hyperlink href="https://www.strava.com/athletes/Harmelodic" target="_blank" rel="noopener">
 						@Harmelodic
-					</a>
+					</Hyperlink>
 				</FlexDiv>
 			</ColumnInfoBox>
 			<ReadingSpace/>

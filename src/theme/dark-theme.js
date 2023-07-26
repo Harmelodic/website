@@ -3,57 +3,21 @@ export const darkTheme = {
 	font: {
 		family: 'Helvetica, \'Segoe UI\', sans-serif',
 		weight: 300,
-	},
-	button: {
-		cancel: {
-			background: 'rgba(0,0,0,0)',
-			hover: {
-				background: '#383838',
-			},
-			active: {
-				background: '#333',
-			},
-		},
-		item: {
-			background: 'rgba(0,0,0,0)',
-			hover: {
-				background: '#383838',
-			},
-			active: {
-				background: '#333',
-			},
-		},
-	},
-	input: {
-		background: '#222',
-		border: '#bbb',
-		icon: '#bbb',
-		color: '#888',
-		hover: {
-			border: '#eee',
-		},
-		focus: {
-			border: '#eee',
-		},
-		active: {
-			border: '#eee',
-		},
-	},
-	text: {
-		title: '#fff',
-		subtitle: '#999',
-		normal: '#eee',
-		negative: '#fff',
-		placeholder: '#aaa',
-		link: '#6190e1',
-		linkActive: '#f17171',
+		titleColor: '#fff',
+		subtitleColor: '#999',
+		normalColor: '#fff',
+		normalNegativeColor: '#fff',
+		placeholderColor: '#aaa',
+		linkColor: '#3573d9',
+		linkActiveColor: '#df0000',
+		linkVisitedColor: '#9156c4',
 		code: {
 			color: '#fff',
 			background: '#000',
 		},
 		blockquote: '#2e70b1',
 		keyboard: {
-			color: '#eee',
+			color: '#fff',
 			border: '#adb3b9',
 			boxShadow: {
 				outer: 'rgba(12, 13, 14, 0.2)',
@@ -67,45 +31,34 @@ export const darkTheme = {
 			wave: 'rgba(255,255,255,0.5)',
 		},
 	},
-	img: {
-		border: '#eee',
-		background: '#222',
-	},
-	separator: '#888',
-	transparent: 'rgb(0,0,0,0)',
-	error: '#f00',
-
-
-	// Special styling
-	rainbow: {
-		one: 'red',
-		two: 'orange',
-		three: 'yellow',
-		four: 'green',
-		five: 'cyan',
-		six: 'blue',
-		seven: 'indigo',
-		eight: 'violet',
-		nine: 'red',
-	},
-
-
-	// Site-specific styling
-	main: {
-		background: '#222',
-	},
-	nav: {
-		background: '#191919',
-		icon: {
-			border: '#fff',
+	colors: {
+		darkBackground: '#131313',
+		mainBackground: '#333',
+		mainHover: '#444',
+		mainActive: '#555',
+		hardBorder: '#ddd',
+		softBorder: '#777',
+		accents: {
+			red: '#b40000',
+			redFaded: 'rgba(180, 0, 0, 0.4)',
+			green: '#080',
+			greenFaded: 'rgba(0, 255, 0, 0.15)',
+			blue: '#003cff',
+			blueFaded: 'rgba(0, 60, 255, 0.5)',
 		},
-		item: {
-			selected: {
-				background: '#222',
-			},
-			hover: {
-				background: '#333',
-			},
+		error: '#f00',
+		transparent: 'rgb(0,0,0,0)',
+		// Special styling
+		rainbow: {
+			one: 'red',
+			two: 'orange',
+			three: 'yellow',
+			four: 'green',
+			five: 'cyan',
+			six: 'blue',
+			seven: 'indigo',
+			eight: 'violet',
+			nine: 'red',
 		},
 	},
 };

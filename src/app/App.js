@@ -21,9 +21,8 @@ const StyledApp = styled.div`
 	width: 100%;
 	min-height: 100vh;
 	
-	font-family: Helvetica, sans-serif;
-	font-weight: 300;
-	color: #fff;
+	font-family: ${props => props.theme.font.family};
+	font-weight: ${props => props.theme.font.weight};
 `;
 
 const HEADER_HEIGHT = '60px';
@@ -31,7 +30,7 @@ const HEADER_HEIGHT = '60px';
 const Header = styled.header`
 	width: 100%;
 	height: ${HEADER_HEIGHT};
-	background: #131313;
+	background: ${props => props.theme.colors.darkBackground};
 	position: sticky;
 	top: 0;
 `;

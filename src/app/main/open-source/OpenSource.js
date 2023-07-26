@@ -8,6 +8,7 @@ import { Title } from '../../../lib/Title';
 import { OpenSourceProjectEntry } from '../../../lib/OpenSourceProjectEntry';
 import { ColumnInfoBox } from '../../../lib/InfoBox';
 import { FlexDiv } from '../../../lib/FlexDiv';
+import {Hyperlink} from "../../../lib/Hyperlink";
 
 const Content = styled.div`
   display: flex;
@@ -32,9 +33,9 @@ export default function OpenSource() {
 			<ColumnInfoBox>
 				<FlexDiv>
 					<span>Sourced from </span>
-					<a href="https://github.com/Harmelodic?tab=repositories"
+					<Hyperlink href="https://github.com/Harmelodic?tab=repositories"
 					   target="_blank"
-					   rel="noopener">my GitHub</a>:
+					   rel="noopener">my GitHub</Hyperlink>:
 				</FlexDiv>
 			</ColumnInfoBox>
 			<Content>

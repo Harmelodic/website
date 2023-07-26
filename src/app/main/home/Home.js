@@ -9,7 +9,7 @@ import styled from 'styled-components';
 
 const ImageOfMe = styled(CircleImage)`
 	margin-top: 50px;
-	border: solid 1px #000;
+	border: solid 1px ${props => props.theme.colors.hardBorder};
 `;
 
 export default function Home() {

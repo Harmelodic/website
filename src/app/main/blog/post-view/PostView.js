@@ -26,15 +26,15 @@ const PostViewWrapper = styled.div`
     max-width: 900px;
 
 	// Markdown re-styling
-	--link-color: ${props => props.theme.text.link};
-	--link-active-color: ${props => props.theme.text.linkActive};
-	--code-block-background: ${props => props.theme.text.code.background};
-	--code-block-color: ${props => props.theme.text.code.color};
-	--blockquote-colour: ${props => props.theme.text.blockquote};
-	--keyboard-text-color: ${props => props.theme.text.keyboard.color};
-	--keyboard-border-color: ${props => props.theme.text.keyboard.border};
-	--keyboard-outer-boxshadow: ${props => props.theme.text.keyboard.boxShadow.outer};
-	--keyboard-inner-boxshadow: ${props => props.theme.text.keyboard.boxShadow.inner};
+	--link-color: ${props => props.theme.font.linkColor};
+	--link-active-color: ${props => props.theme.font.linkActive};
+	--code-block-background: ${props => props.theme.font.code.background};
+	--code-block-color: ${props => props.theme.font.code.color};
+	--blockquote-colour: ${props => props.theme.font.blockquote};
+	--keyboard-text-color: ${props => props.theme.font.keyboard.color};
+	--keyboard-border-color: ${props => props.theme.font.keyboard.border};
+	--keyboard-outer-boxshadow: ${props => props.theme.font.keyboard.boxShadow.outer};
+	--keyboard-inner-boxshadow: ${props => props.theme.font.keyboard.boxShadow.inner};
 
 	& > div {
 		font-family: Helvetica, sans-serif;
@@ -43,7 +43,7 @@ const PostViewWrapper = styled.div`
 	& > div > h1 {
 		padding-bottom: 15px;
 		border-bottom: solid ${props => props.theme.separator} 2px;
-	    color: ${props => props.theme.text.title};
+	    color: ${props => props.theme.font.titleColor};
 	}
 	& > div > h2 {
 		padding-top: 20px;
@@ -70,13 +70,13 @@ const PostHeading = styled.h1`
 	padding-bottom: 15px;
 	border-bottom: solid ${props => props.theme.separator} 2px;
 	white-space: normal;
-    color: ${props => props.theme.text.title};
+    color: ${props => props.theme.font.titleColor};
 `;
 
 const Category = styled.div`
 	margin-top: 5px;
 	font-size: 1rem;
-	color: ${props => props.theme.text.subtitle};
+	color: ${props => props.theme.font.subtitleColor};
 	font-style: italic;
 `;
 
@@ -126,7 +126,7 @@ export default function PostView() {
 		<PostViewMain>
 			<PostViewWrapper>
 				<PostHeading>
-					<LoadingTextBlock width={500} color={theme.text.loading.title} />
+					<LoadingTextBlock width={500} color={theme.font.loading.title} />
 				</PostHeading>
 				<div>
 					<LoadingTextBlock margin={15} width={300} />
@@ -138,7 +138,7 @@ export default function PostView() {
 					<LoadingTextBlock margin={15} width={80} />
 					<br />
 					<br />
-					<LoadingTextBlock margin={15} width={200} color={theme.text.loading.title} />
+					<LoadingTextBlock margin={15} width={200} color={theme.font.loading.title} />
 					<HorizontalRule />
 					<LoadingTextBlock margin={15} width={250} />
 					<LoadingTextBlock margin={15} width={100} />
@@ -154,14 +154,14 @@ export default function PostView() {
 					<LoadingTextBlock margin={15} width={500} />
 					<br />
 					<br />
-					<LoadingTextBlock margin={15} width={100} color={theme.text.loading.title} />
+					<LoadingTextBlock margin={15} width={100} color={theme.font.loading.title} />
 					<LoadingTextBlock margin={15} width={500} />
 					<LoadingTextBlock margin={15} width={150} />
 					<LoadingTextBlock margin={15} width={80} />
 					<LoadingTextBlock margin={15} width={450} />
 					<br />
 					<br />
-					<LoadingTextBlock margin={15} width={300} color={theme.text.loading.title} />
+					<LoadingTextBlock margin={15} width={300} color={theme.font.loading.title} />
 					<HorizontalRule />
 					<LoadingTextBlock margin={15} width={50} />
 					<LoadingTextBlock margin={15} width={250} />
@@ -171,7 +171,7 @@ export default function PostView() {
 					<LoadingTextBlock margin={15} width={350} />
 				</div>
 				<Category>
-					<LoadingTextBlock width={200} color={theme.text.loading.subtitle} />
+					<LoadingTextBlock width={200} color={theme.font.loading.subtitle} />
 				</Category>
 			</PostViewWrapper>
 			<ReadingSpace />

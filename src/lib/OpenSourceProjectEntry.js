@@ -10,18 +10,18 @@ const StyledEntry = styled.a`
 	min-width: 250px;
 	max-width: 400px;
 	padding: 15px;
-    background: ${props => props.theme.button.item.background};
+    background: ${props => props.theme.colors.transparent};
 	text-decoration: none;
-	color: ${props => props.theme.text.title};
+	color: ${props => props.theme.font.titleColor};
 	transition: background 300ms;
 
 	&:hover {
-		background: ${props => props.theme.button.item.hover.background};
+		background: ${props => props.theme.colors.mainHover};
 		cursor: pointer;
 	}
 
 	&:active {
-		background: ${props => props.theme.button.item.active.background};
+		background: ${props => props.theme.colors.mainActive};
 	}
 `;
 
@@ -44,7 +44,7 @@ const StyledTitle = styled.span`
 
 const StyledSubtitle = styled.span`
 	font-size: 0.8rem;
-	color: ${props => props.theme.text.subtitle};
+	color: ${props => props.theme.font.subtitleColor};
 `;
 
 export function OpenSourceProjectEntry(props) {

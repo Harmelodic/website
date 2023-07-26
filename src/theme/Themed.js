@@ -20,7 +20,7 @@ export function Themed(props) {
 			break;
 	}
 
-	document.getElementsByTagName('body').item(0).style.background = theme.main.background;
+	document.getElementsByTagName('body').item(0).style.background = theme.colors.mainBackground;
 
 	return (
 		<ThemeProvider theme={theme}>

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const StyledMediaListEntry = styled.div`
 	width: 100%;
   	max-width: 900px;
-	border-bottom: solid 1px ${props => props.theme.separator};
+	border-bottom: solid 1px ${props => props.theme.colors.softBorder};
 `;
 
 const StyledHalf = styled.div`
@@ -26,7 +26,7 @@ const StyledPicture = styled.img`
 	margin: 20px 0;
 	width: calc(5 * ${pictureSizeFactor}px);
 	height: calc(7.2 * ${pictureSizeFactor}px);
-	border: solid 1px ${props => props.theme.img.border};
+	border: solid 1px ${props => props.theme.colors.hardBorder};
 `;
 
 const StyledDetailsWrapper = styled.div`
@@ -38,7 +38,7 @@ const StyledDetailsWrapper = styled.div`
 
 const StyledDetailsText = styled.div`
 	padding: 5px 0;
-	color: ${props => props.theme.text.subtitle};
+	color: ${props => props.theme.font.normalColor};
 	font-size: 1rem;
 	font-style: italic;
 `;
@@ -51,7 +51,7 @@ const StyledPosition = styled(StyledDetailsText)`
 const StyledTitle = styled.div`
 	font-size: 1.2rem;
 	font-weight: bold;
-	color: ${props => props.theme.text.title};
+	color: ${props => props.theme.font.titleColor};
 `;
 
 export default function MediaListEntry(props) {

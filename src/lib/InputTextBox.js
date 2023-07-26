@@ -5,25 +5,25 @@ export const InputTextBox = styled.input`
 	max-width: 200px;
 	height: 38px;
 	margin: 10px;
-    background: ${props => props.theme.input.background};
-	border: solid 1px ${props => props.theme.input.border};
+    background: ${props => props.theme.colors.transparent};
+	border: solid 1px ${props => props.theme.colors.softBorder};
 	border-radius: 5px;
 	padding: 0 15px;
 	font-size: 1rem;
-	color: ${props => props.theme.text.normal};
+	color: ${props => props.theme.font.normalColor};
 	transition: border 200ms;
 
 	&::placeholder {
-		color: ${props => props.theme.text.placeholder};
+		color: ${props => props.theme.font.placeholderColor};
 		transition: color 200ms;
 	}
 
   	&:hover {
-	    border: solid 1px ${props => props.theme.input.hover.border};
+	    border: solid 1px ${props => props.theme.colors.hardBorder};
 	}
 
 	&:focus {
-		border: solid 1px ${props => props.theme.input.focus.border};
+		border: solid 1px ${props => props.theme.colors.hardBorder};
 	}
 
 	&:focus::placeholder {

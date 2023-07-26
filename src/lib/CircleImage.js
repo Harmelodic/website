@@ -5,8 +5,8 @@ export const CircleImage = styled.div`
 	min-width: 180px;
 	min-height: 180px;
 	border-radius: 100%;
-	border: solid 1px ${props => props.theme.img.border};
-	background-color: ${props => props.theme.img.background};
+	border: solid 1px ${props => props.theme.colors.hardBorder};
+	background-color: ${props => props.theme.colors.mainBackground};
 	background-image: url('${props => props.src}');
 	background-size: contain;
 	background-repeat: no-repeat;

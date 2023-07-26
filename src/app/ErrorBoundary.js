@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const ErrorMessage = styled.div`
 	display: inline-block;
 	margin-top: 10px;
-	border: ${props => props.theme.error} solid 1px;
+	border: ${props => props.theme.colors.error} solid 1px;
 	border-radius: 3px;
 	padding: 0 20px;
 	font-size: 1rem;
