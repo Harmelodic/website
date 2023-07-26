@@ -8,7 +8,7 @@ import { Title } from '../../../lib/Title';
 import { OpenSourceProjectEntry } from '../../../lib/OpenSourceProjectEntry';
 import { ColumnInfoBox } from '../../../lib/InfoBox';
 import { FlexDiv } from '../../../lib/FlexDiv';
-import {Hyperlink} from "../../../lib/Hyperlink";
+import { Hyperlink } from '../../../lib/Hyperlink';
 
 const Content = styled.div`
   display: flex;

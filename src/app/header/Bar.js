@@ -29,7 +29,8 @@ const NavItem = styled(NavLink)`
 	white-space: normal;
 
 	&:hover {
-		background: ${props => props.selected ? props.theme.colors.accents.green : props.theme.colors.accents.greenFaded};
+		background:
+			${props => props.selected ? props.theme.colors.accents.green : props.theme.colors.accents.greenFaded};
 	}
 `;
 

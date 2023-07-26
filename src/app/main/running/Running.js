@@ -4,7 +4,7 @@ import { ColumnInfoBox } from '../../../lib/InfoBox';
 import { ReadingSpace } from '../../../lib/ReadingSpace';
 import { Title } from '../../../lib/Title';
 import { Main } from '../Main';
-import {Hyperlink} from "../../../lib/Hyperlink";
+import { Hyperlink } from '../../../lib/Hyperlink';
 
 const WorkHistoryMain = styled(Main)`
   flex-flow: column nowrap;
