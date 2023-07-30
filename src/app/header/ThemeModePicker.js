@@ -1,4 +1,4 @@
-import styled, {useTheme} from 'styled-components';
+import styled, { useTheme } from 'styled-components';
 import { LightMode, DarkMode, Brightness4 } from '@mui/icons-material';
 import { useDispatch, useSelector } from 'react-redux';
 import { themeMode, themeModeSelector } from '../../theme/themeMode';
