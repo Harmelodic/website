@@ -26,11 +26,9 @@ const StyledApp = styled.div`
 	font-weight: ${props => props.theme.font.weight};
 `;
 
-const HEADER_HEIGHT = '60px';
-
 const Header = styled.header`
 	width: 100%;
-	height: ${HEADER_HEIGHT};
+	height: 60px;
 	background: ${props => props.theme.colors.darkBackground};
 	position: sticky;
 	top: 0;

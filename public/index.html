@@ -24,17 +24,6 @@
         <meta property="og:type" content="website" />
         <meta property="twitter:site" content="@Harmelodic" />
 
-        <!-- No Script -->
-        <style>
-            #noscript {
-                text-align: center;
-                margin-top: 20px;
-                font-size: 1.2rem;
-                white-space: pre-wrap;
-                font-family: Helvetica, sans-serif;
-            }
-        </style>
-
         <!-- Global CSS -->
         <style>
             html {
@@ -46,6 +35,16 @@
             }
         </style>
 
+        <!-- No Script -->
+        <style>
+            noscript {
+                display: block;
+                width: 100%;
+                text-align: center;
+                font-family: Helvetica, sans-serif;
+            }
+        </style>
+
         <!-- Page Data -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -54,7 +53,8 @@
     </head>
     <body>
         <noscript>
-            <div id="noscript">This website requires JavaScript enabled.</div>
+            <h1>Site unavailable</h1>
+            <span>This website requires JavaScript enabled.</span>
         </noscript>
         <div id="app"></div>
         <script src="/js-main.bundle.js" type="text/javascript"></script>
