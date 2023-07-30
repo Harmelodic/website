@@ -3,7 +3,7 @@ import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import styled from 'styled-components';
 import { ErrorBoundary } from './ErrorBoundary';
 
-const HeaderBar = lazy(() => import('./header/Bar'));
+const HeaderBar = lazy(() => import('./header/HeaderBar'));
 const Home = lazy(() => import('./main/home/Home'));
 const Blog = lazy(() => import('./main/blog/Blog'));
 const PostView = lazy(() => import('./main/blog/post-view/PostView'));
@@ -26,27 +26,18 @@ const StyledApp = styled.div`
 	font-weight: ${props => props.theme.font.weight};
 `;
 
-const Header = styled.header`
-	width: 100%;
-	height: 60px;
-	background: ${props => props.theme.colors.darkBackground};
-	position: sticky;
-	top: 0;
-`;
 
 export function App() {
 	return (
 		<BrowserRouter>
 			<StyledApp>
-				<Header>
-					<ErrorBoundary>
-						<Suspense fallback={<div />}>
-							<Routes>
-								<Route path="*" element={<HeaderBar />} />
-							</Routes>
-						</Suspense>
-					</ErrorBoundary>
-				</Header>
+				<ErrorBoundary>
+					<Suspense fallback={<div />}>
+						<Routes>
+							<Route path="*" element={<HeaderBar />} />
+						</Routes>
+					</Suspense>
+				</ErrorBoundary>
 				<ErrorBoundary>
 					<Suspense fallback={<div />}>
 						<Routes>

@@ -5,13 +5,9 @@ import { useWindowSize } from '../../useWindowSize';
 const Nav = styled.nav`
 	display: flex;
 	flex-flow: row nowrap;
-	justify-content: ${props => props.thinView ? 'flex-start' : 'center'};
+	justify-content: flex-start;
 	align-items: center;
-	width: 100%;
-	max-width: 1000px;
 	height: 100%;
-	margin: 0 auto;
-	overflow-x: auto;
 `;
 
 const NavItem = styled(NavLink)`
@@ -35,7 +31,7 @@ const NavItem = styled(NavLink)`
 `;
 
 
-export default function Bar() {
+export function NavMenu() {
 	const location = useLocation();
 	const path = location.pathname;
 
@@ -44,22 +40,22 @@ export default function Bar() {
 	return (
 		<Nav thinView={windowSize.width < 650}>
 			<NavItem end to="/" selected={path === '/'}>
-				Me
+                Me
 			</NavItem>
-			<NavItem to="/blog" selected={path.match(/^\/blog/) !== null}>
-				Blog
+			<NavItem to="/blog" selected={path.startsWith('/blog')}>
+                Blog
 			</NavItem>
 			<NavItem end to="/creations" selected={path === '/creations'}>
-				Creations
+                Creations
 			</NavItem>
 			<NavItem end to="/open-source" selected={path === '/open-source'}>
-				Open Source
+                Open Source
 			</NavItem>
 			<NavItem end to="/work-history" selected={path === '/work-history'}>
-				Work History
+                Work History
 			</NavItem>
 			<NavItem end to="/running" selected={path === '/running'}>
-				Running
+                Running
 			</NavItem>
 		</Nav>
 	);

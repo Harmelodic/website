@@ -6,12 +6,12 @@ import { markdownText, selectedPost } from './app/main/blog/post-view/postViewSt
 import { loadingPostsStatus, posts } from './app/main/blog/posts';
 import creationsReducer from './app/main/creations/creationsState';
 import openSourceProjectsReducer from './app/main/open-source/openSourceProjects';
-import themeReducer from './theme/theme';
+import themeModeReducer from './theme/themeMode';
 
 export function initialiseStore() {
 	return configureStore({
 		reducer: {
-			theme: themeReducer,
+			themeMode: themeModeReducer,
 			creations: creationsReducer,
 			openSourceProjects: openSourceProjectsReducer,
 

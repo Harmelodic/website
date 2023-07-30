@@ -1,14 +1,27 @@
-import { useSelector } from 'react-redux';
 import { ThemeProvider } from 'styled-components';
 import { lightTheme } from './light-theme';
 import { darkTheme } from './dark-theme';
-import { themeSelector } from './theme';
+import { useSystemPreferenceTheme } from './useSystemPreferenceTheme';
+import { useSelector } from 'react-redux';
+import { themeModeSelector } from './themeMode';
 
 export function Themed(props) {
-	const selectedTheme = useSelector(themeSelector);
+	const selectedThemeMode = useSelector(themeModeSelector);
+	const systemPreferenceTheme = useSystemPreferenceTheme();
 
 	let theme;
-	switch (selectedTheme) {
+
+	switch (selectedThemeMode) {
+		case 'system-preference':
+			switch (systemPreferenceTheme) {
+				case 'light':
+					theme = lightTheme;
+					break;
+				case 'dark':
+					theme = darkTheme;
+					break;
+			}
+			break;
 		case 'light':
 			theme = lightTheme;
 			break;
@@ -20,7 +33,10 @@ export function Themed(props) {
 			break;
 	}
 
-	document.getElementsByTagName('body').item(0).style.background = theme.colors.mainBackground;
+	document.getElementsByTagName('body')
+		.item(0)
+		.style
+		.background = theme.colors.mainBackground;
 
 	return (
 		<ThemeProvider theme={theme}>
