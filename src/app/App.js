@@ -36,10 +36,6 @@ const Header = styled.header`
 	top: 0;
 `;
 
-const Main = styled.main`
-	width: 100%;
-`;
-
 export function App() {
 	return (
 		<BrowserRouter>
@@ -53,24 +49,22 @@ export function App() {
 						</Suspense>
 					</ErrorBoundary>
 				</Header>
-				<Main>
-					<ErrorBoundary>
-						<Suspense fallback={<div />}>
-							<Routes>
-								<Route exact path="/" element={<Home />} />
-								<Route exact path="/blog" element={<Blog />} />
-								<Route exact path="/blog/post/:id" element={<PostView />} />
-								<Route exact path="/blog/list/1532228220000" element={<FilmsSeen />} />
-								<Route exact path="/blog/list/1532228640000" element={<TvShowsSeen />} />
-								<Route exact path="/creations" element={<Creations />} />
-								<Route exact path="/open-source" element={<OpenSource />} />
-								<Route exact path="/work-history" element={<WorkHistory />} />
-								<Route exact path="/running" element={<Running />} />
-								<Route path="*" element={<NoPageFound />} />
-							</Routes>
-						</Suspense>
-					</ErrorBoundary>
-				</Main>
+				<ErrorBoundary>
+					<Suspense fallback={<div />}>
+						<Routes>
+							<Route exact path="/" element={<Home />} />
+							<Route exact path="/blog" element={<Blog />} />
+							<Route exact path="/blog/post/:id" element={<PostView />} />
+							<Route exact path="/blog/list/1532228220000" element={<FilmsSeen />} />
+							<Route exact path="/blog/list/1532228640000" element={<TvShowsSeen />} />
+							<Route exact path="/creations" element={<Creations />} />
+							<Route exact path="/open-source" element={<OpenSource />} />
+							<Route exact path="/work-history" element={<WorkHistory />} />
+							<Route exact path="/running" element={<Running />} />
+							<Route path="*" element={<NoPageFound />} />
+						</Routes>
+					</Suspense>
+				</ErrorBoundary>
 			</StyledApp>
 		</BrowserRouter>
 	);
