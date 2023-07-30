@@ -21,8 +21,8 @@ const NavItem = styled(NavLink)`
 	text-decoration: none;
 	background: ${props => props.selected ? props.theme.colors.accents.green : props.theme.colors.transparent};
 	text-align: center;
-	transition: background 200ms;
 	white-space: normal;
+	transition: background 200ms;
 
 	&:hover {
 		background:

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, {useTheme} from 'styled-components';
 import { LightMode, DarkMode, Brightness4 } from '@mui/icons-material';
 import { useDispatch, useSelector } from 'react-redux';
 import { themeMode, themeModeSelector } from '../../theme/themeMode';
@@ -10,11 +10,18 @@ const StyledPicker = styled.div`
 	align-items: center;
     height: 100%;
 	padding: 0 20px;
+	transition: background 200ms;
+	
+	&:hover {
+		background:
+			${props => props.selected ? props.theme.colors.accents.green : props.theme.colors.accents.greenFaded};
+	}
 `;
 
 export function ThemeModePicker() {
 	const selectedThemeMode = useSelector(themeModeSelector);
 	const dispatch = useDispatch();
+	const theme = useTheme();
 
 	let IconToShow;
 	switch (selectedThemeMode) {
@@ -45,7 +52,7 @@ export function ThemeModePicker() {
 
 	return (
 		<StyledPicker onClick={changeMode}>
-			<IconToShow sx={{ color: '#fff' }} />
+			<IconToShow sx={{ color: theme.font.normalNegativeColor }} />
 		</StyledPicker>
 	);
 }
