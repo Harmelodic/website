@@ -13,6 +13,7 @@ const Creations = lazy(() => import('./main/creations/Creations'));
 const OpenSource = lazy(() => import('./main/open-source/OpenSource'));
 const WorkHistory = lazy(() => import('./main/work-history/WorkHistory'));
 const Running = lazy(() => import('./main/running/Running'));
+const NoPageFound = lazy(() => import('./main/no-page-found/NoPageFound'));
 
 const StyledApp = styled.div`
 	display: flex;
@@ -65,6 +66,7 @@ export function App() {
 								<Route exact path="/open-source" element={<OpenSource />} />
 								<Route exact path="/work-history" element={<WorkHistory />} />
 								<Route exact path="/running" element={<Running />} />
+								<Route path="*" element={<NoPageFound />} />
 							</Routes>
 						</Suspense>
 					</ErrorBoundary>
