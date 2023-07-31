@@ -6,7 +6,7 @@ export function useSystemPreferenceTheme() {
 	);
 
 	useEffect(() => {
-		function handleThemeChange(event) {
+		function handleSystemPreferenceThemeChange(event) {
 			if (event.matches) {
 				setSystemPreferenceTheme('dark');
 			} else {
@@ -15,11 +15,11 @@ export function useSystemPreferenceTheme() {
 		}
 
 		window.matchMedia('(prefers-color-scheme: dark)')
-			.addEventListener('change', handleThemeChange);
+			.addEventListener('change', handleSystemPreferenceThemeChange);
 
 		return function cleanup() {
 			window.matchMedia('(prefers-color-scheme: dark)')
-				.removeEventListener('change', handleThemeChange);
+				.removeEventListener('change', handleSystemPreferenceThemeChange);
 		};
 	});
 
