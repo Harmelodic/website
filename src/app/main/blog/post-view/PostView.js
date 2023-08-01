@@ -25,7 +25,7 @@ const PostViewWrapper = styled.div`
 
 	// Markdown re-styling
 	--link-color: ${props => props.theme.font.linkColor};
-	--link-active-color: ${props => props.theme.font.linkActive};
+	--link-active-color: ${props => props.theme.font.linkActiveColor};
 	--code-block-background: ${props => props.theme.font.code.background};
 	--code-block-color: ${props => props.theme.font.code.color};
 	--blockquote-colour: ${props => props.theme.font.blockquote};
@@ -36,6 +36,7 @@ const PostViewWrapper = styled.div`
 
 	& > div {
 		font-family: Helvetica, sans-serif;
+		color: ${props => props.theme.font.normalColor};
 	}
 
 	& > div > h1 {
