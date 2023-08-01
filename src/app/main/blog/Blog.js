@@ -51,14 +51,6 @@ export default function Blog() {
 	const categories = useSelector(categoriesSelector);
 	const loadingCategoriesStatus = useSelector(loadingCategoriesStatusSelector);
 
-	const dateFormatOptions = {
-		year: 'numeric',
-		month: 'short',
-		day: '2-digit',
-		hour: '2-digit',
-		minute: '2-digit',
-	};
-
 	// Render Categories - with Loading fallback
 	let categoryBox;
 	if (loadingCategoriesStatus && categories.length === 0) {
@@ -81,9 +73,9 @@ export default function Blog() {
 					categories.map((category) => {
 						return (
 							<option
-								key={category}
-								value={category}>
-								{category}
+								key={category.id}
+								value={category.id}>
+								{category.name}
 							</option>
 						);
 					})
@@ -106,10 +98,7 @@ export default function Blog() {
 		postsToRender = <RowInfoBox>No posts found at this time.</RowInfoBox>;
 	} else {
 		postsToRender = posts
-			.sort((a, b) => b.datePosted - a.datePosted)
-			.filter(post => post.title
-				.toUpperCase()
-				.includes(filterBySearch.toUpperCase()))
+			.filter(post => post.title.toUpperCase().includes(filterBySearch.toUpperCase()))
 			.filter((post) => {
 				if (filterByCategory === '' ||
 					post.category === filterByCategory) {
@@ -121,18 +110,9 @@ export default function Blog() {
 			.map((post) => {
 				return (
 					<Post
-						key={post.datePosted}
-						link={`/blog/${post.route}/${post.datePosted}`}
-						title={post.title}
-						category={post.category}
-						datePosted={
-							new Date(post.datePosted)
-								.toLocaleString('en-GB', dateFormatOptions)
-						}
-						lastUpdated={
-							new Date(post.lastUpdated)
-								.toLocaleString('en-GB', dateFormatOptions)
-						}/>
+						key={post.id}
+						link={`/blog/${post.id}`}
+						title={post.title}/>
 				);
 			});
 	}
@@ -142,7 +122,7 @@ export default function Blog() {
 			<Title>Blog</Title>
 			<StyledFilters>
 				{
-					categoryBox
+					// categoryBox
 				}
 				<InputTextBox
 					placeholder="Filter..."

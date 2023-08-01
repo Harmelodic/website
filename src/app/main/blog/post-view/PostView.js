@@ -1,11 +1,9 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import styled, { useTheme } from 'styled-components';
-import { Markdown } from '@harmelodic/react-ui-lib';
+import { Markdown } from '@harmelodic/web-ui';
 import { Main } from '../../Main';
-import {
-	fetchPost, fetchMarkdown, selectedPostSelector, markdownTextSelector, selectedPost, markdownText,
-} from './postViewState';
+import { fetchPost, selectedPostSelector, selectedPost } from './postViewState';
 import { LoadingTextBlock } from '../../../../lib/LoadingTextBlock';
 import { HorizontalRule } from '../../../../lib/HorizontalRule';
 import { ReadingSpace } from '../../../../lib/ReadingSpace';
@@ -82,24 +80,17 @@ const Category = styled.div`
 
 export default function PostView() {
 	const post = useSelector(selectedPostSelector);
-	const textToRender = useSelector(markdownTextSelector);
 
 	const params = useParams();
 
 	const dispatch = useDispatch();
-	useEffect(() => {
-		if (post.datePosted) {
-			dispatch(fetchMarkdown(post.fileName));
-		}
-	}, [post.datePosted]);
 
 	useEffect(() => {
-		dispatch(fetchPost(parseInt(params.id)));
+		dispatch(fetchPost(params.id));
 		window.scroll(0, 0);
 
 		return function cleanup() {
 			dispatch(selectedPost.actions.clear());
-			dispatch(markdownText.actions.clear());
 		};
 	}, []);
 
@@ -107,17 +98,17 @@ export default function PostView() {
 
 	const theme = useTheme();
 
-	const readyToRender = title && textToRender;
+	const readyToRender = title && post.content;
 
 	return readyToRender ? (
 		<PostViewMain>
 			<PostViewWrapper>
 				<PostHeading>{title}</PostHeading>
 				<Markdown
-					markdown={textToRender}
+					markdown={post.content}
 					aTagAttributes='target="_blank" rel="nofollow"' />
 				<Category>
-					{textToRender && post.category}
+					{post.content && post.category}
 				</Category>
 			</PostViewWrapper>
 			<ReadingSpace />

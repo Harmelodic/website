@@ -43,7 +43,7 @@ export function App() {
 						<Routes>
 							<Route exact path="/" element={<Home />} />
 							<Route exact path="/blog" element={<Blog />} />
-							<Route exact path="/blog/post/:id" element={<PostView />} />
+							<Route exact path="/blog/:id" element={<PostView />} />
 							<Route exact path="/blog/list/1532228220000" element={<FilmsSeen />} />
 							<Route exact path="/blog/list/1532228640000" element={<TvShowsSeen />} />
 							<Route exact path="/creations" element={<Creations />} />

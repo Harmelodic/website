@@ -57,17 +57,6 @@ export function Post(props) {
 		return (
 			<StyledPost to={props.link}>
 				<StyledTitle className="heading">{props.title}</StyledTitle>
-				<StyledSubtitle>
-					{
-						props.datePosted
-					}
-				</StyledSubtitle>
-				{
-					props.lastUpdated !== props.datePosted &&
-					<StyledSubtitle>
-						{`Last Updated: ${props.lastUpdated}`}
-					</StyledSubtitle>
-				}
 			</StyledPost>
 		);
 	}
