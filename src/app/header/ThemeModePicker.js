@@ -24,15 +24,19 @@ export function ThemeModePicker() {
 	const theme = useTheme();
 
 	let IconToShow;
+	let tooltipText;
 	switch (selectedThemeMode) {
 		case 'system-preference':
 			IconToShow = Brightness4;
+			tooltipText = 'System Default Theme';
 			break;
 		case 'light':
 			IconToShow = LightMode;
+			tooltipText = 'Always Light Theme';
 			break;
 		case 'dark':
 			IconToShow = DarkMode;
+			tooltipText = 'Always Dark Theme';
 			break;
 	}
 
@@ -51,7 +55,7 @@ export function ThemeModePicker() {
 	}
 
 	return (
-		<StyledPicker onClick={changeMode}>
+		<StyledPicker onClick={changeMode} title={tooltipText}>
 			<IconToShow sx={{ color: theme.font.normalNegativeColor }} />
 		</StyledPicker>
 	);
