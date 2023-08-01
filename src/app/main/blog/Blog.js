@@ -122,7 +122,7 @@ export default function Blog() {
 			<Title>Blog</Title>
 			<StyledFilters>
 				{
-					// categoryBox
+					categoryBox
 				}
 				<InputTextBox
 					placeholder="Filter..."
