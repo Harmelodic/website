@@ -1,6 +1,5 @@
 import { NavLink, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
-import { useWindowSize } from '../../useWindowSize';
 
 const Nav = styled.nav`
 	display: flex;
