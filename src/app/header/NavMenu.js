@@ -35,10 +35,8 @@ export function NavMenu() {
 	const location = useLocation();
 	const path = location.pathname;
 
-	const windowSize = useWindowSize();
-
 	return (
-		<Nav thinView={windowSize.width < 650}>
+		<Nav>
 			<NavItem end to="/" selected={path === '/'}>
                 Me
 			</NavItem>

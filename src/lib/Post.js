@@ -54,9 +54,18 @@ export function Post(props) {
 			</StyledPost>
 		);
 	} else {
+		const categoryList = props.categories.map((category) => {
+			const categoryMapping = props.categoryMappingList.find(categoryMapping => categoryMapping.id === category);
+			return categoryMapping.name;
+		});
 		return (
 			<StyledPost to={props.link}>
 				<StyledTitle className="heading">{props.title}</StyledTitle>
+				<StyledSubtitle>
+					{
+						categoryList.length === 1 ? categoryList[0] : categoryList.join(', ')
+					}
+				</StyledSubtitle>
 			</StyledPost>
 		);
 	}

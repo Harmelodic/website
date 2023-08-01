@@ -100,8 +100,7 @@ export default function Blog() {
 		postsToRender = posts
 			.filter(post => post.title.toUpperCase().includes(filterBySearch.toUpperCase()))
 			.filter((post) => {
-				if (filterByCategory === '' ||
-					post.category === filterByCategory) {
+				if (filterByCategory === '' || post.categories.includes(filterByCategory)) {
 					return post;
 				} else {
 					return null;
@@ -112,7 +111,9 @@ export default function Blog() {
 					<Post
 						key={post.id}
 						link={`/blog/${post.id}`}
-						title={post.title}/>
+						title={post.title}
+						categories={post.categories}
+						categoryMappingList={categories} />
 				);
 			});
 	}
