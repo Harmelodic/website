@@ -1,4 +1,5 @@
 export const lightTheme = {
+	name: 'light',
 	// General styling
 	font: {
 		family: 'Helvetica, \'Segoe UI\', sans-serif',

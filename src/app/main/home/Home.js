@@ -5,7 +5,7 @@ import { ReadingSpace } from '../../../lib/ReadingSpace';
 import { Title } from '../../../lib/Title';
 import { ProjectSmall } from '../../../lib/ProjectSmall';
 import { CircleImage } from '../../../lib/CircleImage';
-import styled from 'styled-components';
+import styled, { useTheme } from 'styled-components';
 
 const ImageOfMe = styled(CircleImage)`
 	margin-top: 50px;
@@ -13,6 +13,8 @@ const ImageOfMe = styled(CircleImage)`
 `;
 
 export default function Home() {
+	const theme = useTheme();
+
 	return (
 		<Main>
 			<ImageOfMe src="/images/headshot.webp" />
@@ -31,14 +33,9 @@ export default function Home() {
 
 			<RowInfoBox>
 				<SocialMedia
-					href="https://twitter.com/Harmelodic"
-					title="Twitter"
-					src="/images/twitter.svg"
-				/>
-				<SocialMedia
 					href="https://github.com/Harmelodic"
 					title="GitHub"
-					src="/images/github.svg"
+					src={`/images/github-${theme.name}.svg`}
 				/>
 				<SocialMedia
 					href="https://www.linkedin.com/in/harmelodic/"
@@ -53,7 +50,7 @@ export default function Home() {
 				<SocialMedia
 					href="mailto:matt@harmelodic.com"
 					title="Email"
-					src="/images/mail.svg"
+					src={`/images/mail-${theme.name}.svg`}
 				/>
 			</RowInfoBox>
 

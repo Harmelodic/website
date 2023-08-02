@@ -15,7 +15,8 @@ const Content = styled.div`
   flex-flow: row wrap;
   align-items: flex-start;
   justify-content: center;
-  width: 80%;
+  width: 100%;
+  max-width: 1500px;
 `;
 
 export default function OpenSource() {

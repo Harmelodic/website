@@ -12,6 +12,7 @@ export function initialiseStore() {
 	return configureStore({
 		reducer: {
 			themeMode: themeModeReducer,
+
 			creations: creationsReducer,
 			openSourceProjects: openSourceProjectsReducer,
 

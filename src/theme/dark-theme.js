@@ -1,4 +1,5 @@
 export const darkTheme = {
+	name: 'dark',
 	// General styling
 	font: {
 		family: 'Helvetica, \'Segoe UI\', sans-serif',
