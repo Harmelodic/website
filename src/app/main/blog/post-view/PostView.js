@@ -42,17 +42,14 @@ const PostViewWrapper = styled.div`
 	& > div > h1 {
 		padding-bottom: 15px;
 		border-bottom: solid ${props => props.theme.separator} 2px;
-	    color: ${props => props.theme.colors.accents.green};
 	}
 	& > div > h2 {
 		padding-top: 20px;
 		padding-bottom: 10px;
 		border-bottom: solid ${props => props.theme.separator} 1px;
-		color: ${props => props.theme.colors.accents.green};
 	}
 	& > .heading, h3, h4, h5, h6 {
 		padding-top: 15px;
-		color: ${props => props.theme.colors.accents.green};
 	}
 	
 	// Creating a gap for clean #anchor linking
