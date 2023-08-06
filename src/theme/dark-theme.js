@@ -42,7 +42,7 @@ export const darkTheme = {
 		accents: {
 			red: '#b40000',
 			redFaded: 'rgba(180, 0, 0, 0.4)',
-			green: '#080',
+			green: '#090',
 			greenFaded: 'rgba(0, 255, 0, 0.15)',
 			blue: '#003cff',
 			blueFaded: 'rgba(0, 60, 255, 0.5)',
