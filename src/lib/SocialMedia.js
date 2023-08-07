@@ -24,6 +24,7 @@ const StyledSocialMedia = styled.a`
 const StyledImage = styled.img`
 	width: 55%;
 	height: 55%;
+	border-radius: 3px;
 `;
 
 export function SocialMedia(props) {

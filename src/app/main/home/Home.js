@@ -33,6 +33,11 @@ export default function Home() {
 
 			<RowInfoBox>
 				<SocialMedia
+					href="https://bsky.app/profile/harmelodic.com"
+					title="Bluesky"
+					src={`/images/bluesky.webp`}
+				/>
+				<SocialMedia
 					href="https://github.com/Harmelodic"
 					title="GitHub"
 					src={`/images/github-${theme.name}.svg`}
