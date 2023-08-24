@@ -11,10 +11,10 @@
 	},
 	"author": "Harmelodic",
 	"devDependencies": {
-		"@babel/core": "7.22.10",
+		"@babel/core": "7.22.11",
 		"@babel/preset-react": "7.22.5",
 		"@harmelodic/web-ui": "0.1.2",
-		"@mui/icons-material": "5.14.3",
+		"@mui/icons-material": "5.14.6",
 		"@reduxjs/toolkit": "1.9.5",
 		"babel-loader": "9.1.3",
 		"compression-webpack-plugin": "10.0.0",
