@@ -9,14 +9,8 @@ import { SelectBox } from '../../../lib/SelectBox';
 import { Title } from '../../../lib/Title';
 import { RowInfoBox } from '../../../lib/InfoBox';
 import { Main } from '../Main';
-import {
-	categoriesSelector, fetchCategories,
-	loadingCategoriesStatusSelector,
-} from './categories';
-import {
-	postsSelector,
-	loadingPostsStatusSelector, fetchPosts,
-} from './posts';
+import { categoriesSelector, fetchCategories } from './categories';
+import { postsSelector, fetchPosts } from './posts';
 
 const StyledFilters = styled.div`
   display: flex;
@@ -37,29 +31,31 @@ const Posts = styled.div`
 
 export default function Blog() {
 	const dispatch = useDispatch();
+	const posts = useSelector(postsSelector);
+	const categories = useSelector(categoriesSelector);
+
+	const [isLoadingPosts, setLoadingPosts] = useState(true);
+	const [isLoadingCategories, setLoadingCategories] = useState(true);
 
 	useEffect(() => {
-		dispatch(fetchPosts());
-		dispatch(fetchCategories());
+		setLoadingPosts(true);
+		setLoadingCategories(true);
+		dispatch(fetchPosts(() => setLoadingPosts(false)));
+		dispatch(fetchCategories(() => setLoadingCategories(false)));
 	}, []);
 
 	const [filterBySearch, setFilterBySearch] = useState('');
 	const [filterByCategory, setFilterByCategory] = useState('');
 
-	const posts = useSelector(postsSelector);
-	const loadingPostsStatus = useSelector(loadingPostsStatusSelector);
-	const categories = useSelector(categoriesSelector);
-	const loadingCategoriesStatus = useSelector(loadingCategoriesStatusSelector);
-
 	// Render Categories - with Loading fallback
 	let categoryBox;
-	if (loadingCategoriesStatus && categories.length === 0) {
+	if (isLoadingCategories) {
 		categoryBox = (
 			<SelectBox
 				onChange={event => setFilterByCategory(event.target.value)}
 				value={filterByCategory}
 			>
-				<option value="">---------------------------</option>
+				<option value="">Loading...</option>
 			</SelectBox>
 		);
 	} else {
@@ -86,7 +82,7 @@ export default function Blog() {
 
 	// Render Posts - with Loading fallback
 	let postsToRender;
-	if (loadingPostsStatus && posts.length === 0) {
+	if (isLoadingPosts) {
 		postsToRender = Array(9).fill('').map((_, index) => {
 			return (
 				<Post
@@ -94,7 +90,7 @@ export default function Blog() {
 					loading={true}/>
 			);
 		});
-	} else if (!loadingPostsStatus && posts.length === 0) {
+	} else if (posts.length === 0) {
 		postsToRender = <RowInfoBox>No posts found at this time.</RowInfoBox>;
 	} else {
 		postsToRender = posts

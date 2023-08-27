@@ -17,35 +17,14 @@ export function postsSelector(state) {
 	return state.posts.value;
 }
 
-export const loadingPostsStatus = createSlice({
-	name: 'loadingPostsStatus',
-	initialState: {
-		value: false,
-	},
-	reducers: {
-		started: (state) => {
-			state.value = true;
-		},
-		finished: (state) => {
-			state.value = false;
-		},
-	},
-});
-
-export function loadingPostsStatusSelector(state) {
-	return state.loadingPostsStatus.value;
-}
-
 const blogAPI = process.env.BLOG_API || '';
 
-export function fetchPosts() {
+export function fetchPosts(done) {
 	return async (dispatch) => {
-		dispatch(loadingPostsStatus.actions.started());
-
 		const response = await request('GET', `${blogAPI}/post`);
 		const data = await response.json();
 
 		dispatch(posts.actions.setPosts(data));
-		dispatch(loadingPostsStatus.actions.finished());
+		done();
 	};
 }

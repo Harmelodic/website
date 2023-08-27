@@ -56,7 +56,7 @@ export function Post(props) {
 	} else {
 		const categoryList = props.categories.map((category) => {
 			const categoryMapping = props.categoryMappingList.find(categoryMapping => categoryMapping.id === category);
-			return categoryMapping.name;
+			return categoryMapping ? categoryMapping.name : [''];
 		});
 		return (
 			<StyledPost to={props.link}>

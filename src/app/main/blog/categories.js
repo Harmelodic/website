@@ -17,35 +17,13 @@ export function categoriesSelector(state) {
 	return state.categories.value;
 }
 
-export const loadingCategoriesStatus = createSlice({
-	name: 'loadingCategoriesStatus',
-	initialState: {
-		value: false,
-	},
-	reducers: {
-		started: (state) => {
-			state.value = true;
-		},
-		finished: (state) => {
-			state.value = false;
-		},
-	},
-});
-
-export function loadingCategoriesStatusSelector(state) {
-	return state.loadingCategoriesStatus.value;
-}
-
 const blogAPI = process.env.BLOG_API || '';
 
-export function fetchCategories() {
+export function fetchCategories(done) {
 	return async (dispatch) => {
-		dispatch(loadingCategoriesStatus.actions.started());
-
 		const response = await request('GET', `${blogAPI}/category`);
 		const data = await response.json();
-
 		dispatch(categories.actions.setCategories(data));
-		dispatch(loadingCategoriesStatus.actions.finished());
+		done();
 	};
 }
