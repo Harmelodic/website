@@ -13,7 +13,9 @@ export const posts = createSlice({
 	},
 });
 
-export const postsSelector = state => state.posts.value;
+export function postsSelector(state) {
+	return state.posts.value;
+}
 
 export const loadingPostsStatus = createSlice({
 	name: 'loadingPostsStatus',
@@ -30,7 +32,9 @@ export const loadingPostsStatus = createSlice({
 	},
 });
 
-export const loadingPostsStatusSelector = state => state.loadingPostsStatus.value;
+export function loadingPostsStatusSelector(state) {
+	return state.loadingPostsStatus.value;
+}
 
 const blogAPI = process.env.BLOG_API || '';
 

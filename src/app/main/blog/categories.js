@@ -13,7 +13,9 @@ export const categories = createSlice({
 	},
 });
 
-export const categoriesSelector = state => state.categories.value;
+export function categoriesSelector(state) {
+	return state.categories.value;
+}
 
 export const loadingCategoriesStatus = createSlice({
 	name: 'loadingCategoriesStatus',
@@ -30,7 +32,9 @@ export const loadingCategoriesStatus = createSlice({
 	},
 });
 
-export const loadingCategoriesStatusSelector = state => state.loadingCategoriesStatus.value;
+export function loadingCategoriesStatusSelector(state) {
+	return state.loadingCategoriesStatus.value;
+}
 
 const blogAPI = process.env.BLOG_API || '';
 

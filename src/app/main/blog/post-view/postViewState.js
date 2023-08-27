@@ -16,7 +16,9 @@ export const selectedPost = createSlice({
 	},
 });
 
-export const selectedPostSelector = state => state.selectedPost.value;
+export function selectedPostSelector(state) {
+	return state.selectedPost.value;
+}
 
 const blogAPI = process.env.BLOG_API || '';
 

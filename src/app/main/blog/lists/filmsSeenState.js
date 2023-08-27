@@ -13,9 +13,9 @@ export const filmsSeen = createSlice({
 	},
 });
 
-export const filmsSeenSelector = state => state.filmsSeen.value;
-
-export default filmsSeen.reducer;
+export function filmsSeenSelector(state) {
+	return state.filmsSeen.value;
+}
 
 const blogContentServer = process.env.BLOG_CONTENT_SERVER || '';
 

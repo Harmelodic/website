@@ -13,9 +13,9 @@ export const tvShowsSeen = createSlice({
 	},
 });
 
-export const tvShowsSeenSelector = state => state.tvShowsSeen.value;
-
-export default tvShowsSeen.reducer;
+export function tvShowsSeenSelector(state) {
+	return state.tvShowsSeen.value;
+}
 
 const blogContentServer = process.env.BLOG_CONTENT_SERVER || '';
 

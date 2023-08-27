@@ -21,6 +21,6 @@ export function fetchCreations() {
 	};
 }
 
-export const creationsSelector = state => state.creations.value;
-
-export default creations.reducer;
+export function creationsSelector(state) {
+	return state.creations.value;
+}

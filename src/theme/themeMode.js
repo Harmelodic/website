@@ -21,6 +21,6 @@ export const themeMode = createSlice({
 	},
 });
 
-export const themeModeSelector = state => state.themeMode.value;
-
-export default themeMode.reducer;
+export function themeModeSelector(state) {
+	return state.themeMode.value;
+}

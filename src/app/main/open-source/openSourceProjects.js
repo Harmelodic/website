@@ -28,6 +28,6 @@ export function fetchOpenSourceProjects() {
 	};
 }
 
-export const openSourceProjectsSelector = state => state.openSourceProjects.value;
-
-export default openSourceProjects.reducer;
+export function openSourceProjectsSelector(state) {
+	return state.openSourceProjects.value;
+}

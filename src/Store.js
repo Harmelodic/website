@@ -1,20 +1,20 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { categories, loadingCategoriesStatus } from './app/main/blog/categories';
-import filmsSeenReducer from './app/main/blog/lists/filmsSeenState';
-import tvShowsSeenReducer from './app/main/blog/lists/tvShowsSeenState';
+import { filmsSeen } from './app/main/blog/lists/filmsSeenState';
+import { tvShowsSeen } from './app/main/blog/lists/tvShowsSeenState';
 import { selectedPost } from './app/main/blog/post-view/postViewState';
 import { loadingPostsStatus, posts } from './app/main/blog/posts';
-import creationsReducer from './app/main/creations/creationsState';
-import openSourceProjectsReducer from './app/main/open-source/openSourceProjects';
-import themeModeReducer from './theme/themeMode';
+import { creations } from './app/main/creations/creationsState';
+import { openSourceProjects } from './app/main/open-source/openSourceProjects';
+import { themeMode } from './theme/themeMode';
 
 export function initialiseStore() {
 	return configureStore({
 		reducer: {
-			themeMode: themeModeReducer,
+			themeMode: themeMode.reducer,
 
-			creations: creationsReducer,
-			openSourceProjects: openSourceProjectsReducer,
+			creations: creations.reducer,
+			openSourceProjects: openSourceProjects.reducer,
 
 			posts: posts.reducer,
 			loadingPostsStatus: loadingPostsStatus.reducer,
@@ -23,8 +23,8 @@ export function initialiseStore() {
 
 			selectedPost: selectedPost.reducer,
 
-			filmsSeen: filmsSeenReducer,
-			tvShowsSeen: tvShowsSeenReducer,
+			filmsSeen: filmsSeen.reducer,
+			tvShowsSeen: tvShowsSeen.reducer,
 		},
 	});
 }
