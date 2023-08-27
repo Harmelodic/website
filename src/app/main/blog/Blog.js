@@ -44,26 +44,12 @@ export default function Blog() {
 		dispatch(fetchCategories(() => setLoadingCategories(false)));
 	}, []);
 
-	const [filterBySearch, setFilterBySearch] = useState('');
-	const [filterByCategory, setFilterByCategory] = useState('');
-
-	// Render Categories - with Loading fallback
-	let categoryBox;
+	let categoryOptions;
 	if (isLoadingCategories) {
-		categoryBox = (
-			<SelectBox
-				onChange={event => setFilterByCategory(event.target.value)}
-				value={filterByCategory}
-			>
-				<option value="">Loading...</option>
-			</SelectBox>
-		);
+		categoryOptions = <option value="">Loading...</option>;
 	} else {
-		categoryBox = (
-			<SelectBox
-				onChange={event => setFilterByCategory(event.target.value)}
-				value={filterByCategory}
-			>
+		categoryOptions = (
+			<>
 				<option value="">All Categories</option>
 				{
 					categories.map((category) => {
@@ -76,20 +62,20 @@ export default function Blog() {
 						);
 					})
 				}
-			</SelectBox>
+			</>
 		);
 	}
 
-	// Render Posts - with Loading fallback
+	const [filterBySearch, setFilterBySearch] = useState('');
+	const [filterByCategory, setFilterByCategory] = useState('');
+
 	let postsToRender;
 	if (isLoadingPosts) {
-		postsToRender = Array(9).fill('').map((_, index) => {
-			return (
-				<Post
-					key={index}
-					loading={true}/>
-			);
-		});
+		postsToRender = Array(9).fill('').map((_, index) => (
+			<Post
+				key={index}
+				loading={true}/>
+		));
 	} else if (posts.length === 0) {
 		postsToRender = <RowInfoBox>No posts found at this time.</RowInfoBox>;
 	} else {
@@ -102,25 +88,26 @@ export default function Blog() {
 					return null;
 				}
 			})
-			.map((post) => {
-				return (
-					<Post
-						key={post.id}
-						link={`/blog/${post.id}`}
-						title={post.title}
-						categories={post.categories}
-						categoryMappingList={categories} />
-				);
-			});
+			.map(post => (
+				<Post
+					key={post.id}
+					link={`/blog/${post.id}`}
+					title={post.title}
+					categories={post.categories}
+					categoryMappingList={categories} />
+			));
 	}
 
 	return (
 		<Main>
 			<Title>Blog</Title>
 			<StyledFilters>
-				{
-					categoryBox
-				}
+				<SelectBox
+					onChange={event => setFilterByCategory(event.target.value)}
+					value={filterByCategory}
+				>
+					{categoryOptions}
+				</SelectBox>
 				<InputTextBox
 					placeholder="Filter..."
 					onChange={event => setFilterBySearch(event.target.value)}
