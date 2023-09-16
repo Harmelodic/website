@@ -81,9 +81,9 @@ export function ProjectLarge(props) {
 						{
 							props.subtitle
 								.split('\n')
-								.map((subtitleString, index) => {
+								.map((subtitleString) => {
 									return (
-										<div key={index}>{subtitleString}</div>
+										<div key={subtitleString}>{subtitleString}</div>
 									);
 								})
 						}

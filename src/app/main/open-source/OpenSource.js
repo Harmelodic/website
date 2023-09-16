@@ -54,10 +54,10 @@ export default function OpenSource() {
 							}
 							return 0;
 						})
-						.map((project, index) => {
+						.map((project) => {
 							return (
 								<OpenSourceProjectEntry
-									key={index}
+									key={project.name}
 									title={project.name}
 									license={project.license}
 									subtitle={project.description}
