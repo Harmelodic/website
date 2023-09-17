@@ -13,7 +13,7 @@ const ShelfBox = styled.div`
 `;
 
 const ShelfTitle = styled.h3`
-	font-weight: 300;
+	font-weight: ${props => props.theme.font.weight};
 	color: ${props => props.theme.font.titleColor};
 `;
 

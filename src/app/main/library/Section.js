@@ -11,7 +11,7 @@ const SectionArea = styled.div`
 `;
 
 const SectionTitle = styled.h2`
-	font-weight: 300;
+	font-weight: ${props => props.theme.font.weight};
 	color: ${props => props.theme.font.titleColor};
 `;
 
@@ -26,6 +26,7 @@ const Subsections = styled.div`
 export function Section(props) {
 	return (
 		<SectionArea>
+			<div>***</div>
 			<SectionTitle>{props.title}</SectionTitle>
 			<Subsections>
 				{props.children}
