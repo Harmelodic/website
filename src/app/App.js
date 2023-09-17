@@ -11,6 +11,7 @@ const FilmsSeen = lazy(() => import('./main/blog/lists/FilmsSeen'));
 const TvShowsSeen = lazy(() => import('./main/blog/lists/TvShowsSeen'));
 const Creations = lazy(() => import('./main/creations/Creations'));
 const OpenSource = lazy(() => import('./main/open-source/OpenSource'));
+const Library = lazy(() => import('./main/library/Library'));
 const WorkHistory = lazy(() => import('./main/work-history/WorkHistory'));
 const Running = lazy(() => import('./main/running/Running'));
 const NoPageFound = lazy(() => import('./main/no-page-found/NoPageFound'));
@@ -48,6 +49,7 @@ export function App() {
 							<Route exact path="/blog/list/1532228640000" element={<TvShowsSeen />} />
 							<Route exact path="/creations" element={<Creations />} />
 							<Route exact path="/open-source" element={<OpenSource />} />
+							<Route exact path="/library" element={<Library />} />
 							<Route exact path="/work-history" element={<WorkHistory />} />
 							<Route exact path="/running" element={<Running />} />
 							<Route path="*" element={<NoPageFound />} />

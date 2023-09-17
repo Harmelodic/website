@@ -2,7 +2,7 @@ export const lightTheme = {
 	name: 'light',
 	// General styling
 	font: {
-		family: 'Helvetica, \'Segoe UI\', sans-serif',
+		family: 'Helvetica, sans-serif',
 		weight: 300,
 		titleColor: '#000',
 		subtitleColor: '#999',

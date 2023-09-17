@@ -2,7 +2,7 @@ export const darkTheme = {
 	name: 'dark',
 	// General styling
 	font: {
-		family: 'Helvetica, \'Segoe UI\', sans-serif',
+		family: 'Helvetica, sans-serif',
 		weight: 300,
 		titleColor: '#fff',
 		subtitleColor: '#999',

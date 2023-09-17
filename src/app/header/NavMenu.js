@@ -48,6 +48,9 @@ export function NavMenu() {
 			<NavItem end to="/open-source" selected={path === '/open-source'}>
                 Open Source
 			</NavItem>
+			<NavItem end to="/library" selected={path === '/library'}>
+				Library
+			</NavItem>
 			<NavItem end to="/work-history" selected={path === '/work-history'}>
                 Work History
 			</NavItem>
