@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { useTheme } from 'styled-components';
 import { Hyperlink } from '../../../lib/Hyperlink';
 
 const LibraryLinkWrapper = styled.div`
@@ -15,10 +15,12 @@ const LinkImage = styled.img`
 `;
 
 export function LibraryLink(props) {
+	const theme = useTheme();
+
 	return (
 		<LibraryLinkWrapper>
-			<LinkImage src={props.imgSrc} />
-			<Hyperlink href={props.href}>{props.title}</Hyperlink>
+			<LinkImage src={props.imgSrc || `/images/external-link-${theme.name}.svg`} />
+			<Hyperlink href={props.href} target="_blank" rel="noopener">{props.title}</Hyperlink>
 		</LibraryLinkWrapper>
 	);
 }

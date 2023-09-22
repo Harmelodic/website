@@ -9,9 +9,9 @@ export const darkTheme = {
 		normalColor: '#fff',
 		normalNegativeColor: '#fff',
 		placeholderColor: '#aaa',
-		linkColor: '#3573d9',
+		linkColor: '#6d9dec',
 		linkActiveColor: '#df0000',
-		linkVisitedColor: '#9156c4',
+		linkVisitedColor: '#b284da',
 		code: {
 			color: '#fff',
 			background: '#000',
