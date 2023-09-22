@@ -20,7 +20,7 @@ export function postsSelector(state) {
 const blogAPI = process.env.BLOG_API || '';
 
 export function fetchPosts(done) {
-	return async (dispatch) => {
+	return async dispatch => {
 		const response = await request('GET', `${blogAPI}/post`);
 		const data = await response.json();
 

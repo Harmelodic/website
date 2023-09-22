@@ -10,7 +10,7 @@ export const selectedPost = createSlice({
 		setSelectedPost: (state, action) => {
 			state.value = action.payload;
 		},
-		clear: (state) => {
+		clear: state => {
 			state.value = {};
 		},
 	},
@@ -23,7 +23,7 @@ export function selectedPostSelector(state) {
 const blogAPI = process.env.BLOG_API || '';
 
 export function fetchPost(id) {
-	return async (dispatch) => {
+	return async dispatch => {
 		const response = await request('GET', `${blogAPI}/post/${id}`);
 		const data = await response.json();
 		dispatch(selectedPost.actions.setSelectedPost(data));

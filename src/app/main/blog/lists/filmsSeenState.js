@@ -20,7 +20,7 @@ export function filmsSeenSelector(state) {
 const blogContentServer = process.env.BLOG_CONTENT_SERVER || '';
 
 export function fetchFilmsSeen() {
-	return async (dispatch) => {
+	return async dispatch => {
 		const response = await request('GET', `${blogContentServer}/posts/filmsSeen.json`);
 		const data = await response.json();
 		dispatch(filmsSeen.actions.setFilmsSeen(data));

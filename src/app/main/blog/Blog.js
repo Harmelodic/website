@@ -52,7 +52,7 @@ export default function Blog() {
 			<>
 				<option value="">All Categories</option>
 				{
-					categories.map((category) => {
+					categories.map(category => {
 						return (
 							<option
 								key={category.id}
@@ -81,7 +81,7 @@ export default function Blog() {
 	} else {
 		postsToRender = posts
 			.filter(post => post.title.toUpperCase().includes(filterBySearch.toUpperCase()))
-			.filter((post) => {
+			.filter(post => {
 				if (filterByCategory === '' || post.categories.includes(filterByCategory)) {
 					return post;
 				} else {

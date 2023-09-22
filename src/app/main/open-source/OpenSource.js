@@ -54,7 +54,7 @@ export default function OpenSource() {
 							}
 							return 0;
 						})
-						.map((project) => {
+						.map(project => {
 							return (
 								<OpenSourceProjectEntry
 									key={project.name}

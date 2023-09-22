@@ -55,7 +55,7 @@ export default function FilmsSeen() {
 								return filmA.position - filmB.position;
 						}
 					})
-					.map((film) => {
+					.map(film => {
 						return (
 							<MediaListEntry
 								key={film.tconst}

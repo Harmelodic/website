@@ -56,7 +56,7 @@ export default function TvShowsSeen() {
 								return tvShowA.position - tvShowB.position;
 						}
 					})
-					.map((tvShow) => {
+					.map(tvShow => {
 						return (
 							<MediaListEntry
 								key={tvShow.tconst}

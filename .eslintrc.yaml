@@ -15,7 +15,7 @@ plugins:
   - react
 rules:
   {
-    arrow-parens: [ "error", "as-needed", { "requireForBlockBody": true } ],
+    arrow-parens: [ "error", "as-needed", { "requireForBlockBody": false } ],
     indent: [ "error", "tab", { "SwitchCase": 1 } ],
     max-len: [ "error", { "code": 120 } ],
     object-curly-spacing: [ "error", "always" ],

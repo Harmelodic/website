@@ -20,7 +20,7 @@ export function tvShowsSeenSelector(state) {
 const blogContentServer = process.env.BLOG_CONTENT_SERVER || '';
 
 export function fetchTvShowsSeen() {
-	return async (dispatch) => {
+	return async dispatch => {
 		const response = await request('GET', `${blogContentServer}/posts/tvShowsSeen.json`);
 		const data = await response.json();
 		dispatch(tvShowsSeen.actions.setTvShowsSeen(data));

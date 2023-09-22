@@ -14,7 +14,7 @@ export const creations = createSlice({
 });
 
 export function fetchCreations() {
-	return async (dispatch) => {
+	return async dispatch => {
 		const response = await request('GET', '/resources/creations.json');
 		const data = await response.json();
 		dispatch(creations.actions.setCreations(data));

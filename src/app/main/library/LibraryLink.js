@@ -3,13 +3,15 @@ import { Hyperlink } from '../../../lib/Hyperlink';
 
 const LibraryLinkWrapper = styled.div`
     display: flex;
-    align-items: center;
+    align-items: start;
+	white-space: pre-wrap;
 `;
 
 const LinkImage = styled.img`
 	width: 20px;
+	min-width: 20px;
 	height: 20px;
-	margin-right: 10px;
+	margin: 8px 10px;
 `;
 
 export function LibraryLink(props) {

@@ -3,21 +3,32 @@ import { Main } from '../Main';
 import { ReadingSpace } from '../../../lib/ReadingSpace';
 import { Title } from '../../../lib/Title';
 import styled from 'styled-components';
-import { Section } from './Section';
 import { Shelf } from './Shelf';
 import { LibraryLink } from './LibraryLink';
-
-import libraryData from './library.json';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchLibrary, librarySelector } from './libraryState';
+import { useEffect } from 'react';
 
 const LibraryContext = styled.div`
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: flex-start;
-	align-items: flex-start;
+	align-items: center;
 	width: 80%;
+	max-width: 1400px;
 `;
 
 export default function Library() {
+	const dispatch = useDispatch();
+	const library = useSelector(librarySelector);
+
+	useEffect(() => {
+		dispatch(fetchLibrary());
+	}, []);
+
+	const categories = [...new Set(library.map(libraryLinks => libraryLinks.category))];
+	categories.sort();
+
 	return (
 		<Main>
 			<Title>Library</Title>
@@ -31,23 +42,21 @@ export default function Library() {
 				</span>
 			</ColumnInfoBox>
 
-			{/* Section > Subsections > Links */}
 			<LibraryContext>
-				{
-					libraryData.map(section => (
-						<Section title={section.title}>
-							{section.shelves.map(shelf => (
-								<Shelf title={shelf.title}>
-									{shelf.links.map(link => (
-										<LibraryLink title={link.title}
-													 href={link.href}
-													 imgSrc={link.imgSrc} />
-									))}
-								</Shelf>
-							))}
-						</Section>
-					))
-				}
+				{categories.map(category => (
+					<Shelf title={category} key={category}>
+						{library
+							.filter(libraryLink => libraryLink.category === category)
+							.sort((a, b) => a.title.toUpperCase().localeCompare(b.title.toUpperCase()))
+							.map(libraryLink => (
+								<LibraryLink key={libraryLink.title}
+											 title={libraryLink.title}
+											 href={libraryLink.href}
+											 imgSrc={libraryLink.favicon} />
+							))
+						}
+					</Shelf>
+				))}
 			</LibraryContext>
 
 			<ReadingSpace/>

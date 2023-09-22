@@ -20,7 +20,7 @@ export function categoriesSelector(state) {
 const blogAPI = process.env.BLOG_API || '';
 
 export function fetchCategories(done) {
-	return async (dispatch) => {
+	return async dispatch => {
 		const response = await request('GET', `${blogAPI}/category`);
 		const data = await response.json();
 		dispatch(categories.actions.setCategories(data));

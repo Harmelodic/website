@@ -69,7 +69,7 @@ export default function SortPicker(props) {
 	return (
 		<StyledSortPicker>
 			{
-				sortChoices.map((choice) => {
+				sortChoices.map(choice => {
 					return (
 						<SortChoice
 							key={choice.sort}

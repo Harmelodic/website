@@ -54,7 +54,7 @@ export function Post(props) {
 			</StyledPost>
 		);
 	} else {
-		const categoryList = props.categories.map((category) => {
+		const categoryList = props.categories.map(category => {
 			const categoryMapping = props.categoryMappingList.find(categoryMapping => categoryMapping.id === category);
 			return categoryMapping ? categoryMapping.name : [''];
 		});

@@ -42,7 +42,7 @@ export default function Creations() {
 							}
 							return 0;
 						})
-						.map((creation) => {
+						.map(creation => {
 							return (
 								<ProjectLarge
 									key={creation.src}

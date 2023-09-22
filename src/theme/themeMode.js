@@ -6,15 +6,15 @@ export const themeMode = createSlice({
 		value: localStorage.getItem('themeMode') || 'system-preference',
 	},
 	reducers: {
-		setToSystemPreference: (state) => {
+		setToSystemPreference: state => {
 			state.value = 'system-preference';
 			localStorage.setItem('themeMode', 'system-preference');
 		},
-		setToLight: (state) => {
+		setToLight: state => {
 			state.value = 'light';
 			localStorage.setItem('themeMode', 'light');
 		},
-		setToDark: (state) => {
+		setToDark: state => {
 			state.value = 'dark';
 			localStorage.setItem('themeMode', 'dark');
 		},

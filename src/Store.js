@@ -6,6 +6,7 @@ import { selectedPost } from './app/main/blog/post-view/postViewState';
 import { posts } from './app/main/blog/posts';
 import { creations } from './app/main/creations/creationsState';
 import { openSourceProjects } from './app/main/open-source/openSourceProjects';
+import { library } from './app/main/library/libraryState';
 import { themeMode } from './theme/themeMode';
 
 export function initialiseStore() {
@@ -13,13 +14,14 @@ export function initialiseStore() {
 		reducer: {
 			themeMode: themeMode.reducer,
 
+			posts: posts.reducer,
+			categories: categories.reducer,
+			selectedPost: selectedPost.reducer,
+
 			creations: creations.reducer,
 			openSourceProjects: openSourceProjects.reducer,
 
-			posts: posts.reducer,
-			categories: categories.reducer,
-
-			selectedPost: selectedPost.reducer,
+			library: library.reducer,
 
 			filmsSeen: filmsSeen.reducer,
 			tvShowsSeen: tvShowsSeen.reducer,
