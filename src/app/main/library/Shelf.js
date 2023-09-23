@@ -6,11 +6,12 @@ const ShelfBox = styled.div`
     justify-content: flex-start;
     align-items: flex-start;
 	
-	margin: 0 10px 20px 10px;
+	margin: 0 auto 20px auto;
 	border: solid 1px ${props => props.theme.colors.softBorder};
 	border-radius: 5px;
 	padding: 0 20px 15px 20px;
-	width: calc(50% - 60px);
+	width: calc(50% - 42px);  // width - (padding + border)
+	min-width: calc(310px - 42px); // width - (padding + border) 
 `;
 
 const ShelfTitle = styled.h3`

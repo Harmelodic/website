@@ -15,6 +15,7 @@ const LibraryContext = styled.div`
 	justify-content: flex-start;
 	align-items: center;
 	width: 80%;
+	min-width: 320px;
 	max-width: 1400px;
 `;
 
