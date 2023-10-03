@@ -6,9 +6,9 @@ import { Main } from '../../Main';
 import styled from 'styled-components';
 
 const FilmsSeenMain = styled(Main)`
-  flex-flow: column nowrap;
-  justify-content: flex-start;
-  align-items: center;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-items: center;
 `;
 
 export default function FilmsSeen() {
@@ -27,13 +27,13 @@ export default function FilmsSeen() {
 
 	return (
 		<FilmsSeenMain>
-			<h1 style={{textAlign: 'center'}}>Films I've Seen</h1>
+			<h1 style={{ textAlign: 'center' }}>Films I've Seen</h1>
 			<SortPicker
 				selectedChoice={sort}
 				onChangeSort={onChangeSort}
 			/>
 			{
-				filmsSeen.length === 0 && <div style={{padding: '20px'}}>Loading...</div>
+				filmsSeen.length === 0 && <div style={{ padding: '20px' }}>Loading...</div>
 			}
 			{
 				filmsSeenWithPosition
