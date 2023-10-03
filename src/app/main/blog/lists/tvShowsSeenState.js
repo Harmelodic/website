@@ -1,5 +1,18 @@
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { createSlice } from '@reduxjs/toolkit';
 import { request } from '../../../fetchHandler';
+
+export function useTvShowsSeen() {
+	const tvShowsSeen = useSelector(tvShowsSeenSelector);
+
+	const dispatch = useDispatch();
+	useEffect(() => {
+		dispatch(fetchTvShowsSeen());
+	}, []);
+
+	return tvShowsSeen;
+}
 
 export const tvShowsSeen = createSlice({
 	name: 'tvShowsSeen',

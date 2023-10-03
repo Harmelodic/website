@@ -1,10 +1,9 @@
-import { useState, useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { tvShowsSeenSelector, fetchTvShowsSeen } from './tvShowsSeenState';
+import { useState } from 'react';
 import MediaListEntry from './MediaListEntry.js';
 import SortPicker from './SortPicker.js';
 import styled from 'styled-components';
 import { Main } from '../../Main';
+import { useTvShowsSeen } from './tvShowsSeenState';
 
 const TvShowsSeenMain = styled(Main)`
 	flex-flow: column nowrap;
@@ -13,18 +12,13 @@ const TvShowsSeenMain = styled(Main)`
 `;
 
 export default function TvShowsSeen() {
-	const tvShowsSeen = useSelector(tvShowsSeenSelector);
+	const tvShowsSeen = useTvShowsSeen();
 
 	const [sort, setSort] = useState('favourite');
 
 	function onChangeSort(sort) {
 		setSort(sort);
 	}
-
-	const dispatch = useDispatch();
-	useEffect(() => {
-		dispatch(fetchTvShowsSeen());
-	}, []);
 
 	const tvShowsSeenWithPosition = tvShowsSeen
 		.map((tvShow, index) => {

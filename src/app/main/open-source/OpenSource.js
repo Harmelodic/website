@@ -1,7 +1,5 @@
-import { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
 import styled from 'styled-components';
-import { fetchOpenSourceProjects, openSourceProjectsSelector } from './openSourceProjects';
+import { useOpenSourceProjects } from './openSourceProjects';
 import { Main } from '../Main';
 import { ReadingSpace } from '../../../lib/ReadingSpace';
 import { Title } from '../../../lib/Title';
@@ -11,22 +9,16 @@ import { FlexDiv } from '../../../lib/FlexDiv';
 import { Hyperlink } from '../../../lib/Hyperlink';
 
 const Content = styled.div`
-  display: flex;
-  flex-flow: row wrap;
-  align-items: flex-start;
-  justify-content: center;
-  width: 100%;
-  max-width: 1500px;
+	display: flex;
+	flex-flow: row wrap;
+	align-items: flex-start;
+	justify-content: center;
+	width: 100%;
+	max-width: 1500px;
 `;
 
 export default function OpenSource() {
-	const dispatch = useDispatch();
-
-	useEffect(() => {
-		dispatch(fetchOpenSourceProjects());
-	}, []);
-
-	const openSourceProjects = useSelector(openSourceProjectsSelector);
+	const openSourceProjects = useOpenSourceProjects();
 
 	return (
 		<Main>
@@ -35,8 +27,8 @@ export default function OpenSource() {
 				<FlexDiv>
 					<span>Sourced from </span>
 					<Hyperlink href="https://github.com/Harmelodic?tab=repositories"
-					   target="_blank"
-					   rel="noopener">my GitHub</Hyperlink>:
+							   target="_blank"
+							   rel="noopener">my GitHub</Hyperlink>:
 				</FlexDiv>
 			</ColumnInfoBox>
 			<Content>

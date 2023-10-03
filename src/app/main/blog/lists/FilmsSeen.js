@@ -1,7 +1,6 @@
-import { useEffect, useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useState } from 'react';
 import MediaListEntry from './MediaListEntry';
-import { filmsSeenSelector, fetchFilmsSeen } from './filmsSeenState';
+import { useFilmsSeen } from './filmsSeenState';
 import SortPicker from './SortPicker';
 import { Main } from '../../Main';
 import styled from 'styled-components';
@@ -13,18 +12,13 @@ const FilmsSeenMain = styled(Main)`
 `;
 
 export default function FilmsSeen() {
-	const filmsSeen = useSelector(filmsSeenSelector);
+	const filmsSeen = useFilmsSeen();
 
 	const [sort, setSort] = useState('favourite');
 
 	function onChangeSort(sort) {
 		setSort(sort);
 	}
-
-	const dispatch = useDispatch();
-	useEffect(() => {
-		dispatch(fetchFilmsSeen());
-	}, []);
 
 	const filmsSeenWithPosition = filmsSeen.map((film, index) => {
 		film.position = index + 1;
@@ -33,13 +27,13 @@ export default function FilmsSeen() {
 
 	return (
 		<FilmsSeenMain>
-			<h1 style={{ textAlign: 'center' }}>Films I've Seen</h1>
+			<h1 style={{textAlign: 'center'}}>Films I've Seen</h1>
 			<SortPicker
 				selectedChoice={sort}
 				onChangeSort={onChangeSort}
 			/>
 			{
-				filmsSeen.length === 0 && <div style={{ padding: '20px' }}>Loading...</div>
+				filmsSeen.length === 0 && <div style={{padding: '20px'}}>Loading...</div>
 			}
 			{
 				filmsSeenWithPosition

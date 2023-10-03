@@ -5,9 +5,7 @@ import { Title } from '../../../lib/Title';
 import styled from 'styled-components';
 import { Shelf } from './Shelf';
 import { LibraryLink } from './LibraryLink';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchLibrary, librarySelector } from './libraryState';
-import { useEffect } from 'react';
+import { useLibrary } from './libraryState';
 
 const LibraryContext = styled.div`
 	display: flex;
@@ -20,12 +18,7 @@ const LibraryContext = styled.div`
 `;
 
 export default function Library() {
-	const dispatch = useDispatch();
-	const library = useSelector(librarySelector);
-
-	useEffect(() => {
-		dispatch(fetchLibrary());
-	}, []);
+	const library = useLibrary();
 
 	const categories = [...new Set(library.map(libraryLinks => libraryLinks.category))];
 	categories.sort();

@@ -1,11 +1,9 @@
-import { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { fetchCreations, creationsSelector } from './creationsState';
 import styled from 'styled-components';
 import { Main } from '../Main';
 import { ReadingSpace } from '../../../lib/ReadingSpace';
 import { Title } from '../../../lib/Title';
 import { ProjectLarge } from '../../../lib/ProjectLarge';
+import { useCreations } from './creationsState';
 
 const Content = styled.div`
   display: flex;
@@ -16,13 +14,7 @@ const Content = styled.div`
 `;
 
 export default function Creations() {
-	const dispatch = useDispatch();
-
-	useEffect(() => {
-		dispatch(fetchCreations());
-	}, []);
-
-	const creations = useSelector(creationsSelector);
+	const creations = useCreations();
 
 	return (
 		<Main>
