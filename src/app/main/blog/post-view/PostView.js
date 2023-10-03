@@ -1,13 +1,12 @@
 import { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
 import styled, { useTheme } from 'styled-components';
-import { Markdown } from '@harmelodic/web-ui';
+import { useParams } from 'react-router-dom';
+import { usePost } from './postViewState';
 import { Main } from '../../Main';
-import { fetchPost, selectedPostSelector, selectedPost } from './postViewState';
 import { LoadingTextBlock } from '../../../../lib/LoadingTextBlock';
 import { HorizontalRule } from '../../../../lib/HorizontalRule';
 import { ReadingSpace } from '../../../../lib/ReadingSpace';
-import { useParams } from 'react-router-dom';
+import { Markdown } from '../../../../lib/Markdown';
 
 const PostViewMain = styled(Main)`
 	flex-flow: column nowrap;
@@ -22,52 +21,14 @@ const PostViewWrapper = styled.div`
     align-items: flex-start;
     width: 100%;
     max-width: 900px;
-
-	// Markdown re-styling
-	--link-color: ${props => props.theme.font.linkColor};
-	--link-active-color: ${props => props.theme.font.linkActiveColor};
-	--code-block-background: ${props => props.theme.font.code.background};
-	--code-block-color: ${props => props.theme.font.code.color};
-	--blockquote-colour: ${props => props.theme.font.blockquote};
-	--keyboard-text-color: ${props => props.theme.font.keyboard.color};
-	--keyboard-border-color: ${props => props.theme.font.keyboard.border};
-	--keyboard-outer-boxshadow: ${props => props.theme.font.keyboard.boxShadow.outer};
-	--keyboard-inner-boxshadow: ${props => props.theme.font.keyboard.boxShadow.inner};
-
-	& > div {
-		font-family: Helvetica, sans-serif;
-		color: ${props => props.theme.font.normalColor};
-	}
-
-	& > div > h1 {
-		padding-bottom: 15px;
-		border-bottom: solid ${props => props.theme.separator} 2px;
-	}
-	& > div > h2 {
-		padding-top: 20px;
-		padding-bottom: 10px;
-		border-bottom: solid ${props => props.theme.separator} 1px;
-	}
-	& > .heading, h3, h4, h5, h6 {
-		padding-top: 15px;
-	}
-	
-	// Creating a gap for clean #anchor linking
-	& > div > h1:before,
-	& > div > h2:before,
-	& > div > h3:before {
-		content: "";
-		display: block;
-		padding-top: 70px;
-		margin-top: -65px;
-	}
 `;
 
 const PostHeading = styled.h1`
 	width: 100%;
 	padding-bottom: 15px;
-	border-bottom: solid ${props => props.theme.separator} 2px;
+	border-bottom: solid ${props => props.theme.colors.hardBorder} 2px;
 	white-space: normal;
+	font-weight:  ${props => props.theme.font.weight};
     color: ${props => props.theme.font.titleColor};
 `;
 
@@ -79,41 +40,15 @@ const Category = styled.div`
 `;
 
 export default function PostView() {
-	const post = useSelector(selectedPostSelector);
-
 	const params = useParams();
-
-	const dispatch = useDispatch();
-
-	useEffect(() => {
-		dispatch(fetchPost(params.id));
-		window.scroll(0, 0);
-
-		return function cleanup() {
-			dispatch(selectedPost.actions.clear());
-		};
-	}, []);
-
-	const title = post.title || '';
-
+	const { post, isPostLoading } = usePost(params.id);
 	const theme = useTheme();
 
-	const readyToRender = title && post.content;
+	useEffect(() => {
+		window.scroll(0, 0);
+	}, []);
 
-	return readyToRender ? (
-		<PostViewMain>
-			<PostViewWrapper>
-				<PostHeading>{title}</PostHeading>
-				<Markdown
-					markdown={post.content}
-					aTagAttributes='target="_blank" rel="nofollow"' />
-				<Category>
-					{post.content && post.category}
-				</Category>
-			</PostViewWrapper>
-			<ReadingSpace />
-		</PostViewMain>
-	) : (
+	return isPostLoading ? (
 		<PostViewMain>
 			<PostViewWrapper>
 				<PostHeading>
@@ -163,6 +98,17 @@ export default function PostView() {
 				</div>
 				<Category>
 					<LoadingTextBlock width={200} color={theme.font.loading.subtitle} />
+				</Category>
+			</PostViewWrapper>
+			<ReadingSpace />
+		</PostViewMain>
+	) : (
+		<PostViewMain>
+			<PostViewWrapper>
+				<PostHeading>{post.title}</PostHeading>
+				<Markdown markdown={post.content} />
+				<Category>
+					{post.content && post.category}
 				</Category>
 			</PostViewWrapper>
 			<ReadingSpace />

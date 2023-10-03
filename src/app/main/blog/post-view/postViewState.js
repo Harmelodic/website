@@ -1,5 +1,25 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { request } from '../../../fetchHandler';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+
+export function usePost(postId) {
+	const post = useSelector(selectedPostSelector);
+	const dispatch = useDispatch();
+
+	useEffect(() => {
+		dispatch(fetchPost(postId));
+
+		return function cleanup() {
+			dispatch(selectedPost.actions.clear());
+		};
+	}, []);
+
+	return {
+		post: post,
+		isPostLoading: post.title === undefined,
+	};
+}
 
 export const selectedPost = createSlice({
 	name: 'selectedPost',
