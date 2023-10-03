@@ -5,17 +5,13 @@ My personal website, found at [harmelodic.com](https://harmelodic.com)
 ## TODO
 
 - Add a top bar containing
-   - Accessibility Settings menu (inc. Theme Switcher)
    - GitHub Source Link
-   - Side menu open/close
    - Cookie settings / info
-- CRM-y article system
-- Theming system with cookies
-- Accessibility theming (dark theme, colour blindness, high-contrast)
-- Move back into K8s, rather than Cloud Run
-- Split personal blog, software blog, films seen and tv shows seen into subsections of Blog 
-- Add a work history page
+- Accessibility theming (colour blindness, high-contrast)
+- Split personal blog, software blog, films seen and tv shows seen into subsections of Blog
 - Add a featured in page
+- Finish Library importing
+- Convert to Next.js application
 
 # Deployment
 
