@@ -17,7 +17,7 @@ export default function Home() {
 
 	return (
 		<Main>
-			<ImageOfMe src="/images/headshot.webp" />
+			<ImageOfMe src="/images/matt.jpg" />
 
 			<Title>Matt Smith</Title>
 
