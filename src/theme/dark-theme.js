@@ -39,6 +39,8 @@ export const darkTheme = {
 		mainActive: '#555',
 		hardBorder: '#ddd',
 		softBorder: '#777',
+		softLight: '#777',
+		hardLight: '#ddd',
 		accents: {
 			red: '#b40000',
 			redFaded: 'rgba(180, 0, 0, 0.4)',

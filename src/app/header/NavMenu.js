@@ -36,25 +36,25 @@ export function NavMenu() {
 
 	return (
 		<Nav>
-			<NavItem end to="/" selected={path === '/'}>
-                Me
+			<NavItem end to="/" selected={path === '/'} title="Me">
+				Me
 			</NavItem>
-			<NavItem to="/blog" selected={path.startsWith('/blog')}>
+			<NavItem to="/blog" selected={path.startsWith('/blog')} title="Blog">
                 Blog
 			</NavItem>
-			<NavItem end to="/creations" selected={path === '/creations'}>
+			<NavItem end to="/creations" selected={path === '/creations'} title="Creations">
                 Creations
 			</NavItem>
-			<NavItem end to="/open-source" selected={path === '/open-source'}>
+			<NavItem end to="/open-source" selected={path === '/open-source'} title="Open-source">
                 Open Source
 			</NavItem>
-			<NavItem end to="/library" selected={path === '/library'}>
+			<NavItem end to="/library" selected={path === '/library'} title="Library">
 				Library
 			</NavItem>
-			<NavItem end to="/work-history" selected={path === '/work-history'}>
+			<NavItem end to="/work-history" selected={path === '/work-history'} title="Work History">
                 Work History
 			</NavItem>
-			<NavItem end to="/running" selected={path === '/running'}>
+			<NavItem end to="/running" selected={path === '/running'} title="Running">
                 Running
 			</NavItem>
 		</Nav>

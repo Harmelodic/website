@@ -1,5 +1,4 @@
-import styled, { useTheme } from 'styled-components';
-import { Brightness4, DarkMode, LightMode } from '@mui/icons-material';
+import styled from 'styled-components';
 import { useDispatch, useSelector } from 'react-redux';
 import { themeMode, themeModeSelector } from '../../theme/themeMode';
 
@@ -9,52 +8,77 @@ const StyledPicker = styled.div`
 	justify-content: center;
 	align-items: center;
 	height: 100%;
-	padding: 0 20px;
-	transition: background 200ms;
+	
+	padding: 0 10px;
+`;
+
+const ThemeSelectBox = styled.select`
+	appearance: none;
+
+	// Drop-down arrow
+    background: ${props => props.theme.colors.transparent};
+	background-image:
+		linear-gradient(45deg, transparent 50%, ${props => props.theme.font.normalNegativeColor} 50%),
+		linear-gradient(135deg, ${props => props.theme.font.normalNegativeColor} 50%, transparent 50%);
+	background-position:
+		calc(100% - 17px) calc(1em - 1px),
+		calc(100% - 12px) calc(1em - 1px);
+	background-size:
+		5px 5px,
+		5px 5px;
+	background-repeat: no-repeat;
+	
+	border: solid 1px ${props => props.theme.colors.softLight};
+	border-radius: 5px;
+	padding: 0 35px 0 15px;
+	height: 40px;
+	font-size: 1rem;
+	color: ${props => props.theme.font.normalNegativeColor};
+	transition: border 200ms;
+
+	&::placeholder {
+		color: ${props => props.theme.font.placeholderColor};
+		transition: color 200ms;
+	}
+
+	&:focus {
+		border: solid 1px ${props => props.theme.colors.hardLight};
+	}
 
 	&:hover {
-		background: ${props => props.theme.colors.accents.greenFaded};
+		border: solid 1px ${props => props.theme.colors.hardLight};
+	}
+
+	&:focus::placeholder {
+		color: ${props => props.theme.font.placeholderColor};
 	}
 `;
 
 export function ThemeModePicker() {
 	const selectedThemeMode = useSelector(themeModeSelector);
 	const dispatch = useDispatch();
-	const theme = useTheme();
 
-	function changeMode() {
-		switch (selectedThemeMode) {
+	function changeMode(event) {
+		switch (event.target.value) {
 			case 'system-preference':
-				dispatch(themeMode.actions.setToLight());
+				dispatch(themeMode.actions.setToSystemPreference());
 				break;
 			case 'light':
-				dispatch(themeMode.actions.setToDark());
+				dispatch(themeMode.actions.setToLight());
 				break;
 			case 'dark':
-				dispatch(themeMode.actions.setToSystemPreference());
+				dispatch(themeMode.actions.setToDark());
 				break;
 		}
 	}
 
-	let IconToShow;
-	let tooltipText;
-	switch (selectedThemeMode) {
-		case 'system-preference':
-			IconToShow = Brightness4;
-			tooltipText = 'System Default Theme';
-			break;
-		case 'light':
-			IconToShow = LightMode;
-			tooltipText = 'Always Light Theme';
-			break;
-		case 'dark':
-			IconToShow = DarkMode;
-			tooltipText = 'Always Dark Theme';
-			break;
-	}
 	return (
-		<StyledPicker onClick={changeMode} title={tooltipText}>
-			<IconToShow sx={{ color: theme.font.normalNegativeColor }}/>
+		<StyledPicker>
+			<ThemeSelectBox value={selectedThemeMode} onChange={changeMode} title="Theme Mode">
+				<option value="system-preference">System Theme</option>
+				<option value="light">Light</option>
+				<option value="dark">Dark</option>
+			</ThemeSelectBox>
 		</StyledPicker>
 	);
 }

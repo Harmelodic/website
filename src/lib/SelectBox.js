@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const SelectBox = styled.select`
 	appearance: none;
 
+    // Drop-down arrow
     background: ${props => props.theme.colors.transparent};
 	background-image:
 		linear-gradient(45deg, transparent 50%, ${props => props.theme.font.normalColor} 50%),
