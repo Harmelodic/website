@@ -44,7 +44,7 @@ export const lightTheme = {
 		accents: {
 			red: '#b40000',
 			redFaded: 'rgba(180, 0, 0, 0.4)',
-			green: '#090',
+			green: '#008200',
 			greenFaded: 'rgba(0, 255, 0, 0.15)',
 			blue: '#003cff',
 			blueFaded: 'rgba(0, 60, 255, 0.5)',
