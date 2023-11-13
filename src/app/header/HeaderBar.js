@@ -2,6 +2,8 @@ import styled from 'styled-components';
 import { NavMenu } from './NavMenu';
 import { ThemeModePicker } from './ThemeModePicker';
 
+export const headerBarHeight = 60;
+
 const StyledBar = styled.header`
 	display: flex;
 	flex-flow: row nowrap;
@@ -10,7 +12,7 @@ const StyledBar = styled.header`
 	position: sticky;
 	top: 0;
 	width: 100%;
-	height: 60px;
+	height: ${headerBarHeight}px;
 `;
 
 const StyledBarContent = styled.div`
