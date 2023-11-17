@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { headerBarHeight } from '../header/HeaderBar';
 
 export const Main = styled.main`
   @keyframes complete-fade-in {
@@ -19,7 +18,6 @@ export const Main = styled.main`
   justify-content: flex-start;
   align-items: center;
   width: 100%;
-  max-height: calc(100vh - ${headerBarHeight}px);
   overflow-y: auto;
   background: ${props => props.theme.colors.mainBackground};
 `;
