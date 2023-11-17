@@ -54,9 +54,6 @@ export function NavMenu() {
 			<NavItem end to="/work-history" selected={path === '/work-history'} title="Work History">
                 Work History
 			</NavItem>
-			<NavItem end to="/running" selected={path === '/running'} title="Running">
-                Running
-			</NavItem>
 		</Nav>
 	);
 }

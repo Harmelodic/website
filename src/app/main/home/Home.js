@@ -57,6 +57,11 @@ export default function Home() {
 					title="Email"
 					src={`/images/mail-${theme.name}.svg`}
 				/>
+				<SocialMedia
+					href="https://www.strava.com/athletes/97680039"
+					title="Strava"
+					src="/images/strava.svg"
+				/>
 			</RowInfoBox>
 
 			<RowInfoBox>
