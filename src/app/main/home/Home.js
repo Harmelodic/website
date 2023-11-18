@@ -48,7 +48,7 @@ export default function Home() {
 					src="/images/linkedin.svg"
 				/>
 				<SocialMedia
-					href="https://youtube.com/Harmelodic"
+					href="https://www.youtube.com/@HarmelodicYT"
 					title="YouTube"
 					src="/images/youtube.svg"
 				/>
