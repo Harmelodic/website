@@ -1,5 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { request } from '../ui/fetchHandler';
 
 export const filmsSeen = createSlice({
 	name: 'filmsSeen',
@@ -15,14 +14,4 @@ export const filmsSeen = createSlice({
 
 export function filmsSeenSelector(state) {
 	return state.filmsSeen.value;
-}
-
-const blogContentServer = process.env.BLOG_CONTENT_SERVER || '';
-
-export function fetchFilmsSeen() {
-	return async dispatch => {
-		const response = await request('GET', `${blogContentServer}/posts/filmsSeen.json`);
-		const data = await response.json();
-		dispatch(filmsSeen.actions.setFilmsSeen(data));
-	};
 }

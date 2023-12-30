@@ -1,5 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { request } from '../ui/fetchHandler';
 
 export const categories = createSlice({
 	name: 'categories',
@@ -15,15 +14,4 @@ export const categories = createSlice({
 
 export function categoriesSelector(state) {
 	return state.categories.value;
-}
-
-const blogAPI = process.env.BLOG_API || '';
-
-export function fetchCategories(done) {
-	return async dispatch => {
-		const response = await request('GET', `${blogAPI}/category`);
-		const data = await response.json();
-		dispatch(categories.actions.setCategories(data));
-		done();
-	};
 }

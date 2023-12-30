@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import { fetchFilmsSeen, filmsSeenSelector } from '../store/filmsSeen';
+import { filmsSeen, filmsSeenSelector } from '../store/filmsSeen';
+import { request } from '../ui/fetchHandler';
 
 export function useFilmsSeen() {
 	const filmsSeen = useSelector(filmsSeenSelector);
@@ -11,4 +12,14 @@ export function useFilmsSeen() {
 	}, []);
 
 	return filmsSeen;
+}
+
+const blogContentServer = process.env.BLOG_CONTENT_SERVER || '';
+
+export function fetchFilmsSeen() {
+	return async dispatch => {
+		const response = await request('GET', `${blogContentServer}/posts/filmsSeen.json`);
+		const data = await response.json();
+		dispatch(filmsSeen.actions.setFilmsSeen(data));
+	};
 }

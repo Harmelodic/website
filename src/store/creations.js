@@ -1,5 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { request } from '../ui/fetchHandler';
 
 export const creations = createSlice({
 	name: 'creations',
@@ -12,14 +11,6 @@ export const creations = createSlice({
 		},
 	},
 });
-
-export function fetchCreations() {
-	return async dispatch => {
-		const response = await request('GET', '/resources/creations.json');
-		const data = await response.json();
-		dispatch(creations.actions.setCreations(data));
-	};
-}
 
 export function creationsSelector(state) {
 	return state.creations.value;

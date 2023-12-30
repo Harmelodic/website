@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import { fetchTvShowsSeen, tvShowsSeenSelector } from '../store/tvShowsSeen';
+import { tvShowsSeen, tvShowsSeenSelector } from '../store/tvShowsSeen';
+import { request } from '../ui/fetchHandler';
 
 export function useTvShowsSeen() {
 	const tvShowsSeen = useSelector(tvShowsSeenSelector);
@@ -11,4 +12,14 @@ export function useTvShowsSeen() {
 	}, []);
 
 	return tvShowsSeen;
+}
+
+const blogContentServer = process.env.BLOG_CONTENT_SERVER || '';
+
+export function fetchTvShowsSeen() {
+	return async dispatch => {
+		const response = await request('GET', `${blogContentServer}/posts/tvShowsSeen.json`);
+		const data = await response.json();
+		dispatch(tvShowsSeen.actions.setTvShowsSeen(data));
+	};
 }
