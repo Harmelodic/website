@@ -1,6 +1,5 @@
 import styled from 'styled-components';
-import { useDispatch, useSelector } from 'react-redux';
-import { themeMode, themeModeSelector } from '../theme/themeMode';
+import { useThemeMode } from '../../hooks/useThemeMode';
 
 const StyledPicker = styled.div`
 	display: flex;
@@ -55,19 +54,18 @@ const ThemeSelectBox = styled.select`
 `;
 
 export function ThemeModePicker() {
-	const selectedThemeMode = useSelector(themeModeSelector);
-	const dispatch = useDispatch();
+	const [selectedThemeMode, changeToSystemPreference, changeToLight, changeToDark] = useThemeMode();
 
 	function changeMode(event) {
 		switch (event.target.value) {
 			case 'system-preference':
-				dispatch(themeMode.actions.setToSystemPreference());
+				changeToSystemPreference();
 				break;
 			case 'light':
-				dispatch(themeMode.actions.setToLight());
+				changeToLight();
 				break;
 			case 'dark':
-				dispatch(themeMode.actions.setToDark());
+				changeToDark();
 				break;
 		}
 	}
