@@ -15,7 +15,7 @@ export async function request(method, url, body) {
 		if (response.ok) {
 			return response;
 		} else {
-			logError(request, url, error);
+			logError(request, url, response.status);
 		}
 	} catch (error) {
 		logError(request, url, error);
