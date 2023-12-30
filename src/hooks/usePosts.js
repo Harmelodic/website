@@ -1,6 +1,8 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
-import { fetchPosts, postsSelector } from '../store/posts';
+import {posts, postsSelector} from '../store/posts';
+import { request } from '../ui/fetchHandler';
+import { selectedPost } from '../store/postView';
 
 export function usePosts() {
 	const dispatch = useDispatch();
@@ -15,5 +17,17 @@ export function usePosts() {
 	return {
 		posts: posts,
 		isLoadingPosts: isLoadingPosts,
+	};
+}
+
+const blogAPI = process.env.BLOG_API || '';
+
+export function fetchPosts(done) {
+	return async dispatch => {
+		const response = await request('GET', `${blogAPI}/post`);
+		const data = await response.json();
+
+		dispatch(posts.actions.setPosts(data));
+		done();
 	};
 }

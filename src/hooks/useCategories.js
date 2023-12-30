@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
-import { categoriesSelector, fetchCategories } from '../store/categories';
+import { categories, categoriesSelector } from '../store/categories';
+import { request } from '../ui/fetchHandler';
 
 export function useCategories() {
 	const dispatch = useDispatch();
@@ -15,5 +16,16 @@ export function useCategories() {
 	return {
 		categories: categories,
 		isLoadingCategories: isLoadingCategories,
+	};
+}
+
+const blogAPI = process.env.BLOG_API || '';
+
+export function fetchCategories(done) {
+	return async dispatch => {
+		const response = await request('GET', `${blogAPI}/category`);
+		const data = await response.json();
+		dispatch(categories.actions.setCategories(data));
+		done();
 	};
 }
