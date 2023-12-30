@@ -2,6 +2,7 @@ import { Suspense, lazy } from 'react';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import styled from 'styled-components';
 import { ErrorBoundary } from './ErrorBoundary';
+import { Themed } from './theme/Themed';
 
 const HeaderBar = lazy(() => import('./header/HeaderBar'));
 const Home = lazy(() => import('./main/home/Home'));
@@ -30,31 +31,33 @@ const StyledApp = styled.div`
 export function App() {
 	return (
 		<BrowserRouter>
-			<StyledApp>
-				<ErrorBoundary>
-					<Suspense fallback={<div />}>
-						<Routes>
-							<Route path="*" element={<HeaderBar />} />
-						</Routes>
-					</Suspense>
-				</ErrorBoundary>
-				<ErrorBoundary>
-					<Suspense fallback={<div />}>
-						<Routes>
-							<Route exact path="/" element={<Home />} />
-							<Route exact path="/blog" element={<Blog />} />
-							<Route exact path="/blog/:id" element={<PostView />} />
-							<Route exact path="/blog/list/1532228220000" element={<FilmsSeen />} />
-							<Route exact path="/blog/list/1532228640000" element={<TvShowsSeen />} />
-							<Route exact path="/creations" element={<Creations />} />
-							<Route exact path="/open-source" element={<OpenSource />} />
-							<Route exact path="/library" element={<Library />} />
-							<Route exact path="/work-history" element={<WorkHistory />} />
-							<Route path="*" element={<NoPageFound />} />
-						</Routes>
-					</Suspense>
-				</ErrorBoundary>
-			</StyledApp>
+			<Themed>
+				<StyledApp>
+					<ErrorBoundary>
+						<Suspense fallback={<div />}>
+							<Routes>
+								<Route path="*" element={<HeaderBar />} />
+							</Routes>
+						</Suspense>
+					</ErrorBoundary>
+					<ErrorBoundary>
+						<Suspense fallback={<div />}>
+							<Routes>
+								<Route exact path="/" element={<Home />} />
+								<Route exact path="/blog" element={<Blog />} />
+								<Route exact path="/blog/:id" element={<PostView />} />
+								<Route exact path="/blog/list/1532228220000" element={<FilmsSeen />} />
+								<Route exact path="/blog/list/1532228640000" element={<TvShowsSeen />} />
+								<Route exact path="/creations" element={<Creations />} />
+								<Route exact path="/open-source" element={<OpenSource />} />
+								<Route exact path="/library" element={<Library />} />
+								<Route exact path="/work-history" element={<WorkHistory />} />
+								<Route path="*" element={<NoPageFound />} />
+							</Routes>
+						</Suspense>
+					</ErrorBoundary>
+				</StyledApp>
+			</Themed>
 		</BrowserRouter>
 	);
 }

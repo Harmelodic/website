@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { useDispatch, useSelector } from 'react-redux';
-import { themeMode, themeModeSelector } from '../../theme/themeMode';
+import { themeMode, themeModeSelector } from '../theme/themeMode';
 
 const StyledPicker = styled.div`
 	display: flex;

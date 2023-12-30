@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 import { useOpenSourceProjects } from './openSourceProjects';
 import { Main } from '../Main';
-import { ReadingSpace } from '../../../lib/ReadingSpace';
-import { Title } from '../../../lib/Title';
-import { OpenSourceProjectEntry } from '../../../lib/OpenSourceProjectEntry';
-import { ColumnInfoBox } from '../../../lib/InfoBox';
-import { FlexDiv } from '../../../lib/FlexDiv';
-import { Hyperlink } from '../../../lib/Hyperlink';
+import { ReadingSpace } from '../../lib/ReadingSpace';
+import { Title } from '../../lib/Title';
+import { OpenSourceProjectEntry } from '../../lib/OpenSourceProjectEntry';
+import { ColumnInfoBox } from '../../lib/InfoBox';
+import { FlexDiv } from '../../lib/FlexDiv';
+import { Hyperlink } from '../../lib/Hyperlink';
 
 const Content = styled.div`
 	display: flex;
