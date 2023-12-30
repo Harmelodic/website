@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { library, librarySelector } from '../store/library';
-import { request } from './fetchHandler';
+import { request } from '../api/apiHandler';
 
 export function useLibrary() {
 	const dispatch = useDispatch();

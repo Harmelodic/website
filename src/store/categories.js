@@ -15,3 +15,5 @@ export const categories = createSlice({
 export function categoriesSelector(state) {
 	return state.categories.value;
 }
+
+export const categoriesActions = categories.actions;
