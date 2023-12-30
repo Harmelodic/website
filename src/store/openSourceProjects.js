@@ -1,18 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { request } from '../ui/fetchHandler';
-import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react';
-
-export function useOpenSourceProjects() {
-	const openSourceProjects = useSelector(openSourceProjectsSelector);
-	const dispatch = useDispatch();
-
-	useEffect(() => {
-		dispatch(fetchOpenSourceProjects());
-	}, []);
-
-	return openSourceProjects;
-}
 
 export const openSourceProjects = createSlice({
 	name: 'openSourceProjects',

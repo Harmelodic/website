@@ -1,18 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { request } from '../ui/fetchHandler';
-import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react';
-
-export function useLibrary() {
-	const dispatch = useDispatch();
-	const library = useSelector(librarySelector);
-
-	useEffect(() => {
-		dispatch(fetchLibrary());
-	}, []);
-
-	return library;
-}
 
 export const library = createSlice({
 	name: 'library',

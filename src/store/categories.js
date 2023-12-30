@@ -1,23 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { request } from '../ui/fetchHandler';
-import { useDispatch, useSelector } from 'react-redux';
-import { useEffect, useState } from 'react';
-
-export function useCategories() {
-	const dispatch = useDispatch();
-	const categories = useSelector(categoriesSelector);
-	const [isLoadingCategories, setLoadingCategories] = useState(true);
-
-	useEffect(() => {
-		setLoadingCategories(true);
-		dispatch(fetchCategories(() => setLoadingCategories(false)));
-	}, []);
-
-	return {
-		categories: categories,
-		isLoadingCategories: isLoadingCategories,
-	};
-}
 
 export const categories = createSlice({
 	name: 'categories',
