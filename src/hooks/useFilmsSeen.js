@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { filmsSeen, filmsSeenSelector } from '../store/filmsSeen';
-import { request } from '../ui/fetchHandler';
+import { request } from './fetchHandler';
 
 export function useFilmsSeen() {
 	const filmsSeen = useSelector(filmsSeenSelector);

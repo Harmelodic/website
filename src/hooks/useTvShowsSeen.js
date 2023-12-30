@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { tvShowsSeen, tvShowsSeenSelector } from '../store/tvShowsSeen';
-import { request } from '../ui/fetchHandler';
+import { request } from './fetchHandler';
 
 export function useTvShowsSeen() {
 	const tvShowsSeen = useSelector(tvShowsSeenSelector);

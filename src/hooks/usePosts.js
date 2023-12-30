@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
 import {posts, postsSelector} from '../store/posts';
-import { request } from '../ui/fetchHandler';
+import { request } from './fetchHandler';
 import { selectedPost } from '../store/postView';
 
 export function usePosts() {
