@@ -1,12 +1,12 @@
 import { useEffect } from 'react';
 import styled, { useTheme } from 'styled-components';
 import { useParams } from 'react-router-dom';
-import { usePost } from './postViewState';
-import { Main } from '../../Main';
-import { LoadingTextBlock } from '../../../lib/LoadingTextBlock';
-import { HorizontalRule } from '../../../lib/HorizontalRule';
-import { ReadingSpace } from '../../../lib/ReadingSpace';
-import { Markdown } from '../../../lib/Markdown';
+import { usePost } from '../../../store/postViewState';
+import { Main } from '../Main';
+import { LoadingTextBlock } from '../../lib/LoadingTextBlock';
+import { HorizontalRule } from '../../lib/HorizontalRule';
+import { ReadingSpace } from '../../lib/ReadingSpace';
+import { Markdown } from '../../lib/Markdown';
 
 const PostViewMain = styled(Main)`
 	flex-flow: column nowrap;

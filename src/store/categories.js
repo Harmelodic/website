@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { request } from '../../fetchHandler';
+import { request } from '../ui/fetchHandler';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
 
