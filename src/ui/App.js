@@ -7,7 +7,7 @@ import { Themed } from './theme/Themed';
 const HeaderBar = lazy(() => import('./header/HeaderBar'));
 const Home = lazy(() => import('./main/home/Home'));
 const Blog = lazy(() => import('./main/blog/Blog'));
-const PostView = lazy(() => import('./main/blog/post-view/PostView'));
+const PostView = lazy(() => import('./main/blog/PostView'));
 const FilmsSeen = lazy(() => import('./main/blog/lists/FilmsSeen'));
 const TvShowsSeen = lazy(() => import('./main/blog/lists/TvShowsSeen'));
 const Creations = lazy(() => import('./main/creations/Creations'));
@@ -26,7 +26,6 @@ const StyledApp = styled.div`
 	font-family: ${props => props.theme.font.family};
 	font-weight: ${props => props.theme.font.weight};
 `;
-
 
 export function App() {
 	return (

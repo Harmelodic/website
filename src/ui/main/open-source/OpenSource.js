@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { useOpenSourceProjects } from './openSourceProjects';
+import { useOpenSourceProjects } from '../../../store/openSourceProjects';
 import { Main } from '../Main';
 import { ReadingSpace } from '../../lib/ReadingSpace';
 import { Title } from '../../lib/Title';

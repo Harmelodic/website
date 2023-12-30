@@ -1,12 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { categories } from '../ui/main/blog/categories';
-import { filmsSeen } from '../ui/main/blog/lists/filmsSeenState';
-import { tvShowsSeen } from '../ui/main/blog/lists/tvShowsSeenState';
-import { selectedPost } from '../ui/main/blog/post-view/postViewState';
-import { posts } from '../ui/main/blog/posts';
-import { creations } from '../ui/main/creations/creationsState';
-import { openSourceProjects } from '../ui/main/open-source/openSourceProjects';
-import { library } from '../ui/main/library/libraryState';
+import { categories } from './categories';
+import { filmsSeen } from './filmsSeenState';
+import { tvShowsSeen } from './tvShowsSeenState';
+import { selectedPost } from './postViewState';
+import { posts } from './posts';
+import { creations } from './creationsState';
+import { openSourceProjects } from './openSourceProjects';
+import { library } from './libraryState';
 import { themeMode } from './themeMode';
 
 export function initialiseStore() {

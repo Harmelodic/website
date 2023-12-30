@@ -8,8 +8,8 @@ import { SelectBox } from '../../lib/SelectBox';
 import { Title } from '../../lib/Title';
 import { RowInfoBox } from '../../lib/InfoBox';
 import { Main } from '../Main';
-import { useCategories } from './categories';
-import { usePosts } from './posts';
+import { useCategories } from '../../../store/categories';
+import { usePosts } from '../../../store/posts';
 
 const StyledFilters = styled.div`
   display: flex;

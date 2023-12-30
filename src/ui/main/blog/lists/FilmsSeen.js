@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import MediaListEntry from './MediaListEntry';
-import { useFilmsSeen } from './filmsSeenState';
+import { useFilmsSeen } from '../../../../store/filmsSeenState';
 import SortPicker from './SortPicker';
 import { Main } from '../../Main';
 import styled from 'styled-components';

@@ -3,7 +3,7 @@ import { Main } from '../Main';
 import { ReadingSpace } from '../../lib/ReadingSpace';
 import { Title } from '../../lib/Title';
 import { ProjectLarge } from '../../lib/ProjectLarge';
-import { useCreations } from './creationsState';
+import { useCreations } from '../../../store/creationsState';
 
 const Content = styled.div`
   display: flex;
