@@ -1,18 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { request } from '../ui/fetchHandler';
-import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react';
-
-export function useFilmsSeen() {
-	const filmsSeen = useSelector(filmsSeenSelector);
-	const dispatch = useDispatch();
-
-	useEffect(() => {
-		dispatch(fetchFilmsSeen());
-	}, []);
-
-	return filmsSeen;
-}
 
 export const filmsSeen = createSlice({
 	name: 'filmsSeen',

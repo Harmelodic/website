@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import MediaListEntry from './MediaListEntry';
-import { useFilmsSeen } from '../../../../store/filmsSeenState';
 import SortPicker from './SortPicker';
 import { Main } from '../../Main';
 import styled from 'styled-components';
+import {useFilmsSeen} from "../../../../hooks/useFilmsSeen";
 
 const FilmsSeenMain = styled(Main)`
 	flex-flow: column nowrap;

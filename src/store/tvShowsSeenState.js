@@ -1,18 +1,5 @@
-import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { createSlice } from '@reduxjs/toolkit';
-import { request } from '../ui/fetchHandler';
-
-export function useTvShowsSeen() {
-	const tvShowsSeen = useSelector(tvShowsSeenSelector);
-
-	const dispatch = useDispatch();
-	useEffect(() => {
-		dispatch(fetchTvShowsSeen());
-	}, []);
-
-	return tvShowsSeen;
-}
+import {createSlice} from '@reduxjs/toolkit';
+import {request} from '../ui/fetchHandler';
 
 export const tvShowsSeen = createSlice({
 	name: 'tvShowsSeen',
