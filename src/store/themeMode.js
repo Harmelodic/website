@@ -20,7 +20,3 @@ export const themeMode = createSlice({
 		},
 	},
 });
-
-export function themeModeSelector(state) {
-	return state.themeMode.value;
-}

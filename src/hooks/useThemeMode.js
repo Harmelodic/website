@@ -1,8 +1,8 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { themeMode, themeModeSelector } from '../ui/theme/themeMode';
+import { themeMode } from '../store/themeMode';
 
 export function useThemeMode() {
-	const selectedThemeMode = useSelector(themeModeSelector);
+	const selectedThemeMode = useSelector(state => state.themeMode.value);
 	const dispatch = useDispatch();
 
 	function changeToSystemPreference() {

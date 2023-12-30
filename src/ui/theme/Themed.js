@@ -1,12 +1,11 @@
 import { ThemeProvider } from 'styled-components';
 import { lightTheme } from './light-theme';
 import { darkTheme } from './dark-theme';
-import { useSystemPreferenceTheme } from './useSystemPreferenceTheme';
+import { useSystemPreferenceTheme } from '../../hooks/useSystemPreferenceTheme';
 import { useSelector } from 'react-redux';
-import { themeModeSelector } from './themeMode';
 
 export function Themed(props) {
-	const selectedThemeMode = useSelector(themeModeSelector);
+	const selectedThemeMode = useSelector(state => state.themeMode.value);
 	const systemPreferenceTheme = useSystemPreferenceTheme();
 
 	let theme;
