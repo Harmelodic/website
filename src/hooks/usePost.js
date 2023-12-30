@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import { fetchPost, selectedPost, selectedPostSelector } from '../store/postViewState';
+import { fetchPost, selectedPost, selectedPostSelector } from '../store/postView';
 
 export function usePost(postId) {
 	const post = useSelector(selectedPostSelector);

@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import { creationsSelector, fetchCreations } from '../store/creationsState';
+import { creationsSelector, fetchCreations } from '../store/creations';
 
 export function useCreations() {
 	const dispatch = useDispatch();

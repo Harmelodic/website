@@ -1,5 +1,5 @@
-import {createSlice} from '@reduxjs/toolkit';
-import {request} from '../ui/fetchHandler';
+import { createSlice } from '@reduxjs/toolkit';
+import { request } from '../ui/fetchHandler';
 
 export const tvShowsSeen = createSlice({
 	name: 'tvShowsSeen',
