@@ -7,7 +7,7 @@ import { posts } from '../ui/main/blog/posts';
 import { creations } from '../ui/main/creations/creationsState';
 import { openSourceProjects } from '../ui/main/open-source/openSourceProjects';
 import { library } from '../ui/main/library/libraryState';
-import { themeMode } from '../ui/theme/themeMode';
+import { themeMode } from './themeMode';
 
 export function initialiseStore() {
 	return configureStore({
