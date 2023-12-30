@@ -1,5 +1,5 @@
 import styled, { useTheme } from 'styled-components';
-import { Hyperlink } from '../../../lib/Hyperlink';
+import { Hyperlink } from '../../lib/Hyperlink';
 
 const LibraryLinkWrapper = styled.div`
     display: flex;

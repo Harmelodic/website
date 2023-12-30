@@ -1,7 +1,7 @@
-import { ColumnInfoBox } from '../../../lib/InfoBox';
+import { ColumnInfoBox } from '../../lib/InfoBox';
 import { Main } from '../Main';
-import { ReadingSpace } from '../../../lib/ReadingSpace';
-import { Title } from '../../../lib/Title';
+import { ReadingSpace } from '../../lib/ReadingSpace';
+import { Title } from '../../lib/Title';
 import styled from 'styled-components';
 import { Shelf } from './Shelf';
 import { LibraryLink } from './LibraryLink';

@@ -1,7 +1,7 @@
-import { ColumnInfoBox } from '../../../lib/InfoBox';
+import { ColumnInfoBox } from '../../lib/InfoBox';
 import { Main } from '../Main';
-import { ReadingSpace } from '../../../lib/ReadingSpace';
-import { Title } from '../../../lib/Title';
+import { ReadingSpace } from '../../lib/ReadingSpace';
+import { Title } from '../../lib/Title';
 import { Link } from 'react-router-dom';
 
 export default function NoPageFound() {
