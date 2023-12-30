@@ -3,7 +3,7 @@ import MediaListEntry from './MediaListEntry';
 import SortPicker from './SortPicker';
 import { Main } from '../../Main';
 import styled from 'styled-components';
-import {useFilmsSeen} from "../../../../hooks/useFilmsSeen";
+import { useFilmsSeen } from '../../../../hooks/useFilmsSeen';
 
 const FilmsSeenMain = styled(Main)`
 	flex-flow: column nowrap;

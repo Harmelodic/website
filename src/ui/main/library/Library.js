@@ -5,8 +5,7 @@ import { Title } from '../../lib/Title';
 import styled from 'styled-components';
 import { Shelf } from './Shelf';
 import { LibraryLink } from './LibraryLink';
-
-import {useLibrary} from "../../../hooks/useLibrary";
+import { useLibrary } from '../../../hooks/useLibrary';
 
 const LibraryContext = styled.div`
 	display: flex;

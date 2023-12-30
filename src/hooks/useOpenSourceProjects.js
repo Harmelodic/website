@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { openSourceProjects, openSourceProjectsSelector } from '../store/openSourceProjects';
-import { request } from '../ui/fetchHandler';
+import { request } from './fetchHandler';
 
 export function useOpenSourceProjects() {
 	const openSourceProjects = useSelector(openSourceProjectsSelector);

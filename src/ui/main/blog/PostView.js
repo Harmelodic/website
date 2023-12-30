@@ -6,7 +6,7 @@ import { LoadingTextBlock } from '../../lib/LoadingTextBlock';
 import { HorizontalRule } from '../../lib/HorizontalRule';
 import { ReadingSpace } from '../../lib/ReadingSpace';
 import { Markdown } from '../../lib/Markdown';
-import {usePost} from "../../../hooks/usePost";
+import { usePost } from '../../../hooks/usePost';
 
 const PostViewMain = styled(Main)`
 	flex-flow: column nowrap;

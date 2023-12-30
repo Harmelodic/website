@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { creations, creationsSelector } from '../store/creations';
-import { request } from '../ui/fetchHandler';
+import { request } from './fetchHandler';
 
 export function useCreations() {
 	const dispatch = useDispatch();
