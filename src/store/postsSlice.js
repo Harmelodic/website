@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-export const posts = createSlice({
+export const postsSlice = createSlice({
 	name: 'posts',
 	initialState: {
 		value: [],

@@ -1,30 +1,30 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { categories } from './categories';
-import { filmsSeen } from './filmsSeen';
-import { tvShowsSeen } from './tvShowsSeen';
-import { selectedPost } from './postView';
-import { posts } from './posts';
-import { creations } from './creations';
-import { openSourceProjects } from './openSourceProjects';
-import { library } from './library';
-import { themeMode } from './themeMode';
+import { categoriesSlice } from './categoriesSlice';
+import { filmsSeenSlice } from './filmsSeenSlice';
+import { tvShowsSeenSlice } from './tvShowsSeenSlice';
+import { selectedPostSlice } from './selectedPostSlice';
+import { postsSlice } from './postsSlice';
+import { creationsSlice } from './creationsSlice';
+import { openSourceProjectsSlice } from './openSourceProjectsSlice';
+import { librarySlice } from './librarySlice';
+import { themeModeSlice } from './themeModeSlice';
 
 export function initialiseStore() {
 	return configureStore({
 		reducer: {
-			themeMode: themeMode.reducer,
+			themeMode: themeModeSlice.reducer,
 
-			posts: posts.reducer,
-			categories: categories.reducer,
-			selectedPost: selectedPost.reducer,
+			posts: postsSlice.reducer,
+			categories: categoriesSlice.reducer,
+			selectedPost: selectedPostSlice.reducer,
 
-			creations: creations.reducer,
-			openSourceProjects: openSourceProjects.reducer,
+			creations: creationsSlice.reducer,
+			openSourceProjects: openSourceProjectsSlice.reducer,
 
-			library: library.reducer,
+			library: librarySlice.reducer,
 
-			filmsSeen: filmsSeen.reducer,
-			tvShowsSeen: tvShowsSeen.reducer,
+			filmsSeen: filmsSeenSlice.reducer,
+			tvShowsSeen: tvShowsSeenSlice.reducer,
 		},
 	});
 }

@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-export const themeMode = createSlice({
+export const themeModeSlice = createSlice({
 	name: 'themeMode',
 	initialState: {
 		value: localStorage.getItem('themeMode') || 'system-preference',

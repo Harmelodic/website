@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import { creations, creationsSelector } from '../store/creations';
+import { creationsSlice, creationsSelector } from '../store/creationsSlice';
 import { request } from '../api/apiHandler';
 
 export function useCreations() {
@@ -8,16 +8,12 @@ export function useCreations() {
 	const creations = useSelector(creationsSelector);
 
 	useEffect(() => {
-		dispatch(fetchCreations());
+		request('GET', '/resources/creations.json')
+			.then(response => response.json())
+			.then(data => {
+				dispatch(creationsSlice.actions.setCreations(data));
+			});
 	}, []);
 
 	return creations;
-}
-
-export function fetchCreations() {
-	return async dispatch => {
-		const response = await request('GET', '/resources/creations.json');
-		const data = await response.json();
-		dispatch(creations.actions.setCreations(data));
-	};
 }

@@ -1,25 +1,21 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import { filmsSeen, filmsSeenSelector } from '../store/filmsSeen';
+import { filmsSeenSlice, filmsSeenSelector } from '../store/filmsSeenSlice';
 import { request } from '../api/apiHandler';
+
+const blogContentServer = process.env.BLOG_CONTENT_SERVER || '';
 
 export function useFilmsSeen() {
 	const filmsSeen = useSelector(filmsSeenSelector);
 	const dispatch = useDispatch();
 
 	useEffect(() => {
-		dispatch(fetchFilmsSeen());
+		request('GET', `${blogContentServer}/posts/filmsSeen.json`)
+			.then(response => response.json())
+			.then(data => {
+				dispatch(filmsSeenSlice.actions.setFilmsSeen(data));
+			});
 	}, []);
 
 	return filmsSeen;
-}
-
-const blogContentServer = process.env.BLOG_CONTENT_SERVER || '';
-
-export function fetchFilmsSeen() {
-	return async dispatch => {
-		const response = await request('GET', `${blogContentServer}/posts/filmsSeen.json`);
-		const data = await response.json();
-		dispatch(filmsSeen.actions.setFilmsSeen(data));
-	};
 }
