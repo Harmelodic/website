@@ -1,7 +1,9 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
-import { categories, categoriesSelector } from '../store/categories';
+import { categoriesSlice, categoriesSelector } from '../store/categoriesSlice';
 import { request } from '../api/apiHandler';
+
+const blogAPI = process.env.BLOG_API || '';
 
 export function useCategories() {
 	const dispatch = useDispatch();
@@ -10,22 +12,17 @@ export function useCategories() {
 
 	useEffect(() => {
 		setLoadingCategories(true);
-		dispatch(fetchCategories(() => setLoadingCategories(false)));
+
+		request('GET', `${blogAPI}/category`)
+			.then(response => response.json())
+			.then(data => {
+				dispatch(categoriesSlice.actions.setCategories(data));
+				setLoadingCategories(false);
+			});
 	}, []);
 
 	return {
 		categories: categories,
 		isLoadingCategories: isLoadingCategories,
-	};
-}
-
-const blogAPI = process.env.BLOG_API || '';
-
-export function fetchCategories(done) {
-	return async dispatch => {
-		const response = await request('GET', `${blogAPI}/category`);
-		const data = await response.json();
-		dispatch(categories.actions.setCategories(data));
-		done();
 	};
 }

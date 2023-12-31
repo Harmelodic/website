@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-export const openSourceProjects = createSlice({
+export const openSourceProjectsSlice = createSlice({
 	name: 'openSourceProjects',
 	initialState: {
 		value: [],

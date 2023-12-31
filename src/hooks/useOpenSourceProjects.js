@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import { openSourceProjects, openSourceProjectsSelector } from '../store/openSourceProjects';
+import { openSourceProjectsSlice, openSourceProjectsSelector } from '../store/openSourceProjectsSlice';
 import { request } from '../api/apiHandler';
 
 export function useOpenSourceProjects() {
@@ -8,23 +8,19 @@ export function useOpenSourceProjects() {
 	const dispatch = useDispatch();
 
 	useEffect(() => {
-		dispatch(fetchOpenSourceProjects());
+		request('GET', 'https://api.github.com/users/Harmelodic/repos')
+			.then(response => response.json())
+			.then(data => {
+				const repositories = data.map(repo => {
+					return {
+						name: repo.name,
+						description: repo.description,
+						url: repo.html_url,
+					};
+				});
+				dispatch(openSourceProjectsSlice.actions.setOpenSourceProjects(repositories));
+			});
 	}, []);
 
 	return openSourceProjects;
-}
-
-export function fetchOpenSourceProjects() {
-	return async dispatch => {
-		const response= await request('GET', 'https://api.github.com/users/Harmelodic/repos');
-		const data = await response.json();
-		const repositories = data.map(repo => {
-			return {
-				name: repo.name,
-				description: repo.description,
-				url: repo.html_url,
-			};
-		});
-		dispatch(openSourceProjects.actions.setOpenSourceProjects(repositories));
-	};
 }

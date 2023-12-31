@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-export const tvShowsSeen = createSlice({
+export const tvShowsSeenSlice = createSlice({
 	name: 'tvShowsSeen',
 	initialState: {
 		value: [],

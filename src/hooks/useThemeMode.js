@@ -1,20 +1,20 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { themeMode, themeModeSelector } from '../store/themeMode';
+import { themeModeSlice, themeModeSelector } from '../store/themeModeSlice';
 
 export function useThemeMode() {
 	const selectedThemeMode = useSelector(themeModeSelector);
 	const dispatch = useDispatch();
 
 	function changeToSystemPreference() {
-		dispatch(themeMode.actions.setToSystemPreference());
+		dispatch(themeModeSlice.actions.setToSystemPreference());
 	}
 
 	function changeToLight() {
-		dispatch(themeMode.actions.setToLight());
+		dispatch(themeModeSlice.actions.setToLight());
 	}
 
 	function changeToDark() {
-		dispatch(themeMode.actions.setToDark());
+		dispatch(themeModeSlice.actions.setToDark());
 	}
 
 	return [selectedThemeMode, changeToSystemPreference, changeToLight, changeToDark];

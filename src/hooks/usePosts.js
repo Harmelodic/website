@@ -1,7 +1,9 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
-import { posts, postsSelector } from '../store/posts';
+import { postsSlice, postsSelector } from '../store/postsSlice';
 import { request } from '../api/apiHandler';
+
+const blogAPI = process.env.BLOG_API || '';
 
 export function usePosts() {
 	const dispatch = useDispatch();
@@ -10,23 +12,16 @@ export function usePosts() {
 
 	useEffect(() => {
 		setLoadingPosts(true);
-		dispatch(fetchPosts(() => setLoadingPosts(false)));
+		request('GET', `${blogAPI}/post`)
+			.then(response => response.json())
+			.then(data => {
+				dispatch(postsSlice.actions.setPosts(data));
+				setLoadingPosts(false);
+			});
 	}, []);
 
 	return {
 		posts: posts,
 		isLoadingPosts: isLoadingPosts,
-	};
-}
-
-const blogAPI = process.env.BLOG_API || '';
-
-export function fetchPosts(done) {
-	return async dispatch => {
-		const response = await request('GET', `${blogAPI}/post`);
-		const data = await response.json();
-
-		dispatch(posts.actions.setPosts(data));
-		done();
 	};
 }

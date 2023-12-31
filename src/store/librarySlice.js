@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-export const library = createSlice({
+export const librarySlice = createSlice({
 	name: 'library',
 	initialState: {
 		value: [],
