@@ -8,7 +8,7 @@ export function usePost(postId) {
 	const dispatch = useDispatch();
 
 	useEffect(() => {
-		request('GET', `${process.env.BLOG_API}/post/${id}`)
+		request('GET', `${process.env.BLOG_API}/post/${postId}`)
 			.then(response => response.json())
 			.then(data => {
 				dispatch(selectedPostSlice.actions.setSelectedPost(data));

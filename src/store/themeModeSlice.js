@@ -2,25 +2,23 @@ import { createSlice } from '@reduxjs/toolkit';
 
 export const themeModeSlice = createSlice({
 	name: 'themeMode',
-	initialState: {
-		value: localStorage.getItem('themeMode') || 'system-preference',
-	},
+	initialState: localStorage.getItem('themeMode') || 'system-preference',
 	reducers: {
-		setToSystemPreference: state => {
-			state.value = 'system-preference';
+		setToSystemPreference: () => {
 			localStorage.setItem('themeMode', 'system-preference');
+			return 'system-preference';
 		},
-		setToLight: state => {
-			state.value = 'light';
+		setToLight: () => {
 			localStorage.setItem('themeMode', 'light');
+			return 'light';
 		},
-		setToDark: state => {
-			state.value = 'dark';
+		setToDark: () => {
 			localStorage.setItem('themeMode', 'dark');
+			return 'dark';
 		},
 	},
 });
 
 export function themeModeSelector(state) {
-	return state.themeMode.value;
+	return state.themeMode;
 }
