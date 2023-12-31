@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
 import { categoriesSlice, categoriesSelector } from '../store/categoriesSlice';
-import { request } from './api-registry';
+import { request } from './requestHandler';
 
 export function useCategories() {
 	const dispatch = useDispatch();

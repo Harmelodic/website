@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
 import { postsSlice, postsSelector } from '../store/postsSlice';
-import { request } from './api-registry';
+import { request } from './requestHandler';
 
 export function usePosts() {
 	const dispatch = useDispatch();
