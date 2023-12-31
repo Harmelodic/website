@@ -1,9 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
 import { categoriesSlice, categoriesSelector } from '../store/categoriesSlice';
-import { request } from '../api/apiHandler';
-
-const blogAPI = process.env.BLOG_API || '';
+import { request } from './api-registry';
 
 export function useCategories() {
 	const dispatch = useDispatch();
@@ -13,7 +11,7 @@ export function useCategories() {
 	useEffect(() => {
 		setLoadingCategories(true);
 
-		request('GET', `${blogAPI}/category`)
+		request('GET', `${process.env.BLOG_API}/category`)
 			.then(response => response.json())
 			.then(data => {
 				dispatch(categoriesSlice.actions.setCategories(data));

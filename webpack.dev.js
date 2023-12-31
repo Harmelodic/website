@@ -9,6 +9,7 @@ module.exports = merge(config, {
 		new webpack.EnvironmentPlugin({
 			BLOG_API: 'https://blog.api.harmelodic.com',
 			BLOG_CONTENT_SERVER: 'https://harmelodic.gitlab.io/scribbles-content',
+			GITHUB_API: 'https://api.github.com',
 		}),
 	],
 });
