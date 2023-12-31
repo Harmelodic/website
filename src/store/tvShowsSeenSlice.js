@@ -2,16 +2,14 @@ import { createSlice } from '@reduxjs/toolkit';
 
 export const tvShowsSeenSlice = createSlice({
 	name: 'tvShowsSeen',
-	initialState: {
-		value: [],
-	},
+	initialState: [],
 	reducers: {
 		setTvShowsSeen: (state, action) => {
-			state.value = action.payload;
+			return action.payload;
 		},
 	},
 });
 
 export function tvShowsSeenSelector(state) {
-	return state.tvShowsSeen.value;
+	return state.tvShowsSeen;
 }

@@ -2,16 +2,14 @@ import { createSlice } from '@reduxjs/toolkit';
 
 export const postsSlice = createSlice({
 	name: 'posts',
-	initialState: {
-		value: [],
-	},
+	initialState: [],
 	reducers: {
 		setPosts: (state, action) => {
-			state.value = action.payload;
+			return action.payload;
 		},
 	},
 });
 
 export function postsSelector(state) {
-	return state.posts.value;
+	return state.posts;
 }

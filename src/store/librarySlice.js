@@ -2,16 +2,14 @@ import { createSlice } from '@reduxjs/toolkit';
 
 export const librarySlice = createSlice({
 	name: 'library',
-	initialState: {
-		value: [],
-	},
+	initialState: [],
 	reducers: {
 		setLibrary: (state, action) => {
-			state.value = action.payload;
+			return action.payload;
 		},
 	},
 });
 
 export function librarySelector(state) {
-	return state.library.value;
+	return state.library;
 }

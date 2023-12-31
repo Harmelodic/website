@@ -2,16 +2,14 @@ import { createSlice } from '@reduxjs/toolkit';
 
 export const filmsSeenSlice = createSlice({
 	name: 'filmsSeen',
-	initialState: {
-		value: [],
-	},
+	initialState: [],
 	reducers: {
 		setFilmsSeen: (state, action) => {
-			state.value = action.payload;
+			return action.payload;
 		},
 	},
 });
 
 export function filmsSeenSelector(state) {
-	return state.filmsSeen.value;
+	return state.filmsSeen;
 }
