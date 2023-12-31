@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { creationsSlice, creationsSelector } from '../store/creationsSlice';
-import { request } from '../api/apiHandler';
+import { request } from './api-registry';
 
 export function useCreations() {
 	const dispatch = useDispatch();

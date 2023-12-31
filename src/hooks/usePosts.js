@@ -1,9 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
 import { postsSlice, postsSelector } from '../store/postsSlice';
-import { request } from '../api/apiHandler';
-
-const blogAPI = process.env.BLOG_API || '';
+import { request } from './api-registry';
 
 export function usePosts() {
 	const dispatch = useDispatch();
@@ -12,7 +10,7 @@ export function usePosts() {
 
 	useEffect(() => {
 		setLoadingPosts(true);
-		request('GET', `${blogAPI}/post`)
+		request('GET', `${process.env.BLOG_API}/post`)
 			.then(response => response.json())
 			.then(data => {
 				dispatch(postsSlice.actions.setPosts(data));

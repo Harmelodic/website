@@ -1,16 +1,14 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { selectedPostSlice, selectedPostSelector } from '../store/selectedPostSlice';
-import { request } from '../api/apiHandler';
-
-const blogAPI = process.env.BLOG_API || '';
+import { request } from './api-registry';
 
 export function usePost(postId) {
 	const post = useSelector(selectedPostSelector);
 	const dispatch = useDispatch();
 
 	useEffect(() => {
-		request('GET', `${blogAPI}/post/${id}`)
+		request('GET', `${process.env.BLOG_API}/post/${id}`)
 			.then(response => response.json())
 			.then(data => {
 				dispatch(selectedPostSlice.actions.setSelectedPost(data));

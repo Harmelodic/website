@@ -1,14 +1,14 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { openSourceProjectsSlice, openSourceProjectsSelector } from '../store/openSourceProjectsSlice';
-import { request } from '../api/apiHandler';
+import { request } from './api-registry';
 
 export function useOpenSourceProjects() {
 	const openSourceProjects = useSelector(openSourceProjectsSelector);
 	const dispatch = useDispatch();
 
 	useEffect(() => {
-		request('GET', 'https://api.github.com/users/Harmelodic/repos')
+		request('GET', `${process.env.GITHUB_API}/users/Harmelodic/repos`)
 			.then(response => response.json())
 			.then(data => {
 				const repositories = data.map(repo => {
