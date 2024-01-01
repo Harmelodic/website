@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import MediaListEntry from './MediaListEntry';
 import SortPicker from './SortPicker';
-import { Main } from '../../Main';
+import { Main } from '../../../lib/Main';
 import styled from 'styled-components';
 import { useFilmsSeen } from '../../../../hooks/useFilmsSeen';
 

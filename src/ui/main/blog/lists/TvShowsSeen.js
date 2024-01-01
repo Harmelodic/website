@@ -2,7 +2,7 @@ import { useState } from 'react';
 import MediaListEntry from './MediaListEntry.js';
 import SortPicker from './SortPicker.js';
 import styled from 'styled-components';
-import { Main } from '../../Main';
+import { Main } from '../../../lib/Main';
 import { useTvShowsSeen } from '../../../../hooks/useTvShowsSeen';
 
 const TvShowsSeenMain = styled(Main)`

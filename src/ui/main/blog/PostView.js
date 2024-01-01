@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import styled, { useTheme } from 'styled-components';
 import { useParams } from 'react-router-dom';
-import { Main } from '../Main';
+import { Main } from '../../lib/Main';
 import { LoadingTextBlock } from '../../lib/LoadingTextBlock';
 import { HorizontalRule } from '../../lib/HorizontalRule';
 import { ReadingSpace } from '../../lib/ReadingSpace';

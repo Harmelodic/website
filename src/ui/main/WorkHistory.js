@@ -1,8 +1,8 @@
-import { FlexDiv } from '../../lib/FlexDiv';
-import { ColumnInfoBox } from '../../lib/InfoBox';
-import { ReadingSpace } from '../../lib/ReadingSpace';
-import { Title } from '../../lib/Title';
-import { Main } from '../Main';
+import { FlexDiv } from '../lib/FlexDiv';
+import { ColumnInfoBox } from '../lib/InfoBox';
+import { ReadingSpace } from '../lib/ReadingSpace';
+import { Title } from '../lib/Title';
+import { Main } from '../lib/Main';
 
 export default function WorkHistory() {
 	return (

@@ -1,5 +1,5 @@
 import { ColumnInfoBox } from '../../lib/InfoBox';
-import { Main } from '../Main';
+import { Main } from '../../lib/Main';
 import { ReadingSpace } from '../../lib/ReadingSpace';
 import { Title } from '../../lib/Title';
 import styled from 'styled-components';

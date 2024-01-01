@@ -5,16 +5,16 @@ import { ErrorBoundary } from './ErrorBoundary';
 import { Themed } from './theme/Themed';
 
 const HeaderBar = lazy(() => import('./header/HeaderBar'));
-const Home = lazy(() => import('./main/home/Home'));
+const Home = lazy(() => import('./main/Home'));
 const Blog = lazy(() => import('./main/blog/Blog'));
 const PostView = lazy(() => import('./main/blog/PostView'));
 const FilmsSeen = lazy(() => import('./main/blog/lists/FilmsSeen'));
 const TvShowsSeen = lazy(() => import('./main/blog/lists/TvShowsSeen'));
-const Creations = lazy(() => import('./main/creations/Creations'));
-const OpenSource = lazy(() => import('./main/open-source/OpenSource'));
+const Creations = lazy(() => import('./main/Creations'));
+const OpenSource = lazy(() => import('./main/OpenSource'));
 const Library = lazy(() => import('./main/library/Library'));
-const WorkHistory = lazy(() => import('./main/work-history/WorkHistory'));
-const NoPageFound = lazy(() => import('./main/no-page-found/NoPageFound'));
+const WorkHistory = lazy(() => import('./main/WorkHistory'));
+const NoPageFound = lazy(() => import('./main/NoPageFound'));
 
 const StyledApp = styled.div`
 	display: flex;

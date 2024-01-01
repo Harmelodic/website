@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import { Main } from '../Main';
-import { ReadingSpace } from '../../lib/ReadingSpace';
-import { Title } from '../../lib/Title';
-import { ProjectLarge } from '../../lib/ProjectLarge';
+import { Main } from '../lib/Main';
+import { ReadingSpace } from '../lib/ReadingSpace';
+import { Title } from '../lib/Title';
+import { ProjectLarge } from '../lib/ProjectLarge';
 
 const Content = styled.div`
   display: flex;

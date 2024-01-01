@@ -7,7 +7,7 @@ import { ReadingSpace } from '../../lib/ReadingSpace';
 import { SelectBox } from '../../lib/SelectBox';
 import { Title } from '../../lib/Title';
 import { ColumnInfoBox, RowInfoBox } from '../../lib/InfoBox';
-import { Main } from '../Main';
+import { Main } from '../../lib/Main';
 import { useCategories } from '../../../hooks/useCategories';
 import { usePosts } from '../../../hooks/usePosts';
 

@@ -1,10 +1,10 @@
-import { SocialMedia } from '../../lib/SocialMedia';
-import { ColumnInfoBox, RowInfoBox } from '../../lib/InfoBox';
-import { Main } from '../Main';
-import { ReadingSpace } from '../../lib/ReadingSpace';
-import { Title } from '../../lib/Title';
-import { ProjectSmall } from '../../lib/ProjectSmall';
-import { CircleImage } from '../../lib/CircleImage';
+import { SocialMedia } from '../lib/SocialMedia';
+import { ColumnInfoBox, RowInfoBox } from '../lib/InfoBox';
+import { Main } from '../lib/Main';
+import { ReadingSpace } from '../lib/ReadingSpace';
+import { Title } from '../lib/Title';
+import { ProjectSmall } from '../lib/ProjectSmall';
+import { CircleImage } from '../lib/CircleImage';
 import styled, { useTheme } from 'styled-components';
 
 const ImageOfMe = styled(CircleImage)`
