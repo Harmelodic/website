@@ -4,7 +4,6 @@ import { filmsSeenSlice } from './filmsSeenSlice';
 import { tvShowsSeenSlice } from './tvShowsSeenSlice';
 import { selectedPostSlice } from './selectedPostSlice';
 import { postsSlice } from './postsSlice';
-import { creationsSlice } from './creationsSlice';
 import { openSourceProjectsSlice } from './openSourceProjectsSlice';
 import { librarySlice } from './librarySlice';
 import { themeModeSlice } from './themeModeSlice';
@@ -18,7 +17,6 @@ export function initialiseStore() {
 			categories: categoriesSlice.reducer,
 			selectedPost: selectedPostSlice.reducer,
 
-			creations: creationsSlice.reducer,
 			openSourceProjects: openSourceProjectsSlice.reducer,
 
 			library: librarySlice.reducer,
