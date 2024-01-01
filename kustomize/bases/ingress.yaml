@@ -4,6 +4,7 @@ metadata:
   name: website
   annotations:
     cert-manager.io/issuer: website # Will generate Certificate
+    cert-manager.io/revision-history-limit: 1
 spec:
   ingressClassName: public
   rules:
