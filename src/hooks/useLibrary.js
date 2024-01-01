@@ -18,7 +18,7 @@ export function useLibrary() {
 					const data = await response.json();
 					dispatch(librarySlice.actions.setLibrary(data));
 				} else {
-					console.error(`Failed to fetch categories. Response: ${response.status}`);
+					console.error(`Failed to fetch library. Response: ${response.status}`);
 					setErrorLoadingLibrary({
 						occurred: true,
 						reason: response.status.toString(),

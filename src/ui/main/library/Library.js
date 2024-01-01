@@ -40,15 +40,11 @@ export default function Library() {
 				{
 					errorLoadingLibrary.occurred ? (
 						<ColumnInfoBox>
-							<span>
-								Error loading library. Please, try again later.
-							</span>
+							<span>Error loading library. Please, try again later.</span>
 						</ColumnInfoBox>
 					) : isLoadingLibrary ? (
 						<ColumnInfoBox>
-							<span>
-								Loading Library...
-							</span>
+							<span>Loading Library...</span>
 						</ColumnInfoBox>
 					) : categories.map(category => (
 						<Shelf title={category} key={category}>

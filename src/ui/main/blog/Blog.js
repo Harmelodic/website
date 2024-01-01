@@ -6,31 +6,31 @@ import { Post } from '../../lib/Post';
 import { ReadingSpace } from '../../lib/ReadingSpace';
 import { SelectBox } from '../../lib/SelectBox';
 import { Title } from '../../lib/Title';
-import { RowInfoBox } from '../../lib/InfoBox';
+import { ColumnInfoBox, RowInfoBox } from '../../lib/InfoBox';
 import { Main } from '../Main';
 import { useCategories } from '../../../hooks/useCategories';
 import { usePosts } from '../../../hooks/usePosts';
 
 const StyledFilters = styled.div`
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  margin: 20px;
-  white-space: normal;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 20px;
+    white-space: normal;
 `;
 
 const Posts = styled.div`
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100%;
-  max-width: 900px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    max-width: 900px;
 `;
 
 export default function Blog() {
 	const { categories, isLoadingCategories, errorLoadingCategories } = useCategories();
-	const { posts, isLoadingPosts } = usePosts();
+	const { posts, isLoadingPosts, errorLoadingPosts } = usePosts();
 	const [filterBySearch, setFilterBySearch] = useState('');
 	const [filterByCategory, setFilterByCategory] = useState('');
 
@@ -83,11 +83,13 @@ export default function Blog() {
 			</StyledFilters>
 			<Posts>
 				{
-					isLoadingPosts ? (
+					errorLoadingPosts.occurred ? (
+						<ColumnInfoBox>
+							<span>Error loading posts. Please, try again later.</span>
+						</ColumnInfoBox>
+					) : isLoadingPosts ? (
 						Array(9).fill('').map((_, index) => (
-							<Post
-								key={index}
-								loading={true}/>
+							<Post key={index} loading={true} />
 						))
 					) : (
 						posts.length === 0 ? (

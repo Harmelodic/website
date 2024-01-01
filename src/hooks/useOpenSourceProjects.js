@@ -27,7 +27,7 @@ export function useOpenSourceProjects() {
 					});
 					dispatch(openSourceProjectsSlice.actions.setOpenSourceProjects(repositories));
 				} else {
-					console.error(`Failed to fetch categories. Response: ${response.status}`);
+					console.error(`Failed to fetch open source projects. Response: ${response.status}`);
 					setErrorLoadingOpenSourceProjects({
 						occurred: true,
 						reason: response.status.toString(),
