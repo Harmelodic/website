@@ -6,6 +6,7 @@ export function useCategories() {
 	const dispatch = useDispatch();
 	const categories = useSelector(categoriesSelector);
 	const [isLoadingCategories, setLoadingCategories] = useState(true);
+	const [errorLoadingCategories, setErrorLoadingCategories] = useState({ occurred: false, reason: '' });
 
 	useEffect(() => {
 		setLoadingCategories(true);
@@ -18,21 +19,29 @@ export function useCategories() {
 					dispatch(categoriesSlice.actions.setCategories(data));
 				} else {
 					console.error(`Failed to fetch categories. Response: ${response.status}`);
-					dispatch(categoriesSlice.actions.setCategories([]));
+					setErrorLoadingCategories({
+						occurred: true,
+						reason: response.status,
+					});
 				}
 			} catch (error) {
 				console.error(error);
-				dispatch(categoriesSlice.actions.setCategories([]));
+				setErrorLoadingCategories({
+					occurred: true,
+					reason: 'Network error',
+				});
 			} finally {
 				setLoadingCategories(false);
 			}
 		}
-		// noinspection JSIgnoredPromiseFromCall - useEffect's effect can't be async.
+
+		// noinspection JSIgnoredPromiseFromCall - cannot await since useEffect's effect can't be async.
 		fetchCategories();
 	}, []);
 
 	return {
 		categories: categories,
 		isLoadingCategories: isLoadingCategories,
+		errorLoadingCategories: errorLoadingCategories,
 	};
 }
