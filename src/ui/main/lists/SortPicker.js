@@ -7,6 +7,7 @@ const StyledSortPicker = styled.div`
     align-items: center;
 	width: 100%;
   	max-width: 900px;
+	height: 80px;
 	border-bottom: solid 1px ${props => props.theme.colors.softBorder};
 `;
 
@@ -40,9 +41,7 @@ const SortChoice = styled.div`
 const SortText = styled.div`
 	display: flex;
 	margin-left: 25px;
-	height: 100%;
 	font-size: 1rem;
-	line-height: 80px;
 	vertical-align: top;
 `;
 
