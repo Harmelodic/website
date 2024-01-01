@@ -65,7 +65,7 @@ const StyledSubtitle = styled.span`
 
 export function ProjectLarge(props) {
 	return (
-		<StyledProject href={props.href} target="_blank" rel="noopener">
+		<StyledProject href={props.href} target="_blank" rel="noopener" title={props.title}>
 			<StyledProjectImageCircle background={props.background}>
 				<StyledProjectImage
 					src={props.src ? props.src : '/images/NoLogo.svg'}

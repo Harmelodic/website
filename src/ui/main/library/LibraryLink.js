@@ -20,7 +20,7 @@ export function LibraryLink(props) {
 	return (
 		<LibraryLinkWrapper>
 			<LinkImage src={props.imgSrc || `/images/external-link-${theme.name}.svg`} />
-			<Hyperlink href={props.href} target="_blank" rel="noopener">{props.title}</Hyperlink>
+			<Hyperlink href={props.href} target="_blank" rel="noopener" title={props.title}>{props.title}</Hyperlink>
 		</LibraryLinkWrapper>
 	);
 }

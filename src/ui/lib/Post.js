@@ -59,7 +59,7 @@ export function Post(props) {
 			return categoryMapping ? categoryMapping.name : [''];
 		});
 		return (
-			<StyledPost to={props.link}>
+			<StyledPost to={props.link} title={props.title}>
 				<StyledTitle className="heading">{props.title}</StyledTitle>
 				<StyledSubtitle>
 					{

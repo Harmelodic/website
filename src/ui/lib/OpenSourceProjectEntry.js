@@ -49,7 +49,7 @@ const StyledSubtitle = styled.span`
 
 export function OpenSourceProjectEntry(props) {
 	return (
-		<StyledEntry href={props.href} target="_blank" rel="noopener">
+		<StyledEntry href={props.href} target="_blank" rel="noopener" title={props.title}>
 			<StyledProjectText>
 				<StyledTitle>{props.title}</StyledTitle>
 				<StyledSubtitle>{props.subtitle}</StyledSubtitle>
