@@ -5,7 +5,7 @@ import { librarySlice, librarySelector } from '../store/librarySlice';
 export function useLibrary() {
 	const dispatch = useDispatch();
 	const library = useSelector(librarySelector);
-	const [isLoadingLibrary, setLoadingLibrary] = useState(false);
+	const [isLoadingLibrary, setLoadingLibrary] = useState(true);
 	const [errorLoadingLibrary, setErrorLoadingLibrary] = useState({ occurred: false, reason: '' });
 
 	useEffect(() => {

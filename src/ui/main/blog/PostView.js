@@ -7,6 +7,7 @@ import { HorizontalRule } from '../../lib/HorizontalRule';
 import { ReadingSpace } from '../../lib/ReadingSpace';
 import { Markdown } from '../../lib/Markdown';
 import { usePost } from '../../../hooks/usePost';
+import { ColumnInfoBox } from '../../lib/InfoBox';
 
 const PostViewMain = styled(Main)`
 	flex-flow: column nowrap;
@@ -41,77 +42,82 @@ const Category = styled.div`
 
 export default function PostView() {
 	const params = useParams();
-	const { post, isPostLoading } = usePost(params.id);
+	const { post, isPostLoading, errorLoadingPost } = usePost(params.id);
 	const theme = useTheme();
 
 	useEffect(() => {
 		window.scroll(0, 0);
 	}, []);
 
-	return isPostLoading ? (
+	return (
 		<PostViewMain>
-			<PostViewWrapper>
-				<PostHeading>
-					<LoadingTextBlock width={500} color={theme.font.loading.title} />
-				</PostHeading>
-				<div>
-					<LoadingTextBlock margin={15} width={300} />
-					<LoadingTextBlock margin={15} width={200} />
-					<LoadingTextBlock margin={15} width={50} />
-					<LoadingTextBlock margin={15} width={250} />
-					<LoadingTextBlock margin={15} width={50} />
-					<LoadingTextBlock margin={15} width={150} />
-					<LoadingTextBlock margin={15} width={80} />
-					<br />
-					<br />
-					<LoadingTextBlock margin={15} width={200} color={theme.font.loading.title} />
-					<HorizontalRule />
-					<LoadingTextBlock margin={15} width={250} />
-					<LoadingTextBlock margin={15} width={100} />
-					<LoadingTextBlock margin={15} width={500} />
-					<LoadingTextBlock margin={15} width={550} />
-					<LoadingTextBlock margin={15} width={80} />
-					<br />
-					<br />
-					<LoadingTextBlock margin={15} width={800} />
-					<LoadingTextBlock margin={15} width={500} />
-					<LoadingTextBlock margin={15} width={600} />
-					<LoadingTextBlock margin={15} width={400} />
-					<LoadingTextBlock margin={15} width={500} />
-					<br />
-					<br />
-					<LoadingTextBlock margin={15} width={100} color={theme.font.loading.title} />
-					<LoadingTextBlock margin={15} width={500} />
-					<LoadingTextBlock margin={15} width={150} />
-					<LoadingTextBlock margin={15} width={80} />
-					<LoadingTextBlock margin={15} width={450} />
-					<br />
-					<br />
-					<LoadingTextBlock margin={15} width={300} color={theme.font.loading.title} />
-					<HorizontalRule />
-					<LoadingTextBlock margin={15} width={50} />
-					<LoadingTextBlock margin={15} width={250} />
-					<LoadingTextBlock margin={15} width={50} />
-					<LoadingTextBlock margin={15} width={150} />
-					<LoadingTextBlock margin={15} width={80} />
-					<LoadingTextBlock margin={15} width={350} />
-				</div>
-				<Category>
-					<LoadingTextBlock width={200} color={theme.font.loading.subtitle} />
-				</Category>
-			</PostViewWrapper>
-			<ReadingSpace />
-		</PostViewMain>
-	) : (
-		<PostViewMain>
-			<PostViewWrapper>
-				<PostHeading>{post.title}</PostHeading>
-				<Markdown markdown={post.content} />
-				<Category>
-					{post.content && post.category}
-				</Category>
-			</PostViewWrapper>
-			<ReadingSpace />
+			{
+				errorLoadingPost.occurred ? (
+					<ColumnInfoBox>
+						<span>Error occurred rendering post. Please, try again later.</span>
+					</ColumnInfoBox>
+				) : isPostLoading ? (
+					<PostViewWrapper>
+						<PostHeading>
+							<LoadingTextBlock width={500} color={theme.font.loading.title}/>
+						</PostHeading>
+						<div>
+							<LoadingTextBlock margin={15} width={300}/>
+							<LoadingTextBlock margin={15} width={200}/>
+							<LoadingTextBlock margin={15} width={50}/>
+							<LoadingTextBlock margin={15} width={250}/>
+							<LoadingTextBlock margin={15} width={50}/>
+							<LoadingTextBlock margin={15} width={150}/>
+							<LoadingTextBlock margin={15} width={80}/>
+							<br/>
+							<br/>
+							<LoadingTextBlock margin={15} width={200} color={theme.font.loading.title}/>
+							<HorizontalRule/>
+							<LoadingTextBlock margin={15} width={250}/>
+							<LoadingTextBlock margin={15} width={100}/>
+							<LoadingTextBlock margin={15} width={500}/>
+							<LoadingTextBlock margin={15} width={550}/>
+							<LoadingTextBlock margin={15} width={80}/>
+							<br/>
+							<br/>
+							<LoadingTextBlock margin={15} width={800}/>
+							<LoadingTextBlock margin={15} width={500}/>
+							<LoadingTextBlock margin={15} width={600}/>
+							<LoadingTextBlock margin={15} width={400}/>
+							<LoadingTextBlock margin={15} width={500}/>
+							<br/>
+							<br/>
+							<LoadingTextBlock margin={15} width={100} color={theme.font.loading.title}/>
+							<LoadingTextBlock margin={15} width={500}/>
+							<LoadingTextBlock margin={15} width={150}/>
+							<LoadingTextBlock margin={15} width={80}/>
+							<LoadingTextBlock margin={15} width={450}/>
+							<br/>
+							<br/>
+							<LoadingTextBlock margin={15} width={300} color={theme.font.loading.title}/>
+							<HorizontalRule/>
+							<LoadingTextBlock margin={15} width={50}/>
+							<LoadingTextBlock margin={15} width={250}/>
+							<LoadingTextBlock margin={15} width={50}/>
+							<LoadingTextBlock margin={15} width={150}/>
+							<LoadingTextBlock margin={15} width={80}/>
+							<LoadingTextBlock margin={15} width={350}/>
+						</div>
+						<Category>
+							<LoadingTextBlock width={200} color={theme.font.loading.subtitle}/>
+						</Category>
+					</PostViewWrapper>
+				) : (
+					<PostViewWrapper>
+						<PostHeading>{post.title}</PostHeading>
+						<Markdown markdown={post.content}/>
+						<Category>
+							{post.content && post.category}
+						</Category>
+					</PostViewWrapper>
+				)
+			}
+			<ReadingSpace/>
 		</PostViewMain>
 	);
 }

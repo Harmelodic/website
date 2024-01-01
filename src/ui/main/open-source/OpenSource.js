@@ -35,15 +35,11 @@ export default function OpenSource() {
 				{
 					errorLoadingOpenSourceProjects.occurred ? (
 						<ColumnInfoBox>
-							<FlexDiv>
-								<span>Error occurred loading Open Source Projects</span>
-							</FlexDiv>
+							<span>Error occurred loading Open Source Projects</span>
 						</ColumnInfoBox>
 					) : isLoadingOpenSourceProjects ? (
 						<ColumnInfoBox>
-							<FlexDiv>
-								<span>Loading Open Source Projects...</span>
-							</FlexDiv>
+							<span>Loading Open Source Projects...</span>
 						</ColumnInfoBox>
 					) : openSourceProjects
 						.filter(project => !project.hidden)

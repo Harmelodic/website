@@ -5,7 +5,7 @@ import { openSourceProjectsSlice, openSourceProjectsSelector } from '../store/op
 export function useOpenSourceProjects() {
 	const openSourceProjects = useSelector(openSourceProjectsSelector);
 	const dispatch = useDispatch();
-	const [isLoadingOpenSourceProjects, setLoadingOpenSourceProjects] = useState(false);
+	const [isLoadingOpenSourceProjects, setLoadingOpenSourceProjects] = useState(true);
 	const [
 		errorLoadingOpenSourceProjects,
 		setErrorLoadingOpenSourceProjects,
