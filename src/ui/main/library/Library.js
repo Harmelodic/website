@@ -7,7 +7,7 @@ import { Shelf } from './Shelf';
 import { LibraryLink } from './LibraryLink';
 import { useLibrary } from '../../../hooks/useLibrary';
 
-const LibraryContext = styled.div`
+const LibraryContent = styled.div`
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: flex-start;
@@ -36,7 +36,7 @@ export default function Library() {
 				</span>
 			</ColumnInfoBox>
 
-			<LibraryContext>
+			<LibraryContent>
 				{
 					errorLoadingLibrary.occurred ? (
 						<ColumnInfoBox>
@@ -65,7 +65,7 @@ export default function Library() {
 						</Shelf>
 					))
 				}
-			</LibraryContext>
+			</LibraryContent>
 
 			<ReadingSpace/>
 		</Main>

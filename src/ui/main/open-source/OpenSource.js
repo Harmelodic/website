@@ -18,7 +18,7 @@ const Content = styled.div`
 `;
 
 export default function OpenSource() {
-	const openSourceProjects = useOpenSourceProjects();
+	const { openSourceProjects, isLoadingOpenSourceProjects, errorLoadingOpenSourceProjects } = useOpenSourceProjects();
 
 	return (
 		<Main>
@@ -33,7 +33,19 @@ export default function OpenSource() {
 			</ColumnInfoBox>
 			<Content>
 				{
-					openSourceProjects
+					errorLoadingOpenSourceProjects.occurred ? (
+						<ColumnInfoBox>
+							<FlexDiv>
+								<span>Error occurred loading Open Source Projects</span>
+							</FlexDiv>
+						</ColumnInfoBox>
+					) : isLoadingOpenSourceProjects ? (
+						<ColumnInfoBox>
+							<FlexDiv>
+								<span>Loading Open Source Projects...</span>
+							</FlexDiv>
+						</ColumnInfoBox>
+					) : openSourceProjects
 						.filter(project => !project.hidden)
 						.sort((a, b) => {
 							const titleA = a.name.toUpperCase();
