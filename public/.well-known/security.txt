@@ -1,2 +1,4 @@
-Contact: https://twitter.com/Harmelodic
+Canonical: https://harmelodic.com/.well-known/security.txt
+Contact: mailto:matt+securitytxt@harmelodic.com
+Expires: 2024-12-31T23:59:59.000Z
 Preferred-Languages: en
