@@ -25,7 +25,7 @@ const SortChoice = styled.div`
     align-items: center;
 	height: 100%;
 	cursor: pointer;
-	color: ${props => props.selected ? props.theme.font.normalColor : props.theme.input.placeholderColor};
+	color: ${props => props.selected ? props.theme.font.normalColor : props.theme.font.placeholderColor};
 	transition: color 150ms;
 
 	&:hover {

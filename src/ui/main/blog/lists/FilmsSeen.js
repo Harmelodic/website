@@ -4,6 +4,7 @@ import SortPicker from './SortPicker';
 import { Main } from '../../../lib/Main';
 import styled from 'styled-components';
 import { useFilmsSeen } from '../../../../hooks/useFilmsSeen';
+import {Title} from "../../../lib/Title";
 
 const FilmsSeenMain = styled(Main)`
 	flex-flow: column nowrap;
@@ -21,13 +22,15 @@ export default function FilmsSeen() {
 	}
 
 	const filmsSeenWithPosition = filmsSeen.map((film, index) => {
-		film.position = index + 1;
-		return film;
+		return {
+			...film,
+			position: index + 1,
+		};
 	});
 
 	return (
 		<FilmsSeenMain>
-			<h1 style={{ textAlign: 'center' }}>Films I've Seen</h1>
+			<Title>Films I've Seen</Title>
 			<SortPicker
 				selectedChoice={sort}
 				onChangeSort={onChangeSort}

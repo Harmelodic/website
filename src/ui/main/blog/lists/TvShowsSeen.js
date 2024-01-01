@@ -4,6 +4,7 @@ import SortPicker from './SortPicker.js';
 import styled from 'styled-components';
 import { Main } from '../../../lib/Main';
 import { useTvShowsSeen } from '../../../../hooks/useTvShowsSeen';
+import {Title} from "../../../lib/Title";
 
 const TvShowsSeenMain = styled(Main)`
 	flex-flow: column nowrap;
@@ -20,15 +21,16 @@ export default function TvShowsSeen() {
 		setSort(sort);
 	}
 
-	const tvShowsSeenWithPosition = tvShowsSeen
-		.map((tvShow, index) => {
-			tvShow.position = index + 1;
-			return tvShow;
-		});
+	const tvShowsSeenWithPosition = tvShowsSeen.map((tvShow, index) => {
+		return {
+			...tvShow,
+			position: index + 1,
+		};
+	});
 
 	return (
 		<TvShowsSeenMain>
-			<h1 style={{ textAlign: 'center' }}>TV Shows I've Seen</h1>
+			<Title>TV Shows I've Seen</Title>
 			<SortPicker
 				selectedChoice={sort}
 				onChangeSort={onChangeSort}
