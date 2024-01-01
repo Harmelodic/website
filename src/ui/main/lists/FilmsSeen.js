@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import MediaListEntry from './MediaListEntry';
 import SortPicker from './SortPicker';
-import { Main } from '../../../lib/Main';
+import { Main } from '../../lib/Main';
 import styled from 'styled-components';
-import { useFilmsSeen } from '../../../../hooks/useFilmsSeen';
-import {Title} from "../../../lib/Title";
-import {ColumnInfoBox} from "../../../lib/InfoBox";
+import { useFilmsSeen } from '../../../hooks/useFilmsSeen';
+import { Title } from '../../lib/Title';
+import { ColumnInfoBox } from '../../lib/InfoBox';
 
 const FilmsSeenMain = styled(Main)`
 	flex-flow: column nowrap;

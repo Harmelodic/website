@@ -2,10 +2,10 @@ import { useState } from 'react';
 import MediaListEntry from './MediaListEntry.js';
 import SortPicker from './SortPicker.js';
 import styled from 'styled-components';
-import { Main } from '../../../lib/Main';
-import { useTvShowsSeen } from '../../../../hooks/useTvShowsSeen';
-import {Title} from "../../../lib/Title";
-import {ColumnInfoBox} from "../../../lib/InfoBox";
+import { Main } from '../../lib/Main';
+import { useTvShowsSeen } from '../../../hooks/useTvShowsSeen';
+import { Title } from '../../lib/Title';
+import { ColumnInfoBox } from '../../lib/InfoBox';
 
 const TvShowsSeenMain = styled(Main)`
 	flex-flow: column nowrap;
