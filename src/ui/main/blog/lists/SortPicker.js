@@ -15,8 +15,8 @@ const SortLogo = styled.img`
     margin-left: 25px;
 	width: 30px;
 	height: 30px;
-	background: ${props => props.selected ? props.theme.font.normalColor : props.theme.font.placeholderColor};
-	transition: background 150ms;
+	opacity: ${props => props.selected ? 1 : 0.5};
+	transition: opacity 150ms;
 `;
 
 const SortChoice = styled.div`
@@ -33,7 +33,7 @@ const SortChoice = styled.div`
 	}
 
 	&:hover ${SortLogo} {
-		background: ${props => props.theme.font.normalColor};
+		opacity: 1;
 	}
 `;
 
