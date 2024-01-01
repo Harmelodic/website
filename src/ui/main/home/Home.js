@@ -35,7 +35,7 @@ export default function Home() {
 				<SocialMedia
 					href="https://bsky.app/profile/harmelodic.com"
 					title="Bluesky"
-					src={`/images/bluesky.webp`}
+					src={`/images/bluesky.svg`}
 				/>
 				<SocialMedia
 					href="https://github.com/Harmelodic"
