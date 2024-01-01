@@ -5,6 +5,7 @@ import { Main } from '../../../lib/Main';
 import styled from 'styled-components';
 import { useFilmsSeen } from '../../../../hooks/useFilmsSeen';
 import {Title} from "../../../lib/Title";
+import {ColumnInfoBox} from "../../../lib/InfoBox";
 
 const FilmsSeenMain = styled(Main)`
 	flex-flow: column nowrap;
@@ -36,7 +37,11 @@ export default function FilmsSeen() {
 				onChangeSort={onChangeSort}
 			/>
 			{
-				filmsSeen.length === 0 && <div style={{ padding: '20px' }}>Loading...</div>
+				filmsSeen.length === 0 && (
+					<ColumnInfoBox>
+						<span>Loading films</span>
+					</ColumnInfoBox>
+				)
 			}
 			{
 				filmsSeenWithPosition

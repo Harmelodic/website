@@ -45,8 +45,8 @@ export function App() {
 								<Route exact path="/" element={<Home />} />
 								<Route exact path="/blog" element={<Blog />} />
 								<Route exact path="/blog/:id" element={<PostView />} />
-								<Route exact path="/blog/list/1532228220000" element={<FilmsSeen />} />
-								<Route exact path="/blog/list/1532228640000" element={<TvShowsSeen />} />
+								<Route exact path="/list/films-seen" element={<FilmsSeen />} />
+								<Route exact path="/list/tv-shows-seen" element={<TvShowsSeen />} />
 								<Route exact path="/creations" element={<Creations />} />
 								<Route exact path="/open-source" element={<OpenSource />} />
 								<Route exact path="/library" element={<Library />} />

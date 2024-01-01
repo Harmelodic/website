@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import { Main } from '../../../lib/Main';
 import { useTvShowsSeen } from '../../../../hooks/useTvShowsSeen';
 import {Title} from "../../../lib/Title";
+import {ColumnInfoBox} from "../../../lib/InfoBox";
 
 const TvShowsSeenMain = styled(Main)`
 	flex-flow: column nowrap;
@@ -36,7 +37,11 @@ export default function TvShowsSeen() {
 				onChangeSort={onChangeSort}
 			/>
 			{
-				tvShowsSeen.length === 0 && <div style={{ padding: '20px' }}>Loading...</div>
+				tvShowsSeen.length === 0 && (
+					<ColumnInfoBox>
+						<span>Loading TV shows</span>
+					</ColumnInfoBox>
+				)
 			}
 			{
 				tvShowsSeenWithPosition
