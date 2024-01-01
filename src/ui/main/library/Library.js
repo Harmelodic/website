@@ -18,7 +18,7 @@ const LibraryContext = styled.div`
 `;
 
 export default function Library() {
-	const library = useLibrary();
+	const { library, isLoadingLibrary, errorLoadingLibrary } = useLibrary();
 
 	const categories = [...new Set(library.map(libraryLinks => libraryLinks.category))];
 	categories.sort();
@@ -37,20 +37,34 @@ export default function Library() {
 			</ColumnInfoBox>
 
 			<LibraryContext>
-				{categories.map(category => (
-					<Shelf title={category} key={category}>
-						{library
-							.filter(libraryLink => libraryLink.category === category)
-							.sort((a, b) => a.title.toUpperCase().localeCompare(b.title.toUpperCase()))
-							.map(libraryLink => (
-								<LibraryLink key={libraryLink.title}
-											 title={libraryLink.title}
-											 href={libraryLink.href}
-											 imgSrc={libraryLink.favicon} />
-							))
-						}
-					</Shelf>
-				))}
+				{
+					errorLoadingLibrary.occurred ? (
+						<ColumnInfoBox>
+							<span>
+								Error loading library. Please, try again later.
+							</span>
+						</ColumnInfoBox>
+					) : isLoadingLibrary ? (
+						<ColumnInfoBox>
+							<span>
+								Loading Library...
+							</span>
+						</ColumnInfoBox>
+					) : categories.map(category => (
+						<Shelf title={category} key={category}>
+							{library
+								.filter(libraryLink => libraryLink.category === category)
+								.sort((a, b) => a.title.toUpperCase().localeCompare(b.title.toUpperCase()))
+								.map(libraryLink => (
+									<LibraryLink key={libraryLink.title}
+										title={libraryLink.title}
+										href={libraryLink.href}
+										imgSrc={libraryLink.favicon}/>
+								))
+							}
+						</Shelf>
+					))
+				}
 			</LibraryContext>
 
 			<ReadingSpace/>

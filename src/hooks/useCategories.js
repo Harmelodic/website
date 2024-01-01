@@ -21,7 +21,7 @@ export function useCategories() {
 					console.error(`Failed to fetch categories. Response: ${response.status}`);
 					setErrorLoadingCategories({
 						occurred: true,
-						reason: response.status,
+						reason: response.status.toString(),
 					});
 				}
 			} catch (error) {
