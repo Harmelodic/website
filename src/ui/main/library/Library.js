@@ -3,7 +3,7 @@ import { Main } from '../../lib/Main';
 import { ReadingSpace } from '../../lib/ReadingSpace';
 import { Title } from '../../lib/Title';
 import styled from 'styled-components';
-import { Shelf } from './Shelf';
+import { SectionBox } from './SectionBox';
 import { LibraryLink } from './LibraryLink';
 import { useLibrary } from '../../../hooks/useLibrary';
 
@@ -47,7 +47,7 @@ export default function Library() {
 							<span>Loading Library...</span>
 						</ColumnInfoBox>
 					) : categories.map(category => (
-						<Shelf title={category} key={category}>
+						<SectionBox title={category} key={category}>
 							{library
 								.filter(libraryLink => libraryLink.category === category)
 								.sort((a, b) => a.title.toUpperCase().localeCompare(b.title.toUpperCase()))
@@ -58,7 +58,7 @@ export default function Library() {
 										imgSrc={libraryLink.favicon}/>
 								))
 							}
-						</Shelf>
+						</SectionBox>
 					))
 				}
 			</LibraryContent>

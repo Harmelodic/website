@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const ShelfBox = styled.div`
+const StyledSectionBox = styled.div`
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
@@ -14,7 +14,7 @@ const ShelfBox = styled.div`
 	min-width: calc(310px - 42px); // width - (padding + border) 
 `;
 
-const ShelfTitle = styled.h3`
+const SectionTitle = styled.h3`
 	font-weight: ${props => props.theme.font.weight};
 	color: ${props => props.theme.font.titleColor};
 `;
@@ -29,13 +29,13 @@ const Links = styled.div`
 `;
 
 
-export function Shelf(props) {
+export function SectionBox(props) {
 	return (
-		<ShelfBox>
-			<ShelfTitle>{props.title}</ShelfTitle>
+		<StyledSectionBox>
+			<SectionTitle>{props.title}</SectionTitle>
 			<Links>
 				{props.children}
 			</Links>
-		</ShelfBox>
+		</StyledSectionBox>
 	);
 }
