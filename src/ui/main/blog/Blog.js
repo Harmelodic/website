@@ -29,7 +29,7 @@ const Posts = styled.div`
 `;
 
 export default function Blog() {
-	const { categories, isLoadingCategories } = useCategories();
+	const { categories, isLoadingCategories, errorLoadingCategories } = useCategories();
 	const { posts, isLoadingPosts } = usePosts();
 	const [filterBySearch, setFilterBySearch] = useState('');
 	const [filterByCategory, setFilterByCategory] = useState('');
@@ -41,6 +41,8 @@ export default function Blog() {
 				<SelectBox
 					onChange={event => setFilterByCategory(event.target.value)}
 					value={filterByCategory}
+					disabled={errorLoadingCategories.occurred}
+					title={'Filter by a category' + (errorLoadingCategories.occurred ? ' (disabled due to error)' : '')}
 				>
 					{
 						isLoadingCategories ? (
@@ -67,6 +69,7 @@ export default function Blog() {
 					placeholder="Filter..."
 					onChange={event => setFilterBySearch(event.target.value)}
 					value={filterBySearch}
+					title={'Filter by title containing specific text'}
 				/>
 				<Button
 					visible={(filterBySearch || filterByCategory)}
