@@ -22,12 +22,25 @@ export default function TvShowsSeen() {
 		setSort(sort);
 	}
 
-	const tvShowsSeenWithPosition = tvShowsSeen.map((tvShow, index) => {
-		return {
-			...tvShow,
-			position: index + 1,
-		};
-	});
+	const tvShowsToRender = tvShowsSeen
+		.map((tvShow, index) => { // Add position for favourite sorting
+			return {
+				...tvShow,
+				position: index + 1,
+			};
+		})
+		.sort((tvShowA, tvShowB) => {
+			switch (sort) {
+				case 'alphabetical':
+					return tvShowA.primary_title
+						.localeCompare(tvShowB.primary_title);
+				case 'chronological':
+					return tvShowA.start_year - tvShowB.start_year;
+				default:
+					// Favourite
+					return tvShowA.position - tvShowB.position;
+			}
+		});
 
 	return (
 		<TvShowsSeenMain>
@@ -44,49 +57,34 @@ export default function TvShowsSeen() {
 				)
 			}
 			{
-				tvShowsSeenWithPosition
-					.sort((tvShowA, tvShowB) => {
-						switch (sort) {
-							case 'alphabetical':
-								return tvShowA.primary_title
-									.localeCompare(tvShowB.primary_title);
-							case 'chronological':
-								return tvShowA.start_year - tvShowB.start_year;
-							default:
-								// Favourite
-								return tvShowA.position - tvShowB.position;
-						}
-					})
-					.map(tvShow => {
-						return (
-							<MediaListEntry
-								key={tvShow.tconst}
-								details={tvShow}
-								descriptionTexts={[
-									`Original Release: ${
-										tvShow.start_year
-									}-${
-										tvShow.end_year ? tvShow.end_year : 'Present'
-									}`,
+				tvShowsToRender.map(tvShow => (
+					<MediaListEntry
+						key={tvShow.tconst}
+						details={tvShow}
+						descriptionTexts={[
+							`Original Release: ${
+								tvShow.start_year
+							}-${
+								tvShow.end_year ? tvShow.end_year : 'Present'
+							}`,
 
-									`Creator${
-										tvShow.creators.length > 1 ? 's' : ''
-									}:${
-										tvShow.creators
-											.map(creator => '\n\t' + creator)
-											.join(',')
-									}`,
+							`Creator${
+								tvShow.creators.length > 1 ? 's' : ''
+							}:${
+								tvShow.creators
+									.map(creator => '\n\t' + creator)
+									.join(',')
+							}`,
 
-									`Genres:${
-										tvShow.genres
-											.split(',')
-											.map(genre => ' ' + genre)
-											.join(',')
-									}`,
-								]}
-							/>
-						);
-					})
+							`Genres:${
+								tvShow.genres
+									.split(',')
+									.map(genre => ' ' + genre)
+									.join(',')
+							}`,
+						]}
+					/>
+				))
 			}
 		</TvShowsSeenMain>
 	);

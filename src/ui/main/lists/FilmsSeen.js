@@ -22,12 +22,24 @@ export default function FilmsSeen() {
 		setSort(sort);
 	}
 
-	const filmsSeenWithPosition = filmsSeen.map((film, index) => {
-		return {
-			...film,
-			position: index + 1,
-		};
-	});
+	const filmsToRender = filmsSeen
+		.map((film, index) => { // Add position for favourite sorting
+			return {
+				...film,
+				position: index + 1,
+			};
+		})
+		.sort((filmA, filmB) => {
+			switch (sort) {
+				case 'alphabetical':
+					return filmA.primary_title.localeCompare(filmB.primary_title);
+				case 'chronological':
+					return filmA.start_year - filmB.start_year;
+				default:
+					// Favourite
+					return filmA.position - filmB.position;
+			}
+		});
 
 	return (
 		<FilmsSeenMain>
@@ -44,48 +56,33 @@ export default function FilmsSeen() {
 				)
 			}
 			{
-				filmsSeenWithPosition
-					.sort((filmA, filmB) => {
-						switch (sort) {
-							case 'alphabetical':
-								return filmA.primary_title
-									.localeCompare(filmB.primary_title);
-							case 'chronological':
-								return filmA.start_year - filmB.start_year;
-							default:
-								// Favourite
-								return filmA.position - filmB.position;
-						}
-					})
-					.map(film => {
-						return (
-							<MediaListEntry
-								key={film.tconst}
-								details={film}
-								descriptionTexts={[
-									'Year: ' + film.start_year,
+				filmsToRender.map(film => (
+					<MediaListEntry
+						key={film.tconst}
+						details={film}
+						descriptionTexts={[
+							'Year: ' + film.start_year,
 
-									`Director${
-										film.directors.length > 1 ? 's' : ''
-									}:${
-										film.directors.map(director => '\n\t' + director).join(',')
-									}`,
+							`Director${
+								film.directors.length > 1 ? 's' : ''
+							}:${
+								film.directors.map(director => '\n\t' + director).join(',')
+							}`,
 
-									`Writer${
-										film.writers.length > 1 ? 's' : ''
-									}:${
-										film.writers.map(writer => '\n\t' + writer).join(',')
-									}`,
+							`Writer${
+								film.writers.length > 1 ? 's' : ''
+							}:${
+								film.writers.map(writer => '\n\t' + writer).join(',')
+							}`,
 
-									`Genres:${
-										film.genres.split(',').map(genre => ' ' + genre).join(',')
-									}`,
+							`Genres:${
+								film.genres.split(',').map(genre => ' ' + genre).join(',')
+							}`,
 
-									'Running Time: ' + film.runtime_minutes + ' minutes',
-								]}
-							/>
-						);
-					})
+							'Running Time: ' + film.runtime_minutes + ' minutes',
+						]}
+					/>
+				))
 			}
 		</FilmsSeenMain>
 	);
