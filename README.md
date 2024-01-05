@@ -17,19 +17,27 @@ My personal website, found at [harmelodic.com](https://harmelodic.com)
 
 - Cookie settings / info
 - Accessibility theming (colour blindness, high-contrast)
-- Split personal blog, software blog, films seen and tv shows seen into subsections of Blog
+- Blog split
+  - Software Engineering
+    - Software thoughts
+    - Management / Ways of Working thoughts
+  - Other
+    - Personal blogs
+    - Lists
+      - Films seen
+      - TV shows seen
 - Add a featured-in page
 - Convert to Next.js application?
-- Write a comprehensive test suite, using:
-    - Jest
-    - Jest Snapshot Testing
-    - React Testing Library?
-    - `react-test-renderer`?
+- Write a comprehensive test suite, see below.
 
-### Need to Test
+### Testing
 
-- UI Components
-- UI Pages
-- Custom Hooks
-- Redux Store setup
-- Redux State slices
+| Functionality to test                               | Issues / Things to consider                   | System of testing                                |
+|-----------------------------------------------------|-----------------------------------------------|--------------------------------------------------|
+| UI components look                                  | Theme Provider                                | Jest + unknown - some sort of "render" + photo?* |
+| UI pages look correct                               | Theme Provider, Mocking Hooks, Redux Provider | Jest + unknown - some sort of "render" + photo?* |
+| Custom Hooks act correctly.                         | Mocking called methods, single-use useEffects | Pure Jest?                                       |
+| Redux Store setup/initial-state results correctly   |                                               | Pure Jest?                                       |
+| Redux State slice reducers work correctly           |                                               | Pure Jest?                                       |
+
+*Snapshot Testing is common here, but they don't really give nice way of showing a developer to meaning of the change. 
