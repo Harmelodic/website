@@ -7,6 +7,7 @@ import { ColumnInfoBox } from '../lib/InfoBox';
 import { FlexDiv } from '../lib/FlexDiv';
 import { Hyperlink } from '../lib/Hyperlink';
 import { useOpenSourceProjects } from '../../hooks/useOpenSourceProjects';
+import {ErrorMessage} from "../lib/ErrorMessage";
 
 const Content = styled.div`
 	display: flex;
@@ -35,7 +36,9 @@ export default function OpenSource() {
 				{
 					errorLoadingOpenSourceProjects.occurred ? (
 						<ColumnInfoBox>
-							<span>Error occurred loading Open Source Projects</span>
+							<ErrorMessage>
+								Error occurred loading Open Source Projects. Please, try again later.
+							</ErrorMessage>
 						</ColumnInfoBox>
 					) : isLoadingOpenSourceProjects ? (
 						<ColumnInfoBox>

@@ -6,6 +6,7 @@ import styled from 'styled-components';
 import { SectionBox } from './SectionBox';
 import { LibraryLink } from './LibraryLink';
 import { useLibrary } from '../../../hooks/useLibrary';
+import {ErrorMessage} from "../../lib/ErrorMessage";
 
 const LibraryContent = styled.div`
 	display: flex;
@@ -40,7 +41,7 @@ export default function Library() {
 				{
 					errorLoadingLibrary.occurred ? (
 						<ColumnInfoBox>
-							<span>Error loading library. Please, try again later.</span>
+							<ErrorMessage>Error loading library. Please, try again later.</ErrorMessage>
 						</ColumnInfoBox>
 					) : isLoadingLibrary ? (
 						<ColumnInfoBox>

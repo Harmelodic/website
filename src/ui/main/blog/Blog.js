@@ -10,6 +10,7 @@ import { ColumnInfoBox, RowInfoBox } from '../../lib/InfoBox';
 import { Main } from '../../lib/Main';
 import { useCategories } from '../../../hooks/useCategories';
 import { usePosts } from '../../../hooks/usePosts';
+import {ErrorMessage} from "../../lib/ErrorMessage";
 
 const StyledFilters = styled.div`
     display: flex;
@@ -85,7 +86,7 @@ export default function Blog() {
 				{
 					errorLoadingPosts.occurred ? (
 						<ColumnInfoBox>
-							<span>Error loading posts. Please, try again later.</span>
+							<ErrorMessage>Error loading posts. Please, try again later.</ErrorMessage>
 						</ColumnInfoBox>
 					) : isLoadingPosts ? (
 						Array(9).fill('').map((_, index) => (
