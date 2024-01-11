@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import { SectionBox } from './SectionBox';
 import { LibraryLink } from './LibraryLink';
 import { useLibrary } from '../../../hooks/useLibrary';
-import {ErrorMessage} from "../../lib/ErrorMessage";
+import { ErrorMessage } from '../../lib/ErrorMessage';
 
 const LibraryContent = styled.div`
 	display: flex;

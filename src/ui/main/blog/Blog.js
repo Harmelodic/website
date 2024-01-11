@@ -10,7 +10,7 @@ import { ColumnInfoBox, RowInfoBox } from '../../lib/InfoBox';
 import { Main } from '../../lib/Main';
 import { useCategories } from '../../../hooks/useCategories';
 import { usePosts } from '../../../hooks/usePosts';
-import {ErrorMessage} from "../../lib/ErrorMessage";
+import { ErrorMessage } from '../../lib/ErrorMessage';
 
 const StyledFilters = styled.div`
     display: flex;
