@@ -22,6 +22,7 @@ const NavItem = styled(NavLink)`
 	text-align: center;
 	white-space: normal;
 	transition: background 200ms;
+	outline-offset: -1px; // makes top & bottom outline more visible for accessibility 
 
 	&:hover {
 		background:
