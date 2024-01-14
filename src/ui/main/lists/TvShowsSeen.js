@@ -6,6 +6,7 @@ import { Main } from '../../lib/Main';
 import { useTvShowsSeen } from '../../../hooks/useTvShowsSeen';
 import { Title } from '../../lib/Title';
 import { ColumnInfoBox } from '../../lib/InfoBox';
+import { ReadingSpace } from '../../lib/ReadingSpace';
 
 const TvShowsSeenMain = styled(Main)`
 	flex-flow: column nowrap;
@@ -86,6 +87,7 @@ export default function TvShowsSeen() {
 					/>
 				))
 			}
+			<ReadingSpace />
 		</TvShowsSeenMain>
 	);
 }
