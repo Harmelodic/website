@@ -3,6 +3,7 @@ import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import styled from 'styled-components';
 import { ErrorBoundary } from './ErrorBoundary';
 import { Themed } from './theme/Themed';
+import Lists from "./main/lists/Lists";
 
 const HeaderBar = lazy(() => import('./header/HeaderBar'));
 const Home = lazy(() => import('./main/Home'));
@@ -45,8 +46,9 @@ export function App() {
 								<Route exact path="/" element={<Home />} />
 								<Route exact path="/blog" element={<Blog />} />
 								<Route exact path="/blog/:id" element={<PostView />} />
-								<Route exact path="/list/films-seen" element={<FilmsSeen />} />
-								<Route exact path="/list/tv-shows-seen" element={<TvShowsSeen />} />
+								<Route exact path="/lists" element={<Lists />} />
+								<Route exact path="/lists/films-seen" element={<FilmsSeen />} />
+								<Route exact path="/lists/tv-shows-seen" element={<TvShowsSeen />} />
 								<Route exact path="/creations" element={<Creations />} />
 								<Route exact path="/open-source" element={<OpenSource />} />
 								<Route exact path="/library" element={<Library />} />

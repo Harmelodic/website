@@ -55,6 +55,9 @@ export function NavMenu() {
 			<NavItem end to="/work-history" selected={path === '/work-history'} title="Work History">
                 Work History
 			</NavItem>
+			<NavItem end to="/lists" selected={path.startsWith('/lists')} title="Lists">
+				Lists
+			</NavItem>
 		</Nav>
 	);
 }
