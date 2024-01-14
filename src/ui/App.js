@@ -3,12 +3,12 @@ import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import styled from 'styled-components';
 import { ErrorBoundary } from './ErrorBoundary';
 import { Themed } from './theme/Themed';
-import Lists from "./main/lists/Lists";
 
 const HeaderBar = lazy(() => import('./header/HeaderBar'));
 const Home = lazy(() => import('./main/Home'));
 const Blog = lazy(() => import('./main/blog/Blog'));
 const PostView = lazy(() => import('./main/blog/PostView'));
+const Lists = lazy(() => import('./main/lists/Lists'));
 const FilmsSeen = lazy(() => import('./main/lists/FilmsSeen'));
 const TvShowsSeen = lazy(() => import('./main/lists/TvShowsSeen'));
 const Creations = lazy(() => import('./main/Creations'));

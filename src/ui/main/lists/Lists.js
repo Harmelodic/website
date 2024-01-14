@@ -1,11 +1,7 @@
 import styled from 'styled-components';
-import { Post } from '../../lib/Post';
 import { ReadingSpace } from '../../lib/ReadingSpace';
 import { Title } from '../../lib/Title';
-import { ColumnInfoBox, RowInfoBox } from '../../lib/InfoBox';
 import { Main } from '../../lib/Main';
-import { ErrorMessage } from '../../lib/ErrorMessage';
-import { LoadingTextBlock } from '../../lib/LoadingTextBlock';
 import { Link } from 'react-router-dom';
 
 const ListsWrapper = styled.div`
