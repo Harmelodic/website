@@ -4,12 +4,14 @@ import { LoadingTextBlock } from './LoadingTextBlock';
 
 const StyledPost = styled(Link)`
 	display: flex;
-	flex-flow: column nowrap;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: space-between;
 	width: calc(100% - 60px);
 	margin-bottom: 0;
     background: ${props => props.theme.colors.transparent};
 	border-bottom: dashed 1px ${props => props.theme.colors.softBorder};
-	padding: 30px;
+	padding: 15px;
 	text-decoration: none;
 	white-space: normal;
 	text-align: left;
@@ -26,16 +28,14 @@ const StyledPost = styled(Link)`
 
 const StyledTitle = styled.div`
 	display: flex;
-	font-size: 1.2rem;
+	font-size: 1rem;
 	color: ${props => props.theme.font.titleColor};
 `;
 
 const StyledSubtitle = styled.div`
 	display: flex;
-	margin-top: 5px;
 	font-size: 0.8rem;
 	color: ${props => props.theme.font.subtitleColor};
-	line-height: 1.6em;
 	font-style: italic;
 `;
 
