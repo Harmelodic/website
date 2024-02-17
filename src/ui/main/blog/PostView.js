@@ -15,15 +15,6 @@ const PostViewMain = styled(Main)`
 	align-items: center;
 `;
 
-const PostViewWrapper = styled.div`
-	display: flex;
-    flex-flow: column nowrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-    width: 100%;
-    max-width: 900px;
-`;
-
 const PostHeading = styled.h1`
 	width: 100%;
 	padding-bottom: 15px;
@@ -57,7 +48,7 @@ export default function PostView() {
 						<span>Error occurred rendering post. Please, try again later.</span>
 					</ColumnInfoBox>
 				) : isPostLoading ? (
-					<PostViewWrapper>
+					<>
 						<PostHeading>
 							<LoadingTextBlock width={500} color={theme.font.loading.title}/>
 						</PostHeading>
@@ -106,15 +97,15 @@ export default function PostView() {
 						<Category>
 							<LoadingTextBlock width={200} color={theme.font.loading.subtitle}/>
 						</Category>
-					</PostViewWrapper>
+					</>
 				) : (
-					<PostViewWrapper>
+					<>
 						<PostHeading>{post.title}</PostHeading>
 						<Markdown markdown={post.content}/>
 						<Category>
 							{post.content && post.category}
 						</Category>
-					</PostViewWrapper>
+					</>
 				)
 			}
 			<ReadingSpace/>

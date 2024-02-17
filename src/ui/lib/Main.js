@@ -1,23 +1,25 @@
 import styled from 'styled-components';
 
 export const Main = styled.main`
-  @keyframes complete-fade-in {
-    from {
-      opacity: 0;
+    @keyframes complete-fade-in {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
     }
 
-    to {
-      opacity: 1;
-    }
-  }
+    animation: complete-fade-in ${props => props.fadeInTime ? props.fadeInTime : '800ms'};
 
-  animation: complete-fade-in ${props => props.fadeInTime ? props.fadeInTime : '800ms'};
-
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100%;
-  overflow-y: auto;
-  background: ${props => props.theme.colors.mainBackground};
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow-y: auto;
+    background: ${props => props.theme.colors.mainBackground};
 `;

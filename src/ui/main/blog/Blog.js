@@ -26,7 +26,6 @@ const Posts = styled.div`
     justify-content: flex-start;
     align-items: center;
     width: 100%;
-    max-width: 900px;
 `;
 
 export default function Blog() {

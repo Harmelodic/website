@@ -5,11 +5,11 @@ import { Title } from '../lib/Title';
 import { ProjectLarge } from '../lib/ProjectLarge';
 
 const Content = styled.div`
-  display: flex;
-  flex-flow: row wrap;
-  align-items: flex-start;
-  justify-content: center;
-  width: 80%;
+	display: flex;
+	flex-flow: row wrap;
+	align-items: flex-start;
+	justify-content: center;
+	width: 100%;
 `;
 
 export default function Creations() {
@@ -37,7 +37,7 @@ export default function Creations() {
 					subtitle='Firefox Theme'
 					href='https://addons.mozilla.org/en-GB/firefox/addon/minimal-grey-theme/'
 					src='/images/minimal-grey-firefox.png'
-					background={'#ebebeb'}
+					background={'#e8e8e8'}
 				/>
 				<ProjectLarge
 					title="Professor Zorg's Guide to Alien Etiquette"
