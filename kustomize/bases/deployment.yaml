@@ -37,6 +37,8 @@ spec:
             requests:
               cpu: 10m
               memory: 10Mi
+            limits:
+              memory: 10Mi
           startupProbe:
             initialDelaySeconds: 10
             periodSeconds: 10
