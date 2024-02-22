@@ -18,7 +18,7 @@ export const Main = styled.main`
     justify-content: flex-start;
     align-items: center;
     width: 100%;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
     overflow-y: auto;
     background: ${props => props.theme.colors.mainBackground};

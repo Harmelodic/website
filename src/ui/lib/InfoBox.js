@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 const InfoBox = styled.div`
     display: flex;
-    max-width: 1000px;
     border-top: solid 1px ${props => props.theme.colors.softBorder};
     margin: 0 10px;
 	padding: 30px 15px;

@@ -15,7 +15,6 @@ const LibraryContent = styled.div`
 	align-items: center;
 	width: 80%;
 	min-width: 320px;
-	max-width: 1400px;
 `;
 
 export default function Library() {
