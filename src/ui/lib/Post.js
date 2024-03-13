@@ -7,7 +7,7 @@ const StyledPost = styled(Link)`
 	flex-flow: row wrap;
 	align-items: center;
 	justify-content: space-between;
-	width: calc(100% - 60px);
+	width: calc(100% - 30px);
 	margin-bottom: 0;
     background: ${props => props.theme.colors.transparent};
 	border-bottom: dashed 1px ${props => props.theme.colors.softBorder};

@@ -17,7 +17,7 @@ export const Main = styled.main`
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: center;
-    width: 100%;
+    width: calc(100% - 15px);
     max-width: 1200px;
     margin: 0 auto;
     overflow-y: auto;
