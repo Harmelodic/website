@@ -11,9 +11,9 @@
 	},
 	"author": "Harmelodic",
 	"devDependencies": {
-		"@babel/core": "7.24.3",
+		"@babel/core": "7.24.4",
 		"@babel/preset-react": "7.24.1",
-		"@reduxjs/toolkit": "2.2.2",
+		"@reduxjs/toolkit": "2.2.3",
 		"babel-loader": "9.1.3",
 		"compression-webpack-plugin": "11.1.0",
 		"eslint": "8.57.0",
