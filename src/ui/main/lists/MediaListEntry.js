@@ -59,7 +59,6 @@ export default function MediaListEntry(props) {
 
 			<StyledHalfLeft>
 				<StyledPicture
-					// eslint-disable-next-line max-len
 					src={`${process.env.BLOG_CONTENT_SERVER}/posts/posters/${props.details.tconst}.jpg`}
 				/>
 			</StyledHalfLeft>
