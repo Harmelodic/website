@@ -1,4 +1,3 @@
-import react from 'eslint-plugin-react';
 import jsdoc from 'eslint-plugin-jsdoc';
 
 export default [
@@ -17,7 +16,6 @@ export default [
             },
         },
         plugins: {
-            react: react,
             jsdoc: jsdoc
         },
         rules: {
@@ -27,7 +25,6 @@ export default [
             "object-curly-spacing": ["error", "always"],
             "no-mixed-spaces-and-tabs": ["error", "smart-tabs"],
             "no-tabs": ["error", {"allowIndentationTabs": true}],
-            // "react/jsx-uses-vars": ["error"], // broken: "TypeError: context.markVariableAsUsed is not a function"
             "jsdoc/require-jsdoc": ["error", {
                 "require": {
                     "FunctionDeclaration": false,
