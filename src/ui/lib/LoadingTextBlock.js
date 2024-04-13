@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const LoadingTextBlock = styled.div`
     height: ${props => props.height ? props.height : '13'}px;
     width: ${props => props.width}px;
-    margin: ${props => props.margin ? props.margin : '5'}px;
+    margin: ${props => props.marginWidth ? props.marginWidth : '5'}px;
     border-radius: ${props => props.height ? props.height : '13'}px;
     background: ${props => props.color ? props.color : props.theme.font.loading.normal} no-repeat;
     background-image: linear-gradient(

@@ -53,46 +53,46 @@ export default function PostView() {
 							<LoadingTextBlock width={500} color={theme.font.loading.title}/>
 						</PostHeading>
 						<div>
-							<LoadingTextBlock margin={15} width={300}/>
-							<LoadingTextBlock margin={15} width={200}/>
-							<LoadingTextBlock margin={15} width={50}/>
-							<LoadingTextBlock margin={15} width={250}/>
-							<LoadingTextBlock margin={15} width={50}/>
-							<LoadingTextBlock margin={15} width={150}/>
-							<LoadingTextBlock margin={15} width={80}/>
+							<LoadingTextBlock marginWidth={15} width={300}/>
+							<LoadingTextBlock marginWidth={15} width={200}/>
+							<LoadingTextBlock marginWidth={15} width={50}/>
+							<LoadingTextBlock marginWidth={15} width={250}/>
+							<LoadingTextBlock marginWidth={15} width={50}/>
+							<LoadingTextBlock marginWidth={15} width={150}/>
+							<LoadingTextBlock marginWidth={15} width={80}/>
 							<br/>
 							<br/>
-							<LoadingTextBlock margin={15} width={200} color={theme.font.loading.title}/>
+							<LoadingTextBlock marginWidth={15} width={200} color={theme.font.loading.title}/>
 							<HorizontalRule/>
-							<LoadingTextBlock margin={15} width={250}/>
-							<LoadingTextBlock margin={15} width={100}/>
-							<LoadingTextBlock margin={15} width={500}/>
-							<LoadingTextBlock margin={15} width={550}/>
-							<LoadingTextBlock margin={15} width={80}/>
+							<LoadingTextBlock marginWidth={15} width={250}/>
+							<LoadingTextBlock marginWidth={15} width={100}/>
+							<LoadingTextBlock marginWidth={15} width={500}/>
+							<LoadingTextBlock marginWidth={15} width={550}/>
+							<LoadingTextBlock marginWidth={15} width={80}/>
 							<br/>
 							<br/>
-							<LoadingTextBlock margin={15} width={800}/>
-							<LoadingTextBlock margin={15} width={500}/>
-							<LoadingTextBlock margin={15} width={600}/>
-							<LoadingTextBlock margin={15} width={400}/>
-							<LoadingTextBlock margin={15} width={500}/>
+							<LoadingTextBlock marginWidth={15} width={800}/>
+							<LoadingTextBlock marginWidth={15} width={500}/>
+							<LoadingTextBlock marginWidth={15} width={600}/>
+							<LoadingTextBlock marginWidth={15} width={400}/>
+							<LoadingTextBlock marginWidth={15} width={500}/>
 							<br/>
 							<br/>
-							<LoadingTextBlock margin={15} width={100} color={theme.font.loading.title}/>
-							<LoadingTextBlock margin={15} width={500}/>
-							<LoadingTextBlock margin={15} width={150}/>
-							<LoadingTextBlock margin={15} width={80}/>
-							<LoadingTextBlock margin={15} width={450}/>
+							<LoadingTextBlock marginWidth={15} width={100} color={theme.font.loading.title}/>
+							<LoadingTextBlock marginWidth={15} width={500}/>
+							<LoadingTextBlock marginWidth={15} width={150}/>
+							<LoadingTextBlock marginWidth={15} width={80}/>
+							<LoadingTextBlock marginWidth={15} width={450}/>
 							<br/>
 							<br/>
-							<LoadingTextBlock margin={15} width={300} color={theme.font.loading.title}/>
+							<LoadingTextBlock marginWidth={15} width={300} color={theme.font.loading.title}/>
 							<HorizontalRule/>
-							<LoadingTextBlock margin={15} width={50}/>
-							<LoadingTextBlock margin={15} width={250}/>
-							<LoadingTextBlock margin={15} width={50}/>
-							<LoadingTextBlock margin={15} width={150}/>
-							<LoadingTextBlock margin={15} width={80}/>
-							<LoadingTextBlock margin={15} width={350}/>
+							<LoadingTextBlock marginWidth={15} width={50}/>
+							<LoadingTextBlock marginWidth={15} width={250}/>
+							<LoadingTextBlock marginWidth={15} width={50}/>
+							<LoadingTextBlock marginWidth={15} width={150}/>
+							<LoadingTextBlock marginWidth={15} width={80}/>
+							<LoadingTextBlock marginWidth={15} width={350}/>
 						</div>
 						<Category>
 							<LoadingTextBlock width={200} color={theme.font.loading.subtitle}/>

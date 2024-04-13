@@ -13,7 +13,7 @@ export const lightTheme = {
 		linkActiveColor: '#df0000',
 		linkVisitedColor: '#9156c4',
 		code: {
-			color: '#fff',
+			defaultColor: '#fff',
 			background: '#222',
 		},
 		blockquote: '#2e70b1',

@@ -1,4 +1,6 @@
-import { marked } from 'marked';
+import { Marked } from 'marked';
+import { markedHighlight } from "marked-highlight";
+import hljs from "highlight.js";
 import styled from 'styled-components';
 
 const StyledMarkdown = styled.div`
@@ -41,7 +43,6 @@ const StyledMarkdown = styled.div`
     pre {
         background: ${props => props.theme.font.code.background};
 		border-radius: 5px;
-        color: ${props => props.theme.font.code.color};
         padding: 15px;
 		font-family: Monaco, monospace;
 		font-size: 0.9rem;
@@ -50,7 +51,7 @@ const StyledMarkdown = styled.div`
 
     code {
         background: ${props => props.theme.font.code.background};
-        color: ${props => props.theme.font.code.color};
+        color: ${props => props.theme.font.code.defaultColor};
 		border-radius: 5px;
         padding: 2px 4px;
 		font-family: Monaco, monospace;
@@ -90,18 +91,31 @@ const StyledMarkdown = styled.div`
 `;
 
 export function Markdown(props) {
+	const marked = new Marked();
 	const renderer = new marked.Renderer();
-	const linkRenderer = renderer.link;
+	const originalLinkRenderer = renderer.link;
 
+	// Set <a> tags to open in a new tab, with nofollow
 	renderer.link = (href, title, text) => {
-		const html = linkRenderer.call(renderer, href, title, text);
+		const html = originalLinkRenderer.call(renderer, href, title, text);
 		return html.replace(/^<a /, `<a target="_blank" rel="nofollow" `);
 	};
+
+	marked.options({
+		renderer: renderer
+	})
+
+	// Configure highlight extension to use highlight.js for strings inside code blocks.
+	marked.use(markedHighlight({
+		highlight: function(code, lang) {
+			return hljs.highlight(code, { language: lang ? lang : 'plaintext' }).value;
+		}
+	}));
 
 	return (
 		<StyledMarkdown
 			dangerouslySetInnerHTML={{
-				__html: marked(props.markdown, { renderer }),
+				__html: marked.parse(props.markdown),
 			}} />
 	);
 }
