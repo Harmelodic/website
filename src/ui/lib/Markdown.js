@@ -40,15 +40,21 @@ const StyledMarkdown = styled.div`
 
     pre {
         background: ${props => props.theme.font.code.background};
+		border-radius: 5px;
         color: ${props => props.theme.font.code.color};
         padding: 15px;
+		font-family: Monaco, monospace;
+		font-size: 0.9rem;
         overflow-x: auto; 
     }
 
     code {
         background: ${props => props.theme.font.code.background};
         color: ${props => props.theme.font.code.color};
+		border-radius: 5px;
         padding: 2px 4px;
+		font-family: Monaco, monospace;
+		font-size: 0.9rem;
     }
 
     pre > code {

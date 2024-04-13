@@ -14,7 +14,7 @@ export const lightTheme = {
 		linkVisitedColor: '#9156c4',
 		code: {
 			color: '#fff',
-			background: '#000',
+			background: '#222',
 		},
 		blockquote: '#2e70b1',
 		keyboard: {
