@@ -13,6 +13,7 @@ const StyledBar = styled.header`
 	top: 0;
 	width: 100%;
 	height: ${headerBarHeight}px;
+	z-index: 999; // Ensure header bar is always on top
 `;
 
 const StyledBarContent = styled.div`
