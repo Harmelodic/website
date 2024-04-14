@@ -91,28 +91,28 @@ const StyledMarkdown = styled.div`
 `;
 
 export function Markdown(props) {
-    const marked = new Marked();
+	const marked = new Marked();
 
-    // Set <a> tags to open in a new tab, with nofollow
-    const renderer = new marked.Renderer();
-    const originalLinkRenderer = renderer.link;
-    renderer.link = (href, title, text) => {
-        const html = originalLinkRenderer.call(renderer, href, title, text);
-        return html.replace(/^<a /, `<a target="_blank" rel="nofollow" `);
-    };
+	// Set <a> tags to open in a new tab, with nofollow
+	const renderer = new marked.Renderer();
+	const originalLinkRenderer = renderer.link;
+	renderer.link = (href, title, text) => {
+		const html = originalLinkRenderer.call(renderer, href, title, text);
+		return html.replace(/^<a /, `<a target="_blank" rel="nofollow" `);
+	};
 
-    // Configure highlight extension to use highlight.js for strings inside code blocks.
-    marked.use(markedHighlight({
-        highlight: function(code, lang) {
-            return hljs.highlight(code, { language: lang ? lang : 'plaintext' }).value;
-        }
-    }));
+	// Configure highlight extension to use highlight.js for strings inside code blocks.
+	marked.use(markedHighlight({
+		highlight: function(code, lang) {
+			return hljs.highlight(code, { language: lang ? lang : 'plaintext' }).value;
+		}
+	}));
 
-    marked.use({
-        renderer: renderer,
-    })
+	marked.use({
+		renderer: renderer,
+	})
 
-    return (
-        <StyledMarkdown dangerouslySetInnerHTML={{ __html: marked.parse(props.markdown) }} />
-    );
+	return (
+		<StyledMarkdown dangerouslySetInnerHTML={{ __html: marked.parse(props.markdown) }} />
+	);
 }
