@@ -8,7 +8,7 @@ module.exports = merge(config, {
 	plugins: [
 		new webpack.EnvironmentPlugin({
 			BLOG_API: 'https://blog.api.harmelodic.com',
-			BLOG_CONTENT_SERVER: 'https://harmelodic.gitlab.io/scribbles-content',
+			BLOG_CONTENT_SERVER: 'https://storage.googleapis.com/harmelodic-web-static-prod',
 			GITHUB_API: 'https://api.github.com',
 		}),
 	],

@@ -8,7 +8,7 @@ export function useTvShowsSeen() {
 
 	const dispatch = useDispatch();
 	useEffect(() => {
-		request('GET', `${process.env.BLOG_CONTENT_SERVER}/posts/tvShowsSeen.json`)
+		request('GET', `${process.env.BLOG_CONTENT_SERVER}/tvShowsSeen.json`)
 			.then(response => response.json())
 			.then(data => {
 				dispatch(tvShowsSeenSlice.actions.setTvShowsSeen(data));

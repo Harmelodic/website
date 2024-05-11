@@ -8,7 +8,7 @@ export function useFilmsSeen() {
 	const dispatch = useDispatch();
 
 	useEffect(() => {
-		request('GET', `${process.env.BLOG_CONTENT_SERVER}/posts/filmsSeen.json`)
+		request('GET', `${process.env.BLOG_CONTENT_SERVER}/filmsSeen.json`)
 			.then(response => response.json())
 			.then(data => {
 				dispatch(filmsSeenSlice.actions.setFilmsSeen(data));

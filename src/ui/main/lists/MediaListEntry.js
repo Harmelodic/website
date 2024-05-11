@@ -59,7 +59,7 @@ export default function MediaListEntry(props) {
 
 			<StyledHalfLeft>
 				<StyledPicture
-					src={`${process.env.BLOG_CONTENT_SERVER}/posts/posters/${props.details.tconst}.jpg`}
+					src={`${process.env.BLOG_CONTENT_SERVER}/posters/${props.details.tconst}.jpg`}
 				/>
 			</StyledHalfLeft>
 
