@@ -8,7 +8,7 @@ export default function WorkHistory() {
 	return (
 		<Main>
 			<Title>Work History</Title>
-			<ColumnInfoBox style={{ fontSize: '1rem' }}>
+			<ColumnInfoBox>
 				I believe in Pay Transparency, which is why below I have listed the highest salary I achieved for
 				each role.
 				<br/>
@@ -17,35 +17,27 @@ export default function WorkHistory() {
 			</ColumnInfoBox>
 
 			<ColumnInfoBox>
-				<FlexDiv style={{ fontWeight: 600 }}>
-					Software Engineer @ Nordnet
-				</FlexDiv>
-				<FlexDiv>May 2021 - Current</FlexDiv>
-				<FlexDiv style={{ fontSize: '0.8rem' }}>73,500 kr / month</FlexDiv>
-				<FlexDiv>
-					&
-				</FlexDiv>
-				<FlexDiv style={{ fontWeight: 600 }}>
-					Director @ Coding for Immigrants (CFI)
-				</FlexDiv>
-				<FlexDiv>September 2022 - Current</FlexDiv>
-				<FlexDiv style={{ fontSize: '0.8rem' }}>0 / month</FlexDiv>
+				<b>Software Engineer @ Nordnet</b>
+				<span>May 2021 - Current</span>
+				<span>76,500 kr / month</span>
 			</ColumnInfoBox>
 
 			<ColumnInfoBox>
-				<FlexDiv style={{ fontWeight: 600 }}>
-					Engineering Manager @ Klarna
-				</FlexDiv>
-				<FlexDiv>August 2020 - May 2021</FlexDiv>
-				<FlexDiv style={{ fontSize: '0.8rem' }}>68,967 kr / month</FlexDiv>
+				<b>Director @ Coding for Immigrants (CFI)</b>
+				<span>September 2022 - May 2024</span>
+				<span>Volunteer</span>
 			</ColumnInfoBox>
 
 			<ColumnInfoBox>
-				<FlexDiv style={{ fontWeight: 600 }}>
-					Software Engineer Lead @ Capgemini
-				</FlexDiv>
-				<FlexDiv>September 2014 - August 2020</FlexDiv>
-				<FlexDiv style={{ fontSize: '0.8rem' }}>£49,425 / year</FlexDiv>
+				<b>Engineering Manager @ Klarna</b>
+				<span>August 2020 - May 2021</span>
+				<span>68,967 kr / month</span>
+			</ColumnInfoBox>
+
+			<ColumnInfoBox>
+				<b>Software Engineer Lead @ Capgemini</b>
+				<span>September 2014 - August 2020</span>
+				<span>£49,425 / year</span>
 			</ColumnInfoBox>
 
 			<ReadingSpace/>
