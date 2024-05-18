@@ -15,7 +15,7 @@ const StyledSectionBox = styled.div`
 `;
 
 const SectionTitle = styled.h3`
-	font-weight: ${props => props.theme.font.weight};
+	font-weight: ${props => props.theme.font.weight.normal};
 	color: ${props => props.theme.font.titleColor};
 `;
 

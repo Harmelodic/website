@@ -1,10 +1,14 @@
-import { FlexDiv } from '../lib/FlexDiv';
 import { ColumnInfoBox } from '../lib/InfoBox';
 import { ReadingSpace } from '../lib/ReadingSpace';
 import { Title } from '../lib/Title';
 import { Main } from '../lib/Main';
+import styled from "styled-components";
 
-export default function WorkHistory() {
+const WorkTitle = styled.span`
+    font-weight: ${props => props.theme.font.weight.bold};
+`;
+
+export default function WorkHistory(props) {
 	return (
 		<Main>
 			<Title>Work History</Title>
@@ -17,25 +21,25 @@ export default function WorkHistory() {
 			</ColumnInfoBox>
 
 			<ColumnInfoBox>
-				<b>Software Engineer @ Nordnet</b>
+				<WorkTitle>Software Engineer @ Nordnet</WorkTitle>
 				<span>May 2021 - Current</span>
 				<span>76,500 kr / month</span>
 			</ColumnInfoBox>
 
 			<ColumnInfoBox>
-				<b>Director @ Coding for Immigrants (CFI)</b>
+				<WorkTitle>Director @ Coding for Immigrants (CFI)</WorkTitle>
 				<span>September 2022 - May 2024</span>
 				<span>Volunteer</span>
 			</ColumnInfoBox>
 
 			<ColumnInfoBox>
-				<b>Engineering Manager @ Klarna</b>
+				<WorkTitle>Engineering Manager @ Klarna</WorkTitle>
 				<span>August 2020 - May 2021</span>
 				<span>68,967 kr / month</span>
 			</ColumnInfoBox>
 
 			<ColumnInfoBox>
-				<b>Software Engineer Lead @ Capgemini</b>
+				<WorkTitle>Software Engineer Lead @ Capgemini</WorkTitle>
 				<span>September 2014 - August 2020</span>
 				<span>£49,425 / year</span>
 			</ColumnInfoBox>

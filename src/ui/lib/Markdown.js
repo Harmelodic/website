@@ -15,7 +15,7 @@ const StyledMarkdown = styled.div`
     & > h1, & > h2, & > h3 {
         padding-bottom: 15px;
         border-bottom: solid 1px ${props => props.theme.colors.softBorder};
-        font-weight: ${props => props.theme.font.weight};
+        font-weight: ${props => props.theme.font.weight.normal};
         color: ${props => props.theme.colors.accents.green};
     }
 	& > h3, h4, h5, h6 {

@@ -20,7 +20,7 @@ const PostHeading = styled.h1`
 	padding-bottom: 15px;
 	border-bottom: solid ${props => props.theme.colors.hardBorder} 2px;
 	white-space: normal;
-	font-weight:  ${props => props.theme.font.weight};
+	font-weight:  ${props => props.theme.font.weight.normal};
     color: ${props => props.theme.font.titleColor};
 `;
 

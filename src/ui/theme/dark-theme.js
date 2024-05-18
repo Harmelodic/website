@@ -3,7 +3,10 @@ export const darkTheme = {
 	// General styling
 	font: {
 		family: 'Helvetica, sans-serif',
-		weight: 300,
+		weight: {
+			normal: 300,
+			bold: 800,
+		},
 		titleColor: '#fff',
 		subtitleColor: '#999',
 		normalColor: '#fff',

@@ -3,7 +3,10 @@ export const lightTheme = {
 	// General styling
 	font: {
 		family: 'Helvetica, sans-serif',
-		weight: 300,
+		weight: {
+			normal: 300,
+			bold: 800,
+		},
 		titleColor: '#000',
 		subtitleColor: '#999',
 		normalColor: '#333',

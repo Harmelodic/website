@@ -25,7 +25,7 @@ const StyledApp = styled.div`
 	min-height: 100vh;
 	
 	font-family: ${props => props.theme.font.family};
-	font-weight: ${props => props.theme.font.weight};
+	font-weight: ${props => props.theme.font.weight.normal};
 `;
 
 export function App() {
