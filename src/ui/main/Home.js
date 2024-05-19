@@ -4,12 +4,21 @@ import { Main } from '../lib/Main';
 import { ReadingSpace } from '../lib/ReadingSpace';
 import { Title } from '../lib/Title';
 import { ProjectSmall } from '../lib/ProjectSmall';
-import { CircleImage } from '../lib/CircleImage';
 import styled, { useTheme } from 'styled-components';
 
-const ImageOfMe = styled(CircleImage)`
+const ImageOfMe = styled.img`
 	margin-top: 50px;
+	display: flex;
+	width: 180px;
+	height: 180px;
+	border-radius: 100%;
 	border: solid 1px ${props => props.theme.colors.hardBorder};
+	background-color: ${props => props.theme.colors.mainBackground};
+	background-image: url('${props => props.src}');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	font-size: 1.2rem;
 `;
 
 export default function Home() {
