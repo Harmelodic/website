@@ -72,7 +72,7 @@ export function ThemeModePicker() {
 
 	return (
 		<StyledPicker>
-			<ThemeSelectBox value={selectedThemeMode} onChange={changeMode} title="Theme Mode">
+			<ThemeSelectBox name="theme-mode-picker" value={selectedThemeMode} onChange={changeMode} title="Theme Mode">
 				<option value="system-preference">System Theme</option>
 				<option value="light">Light</option>
 				<option value="dark">Dark</option>
