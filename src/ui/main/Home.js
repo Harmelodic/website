@@ -26,7 +26,7 @@ export default function Home() {
 
 	return (
 		<Main>
-			<ImageOfMe src="/images/matt.webp" />
+			<ImageOfMe src="/images/matt.webp" alt="Portrait of Matt Smith" />
 
 			<Title>Matt Smith</Title>
 
@@ -44,65 +44,32 @@ export default function Home() {
 				<SocialMedia
 					href="https://bsky.app/profile/harmelodic.com"
 					title="Bluesky"
-					src={`/images/bluesky.svg`}
+					src={`/images/social/bluesky.svg`}
 				/>
 				<SocialMedia
 					href="https://github.com/Harmelodic"
 					title="GitHub"
-					src={`/images/github-${theme.name}.svg`}
+					src={`/images/social/github-${theme.name}.svg`}
 				/>
 				<SocialMedia
 					href="https://www.linkedin.com/in/harmelodic/"
 					title="LinkedIn"
-					src="/images/linkedin.svg"
+					src="/images/social/linkedin.svg"
 				/>
 				<SocialMedia
 					href="https://www.youtube.com/@HarmelodicYT"
 					title="YouTube"
-					src="/images/youtube.svg"
+					src="/images/social/youtube.svg"
 				/>
 				<SocialMedia
 					href="mailto:matt@harmelodic.com"
 					title="Email"
-					src={`/images/mail-${theme.name}.svg`}
+					src={`/images/social/mail-${theme.name}.svg`}
 				/>
 				<SocialMedia
 					href="https://www.strava.com/athletes/97680039"
 					title="Strava"
-					src="/images/strava.svg"
-				/>
-			</RowInfoBox>
-
-			<RowInfoBox>
-				<ProjectSmall
-					src="/images/cloud-architect.webp"
-					title="Cloud Architect"
-					href="https://www.credential.net/bd886e12-4a18-4439-8c9a-680107c23547"
-					size={100}
-				/>
-				<ProjectSmall
-					src="/images/cfi.webp"
-					title='Co-Leader & Director'
-					href="https://github.com/Coding-For-Immigrants"
-					size={100}
-				/>
-				<ProjectSmall
-					src="/images/cncf.svg"
-					title="CNCF Contributor"
-					href="https://www.cncf.io/"
-					size={60}
-				/>
-				<ProjectSmall
-					src="/images/gitlab.svg"
-					title="GitLab Hero"
-					href="https://gitlab.com/gitlab-com/www-gitlab-com/merge_requests/34774"
-					size={60}
-				/>
-				<ProjectSmall
-					src="/images/certificate.svg"
-					title="BSc Digital &amp; Technology Solutions"
-					href="https://www.aston.ac.uk"
-					size={65}
+					src="/images/social/strava.svg"
 				/>
 			</RowInfoBox>
 
