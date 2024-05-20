@@ -45,7 +45,7 @@ export default function WorkHistory() {
 				<span>£49,425 / year</span>
 			</ColumnInfoBox>
 
-			<RowInfoBox style={{borderTop: 'solid 2px'}}>
+			<RowInfoBox style={{ borderTop: "solid 2px" }}>
 				<ProjectSmall
 					src="/images/accreditations/cloud-architect.webp"
 					title="Cloud Architect"
