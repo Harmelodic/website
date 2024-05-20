@@ -49,17 +49,17 @@ export default function SortPicker(props) {
 	const sortChoices = [
 		{
 			sort: 'favourite',
-			img: '/images/heart.svg',
+			img: '/images/sorting/heart.svg',
 			display: 'Numerical Favourite',
 		},
 		{
 			sort: 'alphabetical',
-			img: '/images/alphabetical.svg',
+			img: '/images/sorting/alphabetical.svg',
 			display: 'Alphabetical',
 		},
 		{
 			sort: 'chronological',
-			img: '/images/chronological.svg',
+			img: '/images/sorting/chronological.svg',
 			display: 'Chronological',
 		},
 	];
