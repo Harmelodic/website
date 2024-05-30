@@ -13,19 +13,19 @@ import { usePosts } from '../../../hooks/usePosts';
 import { ErrorMessage } from '../../lib/ErrorMessage';
 
 const StyledFilters = styled.div`
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    margin: 20px;
-    white-space: normal;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	margin: 20px;
+	white-space: normal;
 `;
 
 const Posts = styled.div`
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	width: 100%;
 `;
 
 export default function Blog() {
@@ -78,7 +78,7 @@ export default function Blog() {
 						setFilterByCategory('');
 					}}
 				>
-                    Reset
+					Reset
 				</Button>
 			</StyledFilters>
 			<Posts>
@@ -89,30 +89,26 @@ export default function Blog() {
 						</ColumnInfoBox>
 					) : isLoadingPosts ? (
 						Array(9).fill('').map((_, index) => (
-							<Post key={index} loading={true} />
+							<Post key={index} loading={true}/>
 						))
-					) : (
-						posts.length === 0 ? (
-							<RowInfoBox>No posts found at this time.</RowInfoBox>
-						) : (
-							posts.filter(post => post.title.toUpperCase().includes(filterBySearch.toUpperCase()))
-								.filter(post => {
-									if (filterByCategory === '' || post.categories.includes(filterByCategory)) {
-										return post;
-									} else {
-										return null;
-									}
-								})
-								.map(post => (
-									<Post
-										key={post.id}
-										link={`/blog/${post.id}`}
-										title={post.title}
-										categories={post.categories}
-										categoryMappingList={categories}/>
-								))
-						)
-					)
+					) : posts.length === 0 ? (
+						<RowInfoBox>No posts found at this time.</RowInfoBox>
+					) : posts.filter(post => post.title.toUpperCase().includes(filterBySearch.toUpperCase()))
+						.filter(post => {
+							if (filterByCategory === '' || post.categories.includes(filterByCategory)) {
+								return post;
+							} else {
+								return null;
+							}
+						})
+						.map(post => (
+							<Post
+								key={post.id}
+								link={`/blog/${post.id}`}
+								title={post.title}
+								categories={post.categories}
+								categoryMappingList={categories}/>
+						))
 				}
 			</Posts>
 			<ReadingSpace/>

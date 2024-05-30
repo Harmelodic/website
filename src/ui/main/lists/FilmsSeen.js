@@ -7,6 +7,7 @@ import { useFilmsSeen } from '../../../hooks/useFilmsSeen';
 import { Title } from '../../lib/Title';
 import { ColumnInfoBox } from '../../lib/InfoBox';
 import { ReadingSpace } from '../../lib/ReadingSpace';
+import { ErrorMessage } from "../../lib/ErrorMessage";
 
 const FilmsSeenMain = styled(Main)`
 	flex-flow: column nowrap;
@@ -15,7 +16,7 @@ const FilmsSeenMain = styled(Main)`
 `;
 
 export default function FilmsSeen() {
-	const filmsSeen = useFilmsSeen();
+	const { filmsSeen, isLoadingFilmsSeen, errorLoadingFilmsSeen } = useFilmsSeen();
 
 	const [sort, setSort] = useState('favourite');
 
@@ -50,14 +51,19 @@ export default function FilmsSeen() {
 				onChangeSort={onChangeSort}
 			/>
 			{
-				filmsSeen.length === 0 && (
+				errorLoadingFilmsSeen.occurred ? (
 					<ColumnInfoBox>
-						<span>Loading films</span>
+						<ErrorMessage>Error loading Films Seen. Please, try again later.</ErrorMessage>
 					</ColumnInfoBox>
-				)
-			}
-			{
-				filmsToRender.map(film => (
+				) : isLoadingFilmsSeen ? (
+					<ColumnInfoBox>
+						<span>Loading films seen</span>
+					</ColumnInfoBox>
+				) : filmsToRender.length === 0 ? (
+					<ColumnInfoBox>
+						<span>No films found</span>
+					</ColumnInfoBox>
+				) : filmsToRender.map(film => (
 					<MediaListEntry
 						key={film.tconst}
 						details={film}
@@ -85,7 +91,7 @@ export default function FilmsSeen() {
 					/>
 				))
 			}
-			<ReadingSpace />
+			<ReadingSpace/>
 		</FilmsSeenMain>
 	);
 }

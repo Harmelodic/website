@@ -7,6 +7,7 @@ import { useTvShowsSeen } from '../../../hooks/useTvShowsSeen';
 import { Title } from '../../lib/Title';
 import { ColumnInfoBox } from '../../lib/InfoBox';
 import { ReadingSpace } from '../../lib/ReadingSpace';
+import { ErrorMessage } from "../../lib/ErrorMessage";
 
 const TvShowsSeenMain = styled(Main)`
 	flex-flow: column nowrap;
@@ -15,7 +16,7 @@ const TvShowsSeenMain = styled(Main)`
 `;
 
 export default function TvShowsSeen() {
-	const tvShowsSeen = useTvShowsSeen();
+	const { tvShowsSeen, isLoadingTVShowsSeen, errorLoadingTVShowsSeen } = useTvShowsSeen();
 
 	const [sort, setSort] = useState('favourite');
 
@@ -51,14 +52,19 @@ export default function TvShowsSeen() {
 				onChangeSort={onChangeSort}
 			/>
 			{
-				tvShowsSeen.length === 0 && (
+				errorLoadingTVShowsSeen.occurred ? (
+					<ColumnInfoBox>
+						<ErrorMessage>Error loading TV Shows Seen. Please, try again later.</ErrorMessage>
+					</ColumnInfoBox>
+				) : isLoadingTVShowsSeen ? (
 					<ColumnInfoBox>
 						<span>Loading TV shows</span>
 					</ColumnInfoBox>
-				)
-			}
-			{
-				tvShowsToRender.map(tvShow => (
+				) : tvShowsToRender.length === 0 ? (
+					<ColumnInfoBox>
+						<span>No TV Shows found</span>
+					</ColumnInfoBox>
+				) : tvShowsToRender.map(tvShow => (
 					<MediaListEntry
 						key={tvShow.tconst}
 						details={tvShow}
@@ -87,7 +93,7 @@ export default function TvShowsSeen() {
 					/>
 				))
 			}
-			<ReadingSpace />
+			<ReadingSpace/>
 		</TvShowsSeenMain>
 	);
 }
