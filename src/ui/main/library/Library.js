@@ -7,6 +7,7 @@ import { SectionBox } from './SectionBox';
 import { LibraryLink } from './LibraryLink';
 import { useLibrary } from '../../../hooks/useLibrary';
 import { ErrorMessage } from '../../lib/ErrorMessage';
+import { Separator } from '../../lib/Separator';
 
 const LibraryContent = styled.div`
 	display: flex;
@@ -26,7 +27,7 @@ export default function Library() {
 	return (
 		<Main>
 			<Title>Library</Title>
-
+			<Separator />
 			<ColumnInfoBox>
 				<span>
                     Previously stored in my browser's bookmarks, here's a collection of useful things on the internet:

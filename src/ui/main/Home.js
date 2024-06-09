@@ -1,9 +1,10 @@
+import styled, { useTheme } from 'styled-components';
 import { SocialMedia } from '../lib/SocialMedia';
 import { ColumnInfoBox, RowInfoBox } from '../lib/InfoBox';
 import { Main } from '../lib/Main';
 import { ReadingSpace } from '../lib/ReadingSpace';
 import { Title } from '../lib/Title';
-import styled, { useTheme } from 'styled-components';
+import { Separator } from '../lib/Separator';
 
 const ImageOfMe = styled.img`
 	margin-top: 50px;
@@ -28,7 +29,7 @@ export default function Home() {
 			<ImageOfMe src="/images/matt.webp" alt="Portrait of Matt Smith" />
 
 			<Title>Matt Smith</Title>
-
+			<Separator width="180px" />
 			<ColumnInfoBox>
 				<span>he/him</span>
 				<span>Harmelodic</span>
@@ -38,7 +39,7 @@ export default function Home() {
 				<span>Writer</span>
 				<span>Dungeon Master</span>
 			</ColumnInfoBox>
-
+			<Separator width="450px" />
 			<RowInfoBox>
 				<SocialMedia
 					href="https://bsky.app/profile/harmelodic.com"

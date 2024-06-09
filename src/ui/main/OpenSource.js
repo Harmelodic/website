@@ -8,6 +8,7 @@ import { FlexDiv } from '../lib/FlexDiv';
 import { Hyperlink } from '../lib/Hyperlink';
 import { useOpenSourceProjects } from '../../hooks/useOpenSourceProjects';
 import { ErrorMessage } from '../lib/ErrorMessage';
+import { Separator } from '../lib/Separator';
 
 const Content = styled.div`
 	display: flex;
@@ -23,6 +24,7 @@ export default function OpenSource() {
 	return (
 		<Main>
 			<Title>Open Source</Title>
+			<Separator />
 			<ColumnInfoBox>
 				<FlexDiv>
 					<span>Sourced from </span>
