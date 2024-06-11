@@ -38,7 +38,6 @@ const StyledDetailsWrapper = styled.div`
 const StyledDetailsText = styled.div`
 	padding: 5px 0;
 	color: ${props => props.theme.font.normalColor};
-	font-size: 1rem;
 	font-style: italic;
 `;
 

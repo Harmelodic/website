@@ -24,7 +24,6 @@ const Links = styled.div`
     flex-flow: column wrap;
     justify-content: flex-start;
     align-items: flex-start;
-	line-height: 2rem;
 	padding-left: 20px;
 `;
 

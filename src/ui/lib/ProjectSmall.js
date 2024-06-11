@@ -49,8 +49,6 @@ const StyledProjectText = styled.div`
 	padding-left: 5px;
 	padding-right: 5px;
 	padding-bottom: 25px;
-	font-size: 1rem;
-	line-height: 20px;
 	white-space: normal;
 	text-align: center;
 `;

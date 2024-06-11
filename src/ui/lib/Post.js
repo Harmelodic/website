@@ -11,7 +11,7 @@ const StyledPost = styled(Link)`
 	margin-bottom: 0;
     background: ${props => props.theme.colors.transparent};
 	border-bottom: dashed 1px ${props => props.theme.colors.softBorder};
-	padding: 15px;
+	padding: 12px 15px;
 	text-decoration: none;
 	white-space: normal;
 	text-align: left;
@@ -28,7 +28,6 @@ const StyledPost = styled(Link)`
 
 const StyledTitle = styled.div`
 	display: flex;
-	font-size: 1rem;
 	color: ${props => props.theme.font.titleColor};
 `;
 

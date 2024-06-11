@@ -40,7 +40,6 @@ const SortChoice = styled.div`
 const SortText = styled.div`
 	display: flex;
 	margin-left: 25px;
-	font-size: 1rem;
 	vertical-align: top;
 `;
 

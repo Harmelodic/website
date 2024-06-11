@@ -15,7 +15,6 @@ const NavItem = styled(NavLink)`
 	justify-content: center;
 	height: 100%;
 	padding: 0 20px;
-	font-size: 1rem;
 	color: ${props => props.theme.font.normalNegativeColor};
 	text-decoration: none;
 	background: ${props => props.selected ? props.theme.colors.accents.green : props.theme.colors.transparent};

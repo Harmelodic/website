@@ -4,8 +4,6 @@ const InfoBox = styled.div`
     display: flex;
     margin: 0 10px;
 	padding: 30px 15px;
-	font-size: 1rem;
-	line-height: 32px;
 	color: ${props => props.theme.font.normalColor};
   	text-align: center;
     overflow-wrap: break-word;

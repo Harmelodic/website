@@ -31,7 +31,6 @@ const ThemeSelectBox = styled.select`
 	border-radius: 5px;
 	padding: 0 35px 0 15px;
 	height: 40px;
-	font-size: 1rem;
 	color: ${props => props.theme.font.normalNegativeColor};
 	transition: border 200ms;
 

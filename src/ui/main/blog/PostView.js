@@ -7,12 +7,13 @@ import { HorizontalRule } from '../../lib/HorizontalRule';
 import { ReadingSpace } from '../../lib/ReadingSpace';
 import { Markdown } from '../../lib/Markdown';
 import { usePost } from '../../../hooks/usePost';
+import { useCategories } from '../../../hooks/useCategories';
 import { ColumnInfoBox } from '../../lib/InfoBox';
 
 const PostViewMain = styled(Main)`
 	flex-flow: column nowrap;
 	justify-content: flex-start;
-	align-items: center;
+	align-items: flex-start;
 `;
 
 const PostHeading = styled.h1`
@@ -26,7 +27,6 @@ const PostHeading = styled.h1`
 
 const Category = styled.div`
 	margin-top: 5px;
-	font-size: 1rem;
 	color: ${props => props.theme.font.subtitleColor};
 	font-style: italic;
 `;
@@ -34,6 +34,7 @@ const Category = styled.div`
 export default function PostView() {
 	const params = useParams();
 	const { post, isPostLoading, errorLoadingPost } = usePost(params.id);
+	const { categories, isLoadingCategories, errorLoadingCategories } = useCategories();
 	const theme = useTheme();
 
 	useEffect(() => {
@@ -102,9 +103,16 @@ export default function PostView() {
 					<>
 						<PostHeading>{post.title}</PostHeading>
 						<Markdown markdown={post.content}/>
-						<Category>
-							{post.content && post.category}
-						</Category>
+						{
+							errorLoadingCategories.occurred === false &&
+							isLoadingCategories === false &&
+							post.categories && categories && (
+								<Category>
+									{post.categories.map(postCategoryId =>
+										categories.find(category => category.id == postCategoryId).name)}
+								</Category>
+							)
+						}
 					</>
 				)
 			}

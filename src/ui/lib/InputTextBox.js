@@ -9,7 +9,6 @@ export const InputTextBox = styled.input`
 	border: solid 1px ${props => props.theme.colors.softBorder};
 	border-radius: 5px;
 	padding: 0 15px;
-	font-size: 1rem;
 	color: ${props => props.theme.font.normalColor};
 	transition: border 200ms;
 
