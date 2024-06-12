@@ -92,11 +92,16 @@ const StyledMarkdown = styled.div`
 
 export function Markdown(props) {
 	const marked = new Marked();
-
-	// Set <a> tags to open in a new tab, with nofollow
 	const renderer = new marked.Renderer();
+	
+	// Internal links to be <a> tags that are scrolled to
+	// External links to be <a> tags that open in a new tab, with nofollow
 	renderer.link = (href, _, text) => {
-		return `<a target="_blank" rel="nofollow" href="${href}">${text}</a>`;
+		if (href.startsWith("#")) {
+			return `<a href="${href}">${text}</a>`;
+		} else {
+			return `<a target="_blank" rel="nofollow" href="${href}">${text}</a>`;
+		}
 	};
 
 	// Configure highlight extension to use highlight.js for strings inside code blocks.
