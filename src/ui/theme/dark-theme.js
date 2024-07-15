@@ -19,7 +19,7 @@ export const darkTheme = {
 			color: '#fff',
 			background: '#000',
 		},
-		blockquote: '#2e70b1',
+		blockquote: '#5598da',
 		keyboard: {
 			color: '#fff',
 			border: '#adb3b9',
