@@ -92,15 +92,16 @@ const StyledMarkdown = styled.div`
 
 export function Markdown(props) {
 	const marked = new Marked();
-	const renderer = new marked.Renderer();
-	
-	// Internal links to be <a> tags that are scrolled to
-	// External links to be <a> tags that open in a new tab, with nofollow
-	renderer.link = (href, _, text) => {
-		if (href.startsWith("#")) {
-			return `<a href="${href}">${text}</a>`;
-		} else {
-			return `<a target="_blank" rel="nofollow" href="${href}">${text}</a>`;
+
+	const renderer = {
+		// Internal links to be <a> tags that are scrolled to
+		// External links to be <a> tags that open in a new tab, with nofollow
+		link(token) {
+			if (token.href.startsWith("#")) {
+				return `<a href="${token.href}">${token.text}</a>`;
+			} else {
+				return `<a target="_blank" rel="nofollow" href="${token.href}">${token.text}</a>`;
+			}
 		}
 	};
 
