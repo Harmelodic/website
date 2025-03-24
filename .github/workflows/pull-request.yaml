@@ -7,7 +7,7 @@ on:
   workflow_dispatch: {}
 
 jobs:
-  build:
+  npm-and-docker-build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
