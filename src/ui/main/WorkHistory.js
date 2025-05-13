@@ -37,7 +37,7 @@ export default function WorkHistory() {
 			<ColumnInfoBox>
 				<WorkTitle>Software Engineer @ Nordnet</WorkTitle>
 				<span>May 2021 - Current</span>
-				<span>76,500 kr / month</span>
+				<span>79,500 kr / month</span>
 				<VerticalLine />
 				<WorkTitle>Director @ Coding for Immigrants (CFI)</WorkTitle>
 				<span>September 2022 - May 2024</span>
