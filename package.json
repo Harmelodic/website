@@ -11,7 +11,7 @@
 	},
 	"author": "Harmelodic",
 	"devDependencies": {
-		"@babel/core": "7.27.1",
+		"@babel/core": "7.27.3",
 		"@babel/preset-react": "7.27.1",
 		"@reduxjs/toolkit": "2.8.2",
 		"babel-loader": "10.0.0",
