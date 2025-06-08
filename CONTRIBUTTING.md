@@ -19,3 +19,8 @@ docs/
 	index.md  # The documentation homepage.
 	...       # Other markdown pages, images and other files.
 ```
+
+### Material for MkDocs
+
+This project also uses [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) for theming and additional
+rendering options.
