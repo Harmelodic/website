@@ -1,5 +1,23 @@
 # Contributing
 
+This website uses MkDocs and MkDocs plugins, which are configured using Python packages.
+
+## Python
+
+Configure a Python Virtual Environment in the following way:
+
+```shell
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+
+Once in the Python Virtual Environment, deactivate it by doing:
+
+```shell
+deactivate
+```
+
 ## Welcome to MkDocs
 
 For full documentation visit [mkdocs.org](https://www.mkdocs.org).
