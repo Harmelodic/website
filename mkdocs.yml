@@ -31,5 +31,5 @@ theme:
         icon: material/brightness-4
         name: Switch to system preference
 
-#  features:
-#    - navigation.tabs
+  features:
+    - navigation.tabs
