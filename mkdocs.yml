@@ -4,8 +4,15 @@ site_name: Harmelodic
 
 strict: true
 
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - pymdownx.blocks.caption
+
 theme:
   name: material
+  features:
+    - navigation.tabs
   palette:
     # Palette toggle for automatic mode
     - media: "(prefers-color-scheme)"
@@ -30,6 +37,3 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to system preference
-
-  features:
-    - navigation.tabs
