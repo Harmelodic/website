@@ -1,6 +1,11 @@
+# JavaScript
 public/**/*bundle.js
 public/**/*bundle.js.gz
 public/**/*bundle.js.LICENSE.txt
 node_modules/
 
+# Python
 venv/
+
+# MkDocs
+site/
