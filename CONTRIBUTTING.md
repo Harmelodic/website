@@ -20,7 +20,11 @@ docs/
 	...       # Other markdown pages, images and other files.
 ```
 
-### Material for MkDocs
+## Material for MkDocs
 
 This project also uses [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) for theming and additional
 rendering options.
+
+## Deploy as GitHub Pages
+
+In `Settings > Pages`, this repo has been configured to deploy the `gh-pages` branch, using the `/` (root) directory.
