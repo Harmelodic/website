@@ -11,8 +11,8 @@ markdown_extensions:
 
 theme:
   name: material
-  logo: assets/logo.png
-  favicon: assets/logo.png
+  logo: assets/logo.svg
+  favicon: assets/favicon.png
   features:
     - navigation.tabs
   palette:
