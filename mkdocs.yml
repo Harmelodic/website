@@ -4,6 +4,10 @@ site_name: Harmelodic
 
 strict: true
 
+# Ensure .well-known is included in serviing
+exclude_docs: |
+  !.well-known
+
 markdown_extensions:
   - attr_list
   - md_in_html
