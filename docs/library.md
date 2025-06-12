@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+---
+
 # Library
 
 Previously stored in my browser's bookmarks, here's a collection of (somewhat) useful things on the internet.
