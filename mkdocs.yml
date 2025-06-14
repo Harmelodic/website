@@ -4,7 +4,7 @@ site_name: Harmelodic
 
 strict: true
 
-# Ensure .well-known is included in serviing
+# Ensure .well-known is included in served content
 exclude_docs: |
   !.well-known
 

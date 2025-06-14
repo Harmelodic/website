@@ -46,3 +46,5 @@ rendering options.
 ## Deploy as GitHub Pages
 
 In `Settings > Pages`, this repo has been configured to deploy the `gh-pages` branch, using the `/` (root) directory.
+
+The custom domain `harmelodic.com` has been configured to be used for this project.
