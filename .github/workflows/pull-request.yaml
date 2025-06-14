@@ -7,19 +7,6 @@ on:
   workflow_dispatch: {}
 
 jobs:
-  npm-and-docker-build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-      - run: npm clean-install
-      - run: npm run lint
-      - run: npm test
-      - run: npm run build
-      - run: docker build . -t "website:$GITHUB_SHA"
-
   mkdocs-build:
     runs-on: ubuntu-latest
     steps:

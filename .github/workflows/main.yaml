@@ -7,31 +7,6 @@ on:
   workflow_dispatch: {}
 
 jobs:
-  npm-and-docker-build-tag-push:
-    permissions:
-      contents: 'read'
-      id-token: 'write' # Fetch OIDC Token for GCP Auth
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-      - run: npm clean-install
-      - run: npm run lint
-      - run: npm test
-      - run: npm run build
-      - run: docker build . -t "website:$GITHUB_SHA"
-      - uses: google-github-actions/auth@v2.1.10
-        with:
-          workload_identity_provider: projects/401363556022/locations/global/workloadIdentityPools/github/providers/github-oidc
-          service_account: automation@automation-220928.iam.gserviceaccount.com
-      - run: gcloud auth configure-docker europe-north1-docker.pkg.dev
-      - run: docker tag "website:$GITHUB_SHA" "europe-north1-docker.pkg.dev/personal-artifacts-353012/harmelodic/website:$GITHUB_SHA"
-      - run: docker push "europe-north1-docker.pkg.dev/personal-artifacts-353012/harmelodic/website:$GITHUB_SHA"
-      - run: docker tag "website:$GITHUB_SHA" "europe-north1-docker.pkg.dev/personal-artifacts-353012/harmelodic/website:latest"
-      - run: docker push "europe-north1-docker.pkg.dev/personal-artifacts-353012/harmelodic/website:latest"
-
   mkdocs-gh-deploy:
     runs-on: ubuntu-latest
     steps:
