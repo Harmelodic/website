@@ -1,3 +1,9 @@
+---
+hide:
+  - navigation
+  - toc
+---
+
 # Welcome
 
 ![Matt Smith](./assets/matt.webp){ width="150" }

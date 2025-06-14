@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+---
+
 # Work History
 
 I believe in Pay Transparency, which is why below I have listed the highest salary I achieved for each role.

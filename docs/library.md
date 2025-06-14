@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+---
+
 # Library
 
 Previously stored in my browser's bookmarks, here's a collection of (somewhat) useful things on the internet.
@@ -413,6 +418,7 @@ A link is not an endorsement or indication that I recommend the thing.
 
 ## Random Useful Dev Tools
 
+- [Crontab Guru](https://crontab.guru/)
 - [CyberChef](https://gchq.github.io/CyberChef/)
 - [Devhints](https://devhints.io/)
 - [IETF Author Resources](https://authors.ietf.org/)
