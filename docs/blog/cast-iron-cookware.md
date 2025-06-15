@@ -14,7 +14,7 @@ corrosion.
 Bare cast iron is cast iron that does not have a coating.
 
 Note: Iron will likely leach from cast iron cookware into the food you cook. This can be beneficial for people with iron
-deficiencies, but dangerous for people with "iron overload".
+deficiencies, but dangerous for people who are subject to "iron overload".
 
 ### Seasoning bare cast iron
 
