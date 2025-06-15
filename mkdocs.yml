@@ -43,3 +43,12 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to system preference
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Harmelodic
+      name: Harmelodic on GitHub
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/harmelodic/
+      name: Harmelodic on LinkedIn
