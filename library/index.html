@@ -1,0 +1,3659 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Harmelodic scribblings & projects.">
+      
+      
+        <meta name="author" content="Harmelodic">
+      
+      
+      
+        <link rel="prev" href="../creations/">
+      
+      
+        <link rel="next" href="../open-source/">
+      
+      
+      <link rel="icon" href="../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Library - Harmelodic</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#library" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Harmelodic" class="md-header__button md-logo" aria-label="Harmelodic" data-md-component="logo">
+      
+  <img src="../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Harmelodic
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Library
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Welcome
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../creations/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Creations
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Library
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../open-source/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Open Source
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../work-history/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Work History
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../blog/" class="md-tabs__link">
+          
+  
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../lists/films-seen/" class="md-tabs__link">
+          
+  
+  
+  Lists
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Harmelodic" class="md-nav__button md-logo" aria-label="Harmelodic" data-md-component="logo">
+      
+  <img src="../assets/logo.svg" alt="logo">
+
+    </a>
+    Harmelodic
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Welcome
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../creations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Creations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Library
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Library
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#artifact-repositories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Artifact Repositories
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authentication-authorization-iam" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentication / Authorization / IAM
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#business-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Business &amp; Management
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#browser-extension-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      Browser Extension Development
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c-and-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      C and C++
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#certificate-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Certificate Management
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#certification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Certification
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ci-cd-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      CI / CD Systems
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloud-providers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cloud Providers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conferences" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conferences
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dart" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dart
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Processing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-science" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Science
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#databases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Databases
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#desktop-linux-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      Desktop Linux Development
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#developer-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Developer Networks
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documentation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#email" class="md-nav__link">
+    <span class="md-ellipsis">
+      Email
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#frontend-web-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      Frontend Web Development
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#frontend-web-styling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Frontend Web Styling
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#game-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      Game Development
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#go" class="md-nav__link">
+    <span class="md-ellipsis">
+      Go
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#google-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Google Tools
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hardware
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#java" class="md-nav__link">
+    <span class="md-ellipsis">
+      Java
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-software-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Software Engineering
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-languages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Languages
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#life" class="md-nav__link">
+    <span class="md-ellipsis">
+      Life
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mobile-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mobile Development
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#networking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Networking
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nodejs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Node.js
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#observability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Observability
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#password-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Password Management
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#payments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Payments
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Testing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#platform-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Platform Engineering
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project Management
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#random-useful-dev-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Random Useful Dev Tools
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regulations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regulations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rust" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rust
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seo-offsite-ux" class="md-nav__link">
+    <span class="md-ellipsis">
+      SEO &amp; Offsite UX
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scheduling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scheduling
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-analysis-hacking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Analysis (Hacking)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#serverless" class="md-nav__link">
+    <span class="md-ellipsis">
+      Serverless
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#software-blogs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Software Blogs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#software-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      Software Design
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#star-trek" class="md-nav__link">
+    <span class="md-ellipsis">
+      Star Trek
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#static-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Static Analysis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ui-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      UI Design
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version Control
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../open-source/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Open Source
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../work-history/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Work History
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Blog
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Blog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/bike-tire-sizing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bike Tire Sizing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/cast-iron-cookware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cast-iron cookware
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Management
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            Management
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/management/are-you-in-governance-answer-this/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Are you in governance/management? Answer this.
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/management/organising-software-teams-2019/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Organising Software Engineering Teams (2019)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_5" id="__nav_6_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Reviews
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            Reviews
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/reviews/2nd-gen-google-pixel-buds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2nd-Gen Google Pixel Buds Review
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/reviews/fairphone-5-review-after-2-months/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fairphone 5 Review - after 2 months
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/reviews/fairphone-5-review-update-android-14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fairphone 5 Review Update - Android 14
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/reviews/fairphone-os-january-2025-bugs-and-fixes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fairphone OS - January 2025 - Bugs and Fixes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Software engineering
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_6">
+            <span class="md-nav__icon md-icon"></span>
+            Software engineering
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/software-engineering/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Software Engineering Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/software-engineering/12-factor-app-methodology-is-good/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    12 Factor App Methodology is good
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/software-engineering/an-ideal-ci-cd-pipeline-old/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    An ideal CI/CD pipeline (Old)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/software-engineering/authorising-a-k8s-deployment-access-to-a-private-container-registry/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Authorising a K8s deployment access to a private container registry
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/software-engineering/building-and-deploying-projects-list-a-pro-old/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Building and Deploying projects like a Pro (old)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/software-engineering/connecting-ci-cd-to-kubernetes-through-a-kubernetes-service-account/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Connecting CI/CD to Kubernetes through a Kubernetes Service Account
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/software-engineering/double-not-with-truthy-falsy-values-javascript/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Double-not with Truthy/Falsy values - JavaScript
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/software-engineering/effective-error-exception-handling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Effective error / exception handling
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/software-engineering/git-basics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Git Basics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/software-engineering/git-with-ssh/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Git with SSH
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/software-engineering/installing-an-apache-http-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Installing an Apache HTTP Server
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/software-engineering/keeping-infrastructure-in-order/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Keeping infrastructure in order
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/software-engineering/logging-in-java-projects/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Logging in Java projects
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/software-engineering/moving-from-docker-to-podman/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Moving from Docker to Podman
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/software-engineering/moving-gpg-keys-to-a-new-machine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Moving GPG keys to a new machine
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/software-engineering/my-personal-ci-cd-setup-2024/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    My personal CI/CD setup (2024)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/software-engineering/onboarding-checklist-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Onboarding Checklist Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/software-engineering/principles-for-managing-npm-packages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Principles for managing npm packages
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/software-engineering/restclient-vs-webclient-vs-resttemplate-configuring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RestClient vs. WebClient vs. RestTemplate (Configuring)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/software-engineering/setting-up-a-large-minecraft-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setting up a large Minecraft server
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/software-engineering/setting-up-an-nginx-ingress/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setting up an NGINX ingress
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/software-engineering/setting-up-cert-manager-on-k8s-with-lets-encrypt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setting up cert-manager on K8s with Let's Encrypt
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/software-engineering/setup-clion-on-windows/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setup CLion on Windows
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/software-engineering/some-software-development-principles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Some Software Development Principles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/software-engineering/special-characters-urls-and-percent-encoding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Special characters, URLs and %-encoding
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/software-engineering/using-oneplus-bullets-wireless-aptx-with-macos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Using OnePlus Bullets Wireless (or any AptX device) with macOS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/software-engineering/vertically-align-anything/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Vertically align anything
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/software-engineering/what-is-homebrew/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    What is... Homebrew (the macOS package manager)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/software-engineering/what-is-programming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    What is Programming
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6_30" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_6_30" id="__nav_6_6_30_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Build and deploy
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_6_30_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_6_30">
+            <span class="md-nav__icon md-icon"></span>
+            Build and deploy
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/software-engineering/build-and-deploy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/software-engineering/build-and-deploy/apache-beam/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Build &amp; Deploy: Apache Beam projects
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/software-engineering/build-and-deploy/containers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Build &amp; Deploy: Containers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/software-engineering/build-and-deploy/maven/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Build &amp; Deploy: Maven projects
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_7" id="__nav_6_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Windows 10
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_7">
+            <span class="md-nav__icon md-icon"></span>
+            Windows 10
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/windows-10/1-introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/windows-10/2-downloading-installation-media/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Downloading installation media
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/windows-10/3-getting-your-product-key/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Getting your product key
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/windows-10/4-installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Installation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/windows-10/5-upgrading-from-windows-7-8-or-8.1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Upgrading from Windows 7, 8 or 8.1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/windows-10/6-configuring-and-cleaning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configuring and Cleaning (Technical)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Lists
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Lists
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lists/films-seen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Films seen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lists/tv-shows-seen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    TV shows seen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#artifact-repositories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Artifact Repositories
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authentication-authorization-iam" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentication / Authorization / IAM
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#business-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Business &amp; Management
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#browser-extension-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      Browser Extension Development
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c-and-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      C and C++
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#certificate-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Certificate Management
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#certification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Certification
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ci-cd-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      CI / CD Systems
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloud-providers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cloud Providers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conferences" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conferences
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dart" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dart
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Processing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-science" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Science
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#databases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Databases
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#desktop-linux-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      Desktop Linux Development
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#developer-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Developer Networks
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documentation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#email" class="md-nav__link">
+    <span class="md-ellipsis">
+      Email
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#frontend-web-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      Frontend Web Development
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#frontend-web-styling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Frontend Web Styling
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#game-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      Game Development
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#go" class="md-nav__link">
+    <span class="md-ellipsis">
+      Go
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#google-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Google Tools
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hardware
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#java" class="md-nav__link">
+    <span class="md-ellipsis">
+      Java
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-software-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Software Engineering
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-languages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Languages
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#life" class="md-nav__link">
+    <span class="md-ellipsis">
+      Life
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mobile-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mobile Development
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#networking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Networking
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nodejs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Node.js
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#observability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Observability
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#password-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Password Management
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#payments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Payments
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Testing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#platform-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Platform Engineering
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project Management
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#random-useful-dev-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Random Useful Dev Tools
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regulations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regulations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rust" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rust
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seo-offsite-ux" class="md-nav__link">
+    <span class="md-ellipsis">
+      SEO &amp; Offsite UX
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scheduling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scheduling
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-analysis-hacking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Analysis (Hacking)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#serverless" class="md-nav__link">
+    <span class="md-ellipsis">
+      Serverless
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#software-blogs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Software Blogs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#software-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      Software Design
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#star-trek" class="md-nav__link">
+    <span class="md-ellipsis">
+      Star Trek
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#static-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Static Analysis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ui-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      UI Design
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version Control
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+
+
+
+
+<h1 id="library">Library</h1>
+<p>Previously stored in my browser's bookmarks, here's a collection of (somewhat) useful things on the internet.</p>
+<p>Most of them are software related.</p>
+<p>A link is not an endorsement or indication that I recommend the thing.</p>
+<h2 id="artifact-repositories">Artifact Repositories</h2>
+<ul>
+<li><a href="https://cloud.google.com/artifact-registry">Artifact Registry - Google Cloud</a></li>
+<li><a href="https://artifacthub.io/">ArtifactHub - Kubernetes Packages</a></li>
+<li><a href="https://hub.docker.com/">Docker Hub</a></li>
+<li><a href="https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository">GitHub Releases</a></li>
+<li><a href="https://docs.gitlab.com/ee/user/project/releases/">GitLab Releases</a></li>
+<li><a href="https://jfrog.com/artifactory/">JFrog Artifactory</a></li>
+<li><a href="https://www.npmjs.com/products">npm - JavaScript packages</a></li>
+<li><a href="https://mvnrepository.com/">Maven Repository</a></li>
+<li><a href="https://central.sonatype.org/">Maven "Central" Repository</a></li>
+<li><a href="https://www.sonatype.com/products/repository-oss">Sonatype Nexus OSS</a></li>
+</ul>
+<h2 id="authentication-authorization-iam">Authentication / Authorization / IAM</h2>
+<ul>
+<li><a href="https://auth0.com/">Auth0</a></li>
+<li><a href="https://www.atlassian.com/software/crowd">Crowd - Atlassian</a></li>
+<li><a href="https://token.actions.githubusercontent.com/.well-known/openid-configuration">GitHub's OpenID Configuration</a></li>
+<li><a href="https://jwt.io/">JWT - JSON Web Tokens</a></li>
+<li><a href="https://www.keycloak.org/">Keycloak</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol">LDAP - Lightweight Directory Access Protocol</a></li>
+<li><a href="https://cloud.google.com/kubernetes-engine/docs/concepts/workload-identity">Workload Identity (GKE)</a></li>
+</ul>
+<h2 id="business-management">Business &amp; Management</h2>
+<ul>
+<li><a href="https://tompeters.com/">Tom Peters (Extreme Humanism)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/DevOps">DevOps</a></li>
+<li><a href="https://landing.google.com/sre/book/index.html">Site Reliability Engineering - Google</a></li>
+<li><a href="https://en.wikipedia.org/wiki/The_One_Minute_Manager">The One Minute Manager</a></li>
+</ul>
+<h2 id="browser-extension-development">Browser Extension Development</h2>
+<ul>
+<li><a href="https://www.extensiontest.com/">Firefox Extension Compatibility Tester</a></li>
+</ul>
+<h2 id="c-and-c">C and C++</h2>
+<ul>
+<li><a href="https://cmake.org/">CMake</a></li>
+<li><a href="https://conan.io/">Conan - Package Manager</a></li>
+<li><a href="https://www.gnu.org/software/make/manual/html_node/index.html">GNU make</a></li>
+<li><a href="https://docs.gtk.org/">GTK Docs</a></li>
+<li><a href="https://www.learn-cpp.org/">learn-cpp.org</a></li>
+<li><a href="https://www.learncpp.com/">learncpp.com</a></li>
+<li><a href="https://doc.qt.io/qt-6.2/reference-overview.html">Qt Framework Reference</a></li>
+</ul>
+<h2 id="certificate-management">Certificate Management</h2>
+<ul>
+<li><a href="https://cert-manager.io/">cert-manager</a></li>
+<li><a href="https://www.digicert.com/">digicert - CA</a></li>
+<li><a href="https://www.globalsign.com/">GlobalSign - CA</a></li>
+<li><a href="https://uk.godaddy.com/web-security/ssl-certificate">GoDaddy - SSL Certificates</a></li>
+<li><a href="https://letsencrypt.org/">Let's Encrypt - CA (nonprofit)</a></li>
+<li><a href="https://www.thesslstore.com/">The SSL Store</a></li>
+</ul>
+<h2 id="certification">Certification</h2>
+<ul>
+<li><a href="https://aws.amazon.com/certification/">AWS Certification</a></li>
+<li><a href="https://www.cncf.io/certification/cka/">CNCF - Kubernetes Administrator</a></li>
+<li><a href="https://www.cncf.io/certification/ckad/">CNCF - Kubernetes Application Developer</a></li>
+<li><a href="https://cloud.google.com/certification/">Google Cloud Certification</a></li>
+<li><a href="https://www.microsoft.com/en-us/learning/azure-exams.aspx">Microsoft Azure Certification</a></li>
+<li><a href="https://education.oracle.com/oracle-certification-path/pFamily_48">Oracle - Java</a></li>
+</ul>
+<h2 id="ci-cd-systems">CI / CD Systems</h2>
+<ul>
+<li><a href="https://argo-cd.readthedocs.io/en/stable/">Argo CD</a></li>
+<li><a href="https://www.atlassian.com/software/bamboo">Bamboo - Atlassian</a></li>
+<li><a href="https://circleci.com/">CircleCI</a></li>
+<li><a href="https://github.com/features/actions">GitHub Actions</a></li>
+<li><a href="https://about.gitlab.com/solutions/continuous-integration/">GitLab CI</a></li>
+<li><a href="https://helm.sh/">Helm - Kubernetes Deployments</a></li>
+<li><a href="https://www.jenkins.io/">Jenkins</a></li>
+<li><a href="https://jenkins-x.io/">Jenkins X</a></li>
+<li><a href="https://kustomize.io/">Kustomize - Kubernetes Deployments</a></li>
+<li><a href="https://www.jetbrains.com/teamcity/">TeamCity - Jetbrains</a></li>
+<li><a href="https://www.travis-ci.com/">Travis CI</a></li>
+</ul>
+<h2 id="cloud-providers">Cloud Providers</h2>
+<ul>
+<li><a href="https://aws.amazon.com/">AWS - Amazon Web Services</a></li>
+<li><a href="https://www.cloudflare.com/">Cloudflare</a></li>
+<li><a href="https://www.digitalocean.com/">DigitalOcean</a></li>
+<li><a href="https://cloud.google.com/">GCP - Google Cloud Platform</a></li>
+<li><a href="https://developers.google.com/api-client-library/">Google API Client Libraries</a></li>
+<li><a href="https://www.heroku.com/">Heroku</a></li>
+<li><a href="https://azure.microsoft.com/en-gb/">Microsoft Azure</a></li>
+<li><a href="https://nextcloud.com/">Nextcloud</a></li>
+<li><a href="https://www.openstack.org/">Openstack</a></li>
+<li><a href="https://www.tsohost.com/">tsoHost (UK only)</a></li>
+</ul>
+<h2 id="conferences">Conferences</h2>
+<ul>
+<li><a href="https://reinvent.awsevents.com/">AWS re:Invent</a></li>
+<li><a href="https://devopsdays.org/">devopsdays</a></li>
+<li><a href="https://www.devoxx.co.uk/">Devoxx</a></li>
+<li><a href="https://githubuniverse.com/">GitHub Universe</a></li>
+<li><a href="https://about.gitlab.com/events/">GitLab Events</a></li>
+<li><a href="https://www.gitopsdays.com/">GitOps Days</a></li>
+<li><a href="https://io.google/">Google I/O</a></li>
+<li><a href="https://www.jfokus.se/">JFokus</a></li>
+<li><a href="https://jsconf.com/">JSConf</a></li>
+<li><a href="https://events.linuxfoundation.org/">Linux Foundation Events</a></li>
+<li><a href="https://springio.net/">Spring I/O</a></li>
+<li><a href="https://events.voxxeddays.com/#/">VoxxedDays</a></li>
+<li><a href="http://www.wikicfp.com/cfp/allcfp">WikiCFP - Call For Papers</a></li>
+</ul>
+<h2 id="dart">Dart</h2>
+<ul>
+<li><a href="https://dart.dev/">Dart programming language</a></li>
+<li><a href="https://flutter.dev/">Flutter - Framework for Dart</a></li>
+<li><a href="https://www.appbrewery.co/p/flutter-development-bootcamp-with-dart">Flutter Course - App Brewery</a></li>
+<li><a href="https://www.youtube.com/watch?v=w2TcYP8qiRI">Flutter LiveCoding</a></li>
+</ul>
+<h2 id="data-processing">Data Processing</h2>
+<ul>
+<li><a href="https://camel.apache.org/">Apache Camel</a></li>
+<li><a href="https://kafka.apache.org/">Apache Kafka</a></li>
+<li><a href="https://nifi.apache.org/docs/nifi-docs/html/user-guide.html">Apache NiFi - User Guide</a></li>
+<li><a href="https://tika.apache.org/">Apache Tika - Metadata Extraction</a></li>
+<li><a href="https://www.cloudera.com/">Cloudera - Managed Apache Software</a></li>
+<li><a href="https://cloud.google.com/dataflow">GCP Dataflow</a></li>
+<li><a href="https://cloud.google.com/pubsub">GCP Pub/Sub</a></li>
+<li><a href="https://spring.io/projects/spring-integration">Spring Integration</a></li>
+</ul>
+<h2 id="data-science">Data Science</h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Data_lake">Data lake</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Data_mesh">Data mesh</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Data_warehouse">Data warehouse</a></li>
+<li><a href="https://jupyter.org/">Jupyter (Notebooks)</a></li>
+<li><a href="https://cloud.google.com/looker">Looker (Google Cloud)</a></li>
+<li><a href="https://pandas.pydata.org/">Pandas</a></li>
+<li><a href="https://www.python.org/">Python</a></li>
+<li><a href="https://pytorch.org/">PyTorch</a></li>
+<li><a href="https://www.r-project.org/">R</a></li>
+</ul>
+<h2 id="databases">Databases</h2>
+<ul>
+<li><a href="https://www.h2database.com/html/main.html">H2 - in-memory for Java</a></li>
+<li><a href="https://docs.mongodb.com/">MongoDB</a></li>
+<li><a href="https://dev.mysql.com/">MySQL</a></li>
+<li><a href="https://www.postgresql.org/docs/">PostgreSQL</a></li>
+<li><a href="https://learn.microsoft.com/en-gb/sql/sql-server">SQL Server by Microsoft</a></li>
+<li><a href="https://www.sqlite.org/">SQLite</a></li>
+</ul>
+<h2 id="desktop-linux-development">Desktop Linux Development</h2>
+<ul>
+<li><a href="https://appimage.org/">AppImage</a></li>
+<li><a href="https://wayland.freedesktop.org/">Wayland Window System</a></li>
+<li><a href="https://www.x.org/wiki/Documentation/">X Window System</a></li>
+</ul>
+<h2 id="developer-networks">Developer Networks</h2>
+<ul>
+<li><a href="https://developer.amazon.com/">Amazon Developer</a></li>
+<li><a href="https://developer.android.com/index.html">Android Developers</a></li>
+<li><a href="https://developer.apple.com/">Apple Developer</a></li>
+<li><a href="https://developer.chrome.com/home">Chrome for Developers</a></li>
+<li><a href="https://discord.com/developers/applications">Discord Developer Portal</a></li>
+<li><a href="https://developers.facebook.com/">Facebook/Meta for Developers</a></li>
+<li><a href="https://addons.mozilla.org/en-gb/developers/">Firefox Add-ons Developer Hub</a></li>
+<li><a href="https://developers.google.com/">Google Developers</a></li>
+<li><a href="https://play.google.com/console/developers">Google Play Developer Console</a></li>
+<li><a href="https://developer.ibm.com/">IBM Developer</a></li>
+<li><a href="https://www.linkedin.com/developers/">LinkedIn Developer Solutions</a></li>
+<li><a href="https://developer.microsoft.com/">Microsoft Developer</a></li>
+<li><a href="https://learn.microsoft.com/en-gb/docs/">Microsoft Technical Docs</a></li>
+<li><a href="https://developers.snap.com/">Snap for Developers</a></li>
+<li><a href="https://developer.spotify.com/">Spotify for Developers</a></li>
+<li><a href="https://developer.spotify.com/">Twitter/X Developer Docs</a></li>
+<li><a href="https://ubuntu.com/desktop/developers">Ubuntu Desktop for Developers</a></li>
+</ul>
+<h2 id="documentation">Documentation</h2>
+<ul>
+<li><a href="https://asyncapi.io/">AsyncAPI</a></li>
+<li><a href="https://studio.asyncapi.com/">AsyncAPI Studio</a></li>
+<li><a href="https://www.atlassian.com/software/confluence">Confluence - Atlassian</a></li>
+<li><a href="https://www.gitbook.com/">Gitbook</a></li>
+<li><a href="https://kroki.io/">Kroki - Diagrams from Code</a></li>
+<li><a href="https://github.github.com/gfm/">Markdown Spec (GitHub Flavored)</a></li>
+<li><a href="https://daringfireball.net/projects/markdown/">Markdown Spec (Original)</a></li>
+<li><a href="https://www.mkdocs.org/">MkDocs</a></li>
+<li><a href="https://squidfunk.github.io/mkdocs-material/">Material for MkDocs</a></li>
+<li><a href="https://editor.swagger.io/">OpenAPI - Swagger Editor</a></li>
+<li><a href="https://swagger.io/tools/swagger-ui/">OpenAPI - Swagger UI</a></li>
+<li><a href="https://spec.openapis.org/oas/latest.html">OpenAPI Specification</a></li>
+<li><a href="https://readthedocs.org/">Read the Docs</a></li>
+<li><a href="https://swimlanes.io/">swimlanes.io - Sequence Diagrams as Code</a></li>
+</ul>
+<h2 id="email">Email</h2>
+<ul>
+<li><a href="https://james.apache.org/">Apache James</a></li>
+<li><a href="https://mailchimp.com/">Mailchimp</a></li>
+<li><a href="https://www.postfix.org/">Postfix</a></li>
+<li><a href="https://roundcube.net/">roundcube</a></li>
+<li><a href="https://sendgrid.com/">Sendgrid</a></li>
+</ul>
+<h2 id="frontend-web-development">Frontend Web Development</h2>
+<ul>
+<li><a href="https://angular.io/">Angular</a></li>
+<li><a href="https://babeljs.io/">Babel</a></li>
+<li><a href="https://www.browserstack.com/">BrowserStack - Browser Testing</a></li>
+<li><a href="https://caniuse.com/">Can I Use... - Browser Compatibility</a></li>
+<li><a href="https://chromestatus.com/features">Chrome Platform Feature Status</a></li>
+<li><a href="https://www.cypress.io/">Cypress</a></li>
+<li><a href="https://d3js.org/">D3 - Data Visualisation</a></li>
+<li><a href="https://realfavicongenerator.net/">Favicon Generator</a></li>
+<li><a href="https://geemanjs.github.io/geemans-a11y-guide/">Geeman's A11y guide</a></li>
+<li><a href="https://html.spec.whatwg.org/multipage/named-characters.html">HTML Entities</a></li>
+<li><a href="https://jasmine.github.io/">Jasmine - BDD Testing</a></li>
+<li><a href="https://www.loqate.com/en-gb/">Loqate - Post Address Verification</a></li>
+<li><a href="https://www.meteor.com/">Meteor</a></li>
+<li><a href="https://mochajs.org/">Mocha</a></li>
+<li><a href="https://github.com/mbeaudru/modern-js-cheatsheet">Modern JS Cheatsheet</a></li>
+<li><a href="https://nextjs.org/">Next.js - Framework</a></li>
+<li><a href="https://pa11y.org/">Pa11y</a></li>
+<li><a href="https://polyfill.io/">Polyfill.io</a></li>
+<li><a href="https://react.dev">React</a></li>
+<li><a href="https://redux.js.org/">Redux</a></li>
+<li><a href="https://www.selenium.dev/">Selenium - Browser Automation</a></li>
+<li><a href="https://sinonjs.org/">SinonJS - Test Mocks &amp; Spies</a></li>
+<li><a href="https://turfjs.org/">Turf.js - Map Graphing</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API">Web APIs - MDN</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components">Web Components</a></li>
+<li><a href="https://webassembly.org/">WebAssembly</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
+<li><a href="https://webpack.js.org/">Webpack</a></li>
+<li><a href="https://www.deque.com/axe/">axe - Accessibility Testing</a></li>
+<li><a href="https://npmjs.com/">npm</a></li>
+<li><a href="https://web.dev/">web.dev</a></li>
+</ul>
+<h2 id="frontend-web-styling">Frontend Web Styling</h2>
+<ul>
+<li><a href="https://atlaskit.atlassian.com/">Atlaskit - Atlassian</a></li>
+<li><a href="https://github.com/MicheleBertoli/css-in-js">CSS in JS - Technique Comparison</a></li>
+<li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">Flexbox - A Complete Guide</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">Flexbox Overview - MDN</a></li>
+<li><a href="https://flexboxfroggy.com/">Flexbox learning - Froggy</a></li>
+<li><a href="https://mui.com/material-ui/getting-started/">Material UI</a></li>
+<li><a href="https://mui.com/material-ui/material-icons/">Material UI - Icons</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations">Using CSS animations</a></li>
+<li><a href="https://cssreference.io/">cssreference.io - Visual CSS Reference</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme">prefers-color-scheme - MDN</a></li>
+<li><a href="https://www.styled-components.com/">styled-components</a></li>
+</ul>
+<h2 id="game-development">Game Development</h2>
+<ul>
+<li><a href="https://developers.google.com/ar/discover/">AR Core - Google</a></li>
+<li><a href="https://www.cplusplus.com/doc/tutorial/">C++ Tutorials</a></li>
+<li><a href="https://docs.unrealengine.com/latest/INT/Programming/Introduction/">Intro to C++ in Unreal Engine</a></li>
+<li><a href="https://www.boundingboxsoftware.com/materialize/">Materialize by Bounding Box Software</a></li>
+<li><a href="https://github.com/photonstorm/phaser">Phaser - 2D Framework for HTML5</a></li>
+<li><a href="https://www.stopkillinggames.com">Stop Killing Games</a></li>
+<li><a href="https://unity.com/">Unity</a></li>
+<li><a href="https://www.unrealengine.com/">Unreal Engine</a></li>
+<li><a href="https://store.speedtree.com/">speedtree - Vegetation Modeling</a></li>
+</ul>
+<h2 id="go">Go</h2>
+<ul>
+<li><a href="https://google.github.io/styleguide/go/">Go Styleguide</a></li>
+<li><a href="https://pkg.go.dev/std">Standard Library - Go Packages</a></li>
+</ul>
+<h2 id="google-tools">Google Tools</h2>
+<ul>
+<li><a href="https://developers.google.com/admin-sdk/overview">Google Admin SDK API</a></li>
+<li><a href="https://developers.google.com/workspace/explore?filter=">Google Workspace APIs Explorer</a></li>
+<li><a href="https://developers.google.com/oauthplayground/">OAuth 2.0 - Google Playground</a></li>
+<li><a href="https://cloud.google.com/iam/docs/understanding-roles">Understanding Roles - GCP</a></li>
+<li><a href="https://cloud.google.com/sdk/gcloud/reference">gcloud - CLI Reference</a></li>
+<li><a href="https://cloud.google.com/storage/docs/gsutil">gsutil - CLI Reference</a></li>
+</ul>
+<h2 id="hardware">Hardware</h2>
+<ul>
+<li><a href="https://www.innovationcooling.com/products/ic-graphite-thermal-pad/">IC Graphite Thermal Pad</a></li>
+</ul>
+<h2 id="java">Java</h2>
+<ul>
+<li><a href="https://adoptium.net/en-GB/temurin/releases/">Adoptium Temurin JDK</a></li>
+<li><a href="https://poi.apache.org/">Apache POI - Processing Microsoft Office Docs</a></li>
+<li><a href="https://docs.jboss.org/arquillian/reference/1.0.0.Alpha1/en-US/html_single/">Arquillian - Integration Testing Framework</a></li>
+<li><a href="https://gradle.org/">Gradle</a></li>
+<li><a href="https://junit.org/">JUnit</a></li>
+<li><a href="https://docs.oracle.com/en/java/javase/20/docs/api/index.html">Java 20 - Javadoc</a></li>
+<li><a href="https://docs.oracle.com/javase/8/javafx/get-started-tutorial/jfx-architecture.htm">JavaFX Architecture</a></li>
+<li><a href="https://dev.java/learn/">Learn Java - dev.java</a></li>
+<li><a href="https://maven.apache.org/">Maven</a></li>
+<li><a href="https://repo.maven.apache.org/maven2/">Maven Repository - Raw</a></li>
+<li><a href="https://www.tutorialspoint.com/java/java_multithreading.htm">Multithreading in Java</a></li>
+<li><a href="https://openjdk.org/jeps">OpenJDK JEPs</a></li>
+<li><a href="https://g1thubhub.github.io/data-structure-zoo.html">Phil's Data Structure Zoo</a></li>
+<li><a href="https://sdkman.io/">SDKMAN!</a></li>
+<li><a href="https://spring.io/">Spring - Framework</a></li>
+<li><a href="https://javadoc.io/">javadoc.io - Free Javadoc Hosting</a></li>
+</ul>
+<h2 id="learning-software-engineering">Learning Software Engineering</h2>
+<ul>
+<li><a href="https://github.com/sindresorhus/awesome">"Awesome" List</a></li>
+<li><a href="https://www.codecademy.com">Codecademy - Learning programming</a></li>
+<li><a href="https://www.udacity.com/">Udacity - General Learning</a></li>
+<li><a href="https://www.udemy.com/">Udemy - General Learning</a></li>
+<li><a href="https://egghead.io">egghead.io - Learning modern web development</a></li>
+<li><a href="https://exercism.org/">exercism - Learning programming languages</a></li>
+</ul>
+<h2 id="learning-languages">Learning Languages</h2>
+<ul>
+<li><a href="https://www.duolingo.com">Duolingo</a></li>
+<li><a href="https://svenska.se/">svenska.se</a></li>
+<li><a href="https://www.synonymer.se/">synonymer.se</a></li>
+</ul>
+<h2 id="life">Life</h2>
+<ul>
+<li><a href="https://www.fieggen.com/shoelace/">Ian's Shoelace Site</a></li>
+<li><a href="https://www.seat61.com/">The Man in Seat Sixty-One</a></li>
+</ul>
+<h2 id="mobile-development">Mobile Development</h2>
+<ul>
+<li><a href="https://developer.android.com/guide/">Android Dev Guides</a></li>
+<li><a href="https://firebase.google.com/">Firebase - Platform</a></li>
+<li><a href="https://reactnative.dev/">React Native</a></li>
+<li><a href="https://swift.org/documentation/">Swift Docs</a></li>
+<li><a href="https://developer.android.com/tools/adb">adb - Android Debug Bridge</a></li>
+</ul>
+<h2 id="networking">Networking</h2>
+<ul>
+<li><a href="https://www.consul.io/">Consul - Service Discovery</a></li>
+<li><a href="https://www.fastly.com/">Fastly</a></li>
+<li><a href="https://en.wikipedia.org/wiki/HTTP">HTTP/1</a></li>
+<li><a href="https://en.wikipedia.org/wiki/HTTP/2">HTTP/2</a></li>
+<li><a href="https://en.wikipedia.org/wiki/HTTP/3">HTTP/3</a></li>
+<li><a href="https://istio.io/">Istio - Service Mesh</a></li>
+<li><a href="https://kubernetes.github.io/ingress-nginx/">Kubernetes Ingress-NGINX Controller</a></li>
+<li><a href="https://nginx.org/en/docs/">NGINX Docs</a></li>
+<li><a href="https://smp-spec.io/dashboard">SMP - Service Mesh Performance</a></li>
+<li><a href="https://varnish-cache.org/">Varnish HTTP Cache</a></li>
+</ul>
+<h2 id="nodejs">Node.js</h2>
+<ul>
+<li><a href="https://www.electronjs.org/">Electron - Desktop Framework</a></li>
+<li><a href="https://expressjs.com/">Express - Framework</a></li>
+<li><a href="https://www.youtube.com/watch?v=8aGhZQkoFbQ">The Event Loop - Philip Roberts' JSConf Talk</a></li>
+<li><a href="https://www.codementor.io/@ashish1dev/list-of-useful-nodejs-modules-du107mcv3">Useful Node.js Modules</a></li>
+</ul>
+<h2 id="observability">Observability</h2>
+<ul>
+<li><a href="https://prometheus.io/docs/alerting/latest/alertmanager/">Alertmanager - Prometheus</a></li>
+<li><a href="https://www.elastic.co/products/elasticsearch">Elasticsearch</a></li>
+<li><a href="https://analytics.google.com">Google Analytics</a></li>
+<li><a href="https://grafana.com/">Grafana</a></li>
+<li><a href="https://www.jaegertracing.io/">Jaeger Tracing</a></li>
+<li><a href="https://www.elastic.co/products/kibana">Kibana</a></li>
+<li><a href="https://kubeapps.dev/">Kubeapps Dashboard</a></li>
+<li><a href="https://www.elastic.co/products/logstash">Logstash</a></li>
+<li><a href="https://micrometer.io/">Micrometer</a></li>
+<li><a href="https://opentelemetry.io/">OpenTelemetry</a></li>
+<li><a href="https://www.atlassian.com/software/opsgenie">Opsgenie</a></li>
+<li><a href="https://prometheus.io/">Prometheus</a></li>
+<li><a href="https://www.splunk.com/">Splunk</a></li>
+<li><a href="https://uptimerobot.com/">UptimeRobot</a></li>
+<li><a href="https://www.fluentd.org/">fluentd</a></li>
+</ul>
+<h2 id="password-management">Password Management</h2>
+<ul>
+<li><a href="https://1password.com/">1Password</a></li>
+<li><a href="https://bitwarden.com/">Bitwarden</a></li>
+<li><a href="https://www.dashlane.com/">Dashlane</a></li>
+<li><a href="https://keepass.info/">KeePass</a></li>
+<li><a href="https://www.lastpass.com/">LastPass</a></li>
+<li><a href="https://developer.apple.com/passkeys/">Passkeys - Apple Developer</a></li>
+<li><a href="https://fidoalliance.org/passkeys/">Passkeys - FIDO Alliance</a></li>
+<li><a href="https://developers.google.com/identity/passkeys">Passkeys - Google Developers</a></li>
+</ul>
+<h2 id="payments">Payments</h2>
+<ul>
+<li><a href="https://developer.paypal.com/braintree/docs/">PayPal Braintree</a></li>
+<li><a href="https://developer.squareup.com/reference/square">Square API</a></li>
+<li><a href="https://docs.staxpayments.com/">Stax Payments API</a></li>
+<li><a href="https://stripe.com/docs/payments">String Payments API</a></li>
+<li><a href="https://eu.developers.trustly.com/doc/reference/">Trustly Payments API</a></li>
+</ul>
+<h2 id="performance-testing">Performance Testing</h2>
+<ul>
+<li><a href="https://www.artillery.io/">Artillery</a></li>
+<li><a href="https://jmeter.apache.org/">JMeter</a></li>
+<li><a href="https://k6.io/">k6</a></li>
+<li><a href="https://locust.io/">Locust</a>j</li>
+<li><a href="https://testkube.io/">Testkube</a></li>
+<li><a href="https://benchmarks.ul.com/">UL Benchmarks</a></li>
+</ul>
+<h2 id="platform-engineering">Platform Engineering</h2>
+<ul>
+<li><a href="https://www.ansible.com/">Ansible</a></li>
+<li><a href="https://www.docker.com/">Docker</a></li>
+<li><a href="https://kubernetes.io/">Kubernetes</a></li>
+<li><a href="https://www.redhat.com/en/technologies/cloud-computing/openshift">OpenShift</a></li>
+<li><a href="https://puppet.com/">Puppet</a></li>
+<li><a href="https://www.terraform.io/docs/">Terraform</a></li>
+<li><a href="https://github.com/kubernetes/kops">kOps</a></li>
+<li><a href="https://www.vagrantup.com/">Vagrant</a></li>
+</ul>
+<h2 id="project-management">Project Management</h2>
+<ul>
+<li><a href="https://asana.com/">Asana</a></li>
+<li><a href="https://www.atlassian.com/software/jira">Jira - Atlassian</a></li>
+<li><a href="https://trello.com/">Trello</a></li>
+<li><a href="https://www.jetbrains.com/youtrack/">YouTrack - Jetbrains</a></li>
+</ul>
+<h2 id="random-useful-dev-tools">Random Useful Dev Tools</h2>
+<ul>
+<li><a href="https://crontab.guru/">Crontab Guru</a></li>
+<li><a href="https://gchq.github.io/CyberChef/">CyberChef</a></li>
+<li><a href="https://devhints.io/">Devhints</a></li>
+<li><a href="https://authors.ietf.org/">IETF Author Resources</a></li>
+<li><a href="https://osquery.io/">osquery - SQL-like OS querying</a></li>
+</ul>
+<h2 id="regulations">Regulations</h2>
+<ul>
+<li><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32016R0679">GDPR</a></li>
+<li><a href="https://www.pcisecuritystandards.org/">PCI Payment Security Standards</a></li>
+</ul>
+<h2 id="rust">Rust</h2>
+<ul>
+<li><a href="https://doc.rust-lang.org/cargo/reference/index.html">Cargo - Reference</a></li>
+<li><a href="https://play.rust-lang.org/">Rust Playground</a></li>
+<li><a href="https://doc.rust-lang.org/book/title-page.html">The Rust Book</a></li>
+<li><a href="https://crates.io/">crates.io</a></li>
+<li><a href="https://crates.io/crates/gtk">gtk - crate</a></li>
+<li><a href="https://crates.io/crates/imgui">imgui - crate</a></li>
+<li><a href="https://crates.io/crates/qt_core">qt_core - crate</a></li>
+</ul>
+<h2 id="seo-offsite-ux">SEO &amp; Offsite UX</h2>
+<ul>
+<li><a href="https://darkvisitors.com/agents">Dark Visitors - Robots.txt Agents</a></li>
+<li><a href="https://moz.com/learn/seo/meta-description">Meta Description Tag</a></li>
+<li><a href="https://ogp.me/">OGP - Open Graph Protocol</a></li>
+<li><a href="https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/summary">Summary Card - Twitter/X</a></li>
+</ul>
+<h2 id="scheduling">Scheduling</h2>
+<ul>
+<li><a href="https://doodle.com/">Doodle</a></li>
+<li><a href="https://youcanbook.me/">YouCanBookMe</a></li>
+</ul>
+<h2 id="security">Security</h2>
+<ul>
+<li><a href="https://www.darktrace.com">Darktrace</a></li>
+<li><a href="https://www.gnupg.org/gph/en/manual/book1.html">GNU Privacy Handbook</a></li>
+<li><a href="https://www.gnupg.org/">GPG (GnuPG)</a></li>
+<li><a href="https://gock.net/blog/2020/gpg-cheat-sheet">GPG Cheat Sheet</a></li>
+<li><a href="https://cheatsheetseries.owasp.org/">OWASP Cheat Sheet Series</a></li>
+<li><a href="https://deps.dev/">Open Source Insights</a></li>
+<li><a href="https://www.phildev.net/pgp/">Phil's PGP Docs</a></li>
+<li><a href="https://www.eicar.org/?page_id=3950">eicar Anti-Malware Testfile</a></li>
+<li><a href="https://securitytxt.org/">security.txt</a></li>
+</ul>
+<h2 id="security-analysis-hacking">Security Analysis (Hacking)</h2>
+<ul>
+<li><a href="https://www.abuseipdb.com/">AbuseIPDB</a></li>
+<li><a href="https://binary.ninja/">Binary Ninja</a></li>
+<li><a href="https://builtwith.com/">BuiltWith</a></li>
+<li><a href="https://cpu.fail/">CPU.fail</a></li>
+<li><a href="https://cve.mitre.org/">CVE - Common Vulnerabilities &amp; Exposures</a></li>
+<li><a href="https://www.hex-rays.com/">Hex Rays IDA - Disassembler</a></li>
+<li><a href="https://www.hopperapp.com/">Hopper - Disassembler</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Interactive_Disassembler">IDA - Interactive Disassembler</a></li>
+<li><a href="https://www.kali.org/">Kali Linux - Penetration Testing Linux Distro</a></li>
+<li><a href="https://samy.pl/keysweeper/">Keysweeper - Wireless Keystroke Logger</a></li>
+<li><a href="https://www.pluralsight.com/courses/play-by-play-exploring-internet-of-vulnerabilities">Play by Play - Internet of Vulnerabilties</a></li>
+<li><a href="https://scotthelme.co.uk/protect-site-from-cryptojacking-csp-sri/">Protect against Cryptojacking</a></li>
+<li><a href="https://api.github.com/users/harmelodic/events/public">Public GitHub User information (harmelodic)</a></li>
+<li><a href="https://www.radare.org/r/">Radare - Reverse Engineering Framework</a></li>
+<li><a href="https://www.shodan.io/">Shodan - Network Fisher</a></li>
+<li><a href="https://www.wappalyzer.com/">Wappalyzer</a></li>
+<li><a href="https://xenbits.xen.org/xsa/">Xen - Security Advisories</a></li>
+<li><a href="https://zmap.io/">ZMap - Scanners &amp; Tools</a></li>
+<li><a href="http://factordb.com">factordb - Find Factors of Big Numbers</a></li>
+</ul>
+<h2 id="serverless">Serverless</h2>
+<ul>
+<li><a href="https://openwhisk.apache.org/">Apache Openwhisk - Serverless Cloud Platform</a></li>
+<li><a href="https://serverless.com/framework/docs/">Serverless Framework</a></li>
+</ul>
+<h2 id="software-blogs">Software Blogs</h2>
+<ul>
+<li><a href="https://andrewharmellaw.github.io/">Andrew Harmel-Law</a></li>
+<li><a href="https://blog.aurynn.com/2015/12/16-contempt-culture">Contempt Culture - Aurynn Shaw</a></li>
+<li><a href="https://geoffdoesstuff.com/">Geoff Does Stuff - Geoff Lawrence</a></li>
+<li><a href="https://github.blog/">GitHub Blog</a></li>
+<li><a href="https://blog.jetbrains.com/">Jetbrains Blog</a></li>
+<li><a href="https://jvns.ca/">Julia Evans</a></li>
+<li><a href="https://hacks.mozilla.org/">Mozilla Hacks</a></li>
+<li><a href="https://red-route.org/">Red Route - Malcolm Young</a></li>
+<li><a href="https://tonsky.me/blog/disenchantment/">Software disenchantment - Tonsky</a></li>
+<li><a href="https://www.google.com/googlebooks/chrome/med_00.html">The Google Chrome Book</a></li>
+</ul>
+<h2 id="software-design">Software Design</h2>
+<ul>
+<li><a href="https://github.com/kamranahmedse/design-patterns-for-humans">Design Patterns for Humans</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Domain-driven_design">Domain-driven Design</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing">Eight fallacies of distributed computing</a></li>
+<li><a href="https://martinfowler.com/eaaDev/EventSourcing.html">Event Sourcing</a></li>
+<li><a href="https://www.youtube.com/watch?v=UBGzsb2UkeY">GraphQL in 30 minutes</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Interface_control_document">Interface control document</a></li>
+<li><a href="https://protobuf.dev/">Protocol Buffers Docs</a></li>
+<li><a href="https://en.wikipedia.org/wiki/OSI_model">Seven Layers of a System - OSI model</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Twelve-Factor_App_methodology">Twelve-Factor App methodology</a></li>
+</ul>
+<h2 id="star-trek">Star Trek</h2>
+<ul>
+<li><a href="https://www.ex-astris-scientia.org/">Ex Astris Scientia</a></li>
+<li><a href="https://docs.google.com/spreadsheets/d/1l6JBqOQh5G7ybMOHT8tgut0rbXUvN1hwYOGEEqpf44E/edit?usp=sharing">The Star Trek List - Harmelodic</a></li>
+<li><a href="https://startreklist.blogspot.com/">The Star Trek List - OG</a></li>
+</ul>
+<h2 id="static-analysis">Static Analysis</h2>
+<ul>
+<li><a href="https://docs.github.com/en/code-security/getting-started/github-security-features">GitHub Code Security</a></li>
+<li><a href="https://docs.gitlab.com/ee/user/application_security/configuration/">GitLab Security Configuration</a></li>
+<li><a href="https://docs.renovatebot.com/">Renovate by Mend</a></li>
+<li><a href="https://snyk.io/plans">Snyk</a></li>
+<li><a href="https://www.sonarsource.com/products/sonarqube/">SonarQube by SonarSource</a></li>
+<li><a href="https://about.sourcegraph.com/">Sourcegraph</a></li>
+<li><a href="https://www.synopsys.com/software-integrity/solutions/application-security-testing.html">Synopsys (BlackDuck) Application Security Testing</a></li>
+</ul>
+<h2 id="testing">Testing</h2>
+<ul>
+<li><a href="https://blog.thecodewhisperer.com/permalink/integrated-tests-are-a-scam">Integrated Tests are a Scam</a></li>
+</ul>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<ul>
+<li><a href="https://command-not-found.com/">command-not-found.com</a></li>
+<li><a href="https://github.com/Genymobile/scrcpy">scrcpy - Screen Copy (Android)</a></li>
+</ul>
+<h2 id="ui-design">UI Design</h2>
+<ul>
+<li><a href="https://www.invisionapp.com/">InVision</a></li>
+<li><a href="https://lawsofux.com/">Laws of UX</a></li>
+<li><a href="https://www.lightningdesignsystem.com/">Lightning Design System - Salesforce</a></li>
+<li><a href="https://storybook.js.org/">Storybook</a></li>
+<li><a href="https://www.a11yproject.com/">The A11y Project</a></li>
+</ul>
+<h2 id="version-control">Version Control</h2>
+<ul>
+<li><a href="https://www.atlassian.com/software/bitbucket">Bitbucket - Atlassian</a></li>
+<li><a href="https://git-scm.com/">Git</a></li>
+<li><a href="https://github.com/">GitHub</a></li>
+<li><a href="https://gitlab.com/">GitLab</a></li>
+<li><a href="https://www.mercurial-scm.org/">Mercurial</a></li>
+<li><a href="https://subversion.apache.org/">SVN - Apache Subversion</a></li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/Harmelodic" target="_blank" rel="noopener" title="Harmelodic on GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.linkedin.com/in/harmelodic/" target="_blank" rel="noopener" title="Harmelodic on LinkedIn" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5m282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>
